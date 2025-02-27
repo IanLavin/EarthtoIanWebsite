@@ -87,3 +87,32 @@ toggleLocations();
 Object.keys(checkboxes).forEach(category => {
     checkboxes[category].addEventListener('change', toggleLocations);
 });
+
+// Function to get a random location and display it
+function showRandomLocation() {
+    const allLocations = [];
+
+    // Collect all locations into an array
+    Object.keys(locations).forEach(category => {
+        locations[category].forEach(place => {
+            allLocations.push(place);
+        });
+    });
+
+    // Pick a random location
+    const randomIndex = Math.floor(Math.random() * allLocations.length);
+    const randomLocation = allLocations[randomIndex];
+
+    // Update the random location section with the location's name and image
+    const randomLocationName = document.getElementById("random-location-name");
+    const randomLocationImg = document.getElementById("random-location-img");
+
+    randomLocationName.textContent = randomLocation.name;
+    randomLocationImg.src = randomLocation.img;
+}
+
+// Call the function to display a random location every 5 seconds
+setInterval(showRandomLocation, 10000); // Change interval (in ms) as needed
+
+// Initialize by showing a random location immediately
+showRandomLocation();
