@@ -13,8 +13,11 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 }).addTo(map);
 
 // Sidebar reference
-var sidebar = document.getElementById("sidebar");
-var locationList = document.getElementById("places");
+var locationList = {
+    park: document.getElementById("parks-list"),
+    mountain: document.getElementById("highpoints-list"),
+    adventure: document.getElementById("adventures-list")
+};
 
 // Checkboxes for toggling
 var checkboxes = {
@@ -33,92 +36,54 @@ function loadMarkers() {
             var marker = L.marker([place.lat, place.lng], { icon: icons[category] })
                 .bindPopup(`<b>${place.name}</b><br>
                     <img src="${place.img}" alt="${place.name}" width="200" onerror="this.onerror=null; this.src='fallback.jpg';"><br>
-                    <a href="${place.url}" target="_blank">Learn more</a>`);
-
-            marker.on('click', function() {
-                updateSidebar(place);
-            });
-
+                    <i>${place.type}</i><br>`);
+            
+            marker.addTo(map);
             markers[category].push(marker);
+
+            // Add to corresponding list
+            var listItem = document.createElement('li');
+            listItem.textContent = place.name;
+            listItem.onclick = function () {
+                map.setView([place.lat, place.lng], 12);
+                marker.openPopup();
+            };
+            locationList[category].appendChild(listItem);
         });
     });
 }
 
-// Function to update sidebar with location details
-function updateSidebar(place) {
-    sidebar.innerHTML = `
-        <h2>${place.name}</h2>
-        <img src="${place.img}" alt="${place.name}" width="100%">
-        <p><a href="${place.url}" target="_blank">Learn more</a></p>
-    `;
-}
-
-// Function to toggle markers on the map
-function toggleMarkers(category, checked) {
-    markers[category].forEach(marker => checked ? marker.addTo(map) : map.removeLayer(marker));
-    updateLocationList(); // Update the list when toggling
-}
-
-// Function to update location list in the sidebar
-function updateLocationList(filteredLocations = null) {
-    locationList.innerHTML = ""; // Clear existing list
-
-    Object.keys(checkboxes).forEach(category => {
-        if (checkboxes[category].checked) {
-            const categoryHeader = document.createElement("h4");
-            categoryHeader.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-            locationList.appendChild(categoryHeader);
-            
-            const ul = document.createElement("ul");
-
-            const locationsToDisplay = filteredLocations && filteredLocations[category] ? filteredLocations[category] : locations[category];
-
-            locationsToDisplay.forEach(place => {
-                var listItem = document.createElement("li");
-                listItem.textContent = place.name;
-                listItem.classList.add("location-item");
-                listItem.addEventListener("click", function() {
-                    map.setView([place.lat, place.lng], 10); // Zoom into selected location
-                });
-                ul.appendChild(listItem);
-            });
-            locationList.appendChild(ul);
-        }
+// Toggle visibility based on checkboxes
+function toggleLocations() {
+    Object.keys(markers).forEach(category => {
+        markers[category].forEach(marker => {
+            if (checkboxes[category].checked) {
+                marker.addTo(map);
+            } else {
+                map.removeLayer(marker);
+            }
+        });
     });
 }
 
-// Add event listeners to checkboxes dynamically
-Object.keys(checkboxes).forEach(category => {
-    checkboxes[category].addEventListener("change", function() {
-        toggleMarkers(category, checkboxes[category].checked);
+// Search filter logic
+document.getElementById('searchBox').addEventListener('input', function(event) {
+    var searchTerm = event.target.value.toLowerCase();
+    
+    Object.keys(locationList).forEach(category => {
+        var items = locationList[category].getElementsByTagName('li');
+        Array.from(items).forEach(item => {
+            var text = item.textContent.toLowerCase();
+            item.style.display = text.includes(searchTerm) ? '' : 'none';
+        });
     });
 });
 
-// Add event listener to search box for real-time search
-var searchBox = document.getElementById("searchBox");
-searchBox.addEventListener("input", function() {
-    const searchTerm = searchBox.value.toLowerCase();
-    filterLocations(searchTerm);
-});
-
-// Function to filter locations by search term
-function filterLocations(searchTerm) {
-    const filteredLocations = {};
-
-    Object.keys(locations).forEach(category => {
-        filteredLocations[category] = locations[category].filter(place =>
-            place.name.toLowerCase().includes(searchTerm)
-        );
-    });
-
-    updateLocationList(filteredLocations);
-}
-
-// Load markers initially
+// Initialize everything
 loadMarkers();
+toggleLocations();
 
-// Set initial checkbox state
-Object.keys(checkboxes).forEach(category => toggleMarkers(category, checkboxes[category].checked));
-
-// Initialize the location list on page load
-updateLocationList();
+// Listen for checkbox changes
+Object.keys(checkboxes).forEach(category => {
+    checkboxes[category].addEventListener('change', toggleLocations);
+});
