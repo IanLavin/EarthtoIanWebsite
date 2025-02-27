@@ -7,7 +7,7 @@ var icons = {
         popupAnchor: [0, -30]
     }),
     mountain: L.icon({
-        iconUrl: 'https://png.pngtree.com/png-clipart/20210226/ourmid/pngtree-woods-snow-white-clip-art-png-image_2942045.jpg',
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/3779/3779780.png',
         iconSize: [30, 30],
         iconAnchor: [15, 30],
         popupAnchor: [0, -30]
