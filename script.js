@@ -66,8 +66,16 @@ function toggleLocations() {
     });
 }
 
-// Search filter logic
-document.getElementById('searchBox').addEventListener('input', function(event) {
+// Debounced Search filter logic
+function debounce(fn, delay) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn.apply(this, args), delay);
+    };
+}
+
+document.getElementById('searchBox').addEventListener('input', debounce(function(event) {
     var searchTerm = event.target.value.toLowerCase();
     
     Object.keys(locationList).forEach(category => {
@@ -77,7 +85,7 @@ document.getElementById('searchBox').addEventListener('input', function(event) {
             item.style.display = text.includes(searchTerm) ? '' : 'none';
         });
     });
-});
+}, 300));  // 300ms debounce delay
 
 // Initialize everything
 loadMarkers();
@@ -109,10 +117,13 @@ function showRandomLocation() {
 
     randomLocationName.textContent = randomLocation.name;
     randomLocationImg.src = randomLocation.img;
+    randomLocationImg.onerror = function() {
+        this.src = 'fallback.jpg'; // In case of missing image
+    };
 }
 
-// Call the function to display a random location every 5 seconds
-setInterval(showRandomLocation, 10000); // Change interval (in ms) as needed
+// Call the function to display a random location every 10 seconds
+setInterval(showRandomLocation, 10000);
 
 // Initialize by showing a random location immediately
 showRandomLocation();
