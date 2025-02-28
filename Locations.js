@@ -198,7 +198,7 @@ const locations = {
             lat: 36.556, 
             lng: -105.416, 
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wheeler_Peak%2C_NM.JPG/408px-Wheeler_Peak%2C_NM.JPG"
+            img: "Pictures/New Mexico/Wheeler/IMG_0960.jpg"
         },
         { 
             name: "Borah Peak", 
@@ -212,7 +212,7 @@ const locations = {
             lat: 36.932, 
             lng: -102.997, 
             url: "https://en.wikipedia.org/wiki/Black_Mesa_(Oklahoma,_Colorado,_New_Mexico)",
-            img: "Pictures/Colorado/IMG_0921.jpg"
+            img: "Pictures/Oklahoma/IMG_0921.jpg"
         },
         { 
             name: "Mount Sunflower", 
@@ -264,6 +264,34 @@ const locations = {
             lng: -117.251, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/La Jolla/GEO_0408.jpg"
+        },
+        { 
+            name: "Lower Calf Creek", 
+            lat: 37.829, 
+            lng: -111.420, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Utah/Grand Staircase/IMG_1885.jpg"
+        },
+        { 
+            name: "Sedona", 
+            lat: 34.869, 
+            lng: -111.760, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Sedona/IMG_3131.jpg"
+        },
+        { 
+            name: "Pikes Peak", 
+            lat: 38.840, 
+            lng: -105.042, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Colorado/Pikes/IMG_0909.jpg"
+        },
+        { 
+            name: "Pfeifferhorn", 
+            lat: 40.533, 
+            lng: -111.706, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Utah/Pfeifferhorn/IMG_0087.jpg"
         }
     ]
 };
