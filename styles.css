@@ -205,8 +205,23 @@ h1 {
     }
 
     #random-location {
+        bottom: 20px;
+        top: auto;
         width: 90%;
-        top: 10%;
         right: 5%;
     }
+}
+.home-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
+}
+
+.category-column li:hover {
+    background: #d5dbdb;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.category-column {
+    scroll-behavior: smooth;
 }
