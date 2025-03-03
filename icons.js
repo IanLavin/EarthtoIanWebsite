@@ -7,13 +7,13 @@ var icons = {
         popupAnchor: [0, -30]
     }),
     mountain: L.icon({
-        iconUrl: 'Pictures/Icons/Mountain.png',
+        iconUrl: 'Pictures/Icons/mountain.png',
         iconSize: [30, 30],
         iconAnchor: [15, 30],
         popupAnchor: [0, -30]
     }),
     adventure: L.icon({
-        iconUrl: 'Pictures/Icons/Adventure.png',
+        iconUrl: 'Pictures/Icons/adventure.png',
         iconSize: [30, 30],
         iconAnchor: [15, 30],
         popupAnchor: [0, -30]

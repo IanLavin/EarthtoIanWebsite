@@ -227,6 +227,13 @@ const locations = {
             lng: -104.031, 
             url: "https://en.wikipedia.org/wiki/Panorama_Point",
             img: "Pictures/Nebraska/IMG_9312.jpg"
+        },
+        { 
+            name: "Guadualupe Mountains National Park", 
+            lat: 31.89, 
+            lng: -104.86, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
         }
     ],
     adventure: [
