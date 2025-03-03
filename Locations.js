@@ -21,7 +21,7 @@ const locations = {
             lat: 42.94, 
             lng: -122.10, 
             url: "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Above_Crater_Lake_%28cropped%29.jpg/2880px-Above_Crater_Lake_%28cropped%29.jpg"
+            img: "Pictures/Oregon/IMG_5284.jpg"
         },
         { 
             name: "Redwood National Park", 
@@ -35,7 +35,7 @@ const locations = {
             lat: 36.49, 
             lng: -121.48, 
             url: "https://en.wikipedia.org/wiki/Pinnacles_National_Park",
-            img: "https://upload.wikimedia.org/wikipedia/commons/5/50/Pinus_sabiniana_Pinnacles_NM_2.jpg"
+            img: "Pictures/California/Pinnacles/IMG_7520.jpg"
         },
         { 
             name: "Death Valley National Park", 
@@ -77,7 +77,7 @@ const locations = {
             lat: 32.27, 
             lng: -111.19, 
             url: "https://en.wikipedia.org/wiki/Saguaro_National_Park",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Saguaro_Sunset.jpg/2880px-Saguaro_Sunset.jpg"
+            img: "Pictures/Arizona/IMG_8402.jpg"
         },
         { 
             name: "Canyonlands National Park", 
@@ -98,7 +98,7 @@ const locations = {
             lat: 38.08, 
             lng: -111.13, 
             url: "https://en.wikipedia.org/wiki/Capitol_Reef_National_Park",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Capitol_Reef_National_Park.jpg/426px-Capitol_Reef_National_Park.jpg"
+            img: "Pictures/Utah/Capitol Reef/IMG_3702.jpg"
         },
         { 
             name: "Bryce Canyon National Park", 
@@ -147,7 +147,7 @@ const locations = {
             lat: 25.76, 
             lng: -80.77, 
             url: "https://en.wikipedia.org/wiki/Everglades_National_Park",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Sunset_over_the_River_of_Grass%2C_NPSphoto%2C_G.Gardner_%289255157507%29.jpg/426px-Sunset_over_the_River_of_Grass%2C_NPSphoto%2C_G.Gardner_%289255157507%29.jpg"
+            img: "Pictures/Florida/IMG_3699.jpg"
         },
         { 
             name: "Biscayne National Park", 
@@ -205,7 +205,7 @@ const locations = {
             lat: 44.136, 
             lng: -113.78, 
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
-            img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Mount_Borah_2009.JPG/375px-Mount_Borah_2009.JPG"
+            img: "Pictures/Idaho/Borah/borah.jpg"
         },
         { 
             name: "Black Mesa", 
@@ -292,6 +292,13 @@ const locations = {
             lng: -111.706, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Pfeifferhorn/IMG_0087.jpg"
+        },
+        { 
+            name: "Sawtooths", 
+            lat: 44.141, 
+            lng: -115.010, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Idaho/Thompson Peak/IMG_9159.jpg"
         }
     ]
 };
