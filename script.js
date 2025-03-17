@@ -4,6 +4,12 @@ import icons from './icons.js';
 // Default map center (USA)
 var defaultLocation = [37.0902, -95.7129];
 
+// Define the default map view (center and zoom level)
+const defaultView = {
+    center: [39.8283, -98.5795], // Center of the USA (or your preferred location)
+    zoom: 5
+};
+
 // Initialize the map
 var map = L.map('map').setView(defaultLocation, 5);
 
@@ -26,10 +32,13 @@ var checkboxes = {
     adventure: document.getElementById("toggleAdventures")
 };
 
-// Marker layers
-var markers = { park: [], mountain: [], adventure: [] };
+// Marker layers using LayerGroups
+var markerLayers = { 
+    park: L.layerGroup().addTo(map), 
+    mountain: L.layerGroup().addTo(map), 
+    adventure: L.layerGroup().addTo(map) 
+};
 
-// Function to create and load markers dynamically
 function loadMarkers() {
     Object.keys(locations).forEach(category => {
         locations[category].forEach(place => {
@@ -37,11 +46,9 @@ function loadMarkers() {
                 .bindPopup(`<b>${place.name}</b><br>
                     <img src="${place.img}" alt="${place.name}" width="200" onerror="this.onerror=null; this.src='fallback.jpg';"><br>
                     <i>${place.type}</i><br>`);
-            
-            marker.addTo(map);
-            markers[category].push(marker);
 
-            // Add to corresponding list
+            markerLayers[category].addLayer(marker); // Add marker to LayerGroup
+
             var listItem = document.createElement('li');
             listItem.textContent = place.name;
             listItem.onclick = function () {
@@ -53,18 +60,21 @@ function loadMarkers() {
     });
 }
 
-// Toggle visibility based on checkboxes
+// Toggle visibility using LayerGroups (more efficient)
 function toggleLocations() {
-    Object.keys(markers).forEach(category => {
-        markers[category].forEach(marker => {
-            if (checkboxes[category].checked) {
-                marker.addTo(map);
-            } else {
-                map.removeLayer(marker);
-            }
-        });
+    Object.keys(markerLayers).forEach(category => {
+        if (checkboxes[category].checked) {
+            map.addLayer(markerLayers[category]);
+        } else {
+            map.removeLayer(markerLayers[category]);
+        }
     });
 }
+
+// Add event listener to the home button
+document.getElementById("homeButton").addEventListener("click", function () {
+    map.setView(defaultView.center, defaultView.zoom);
+});
 
 // Debounced Search filter logic
 function debounce(fn, delay) {
@@ -89,38 +99,26 @@ document.getElementById('searchBox').addEventListener('input', debounce(function
 
 // Initialize everything
 loadMarkers();
-toggleLocations();
 
-// Listen for checkbox changes
-Object.keys(checkboxes).forEach(category => {
-    checkboxes[category].addEventListener('change', toggleLocations);
+document.getElementById("filter-container").addEventListener("change", (event) => {
+    if (event.target.type === "checkbox") {
+        toggleLocations();
+    }
 });
 
-// Function to get a random location and display it
+
+// Precompute all locations into a flat array
+const allLocations = Object.values(locations).flat();
+
 function showRandomLocation() {
-    const allLocations = [];
-
-    // Collect all locations into an array
-    Object.keys(locations).forEach(category => {
-        locations[category].forEach(place => {
-            allLocations.push(place);
-        });
-    });
-
-    // Pick a random location
-    const randomIndex = Math.floor(Math.random() * allLocations.length);
-    const randomLocation = allLocations[randomIndex];
-
-    // Update the random location section with the location's name and image
-    const randomLocationName = document.getElementById("random-location-name");
-    const randomLocationImg = document.getElementById("random-location-img");
-
-    randomLocationName.textContent = randomLocation.name;
-    randomLocationImg.src = randomLocation.img;
-    randomLocationImg.onerror = function() {
-        this.src = 'fallback.jpg'; // In case of missing image
-    };
+    const randomLocation = allLocations[Math.floor(Math.random() * allLocations.length)];
+    
+    document.getElementById("random-location-name").textContent = randomLocation.name;
+    const imgElement = document.getElementById("random-location-img");
+    imgElement.src = randomLocation.img;
+    imgElement.onerror = () => { imgElement.src = 'fallback.jpg'; };
 }
+
 
 // Call the function to display a random location every 10 seconds
 setInterval(showRandomLocation, 10000);

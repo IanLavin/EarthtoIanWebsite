@@ -306,6 +306,13 @@ const locations = {
             lng: -115.010, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Thompson Peak/IMG_9159.jpg"
+        },
+        { 
+            name: "Goat Canyon Trestle", 
+            lat: 32.729, 
+            lng: -116.183, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/California/GOPR4197.jpg"
         }
     ]
 };
