@@ -287,13 +287,6 @@ const locations = {
             img: "Pictures/Arizona/Sedona/IMG_3131.jpg"
         },
         { 
-            name: "Pikes Peak", 
-            lat: 38.840, 
-            lng: -105.042, 
-            url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Colorado/Pikes/IMG_0909.jpg"
-        },
-        { 
             name: "Pfeifferhorn", 
             lat: 40.533, 
             lng: -111.706, 
@@ -313,7 +306,101 @@ const locations = {
             lng: -116.183, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/GOPR4197.jpg"
+        },
+        { 
+            name: "Salome Jug", 
+            lat: 33.770, 
+            lng: -111.119, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Sightseeing/IMG_3823.jpg"
         }
+    ],
+    sightseeing: [
+        {
+            name: "Superstitions",
+            lat: 33.438, 
+            lng: -111.454, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Superstitions/IMG_3812.jpg"
+        },
+        {
+            name: "Kirkham Hot Springs",
+            lat: 44.072, 
+            lng: -115.546, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Idaho/Sightseeing/IMG_3497.jpg"
+        },
+        {
+            name: "Fossil Creek",
+            lat: 34.145, 
+            lng: -111.605, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Sightseeing/IMG_3822.jpg"
+        },
+        { 
+            name: "Pikes Peak", 
+            lat: 38.840, 
+            lng: -105.042, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Colorado/Pikes/IMG_0909.jpg"
+        },
+        {
+            name: "Coal Mine Canyon",
+            lat: 36.012, 
+            lng: -110.989, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Sightseeing/IMG_0825.jpg"
+        },
+        {
+            name: "Panther Creek Falls",
+            lat: 45.867, 
+            lng: -121.828, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Washington/Sightseeing/IMG_1502.jpg"
+        },
+        {
+            name: "Blue Heart Springs",
+            lat: 42.170, 
+            lng: -114.829, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Idaho/Sightseeing/IMG_1605.jpg"
+        },
+        {
+            name: "Donut Falls",
+            lat: 40.613, 
+            lng: -111.654, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Utah/Sightseeing/IMG_1650.jpg"
+        },
+        {
+            name: "Imperial Sand Dunes",
+            lat: 32.982, 
+            lng: -115.132, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/California/Sightseeing/IMG_3759.jpg"
+        },
+        {
+            name: "Black Sands Beach",
+            lat: 37.824, 
+            lng: -122.508, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/California/Sightseeing/IMG_7640.jpg"
+        },
+        {
+            name: "Four Peaks",
+            lat: 33.684, 
+            lng: -111.325, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Sightseeing/IMG_7751.jpg"
+        },
+        {
+            name: "Chiricahua National Monument",
+            lat: 32.008, 
+            lng: -109.319, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/Sightseeing/IMG_8082.jpg"
+        }
+        
     ]
 };
 

@@ -17,6 +17,12 @@ var icons = {
         iconSize: [30, 30],
         iconAnchor: [15, 30],
         popupAnchor: [0, -30]
+    }),
+    sightseeing: L.icon({
+        iconUrl: 'Pictures/Icons/camera-circle.svg',
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -30]
     })
 };
 

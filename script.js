@@ -22,21 +22,25 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 var locationList = {
     park: document.getElementById("parks-list"),
     mountain: document.getElementById("highpoints-list"),
-    adventure: document.getElementById("adventures-list")
+    adventure: document.getElementById("adventures-list"),
+    sightseeing: document.getElementById("sightseeing-list")
 };
 
 // Checkboxes for toggling
 var checkboxes = {
     park: document.getElementById("toggleParks"),
     mountain: document.getElementById("toggleHighpoints"),
-    adventure: document.getElementById("toggleAdventures")
+    adventure: document.getElementById("toggleAdventures"),
+    sightseeing: document.getElementById("toggleSightseeing")
 };
 
 // Marker layers using LayerGroups
 var markerLayers = { 
     park: L.layerGroup().addTo(map), 
     mountain: L.layerGroup().addTo(map), 
-    adventure: L.layerGroup().addTo(map) 
+    adventure: L.layerGroup().addTo(map), 
+    sightseeing: L.layerGroup().addTo(map) 
+
 };
 
 function loadMarkers() {
