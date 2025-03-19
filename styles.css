@@ -61,12 +61,12 @@ h1 {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 99%;
     background: white;
     padding: 15px;
     box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.3);
     font-size: 15px;
-    max-height: 300px;
+    max-height: 20%;
     z-index: 1000;
     border-top: 3px solid #2c3e50;
     flex-wrap: wrap; /* Make columns stack on smaller screens */
@@ -75,7 +75,7 @@ h1 {
 
 #location-list h3 {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -136,6 +136,26 @@ h1 {
 }
 
 .home-button:hover {
+    background-color: #1f618d;
+}
+
+/* World button styles */
+.world-button {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    padding: 12px 16px;
+    background-color: #2980b9;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1001;
+}
+
+.world-button:hover {
     background-color: #1f618d;
 }
 
@@ -223,6 +243,11 @@ h1 {
     }
 }
 .home-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
+}
+
+.world-button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
 }

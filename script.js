@@ -6,8 +6,14 @@ var defaultLocation = [37.0902, -95.7129];
 
 // Define the default map view (center and zoom level)
 const defaultView = {
-    center: [39.8283, -98.5795], // Center of the USA (or your preferred location)
+    center: [35.8283, -95.5795], // Center of the USA (or your preferred location)
     zoom: 5
+};
+
+// Define the default map view (center and zoom level)
+const worldView = {
+    center: [10.8283, -9.5795], // Center of the USA (or your preferred location)
+    zoom: 2
 };
 
 // Initialize the map
@@ -78,6 +84,11 @@ function toggleLocations() {
 // Add event listener to the home button
 document.getElementById("homeButton").addEventListener("click", function () {
     map.setView(defaultView.center, defaultView.zoom);
+});
+
+// Add event listener to the home button
+document.getElementById("worldButton").addEventListener("click", function () {
+    map.setView(worldView.center, worldView.zoom);
 });
 
 // Debounced Search filter logic
