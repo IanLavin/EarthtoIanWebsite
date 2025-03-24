@@ -3,35 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrollable Gallery</title>
+    <title>Mosaic Gallery</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
 </head>
 <body>
-    <nav id="floating-menu">
-        <ul>
-            <li><span class="icon">🏠</span> Home</li>
-            <li><span class="icon">📷</span> Gallery</li>
-            <li><span class="icon">ℹ️</span> About</li>
-            <li><span class="icon">📩</span> Contact</li>
-        </ul>
-    </nav>
+    <div class="grid">
+        <div class="grid-item"><img src="../Pictures/Arizona/Sightseeing/IMG_0825.jpg" alt="Image 1"></div>
+        <div class="grid-item"><img src="../Pictures/Arizona/Sightseeing/IMG_3823.jpg" alt="Image 2"></div>
+        <div class="grid-item"><img src="../Pictures/Arizona/Sightseeing/IMG_7751.jpg" alt="Image 3"></div>
+        <div class="grid-item"><img src="../Pictures/Arizona/Superstitions/IMG_3812.jpg" alt="Image 1"></div>
+        <div class="grid-item"><img src="../Pictures/Arizona/Superstitions/IMG_3813.jpg" alt="Image 2"></div>
+        <div class="grid-item"><img src="../Pictures/California/Sightseeing/IMG_3759.jpg" alt="Image 3"></div>
+        <div class="grid-item"><img src="../Pictures/California/Sightseeing/IMG_7640.jpg" alt="Image 1"></div>
+        
+    </div>
+
     
-    <section class="gallery-row">
-        <div class="image-group">
-            <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
-        </div>
-        <div class="text-box">Description for these images.</div>
-    </section>
-    
-    <section class="gallery-row">
-        <div class="image-group">
-            <img src="image4.jpg" alt="Image 4">
-            <img src="image5.jpg" alt="Image 5">
-        </div>
-        <div class="text-box">Another description for this set.</div>
-    </section>
+
 </body>
 </html>
+

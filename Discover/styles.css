@@ -1,0 +1,62 @@
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    max-width: 90vw; /* Keeps grid within the viewport */
+    margin: 20px auto;
+    column-count: 3; /* Default to 3 columns */
+    column-gap: 15px;
+    
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    width: 100%;
+    margin-bottom: 15px;
+    break-inside: avoid; /* Prevents awkward cuts */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Box Styles */
+.text-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid {
+        column-count: 2; /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        column-count: 1; /* Single column for phones */
+    }
+}
