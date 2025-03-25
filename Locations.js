@@ -147,7 +147,7 @@ const locations = {
             lat: 25.76, 
             lng: -80.77, 
             url: "https://en.wikipedia.org/wiki/Everglades_National_Park",
-            img: "Pictures/Florida/IMG_3699.jpg"
+            img: "Pictures/Florida/IMG_3699.JPG"
         },
         { 
             name: "Biscayne National Park", 
