@@ -28,7 +28,7 @@ const locations = {
             lat: 41.4, 
             lng: -124.04, 
             url: "https://en.wikipedia.org/wiki/Redwood_National_and_State_Parks",
-            img: "Pictures/California/Redwoods/IMG_0033.jpg"
+            img: "Pictures/California/Redwoods/IMG_0033.JPG"
         },
         { 
             name: "Pinnacles National Park", 
@@ -184,7 +184,7 @@ const locations = {
             lat: 39.117, 
             lng: -106.445, 
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
-            img: "Pictures/Colorado/IMG_9119.jpg"
+            img: "Pictures/Colorado/IMG_9119.JPG"
         },
         { 
             name: "Humphreys Peak", 
@@ -205,7 +205,7 @@ const locations = {
             lat: 44.136, 
             lng: -113.78, 
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
-            img: "Pictures/Idaho/Borah/borah.jpg"
+            img: "Pictures/Idaho/Borah/borah.JPG"
         },
         { 
             name: "Black Mesa", 
@@ -291,7 +291,7 @@ const locations = {
             lat: 40.533, 
             lng: -111.706, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Pfeifferhorn/IMG_0087.jpg"
+            img: "Pictures/Utah/Pfeifferhorn/IMG_0087.JPG"
         },
         { 
             name: "Sawtooths", 
@@ -305,7 +305,7 @@ const locations = {
             lat: 32.729, 
             lng: -116.183, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/California/GOPR4197.jpg"
+            img: "Pictures/California/GOPR4197.JPG"
         },
         { 
             name: "Salome Jug", 
