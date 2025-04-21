@@ -169,7 +169,21 @@ const locations = {
             lng: -104.44, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/New Mexico/IMG_7821.jpg"
-        }
+        }/*,
+        { 
+            name: "Shenandoah National Park", 
+            lat: 38.475, 
+            lng: -78.453, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/New Mexico/IMG_7821.jpg"
+        },
+        { 
+            name: "New River Gorge National Park", 
+            lat: 38.068, 
+            lng: -81.082, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/New Mexico/IMG_7821.jpg"
+        }*/
     ],
     mountain: [
         { 
@@ -234,7 +248,49 @@ const locations = {
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/IMG_7818.jpg"
-        }
+        }/*,
+        { 
+            name: "Mt. Rogers", 
+            lat: 36.659, 
+            lng: -81.154, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
+        },
+        { 
+            name: "Black Mountain", 
+            lat: 36.914, 
+            lng: -82.893, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
+        },
+        { 
+            name: "Spruce Knob", 
+            lat: 38.699, 
+            lng: -79.532, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
+        },
+        { 
+            name: "Backbone Mountain", 
+            lat: 39.237, 
+            lng: -79.485, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
+        },
+        { 
+            name: "Mt. Davis", 
+            lat: 39.786, 
+            lng: -79.177, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
+        },
+        { 
+            name: "Ebright Azimuth", 
+            lat: 39.835, 
+            lng: -75.519, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Texas/IMG_7818.jpg"
+        }*/
     ],
     adventure: [
         { 
@@ -305,7 +361,7 @@ const locations = {
             lat: 32.729, 
             lng: -116.183, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/California/GOPR4197.JPG"
+            img: "Pictures/California/Goat Canyon/GOPR4197.JPG"
         },
         { 
             name: "Salome Jug", 
@@ -313,6 +369,13 @@ const locations = {
             lng: -111.119, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Sightseeing/IMG_3823.jpg"
+        },
+        { 
+            name: "Buckskin Gulch", 
+            lat: 37.017, 
+            lng: -112.001, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Utah/Buckskin/IMG_3949.jpg"
         }
     ],
     sightseeing: [
@@ -399,6 +462,20 @@ const locations = {
             lng: -109.319, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Sightseeing/IMG_8082.jpg"
+        },
+        {
+            name: "Valley of Fire",
+            lat: 36.482, 
+            lng: -114.552, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Nevada/Valley of Fire/IMG_4058.jpg"
+        },
+        {
+            name: "Grand Staircase Escalante",
+            lat: 37.460, 
+            lng: -111.594, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Utah/Grand Staircase/Grand Staircase.jpg"
         }
         
     ]
