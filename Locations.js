@@ -175,14 +175,14 @@ const locations = {
             lat: 38.475, 
             lng: -78.453, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/New Mexico/IMG_7821.jpg"
+            img: "Pictures/Virginia/IMG_4318.jpg"
         },
         { 
             name: "New River Gorge National Park", 
             lat: 38.068, 
             lng: -81.082, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/New Mexico/IMG_7821.jpg"
+            img: "Pictures/West Virginia/IMG_4323.jpg"
         }
     ],
     mountain: [
@@ -254,42 +254,42 @@ const locations = {
             lat: 36.659, 
             lng: -81.154, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Virginia/IMG_4354.jpg"
         },
         { 
             name: "Black Mountain", 
             lat: 36.914, 
             lng: -82.893, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Kentucky/IMG_4335.jpg"
         },
         { 
             name: "Spruce Knob", 
             lat: 38.699, 
             lng: -79.532, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/West Virginia/IMG_4372.jpg"
         },
         { 
             name: "Backbone Mountain", 
             lat: 39.237, 
             lng: -79.485, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Maryland/IMG_4378.jpg"
         },
         { 
             name: "Mt. Davis", 
             lat: 39.786, 
             lng: -79.177, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Pennsylvania/IMG_4390.jpg"
         },
         { 
             name: "Ebright Azimuth", 
             lat: 39.836, 
             lng: -75.52, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Delaware/IMG_4402.jpg"
         }
     ],
     adventure: [
@@ -376,6 +376,20 @@ const locations = {
             lng: -112.001, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Buckskin/IMG_3949.jpg"
+        },
+        { 
+            name: "Ausangate", 
+            lat: -13.758, 
+            lng: -71.218, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Peru/IMG_4894.jpg"
+        },
+        { 
+            name: "Salkantay", 
+            lat: -13.381, 
+            lng: -72.584, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Peru/IMG_4672.jpg"
         }
     ],
     sightseeing: [
@@ -476,6 +490,20 @@ const locations = {
             lng: -111.594, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Grand Staircase/Grand Staircase.jpg"
+        },
+        { 
+            name: "Machu Picchu", 
+            lat: -13.163, 
+            lng: -72.545, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Peru/IMG_4832.jpg"
+        },
+        { 
+            name: "Pallay Punchu", 
+            lat: -14.463, 
+            lng: -71.136, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Peru/pallay_punchu.jpg"
         }
         
     ]
