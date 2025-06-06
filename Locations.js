@@ -169,7 +169,7 @@ const locations = {
             lng: -104.44, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/New Mexico/IMG_7821.jpg"
-        }/*,
+        },
         { 
             name: "Shenandoah National Park", 
             lat: 38.475, 
@@ -183,7 +183,7 @@ const locations = {
             lng: -81.082, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/New Mexico/IMG_7821.jpg"
-        }*/
+        }
     ],
     mountain: [
         { 
@@ -248,7 +248,7 @@ const locations = {
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/IMG_7818.jpg"
-        }/*,
+        },
         { 
             name: "Mt. Rogers", 
             lat: 36.659, 
@@ -286,11 +286,11 @@ const locations = {
         },
         { 
             name: "Ebright Azimuth", 
-            lat: 39.835, 
-            lng: -75.519, 
+            lat: 39.836, 
+            lng: -75.52, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/IMG_7818.jpg"
-        }*/
+        }
     ],
     adventure: [
         { 
