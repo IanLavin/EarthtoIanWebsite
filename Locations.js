@@ -183,6 +183,27 @@ const locations = {
             lng: -81.082, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/West Virginia/IMG_4323.jpg"
+        },
+        { 
+            name: "Mesa Verde", 
+            lat: 37.183, 
+            lng: -108.487, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/Colorado/IMG_5322.jpg"
+        },
+        { 
+            name: "Black Canyon of the Gunnison", 
+            lat: 38.544, 
+            lng: -107.686, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/Colorado/IMG_5380.jpg"
+        },
+        { 
+            name: "Petrified Forest", 
+            lat: 35.083, 
+            lng: -109.787, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/Arizona/IMG_5506.jpg"
         }
     ],
     mountain: [
@@ -390,6 +411,13 @@ const locations = {
             lng: -72.584, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/IMG_4672.jpg"
+        },
+        { 
+            name: "Ice Lake Basin", 
+            lat: 37.814, 
+            lng: -107.808, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Colorado/IMG_5476.jpg"
         }
     ],
     sightseeing: [
@@ -504,6 +532,13 @@ const locations = {
             lng: -71.136, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/pallay_punchu.jpg"
+        },
+        { 
+            name: "Monument Valley", 
+            lat: 36.951, 
+            lng: -110.082, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Arizona/IMG_5606.jpg"
         }
         
     ]
