@@ -185,25 +185,46 @@ const locations = {
             img: "Pictures/West Virginia/IMG_4323.jpg"
         },
         { 
-            name: "Mesa Verde", 
+            name: "Mesa Verde National Park", 
             lat: 37.183, 
             lng: -108.487, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/Colorado/IMG_5322.jpg"
         },
         { 
-            name: "Black Canyon of the Gunnison", 
+            name: "Black Canyon of the Gunnison National Park", 
             lat: 38.544, 
             lng: -107.686, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/Colorado/IMG_5380.jpg"
         },
         { 
-            name: "Petrified Forest", 
+            name: "Petrified Forest National Park", 
             lat: 35.083, 
             lng: -109.787, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/Arizona/IMG_5506.jpg"
+        },
+        { 
+            name: "Olympic National Park", 
+            lat: 47.895, 
+            lng: -123.934, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/Arizona/IMG_5123506.jpg"
+        },
+        { 
+            name: "North Cascades National Park", 
+            lat: 48.713, 
+            lng: -121.114, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/Arizona/IMG_5512306.jpg"
+        },
+        { 
+            name: "Mount Rainier National Park", 
+            lat: 46.825, 
+            lng: -121.760, 
+            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            img: "Pictures/Arizona/IMG_5502346.jpg"
         }
     ],
     mountain: [
@@ -418,6 +439,20 @@ const locations = {
             lng: -107.808, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Colorado/IMG_5476.jpg"
+        },
+        { 
+            name: "Great Barrier Reef", 
+            lat: -16.73, 
+            lng: 146.271, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Australia/IMG_6500.jpg"
+        },
+        { 
+            name: "Wallaman Falls", 
+            lat: -18.59, 
+            lng: 145.802, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Australia/wallamanfalls.jpg"
         }
     ],
     sightseeing: [
@@ -539,6 +574,27 @@ const locations = {
             lng: -110.082, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/IMG_5606.jpg"
+        },
+        { 
+            name: "Whitehaven Beach", 
+            lat: -20.251, 
+            lng: 149.021, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Australia/IMG_6216.jpg"
+        },
+        { 
+            name: "Daintree Rainforest", 
+            lat: -16.075, 
+            lng: 145.469, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Australia/IMG_6107.jpg"
+        },
+        { 
+            name: "Sydney Opera House", 
+            lat: -33.857, 
+            lng: 151.215, 
+            url: "https://en.wikipedia.org/wiki/La_Jolla",
+            img: "Pictures/Australia/IMG_6367.jpg"
         }
         
     ]
