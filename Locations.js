@@ -210,22 +210,31 @@ const locations = {
             lat: 47.895, 
             lng: -123.934, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Arizona/IMG_5123506.jpg"
+            img: "Pictures/Washington/IMG_5671.jpg"
         },
         { 
             name: "North Cascades National Park", 
             lat: 48.713, 
             lng: -121.114, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Arizona/IMG_5512306.jpg"
+            img: "Pictures/Washington/IMG_5839.jpg"
         },
         { 
             name: "Mount Rainier National Park", 
             lat: 46.825, 
             lng: -121.760, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Arizona/IMG_5502346.jpg"
+            img: "Pictures/Washington/IMG_5862.jpg"
         }
+        /*
+        { 
+            name: "Cuyahoga Valley National Park", 
+            lat: 41.280, 
+            lng: -81.565, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Ohio/IMG_4402.jpg"
+        }
+            */
     ],
     mountain: [
         { 
@@ -333,6 +342,50 @@ const locations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Delaware/IMG_4402.jpg"
         }
+        /*
+        { 
+            name: "High Point", 
+            lat: 41.321, 
+            lng: -74.661, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/New_Jersey/IMG_4402.jpg"
+        },
+        { 
+            name: "Mt. Frissell", 
+            lat: 42.051, 
+            lng: -73.482, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Connecticut/IMG_4402.jpg"
+        },
+        { 
+            name: "Mt. Greylock", 
+            lat: 42.637, 
+            lng: -73.166, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Massachusets/IMG_4402.jpg"
+        },
+        { 
+            name: "Jerimoth Hill", 
+            lat: 41.849, 
+            lng: -71.779, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Rhode_Island/IMG_4402.jpg"
+        },
+        { 
+            name: "Campbell Hill", 
+            lat: 40.370, 
+            lng: -83.720, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Ohio/IMG_4402.jpg"
+        },
+        { 
+            name: "Hoosier Hill", 
+            lat: 40.001, 
+            lng: -84.848, 
+            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            img: "Pictures/Indiana/IMG_4402.jpg"
+        }
+            */
     ],
     adventure: [
         { 
