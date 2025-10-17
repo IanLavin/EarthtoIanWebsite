@@ -225,16 +225,15 @@ const locations = {
             lng: -121.760, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/Washington/IMG_5862.jpg"
-        }
-        /*
+        },
         { 
             name: "Cuyahoga Valley National Park", 
             lat: 41.280, 
             lng: -81.565, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Ohio/IMG_4402.jpg"
+            img: "Pictures/Ohio/IMG_6613.jpg"
         }
-            */
+            
     ],
     mountain: [
         { 
@@ -341,51 +340,50 @@ const locations = {
             lng: -75.52, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Delaware/IMG_4402.jpg"
-        }
-        /*
+        },
         { 
             name: "High Point", 
             lat: 41.321, 
             lng: -74.661, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/New_Jersey/IMG_4402.jpg"
+            img: "Pictures/New Jersey/IMG_6587.jpg"
         },
         { 
             name: "Mt. Frissell", 
             lat: 42.051, 
             lng: -73.482, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Connecticut/IMG_4402.jpg"
+            img: "Pictures/Connecticut/IMG_6640.jpg"
         },
         { 
             name: "Mt. Greylock", 
             lat: 42.637, 
             lng: -73.166, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Massachusets/IMG_4402.jpg"
+            img: "Pictures/Massachusets/IMG_6597.jpg"
         },
         { 
             name: "Jerimoth Hill", 
             lat: 41.849, 
             lng: -71.779, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Rhode_Island/IMG_4402.jpg"
+            img: "Pictures/Rhode Island/IMG_6634.jpg"
         },
         { 
             name: "Campbell Hill", 
             lat: 40.370, 
             lng: -83.720, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Ohio/IMG_4402.jpg"
+            img: "Pictures/Ohio/IMG_6628.jpg"
         },
         { 
             name: "Hoosier Hill", 
             lat: 40.001, 
             lng: -84.848, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Indiana/IMG_4402.jpg"
+            img: "Pictures/Indiana/IMG_6629.jpg"
         }
-            */
+            
     ],
     adventure: [
         { 
