@@ -50,25 +50,39 @@ var markerLayers = {
 };
 
 function loadMarkers() {
-    Object.keys(locations).forEach(category => {
-        locations[category].forEach(place => {
-            var marker = L.marker([place.lat, place.lng], { icon: icons[category] })
-                .bindPopup(`<b>${place.name}</b><br>
-                    <img src="${place.img}" alt="${place.name}" width="200" onerror="this.onerror=null; this.src='fallback.jpg';"><br>
-                    <i>${place.type}</i><br>`);
+  Object.keys(locations).forEach(category => {
+    locations[category].forEach(place => {
+      const marker = L.marker([place.lat, place.lng], {
+        icon: icons[category]
+      }).bindPopup(`
+        <b>${place.name}</b><br>
+        <a href="location.html?id=${place.id}">
+          <img 
+            src="${place.img}"
+            alt="${place.name}"
+            width="200"
+            class="popup-image"
+            onerror="this.onerror=null; this.src='fallback.jpg';"
+          >
+        </a>
+        <br>
+        <i>${category}</i>
+      `);
 
-            markerLayers[category].addLayer(marker); // Add marker to LayerGroup
+      markerLayers[category].addLayer(marker);
 
-            var listItem = document.createElement('li');
-            listItem.textContent = place.name;
-            listItem.onclick = function () {
-                map.setView([place.lat, place.lng], 12);
-                marker.openPopup();
-            };
-            locationList[category].appendChild(listItem);
-        });
+      const listItem = document.createElement("li");
+      listItem.textContent = place.name;
+      listItem.onclick = () => {
+        map.setView([place.lat, place.lng], 12);
+        marker.openPopup();
+      };
+
+      locationList[category].appendChild(listItem);
     });
+  });
 }
+
 
 // Toggle visibility using LayerGroups (more efficient)
 function toggleLocations() {

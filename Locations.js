@@ -1,6 +1,14 @@
 // locations.js
 
-const locations = {
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "") // remove punctuation
+    .replace(/\s+/g, "-");    // spaces → hyphens
+}
+
+const rawLocations = {
     park: [
         { 
             name: "Yellowstone National Park", 
@@ -235,6 +243,7 @@ const locations = {
         }
             
     ],
+
     mountain: [
         { 
             name: "Mt. Whitney", 
@@ -385,6 +394,7 @@ const locations = {
         }
             
     ],
+
     adventure: [
         { 
             name: "Whitewater Rafting", 
@@ -506,6 +516,7 @@ const locations = {
             img: "Pictures/Australia/wallamanfalls.jpg"
         }
     ],
+
     sightseeing: [
         {
             name: "Superstitions",
@@ -651,5 +662,14 @@ const locations = {
     ]
 };
 
-// Export locations
+// 🔥 Automatically add IDs to every entry
+const locations = {};
+
+Object.keys(rawLocations).forEach(category => {
+  locations[category] = rawLocations[category].map(place => ({
+    id: slugify(place.name),
+    ...place
+  }));
+});
+
 export default locations;
