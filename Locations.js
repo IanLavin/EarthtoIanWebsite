@@ -8,24 +8,38 @@ function slugify(text) {
     .replace(/\s+/g, "-");    // spaces → hyphens
 }
 
+function generateId(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+
 const rawLocations = {
     park: [
         { 
-            name: "Yellowstone National Park", 
+            name: "Yellowstone National Park",
+            country: "US",
+            region: "Rocky Mountain",
             lat: 44.59, 
             lng: -110.55, 
             url: "https://www.nps.gov/yell/index.htm",
             img: "Pictures/Wyoming/Yellowstone/IMG_2651.jpg"
         },
         { 
-            name: "Grand Teton National Park", 
+            name: "Grand Teton National Park",
+            country: "US",
+            region: "Rocky Mountain",
             lat: 43.74, 
             lng: -110.8, 
             url: "https://en.wikipedia.org/wiki/Grand_Teton_National_Park",
             img: "Pictures/Wyoming/Grand Teton/IMG_2769.jpg"
         },
         { 
-            name: "Crater Lake National Park", 
+            name: "Crater Lake National Park",
+            country: "US",
+            region: "West Coast", 
             lat: 42.94, 
             lng: -122.10, 
             url: "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
@@ -33,6 +47,8 @@ const rawLocations = {
         },
         { 
             name: "Redwood National Park", 
+            country: "US",
+            region: "West Coast",
             lat: 41.4, 
             lng: -124.04, 
             url: "https://en.wikipedia.org/wiki/Redwood_National_and_State_Parks",
@@ -40,6 +56,8 @@ const rawLocations = {
         },
         { 
             name: "Pinnacles National Park", 
+            country: "US",
+            region: "West Coast",
             lat: 36.49, 
             lng: -121.48, 
             url: "https://en.wikipedia.org/wiki/Pinnacles_National_Park",
@@ -47,6 +65,8 @@ const rawLocations = {
         },
         { 
             name: "Death Valley National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 36.5, 
             lng: -117.05, 
             url: "https://en.wikipedia.org/wiki/Death_Valley_National_Park",
@@ -54,6 +74,8 @@ const rawLocations = {
         },
         { 
             name: "Channel Islands National Park", 
+            country: "US",
+            region: "West Coast",
             lat: 34.0, 
             lng: -119.69, 
             url: "https://en.wikipedia.org/wiki/Channel_Islands_National_Park",
@@ -61,6 +83,8 @@ const rawLocations = {
         },
         { 
             name: "Joshua Tree National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 33.87, 
             lng: -115.9, 
             url: "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
@@ -68,6 +92,8 @@ const rawLocations = {
         },
         { 
             name: "Grand Canyon National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 36.05, 
             lng: -112.14, 
             url: "https://en.wikipedia.org/wiki/Grand_Canyon",
@@ -75,6 +101,8 @@ const rawLocations = {
         },
         { 
             name: "Great Basin National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 38.98, 
             lng: -114.31, 
             url: "https://en.wikipedia.org/wiki/Great_Basin_National_Park",
@@ -82,6 +110,8 @@ const rawLocations = {
         },
         { 
             name: "Saguaro National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 32.27, 
             lng: -111.19, 
             url: "https://en.wikipedia.org/wiki/Saguaro_National_Park",
@@ -89,6 +119,8 @@ const rawLocations = {
         },
         { 
             name: "Canyonlands National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 38.3, 
             lng: -109.86, 
             url: "https://en.wikipedia.org/wiki/Canyonlands_National_Park",
@@ -96,6 +128,8 @@ const rawLocations = {
         },
         { 
             name: "Arches National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 38.73, 
             lng: -109.57, 
             url: "https://en.wikipedia.org/wiki/Arches_National_Park",
@@ -103,6 +137,8 @@ const rawLocations = {
         },
         { 
             name: "Capitol Reef National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 38.08, 
             lng: -111.13, 
             url: "https://en.wikipedia.org/wiki/Capitol_Reef_National_Park",
@@ -110,6 +146,8 @@ const rawLocations = {
         },
         { 
             name: "Bryce Canyon National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 37.61, 
             lng: -112.16, 
             url: "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
@@ -117,6 +155,8 @@ const rawLocations = {
         },
         { 
             name: "Zion National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 37.22, 
             lng: -112.96, 
             url: "https://en.wikipedia.org/wiki/Zion_National_Park",
@@ -124,6 +164,8 @@ const rawLocations = {
         },
         { 
             name: "White Sands National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 32.78, 
             lng: -106.32, 
             url: "https://en.wikipedia.org/wiki/White_Sands_National_Park",
@@ -131,6 +173,8 @@ const rawLocations = {
         },
         { 
             name: "Guadualupe Mountains National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 31.89, 
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -138,6 +182,8 @@ const rawLocations = {
         },
         { 
             name: "Great Sand Dunes National Park", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 37.74, 
             lng: -105.52, 
             url: "https://en.wikipedia.org/wiki/Great_Sand_Dunes_National_Park_and_Preserve",
@@ -145,6 +191,8 @@ const rawLocations = {
         },
         { 
             name: "Rocky Mountain National Park", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 40.30, 
             lng: -105.66, 
             url: "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
@@ -152,6 +200,8 @@ const rawLocations = {
         },
         { 
             name: "Everglades National Park", 
+            country: "US",
+            region: "Southeast",
             lat: 25.76, 
             lng: -80.77, 
             url: "https://en.wikipedia.org/wiki/Everglades_National_Park",
@@ -159,6 +209,8 @@ const rawLocations = {
         },
         { 
             name: "Biscayne National Park", 
+            country: "US",
+            region: "Southeast",
             lat: 25.49, 
             lng: -80.18, 
             url: "https://en.wikipedia.org/wiki/Biscayne_National_Park",
@@ -166,6 +218,8 @@ const rawLocations = {
         },
         { 
             name: "Dry Tortugas National Park", 
+            country: "US",
+            region: "Southeast",
             lat: 24.63, 
             lng: -82.87, 
             url: "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park",
@@ -173,6 +227,8 @@ const rawLocations = {
         },
         { 
             name: "Carlsbad Caverns National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 32.17, 
             lng: -104.44, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
@@ -180,6 +236,8 @@ const rawLocations = {
         },
         { 
             name: "Shenandoah National Park", 
+            country: "US",
+            region: "Appalachian",
             lat: 38.475, 
             lng: -78.453, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
@@ -187,6 +245,8 @@ const rawLocations = {
         },
         { 
             name: "New River Gorge National Park", 
+            country: "US",
+            region: "Appalachian",
             lat: 38.068, 
             lng: -81.082, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
@@ -194,6 +254,8 @@ const rawLocations = {
         },
         { 
             name: "Mesa Verde National Park", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 37.183, 
             lng: -108.487, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
@@ -201,6 +263,8 @@ const rawLocations = {
         },
         { 
             name: "Black Canyon of the Gunnison National Park", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 38.544, 
             lng: -107.686, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
@@ -208,6 +272,8 @@ const rawLocations = {
         },
         { 
             name: "Petrified Forest National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 35.083, 
             lng: -109.787, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
@@ -215,30 +281,38 @@ const rawLocations = {
         },
         { 
             name: "Olympic National Park", 
+            country: "US",
+            region: "West Coast",
             lat: 47.895, 
             lng: -123.934, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            url: "https://en.wikipedia.org/wiki/Olympic_National_Park",
             img: "Pictures/Washington/IMG_5671.jpg"
         },
         { 
             name: "North Cascades National Park", 
+            country: "US",
+            region: "West Coast",
             lat: 48.713, 
             lng: -121.114, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            url: "https://en.wikipedia.org/wiki/North_Cascades_National_Park",
             img: "Pictures/Washington/IMG_5839.jpg"
         },
         { 
             name: "Mount Rainier National Park", 
+            country: "US",
+            region: "West Coast",
             lat: 46.825, 
             lng: -121.760, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
+            url: "https://en.wikipedia.org/wiki/Mount_Rainier_National_Park",
             img: "Pictures/Washington/IMG_5862.jpg"
         },
         { 
             name: "Cuyahoga Valley National Park", 
+            country: "US",
+            region: "Midwest",
             lat: 41.280, 
             lng: -81.565, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            url: "https://en.wikipedia.org/wiki/Cuyahoga_Valley_National_Park",
             img: "Pictures/Ohio/IMG_6613.jpg"
         }
             
@@ -247,6 +321,8 @@ const rawLocations = {
     mountain: [
         { 
             name: "Mt. Whitney", 
+            country: "US",
+            region: "West Coast",
             lat: 36.578, 
             lng: -118.292, 
             url: "https://en.wikipedia.org/wiki/Mount_Whitney",
@@ -254,6 +330,8 @@ const rawLocations = {
         },
         { 
             name: "Mt. Elbert", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 39.117, 
             lng: -106.445, 
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
@@ -261,6 +339,8 @@ const rawLocations = {
         },
         { 
             name: "Humphreys Peak", 
+            country: "US",
+            region: "Southwest",
             lat: 35.346, 
             lng: -111.677, 
             url: "https://en.wikipedia.org/wiki/Humphreys_Peak",
@@ -268,6 +348,8 @@ const rawLocations = {
         },
         { 
             name: "Wheeler Peak", 
+            country: "US",
+            region: "Southwest",
             lat: 36.556, 
             lng: -105.416, 
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
@@ -275,6 +357,8 @@ const rawLocations = {
         },
         { 
             name: "Borah Peak", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 44.136, 
             lng: -113.78, 
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
@@ -282,6 +366,8 @@ const rawLocations = {
         },
         { 
             name: "Black Mesa", 
+            country: "US",
+            region: "Midwest",
             lat: 36.932, 
             lng: -102.997, 
             url: "https://en.wikipedia.org/wiki/Black_Mesa_(Oklahoma,_Colorado,_New_Mexico)",
@@ -289,6 +375,8 @@ const rawLocations = {
         },
         { 
             name: "Mount Sunflower", 
+            country: "US",
+            region: "Midwest",
             lat: 39.022, 
             lng: -102.037, 
             url: "https://en.wikipedia.org/wiki/Mount_Sunflower",
@@ -296,6 +384,8 @@ const rawLocations = {
         },
         { 
             name: "Panorama Point", 
+            country: "US",
+            region: "Midwest",
             lat: 41.007, 
             lng: -104.031, 
             url: "https://en.wikipedia.org/wiki/Panorama_Point",
@@ -303,6 +393,8 @@ const rawLocations = {
         },
         { 
             name: "Guadualupe Mountains National Park", 
+            country: "US",
+            region: "Southwest",
             lat: 31.89, 
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -310,6 +402,8 @@ const rawLocations = {
         },
         { 
             name: "Mt. Rogers", 
+            country: "US",
+            region: "Appalachian",
             lat: 36.659, 
             lng: -81.154, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -317,6 +411,8 @@ const rawLocations = {
         },
         { 
             name: "Black Mountain", 
+            country: "US",
+            region: "Appalachian",
             lat: 36.914, 
             lng: -82.893, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -324,6 +420,8 @@ const rawLocations = {
         },
         { 
             name: "Spruce Knob", 
+            country: "US",
+            region: "Appalachian",
             lat: 38.699, 
             lng: -79.532, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -331,6 +429,8 @@ const rawLocations = {
         },
         { 
             name: "Backbone Mountain", 
+            country: "US",
+            region: "Appalachian",
             lat: 39.237, 
             lng: -79.485, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -338,6 +438,8 @@ const rawLocations = {
         },
         { 
             name: "Mt. Davis", 
+            country: "US",
+            region: "Appalachian",
             lat: 39.786, 
             lng: -79.177, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -345,6 +447,8 @@ const rawLocations = {
         },
         { 
             name: "Ebright Azimuth", 
+            country: "US",
+            region: "Northeast",
             lat: 39.836, 
             lng: -75.52, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -352,6 +456,8 @@ const rawLocations = {
         },
         { 
             name: "High Point", 
+            country: "US",
+            region: "Northeast",
             lat: 41.321, 
             lng: -74.661, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -359,6 +465,8 @@ const rawLocations = {
         },
         { 
             name: "Mt. Frissell", 
+            country: "US",
+            region: "Northeast",
             lat: 42.051, 
             lng: -73.482, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -366,6 +474,8 @@ const rawLocations = {
         },
         { 
             name: "Mt. Greylock", 
+            country: "US",
+            region: "Northeast",
             lat: 42.637, 
             lng: -73.166, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -373,6 +483,8 @@ const rawLocations = {
         },
         { 
             name: "Jerimoth Hill", 
+            country: "US",
+            region: "Northeast",
             lat: 41.849, 
             lng: -71.779, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -380,6 +492,8 @@ const rawLocations = {
         },
         { 
             name: "Campbell Hill", 
+            country: "US",
+            region: "Midwest",
             lat: 40.370, 
             lng: -83.720, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -387,6 +501,8 @@ const rawLocations = {
         },
         { 
             name: "Hoosier Hill", 
+            country: "US",
+            region: "Midwest",
             lat: 40.001, 
             lng: -84.848, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
@@ -398,6 +514,8 @@ const rawLocations = {
     adventure: [
         { 
             name: "Whitewater Rafting", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 44.079, 
             lng: -115.658, 
             url: "https://en.wikipedia.org/wiki/Payette_River",
@@ -405,6 +523,8 @@ const rawLocations = {
         },
         { 
             name: "Antelope Canyon Kayak", 
+            country: "US",
+            region: "Southwest",
             lat: 36.939, 
             lng: -111.431, 
             url: "https://www.kayakpowell.com/",
@@ -412,6 +532,8 @@ const rawLocations = {
         },
         { 
             name: "Mt. Adams", 
+            country: "US",
+            region: "West Coast",
             lat: 46.202, 
             lng: -121.491, 
             url: "https://en.wikipedia.org/wiki/Mount_Adams_(Washington)",
@@ -419,6 +541,8 @@ const rawLocations = {
         },
         { 
             name: "Black Canyon of the Colorado River", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 35.993, 
             lng: -114.739, 
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Colorado",
@@ -426,6 +550,8 @@ const rawLocations = {
         },
         { 
             name: "La Jolla Paragliding", 
+            country: "US",
+            region: "West Coast",
             lat: 32.980, 
             lng: -117.251, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -433,6 +559,8 @@ const rawLocations = {
         },
         { 
             name: "Lower Calf Creek", 
+            country: "US",
+            region: "Southwest",
             lat: 37.829, 
             lng: -111.420, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -440,6 +568,8 @@ const rawLocations = {
         },
         { 
             name: "Sedona", 
+            country: "US",
+            region: "Southwest",
             lat: 34.869, 
             lng: -111.760, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -447,6 +577,8 @@ const rawLocations = {
         },
         { 
             name: "Pfeifferhorn", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 40.533, 
             lng: -111.706, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -454,6 +586,8 @@ const rawLocations = {
         },
         { 
             name: "Sawtooths", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 44.141, 
             lng: -115.010, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -461,6 +595,8 @@ const rawLocations = {
         },
         { 
             name: "Goat Canyon Trestle", 
+            country: "US",
+            region: "Southwest",
             lat: 32.729, 
             lng: -116.183, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -468,6 +604,8 @@ const rawLocations = {
         },
         { 
             name: "Salome Jug", 
+            country: "US",
+            region: "Southwest",
             lat: 33.770, 
             lng: -111.119, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -475,6 +613,8 @@ const rawLocations = {
         },
         { 
             name: "Buckskin Gulch", 
+            country: "US",
+            region: "Southwest",
             lat: 37.017, 
             lng: -112.001, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -482,6 +622,8 @@ const rawLocations = {
         },
         { 
             name: "Ausangate", 
+            country: "PE",
+            region: "Cusco",
             lat: -13.758, 
             lng: -71.218, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -489,6 +631,8 @@ const rawLocations = {
         },
         { 
             name: "Salkantay", 
+            country: "PE",
+            region: "Cusco",
             lat: -13.381, 
             lng: -72.584, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -496,6 +640,8 @@ const rawLocations = {
         },
         { 
             name: "Ice Lake Basin", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 37.814, 
             lng: -107.808, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -503,6 +649,8 @@ const rawLocations = {
         },
         { 
             name: "Great Barrier Reef", 
+            country: "AU",
+            region: "Queensland",
             lat: -16.73, 
             lng: 146.271, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -510,6 +658,8 @@ const rawLocations = {
         },
         { 
             name: "Wallaman Falls", 
+            country: "AU",
+            region: "Queensland",
             lat: -18.59, 
             lng: 145.802, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -520,6 +670,8 @@ const rawLocations = {
     sightseeing: [
         {
             name: "Superstitions",
+            country: "US",
+            region: "Southwest",
             lat: 33.438, 
             lng: -111.454, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -527,6 +679,8 @@ const rawLocations = {
         },
         {
             name: "Kirkham Hot Springs",
+            country: "US",
+            region: "Rocky Mountain",
             lat: 44.072, 
             lng: -115.546, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -534,6 +688,8 @@ const rawLocations = {
         },
         {
             name: "Fossil Creek",
+            country: "US",
+            region: "Southwest",
             lat: 34.145, 
             lng: -111.605, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -541,6 +697,8 @@ const rawLocations = {
         },
         { 
             name: "Pikes Peak", 
+            country: "US",
+            region: "Rocky Mountain",
             lat: 38.840, 
             lng: -105.042, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -548,6 +706,8 @@ const rawLocations = {
         },
         {
             name: "Coal Mine Canyon",
+            country: "US",
+            region: "Southwest",
             lat: 36.012, 
             lng: -110.989, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -555,6 +715,8 @@ const rawLocations = {
         },
         {
             name: "Panther Creek Falls",
+            country: "US",
+            region: "West Coast",
             lat: 45.867, 
             lng: -121.828, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -562,6 +724,8 @@ const rawLocations = {
         },
         {
             name: "Blue Heart Springs",
+            country: "US",
+            region: "Rocky Mountain",
             lat: 42.170, 
             lng: -114.829, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -569,6 +733,8 @@ const rawLocations = {
         },
         {
             name: "Donut Falls",
+            country: "US",
+            region: "Rocky Mountain",
             lat: 40.613, 
             lng: -111.654, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -576,6 +742,8 @@ const rawLocations = {
         },
         {
             name: "Imperial Sand Dunes",
+            country: "US",
+            region: "Southwest",
             lat: 32.982, 
             lng: -115.132, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -583,6 +751,8 @@ const rawLocations = {
         },
         {
             name: "Black Sands Beach",
+            country: "US",
+            region: "West Coast",
             lat: 37.824, 
             lng: -122.508, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -590,6 +760,8 @@ const rawLocations = {
         },
         {
             name: "Four Peaks",
+            country: "US",
+            region: "Southwest",
             lat: 33.684, 
             lng: -111.325, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -597,6 +769,8 @@ const rawLocations = {
         },
         {
             name: "Chiricahua National Monument",
+            country: "US",
+            region: "Southwest",
             lat: 32.008, 
             lng: -109.319, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -604,6 +778,8 @@ const rawLocations = {
         },
         {
             name: "Valley of Fire",
+            country: "US",
+            region: "Southwest",
             lat: 36.482, 
             lng: -114.552, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -611,6 +787,8 @@ const rawLocations = {
         },
         {
             name: "Grand Staircase Escalante",
+            country: "US",
+            region: "Southwest",
             lat: 37.460, 
             lng: -111.594, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -618,6 +796,8 @@ const rawLocations = {
         },
         { 
             name: "Machu Picchu", 
+            country: "PE",
+            region: "Cusco",
             lat: -13.163, 
             lng: -72.545, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -625,6 +805,8 @@ const rawLocations = {
         },
         { 
             name: "Pallay Punchu", 
+            country: "PE",
+            region: "Cusco",
             lat: -14.463, 
             lng: -71.136, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -632,6 +814,8 @@ const rawLocations = {
         },
         { 
             name: "Monument Valley", 
+            country: "US",
+            region: "Southwest",
             lat: 36.951, 
             lng: -110.082, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -639,6 +823,8 @@ const rawLocations = {
         },
         { 
             name: "Whitehaven Beach", 
+            country: "AU",
+            region: "Queensland",
             lat: -20.251, 
             lng: 149.021, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -646,6 +832,8 @@ const rawLocations = {
         },
         { 
             name: "Daintree Rainforest", 
+            country: "AU",
+            region: "Queensland",
             lat: -16.075, 
             lng: 145.469, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -653,6 +841,8 @@ const rawLocations = {
         },
         { 
             name: "Sydney Opera House", 
+            country: "AU",
+            region: "New South Wales",
             lat: -33.857, 
             lng: 151.215, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
@@ -662,14 +852,14 @@ const rawLocations = {
     ]
 };
 
-// 🔥 Automatically add IDs to every entry
 const locations = {};
 
-Object.keys(rawLocations).forEach(category => {
-  locations[category] = rawLocations[category].map(place => ({
-    id: slugify(place.name),
-    ...place
+Object.entries(rawLocations).forEach(([category, places]) => {
+  locations[category] = places.map(place => ({
+    ...place,
+    id: generateId(place.name)
   }));
 });
 
 export default locations;
+

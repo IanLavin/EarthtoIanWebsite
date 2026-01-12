@@ -52,22 +52,23 @@ var markerLayers = {
 function loadMarkers() {
   Object.keys(locations).forEach(category => {
     locations[category].forEach(place => {
-      const marker = L.marker([place.lat, place.lng], {
-        icon: icons[category]
-      }).bindPopup(`
-        <b>${place.name}</b><br>
-        <a href="location.html?id=${place.id}">
-          <img 
-            src="${place.img}"
-            alt="${place.name}"
-            width="200"
-            class="popup-image"
-            onerror="this.onerror=null; this.src='fallback.jpg';"
-          >
-        </a>
-        <br>
-        <i>${category}</i>
-      `);
+        const marker = L.marker([place.lat, place.lng], {
+            icon: icons[category]
+        }).bindPopup(`
+            <b>${place.name}</b><br>
+            <a href="country.html?country=${place.country}">
+                <img 
+                    src="${place.img}"
+                    alt="${place.name}"
+                    width="200"
+                    class="popup-image"
+                    onerror="this.onerror=null; this.src='fallback.jpg';"
+                >
+            </a>
+            <br>
+            <i>${place.country} • ${place.region ?? ""}</i>
+        `);
+
 
       markerLayers[category].addLayer(marker);
 

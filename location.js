@@ -1,4 +1,6 @@
 import locations from "./Locations.js";
+import { initCarousel } from "./js/carousel.js";
+
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
@@ -23,3 +25,5 @@ const itineraryEl = document.getElementById("itinerary");
   li.textContent = item;
   itineraryEl.appendChild(li);
 });
+
+initCarousel("location-carousel", location.gallery);
