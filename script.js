@@ -1,157 +1,194 @@
 import locations from './Locations.js';
 import icons from './icons.js';
 
-// Default map center (USA)
-var defaultLocation = [37.0902, -95.7129];
+/* =====================
+   CONFIG
+===================== */
 
-// Define the default map view (center and zoom level)
-const defaultView = {
-    center: [35.8283, -95.5795], // Center of the USA (or your preferred location)
-    zoom: 5
+const DEFAULT_VIEW = { center: [35.8283, -95.5795], zoom: 5 };
+const WORLD_VIEW   = { center: [10.8283, -9.5795], zoom: 2 };
+
+const CATEGORIES = ['park', 'mountain', 'adventure', 'sightseeing'];
+
+/* =====================
+   MAP SETUP
+===================== */
+
+const map = L.map('map').setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
+
+L.tileLayer(
+  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+  { attribution: '&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics' }
+).addTo(map);
+
+/* =====================
+   DOM REFERENCES
+===================== */
+
+const locationLists = {
+  park: document.getElementById('parks-list'),
+  mountain: document.getElementById('highpoints-list'),
+  adventure: document.getElementById('adventures-list'),
+  sightseeing: document.getElementById('sightseeing-list')
 };
 
-// Define the default map view (center and zoom level)
-const worldView = {
-    center: [10.8283, -9.5795], // Center of the USA (or your preferred location)
-    zoom: 2
+const checkboxes = {
+  park: document.getElementById('toggleParks'),
+  mountain: document.getElementById('toggleHighpoints'),
+  adventure: document.getElementById('toggleAdventures'),
+  sightseeing: document.getElementById('toggleSightseeing')
 };
 
-// Initialize the map
-var map = L.map('map').setView(defaultLocation, 5);
+/* =====================
+   MARKER LAYERS
+===================== */
 
-// Load and display the satellite tile layer (Esri)
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: '&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics'
-}).addTo(map);
+const markerLayers = Object.fromEntries(
+  CATEGORIES.map(cat => [cat, L.layerGroup().addTo(map)])
+);
 
-// Sidebar reference
-var locationList = {
-    park: document.getElementById("parks-list"),
-    mountain: document.getElementById("highpoints-list"),
-    adventure: document.getElementById("adventures-list"),
-    sightseeing: document.getElementById("sightseeing-list")
-};
+/* =====================
+   HELPERS
+===================== */
 
-// Checkboxes for toggling
-var checkboxes = {
-    park: document.getElementById("toggleParks"),
-    mountain: document.getElementById("toggleHighpoints"),
-    adventure: document.getElementById("toggleAdventures"),
-    sightseeing: document.getElementById("toggleSightseeing")
-};
+function createPopup(place, category) {
+  return `
+    <div class="popup">
+      <b>${place.name}</b><br>
+      <a href="country.html?country=${place.country}">
+        <img
+          src="${place.img}"
+          alt="${place.name}"
+          width="200"
+          class="popup-image"
+          onerror="this.onerror=null; this.src='fallback.jpg';"
+        >
+      </a>
+      <br>
+      <i>${place.country} • ${place.region ?? category}</i>
+    </div>
+  `;
+}
 
-// Marker layers using LayerGroups
-var markerLayers = { 
-    park: L.layerGroup().addTo(map), 
-    mountain: L.layerGroup().addTo(map), 
-    adventure: L.layerGroup().addTo(map), 
-    sightseeing: L.layerGroup().addTo(map) 
+function createListItem(place, marker) {
+  const li = document.createElement('li');
+  li.textContent = place.name;
+  li.addEventListener('click', () => {
+    map.setView([place.lat, place.lng], 12);
+    marker.openPopup();
+  });
+  return li;
+}
 
-};
+/* =====================
+   LOAD MARKERS
+===================== */
 
 function loadMarkers() {
-  Object.keys(locations).forEach(category => {
+  CATEGORIES.forEach(category => {
     locations[category].forEach(place => {
-        const marker = L.marker([place.lat, place.lng], {
-            icon: icons[category]
-        }).bindPopup(`
-            <b>${place.name}</b><br>
-            <a href="country.html?country=${place.country}">
-                <img 
-                    src="${place.img}"
-                    alt="${place.name}"
-                    width="200"
-                    class="popup-image"
-                    onerror="this.onerror=null; this.src='fallback.jpg';"
-                >
-            </a>
-            <br>
-            <i>${place.country} • ${place.region ?? ""}</i>
-        `);
+      const marker = L.marker([place.lat, place.lng], {
+        icon: icons[category]
+      }).bindPopup(`
+  <div class="popup">
+    <h3>${place.name}</h3>
+
+    <!-- Location page -->
+    <a href="location.html?id=${place.id}">
+      <img
+        src="${place.img}"
+        alt="${place.name}"
+        width="200"
+        class="popup-image"
+        onerror="this.onerror=null; this.src='fallback.jpg';"
+      />
+    </a>
+
+    <div class="popup-meta">
+      <span>${place.region ?? ""}</span>
+    </div>
+
+    <!-- Country page -->
+    <a
+      class="country-link"
+      href="country.html?country=${place.country}"
+      title="View all locations in this country"
+    >
+      🌍 ${place.country}
+    </a>
+  </div>
+`);
 
 
       markerLayers[category].addLayer(marker);
-
-      const listItem = document.createElement("li");
-      listItem.textContent = place.name;
-      listItem.onclick = () => {
-        map.setView([place.lat, place.lng], 12);
-        marker.openPopup();
-      };
-
-      locationList[category].appendChild(listItem);
+      locationLists[category].appendChild(createListItem(place, marker));
     });
   });
 }
 
+/* =====================
+   UI CONTROLS
+===================== */
 
-// Toggle visibility using LayerGroups (more efficient)
-function toggleLocations() {
-    Object.keys(markerLayers).forEach(category => {
-        if (checkboxes[category].checked) {
-            map.addLayer(markerLayers[category]);
-        } else {
-            map.removeLayer(markerLayers[category]);
-        }
-    });
+function toggleCategories() {
+  CATEGORIES.forEach(cat => {
+    map[checkboxes[cat].checked ? 'addLayer' : 'removeLayer'](markerLayers[cat]);
+  });
 }
 
-// Add event listener to the home button
-document.getElementById("homeButton").addEventListener("click", function () {
-    map.setView(defaultView.center, defaultView.zoom);
-});
+document.getElementById('filter-container')
+  .addEventListener('change', e => e.target.type === 'checkbox' && toggleCategories());
 
-// Add event listener to the home button
-document.getElementById("worldButton").addEventListener("click", function () {
-    map.setView(worldView.center, worldView.zoom);
-});
+document.getElementById('homeButton')
+  .addEventListener('click', () => map.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom));
 
-// Debounced Search filter logic
-function debounce(fn, delay) {
-    let timeout;
-    return function (...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => fn.apply(this, args), delay);
-    };
+document.getElementById('worldButton')
+  .addEventListener('click', () => map.setView(WORLD_VIEW.center, WORLD_VIEW.zoom));
+
+/* =====================
+   SEARCH
+===================== */
+
+function debounce(fn, delay = 300) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
 }
 
-document.getElementById('searchBox').addEventListener('input', debounce(function(event) {
-    var searchTerm = event.target.value.toLowerCase();
-    
-    Object.keys(locationList).forEach(category => {
-        var items = locationList[category].getElementsByTagName('li');
-        Array.from(items).forEach(item => {
-            var text = item.textContent.toLowerCase();
-            item.style.display = text.includes(searchTerm) ? '' : 'none';
-        });
+document.getElementById('searchBox').addEventListener(
+  'input',
+  debounce(e => {
+    const term = e.target.value.toLowerCase();
+    CATEGORIES.forEach(cat => {
+      [...locationLists[cat].children].forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(term) ? '' : 'none';
+      });
     });
-}, 300));  // 300ms debounce delay
+  })
+);
 
-// Initialize everything
-loadMarkers();
+/* =====================
+   RANDOM LOCATION
+===================== */
 
-document.getElementById("filter-container").addEventListener("change", (event) => {
-    if (event.target.type === "checkbox") {
-        toggleLocations();
-    }
-});
-
-
-// Precompute all locations into a flat array
 const allLocations = Object.values(locations).flat();
 
 function showRandomLocation() {
-    const randomLocation = allLocations[Math.floor(Math.random() * allLocations.length)];
-    
-    document.getElementById("random-location-name").textContent = randomLocation.name;
-    const imgElement = document.getElementById("random-location-img");
-    imgElement.src = randomLocation.img;
-    imgElement.onerror = () => { imgElement.src = 'fallback.jpg'; };
+  const loc = allLocations[Math.floor(Math.random() * allLocations.length)];
+  document.getElementById('random-location-name').textContent = loc.name;
+
+  const img = document.getElementById('random-location-img');
+  img.src = loc.img;
+  img.onerror = () => (img.src = 'fallback.jpg');
 }
 
-
-// Call the function to display a random location every 10 seconds
 setInterval(showRandomLocation, 10000);
 
-// Initialize by showing a random location immediately
+/* =====================
+   INIT
+===================== */
+
+loadMarkers();
 showRandomLocation();

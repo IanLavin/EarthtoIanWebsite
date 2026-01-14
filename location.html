@@ -2,27 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Location Details</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <a href="index.html">← Back to Map</a>
+  <nav class="page-nav">
+    <a href="index.html">← Back to Map</a>
+  </nav>
 
-  <h1 id="location-title"></h1>
+  <main class="location-page">
 
-  <img id="hero-image" style="max-width:600px;border-radius:10px;" />
+    <header class="location-header">
+      <h1 id="location-title"></h1>
 
-  <p id="description"></p>
+      <img
+        id="hero-image"
+        class="location-hero"
+        alt=""
+      />
+    </header>
 
-  <div id="location-carousel" class="carousel"></div>
+    <section class="location-description">
+      <p id="description"></p>
+    </section>
 
+    <section class="location-carousel-section">
+      <div id="location-carousel" class="carousel"></div>
+    </section>
+
+    <section class="location-itinerary">
+      <h2>Itinerary</h2>
+      <ul id="itinerary"></ul>
+    </section>
+
+    <section class="location-journal">
+      <h2>Journal</h2>
+      <div id="journal-container"></div>
+    </section>
+
+
+  </main>
+
+  <!-- Load once, at the end -->
   <script type="module" src="location.js"></script>
 
-
-  <h2>Itinerary</h2>
-  <ul id="itinerary"></ul>
-
-  <script type="module" src="location.js"></script>
 </body>
 </html>

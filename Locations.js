@@ -857,9 +857,11 @@ const locations = {};
 Object.entries(rawLocations).forEach(([category, places]) => {
   locations[category] = places.map(place => ({
     ...place,
+    category,          
     id: generateId(place.name)
   }));
 });
+
 
 export default locations;
 
