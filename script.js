@@ -1,4 +1,4 @@
-import locations from './Locations.js';
+import locations from './locations-data.js';
 import icons from './icons.js';
 
 /* =====================

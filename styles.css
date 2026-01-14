@@ -169,6 +169,19 @@ h1 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
+/* Make markers feel interactive */
+.leaflet-marker-icon {
+  transition: transform 0.15s ease, filter 0.15s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.leaflet-marker-icon:hover {
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  z-index: 1000;
+}
+
 
 #random-location {
     position: fixed;

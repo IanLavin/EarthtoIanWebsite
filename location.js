@@ -1,4 +1,4 @@
-import locations from "./Locations.js";
+import locations from "./locations-data.js";
 import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 
