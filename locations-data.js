@@ -25,7 +25,23 @@ const rawLocations = {
             lat: 44.59, 
             lng: -110.55, 
             url: "https://www.nps.gov/yell/index.htm",
-            img: "Pictures/Wyoming/Yellowstone/IMG_2651.jpg"
+            img: "Pictures/Wyoming/Yellowstone/IMG_2651.jpg",
+
+            // NEW: carousel images
+            gallery: [
+            "IMG_2521.jpg",
+            "IMG_2532.jpg",
+            "IMG_2542.jpg",
+            "IMG_2561.jpg",
+            "IMG_2592.jpg",
+            "IMG_2614.jpg",
+            "IMG_2651.jpg",
+            "IMG_2669.jpg",
+            "IMG_2677.jpg",
+            "IMG_2704.jpg",
+            "IMG_2707.jpg",
+            "IMG_2838.jpg"          
+            ].map(f => `Pictures/Wyoming/Yellowstone/${f}`)
         },
         { 
             name: "Grand Teton National Park",

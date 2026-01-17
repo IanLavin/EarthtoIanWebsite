@@ -21,6 +21,12 @@ if (!selectedLocation) {
 // Basic page content
 // -------------------------
 document.getElementById("location-title").textContent = selectedLocation.name;
+const subtitleEl = document.getElementById("location-subtitle");
+if (subtitleEl) {
+  const parts = [selectedLocation.region, selectedLocation.country].filter(Boolean);
+  subtitleEl.textContent = parts.join(" • ");
+}
+
 
 const heroImg = document.getElementById("hero-image");
 heroImg.src = selectedLocation.img;
@@ -67,6 +73,17 @@ if (selectedLocation.category !== "mountain" || !journal) {
 // -------------------------
 // Image carousel
 // -------------------------
-if (selectedLocation.gallery?.length) {
-  initCarousel("location-carousel", selectedLocation.gallery);
+const gallery =
+  Array.isArray(selectedLocation.gallery) && selectedLocation.gallery.length
+    ? selectedLocation.gallery
+    : selectedLocation.img
+      ? [selectedLocation.img]
+      : [];
+
+if (gallery.length) {
+  initCarousel("location-carousel", gallery);
+} else {
+  // No images at all → remove the section
+  document.querySelector(".location-carousel-section")?.remove();
 }
+

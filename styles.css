@@ -382,3 +382,163 @@ h1 {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+
+/* Carousel container on location page */
+.location-carousel-section {
+  margin: 20px 0;
+}
+
+.carousel {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Carousel image: show full photo without cropping */
+.carousel-inner,
+.carousel {
+  width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  background: #111;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  #location-carousel img,
+  #location-carousel .carousel-img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .carousel-img { height: 240px; }
+}
+
+/* Never crop carousel images */
+#location-carousel img,
+#location-carousel .carousel-img {
+  width: 100%;
+  height: 520px;        /* adjust if you want taller/shorter */
+  object-fit: contain;  /* IMPORTANT: show whole image */
+  object-position: center;
+  background: #111;     /* letterbox background */
+  display: block;
+}
+
+
+
+/* -------------------------
+   Location page layout
+------------------------- */
+
+.location-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Banner across the top */
+.location-banner {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+  margin-bottom: 16px;
+}
+
+/* Small image in top-left */
+.location-thumb {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgba(0,0,0,0.08);
+}
+
+/* Title block */
+.banner-title h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.location-subtitle {
+  margin: 6px 0 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Two-column split */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* carousel bigger than writing */
+  gap: 16px;
+  align-items: start;
+}
+
+/* Left column */
+.location-media {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Right column */
+.location-writing {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+}
+
+.location-writing section + section {
+  margin-top: 16px;
+}
+
+.location-writing h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(0,0,0,0.08);
+  padding-bottom: 6px;
+}
+
+/* Journal content styling (HTML content option) */
+.journal-entry p {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.journal-entry h3 {
+  margin: 18px 0 8px;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 900px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-banner {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .location-thumb {
+    width: 72px;
+    height: 72px;
+  }
+
+  .banner-title h1 {
+    font-size: 24px;
+  }
+}

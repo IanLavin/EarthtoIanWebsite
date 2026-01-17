@@ -15,36 +15,52 @@
 
   <main class="location-page">
 
-    <header class="location-header">
+  <!-- Top banner -->
+  <header class="location-banner">
+    <div class="banner-left">
+      <img id="hero-image" class="location-thumb" alt="" />
+    </div>
+
+    <div class="banner-title">
       <h1 id="location-title"></h1>
+      <p id="location-subtitle" class="location-subtitle"></p>
+    </div>
+  </header>
 
-      <img
-        id="hero-image"
-        class="location-hero"
-        alt=""
-      />
-    </header>
+  <!-- Two-column layout -->
+  <section class="location-grid">
 
-    <section class="location-description">
-      <p id="description"></p>
-    </section>
+    <div class="location-media">
+  <div id="location-carousel" class="carousel"></div>
 
-    <section class="location-carousel-section">
-      <div id="location-carousel" class="carousel"></div>
-    </section>
+  <!-- Journal under carousel -->
+  <section class="location-journal">
+    <h2>Journal</h2>
+    <div id="journal-container"></div>
+  </section>
+  </div>
 
-    <section class="location-itinerary">
-      <h2>Itinerary</h2>
-      <ul id="itinerary"></ul>
-    </section>
+  <div class="location-writing">
+  <section class="location-description">
+    <h2>Overview</h2>
+    <p id="description"></p>
+  </section>
 
-    <section class="location-journal">
-      <h2>Journal</h2>
-      <div id="journal-container"></div>
-    </section>
+  <section class="location-itinerary">
+    <h2>Itinerary</h2>
+    <ul id="itinerary"></ul>
+  </section>
+
+  <section class="location-notes">
+    <h2>Notes</h2>
+    <div id="notes-container"></div>
+  </section>
+  </div>
 
 
+  </section>
   </main>
+
 
   <!-- Load once, at the end -->
   <script type="module" src="location.js"></script>
