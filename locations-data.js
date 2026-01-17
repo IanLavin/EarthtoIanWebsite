@@ -27,7 +27,7 @@ const rawLocations = {
             url: "https://www.nps.gov/yell/index.htm",
             img: "Pictures/Wyoming/Yellowstone/IMG_2651.jpg",
 
-            // NEW: carousel images
+            //carousel images
             gallery: [
             "IMG_2521.jpg",
             "IMG_2532.jpg",
@@ -42,6 +42,7 @@ const rawLocations = {
             "IMG_2707.jpg",
             "IMG_2838.jpg"          
             ].map(f => `Pictures/Wyoming/Yellowstone/${f}`)
+            
         },
         { 
             name: "Grand Teton National Park",
@@ -50,7 +51,20 @@ const rawLocations = {
             lat: 43.74, 
             lng: -110.8, 
             url: "https://en.wikipedia.org/wiki/Grand_Teton_National_Park",
-            img: "Pictures/Wyoming/Grand Teton/IMG_2769.jpg"
+            img: "Pictures/Wyoming/Grand_Teton/IMG_2769.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_2504.jpg",
+            "IMG_2720.jpg",
+            "IMG_2735.jpg",
+            "IMG_2769.jpg",
+            "IMG_2831.jpg",
+            "IMG_2833.jpg",
+            "IMG_2837.jpg",
+            "IMG_2842.jpg",
+            "IMG_2845.jpg"          
+            ].map(f => `Pictures/Wyoming/Grand_Teton/${f}`)
         },
         { 
             name: "Crater Lake National Park",
@@ -59,7 +73,13 @@ const rawLocations = {
             lat: 42.94, 
             lng: -122.10, 
             url: "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
-            img: "Pictures/Oregon/IMG_5284.jpg"
+            img: "Pictures/Oregon/IMG_5284.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0117.jpg",
+            "IMG_5284.jpg"          
+            ].map(f => `Pictures/Oregon/${f}`)
         },
         { 
             name: "Redwood National Park", 
@@ -68,7 +88,14 @@ const rawLocations = {
             lat: 41.4, 
             lng: -124.04, 
             url: "https://en.wikipedia.org/wiki/Redwood_National_and_State_Parks",
-            img: "Pictures/California/Redwoods/IMG_0033.JPG"
+            img: "Pictures/California/Redwoods/IMG_0033.JPG",
+
+            //carousel images
+            gallery: [
+            "IMG_0033.jpg",
+            "IMG_0374.jpg",
+            "IMG_5260.jpg"          
+            ].map(f => `Pictures/California/Redwoods/${f}`)
         },
         { 
             name: "Pinnacles National Park", 
@@ -77,7 +104,15 @@ const rawLocations = {
             lat: 36.49, 
             lng: -121.48, 
             url: "https://en.wikipedia.org/wiki/Pinnacles_National_Park",
-            img: "Pictures/California/Pinnacles/IMG_7520.jpg"
+            img: "Pictures/California/Pinnacles/IMG_7520.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_7520.jpg",
+            "IMG_7542.jpg",
+            "IMG_7550.jpg",
+            "IMG_7559.jpg"        
+            ].map(f => `Pictures/California/Pinnacles/${f}`)
         },
         { 
             name: "Death Valley National Park", 
@@ -86,7 +121,15 @@ const rawLocations = {
             lat: 36.5, 
             lng: -117.05, 
             url: "https://en.wikipedia.org/wiki/Death_Valley_National_Park",
-            img: "Pictures/California/Death Valley/IMG_2337.jpg"
+            img: "Pictures/California/Death_Valley/IMG_2337.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_2337.jpg",
+            "IMG_2356.jpg",
+            "IMG_2381.jpg",
+            "IMG_2386.jpg"        
+            ].map(f => `Pictures/California/Death_Valley/${f}`)
         },
         { 
             name: "Channel Islands National Park", 
@@ -95,7 +138,14 @@ const rawLocations = {
             lat: 34.0, 
             lng: -119.69, 
             url: "https://en.wikipedia.org/wiki/Channel_Islands_National_Park",
-            img: "Pictures/California/Channel Islands/IMG_0669.jpg"
+            img: "Pictures/California/Channel_Islands/IMG_0669.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0659.jpg",
+            "IMG_0669.jpg",
+            "IMG_0702.jpg"        
+            ].map(f => `Pictures/California/Channel_Islands/${f}`)
         },
         { 
             name: "Joshua Tree National Park", 
@@ -104,7 +154,14 @@ const rawLocations = {
             lat: 33.87, 
             lng: -115.9, 
             url: "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
-            img: "Pictures/California/Joshua Tree/IMG_8823.jpg"
+            img: "Pictures/California/Joshua_Tree/IMG_8823.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_8823.jpg",
+            "IMG_8837.jpg",
+            "IMG_8850.jpg"       
+            ].map(f => `Pictures/California/Joshua_Tree/${f}`)
         },
         { 
             name: "Grand Canyon National Park", 
@@ -113,7 +170,21 @@ const rawLocations = {
             lat: 36.05, 
             lng: -112.14, 
             url: "https://en.wikipedia.org/wiki/Grand_Canyon",
-            img: "Pictures/Arizona/Grand Canyon/Grand_Canyon.jpg"
+            img: "Pictures/Arizona/Grand_Canyon/Grand_Canyon.jpg",
+
+            //carousel images
+            gallery: [
+            "Grand_Canyon.jpg",
+            "IMG_0726.jpg",
+            "IMG_0743.jpg",
+            "IMG_0744.jpg",
+            "IMG_0745.jpg",
+            "IMG_0765.jpg",
+            "IMG_0797.jpg",
+            "IMG_7904.jpg",
+            "IMG_7953.jpg",
+            "IMG_9774.jpg"        
+            ].map(f => `Pictures/Arizona/Grand_Canyon/${f}`)
         },
         { 
             name: "Great Basin National Park", 
@@ -122,7 +193,16 @@ const rawLocations = {
             lat: 38.98, 
             lng: -114.31, 
             url: "https://en.wikipedia.org/wiki/Great_Basin_National_Park",
-            img: "Pictures/Nevada/Great Basin/IMG_1194.jpg"
+            img: "Pictures/Nevada/Great Basin/IMG_1194.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1194.jpg",
+            "IMG_1196.jpg",
+            "IMG_1200.jpg",
+            "IMG_1209.jpg",
+            "IMG_1220.jpg"       
+            ].map(f => `Pictures/Nevada/Great Basin/${f}`)
         },
         { 
             name: "Saguaro National Park", 
@@ -140,7 +220,13 @@ const rawLocations = {
             lat: 38.3, 
             lng: -109.86, 
             url: "https://en.wikipedia.org/wiki/Canyonlands_National_Park",
-            img: "Pictures/Utah/Canyonlands/IMG_1847.jpg"
+            img: "Pictures/Utah/Canyonlands/IMG_1847.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1836.jpg",
+            "IMG_1847.jpg"       
+            ].map(f => `Pictures/Utah/Canyonlands/${f}`)
         },
         { 
             name: "Arches National Park", 
@@ -149,7 +235,16 @@ const rawLocations = {
             lat: 38.73, 
             lng: -109.57, 
             url: "https://en.wikipedia.org/wiki/Arches_National_Park",
-            img: "Pictures/Utah/Arches/IMG_1782.jpg"
+            img: "Pictures/Utah/Arches/IMG_1782.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1664.jpg",
+            "IMG_1669.jpg",
+            "IMG_1690.jpg",
+            "IMG_1782.jpg",
+            "IMG_2127.jpg"       
+            ].map(f => `Pictures/Utah/Arches/${f}`)
         },
         { 
             name: "Capitol Reef National Park", 
@@ -167,7 +262,15 @@ const rawLocations = {
             lat: 37.61, 
             lng: -112.16, 
             url: "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
-            img: "Pictures/Utah/Bryce/IMG_1915.jpg"
+            img: "Pictures/Utah/Bryce/IMG_1915.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1915.jpg",
+            "IMG_1916.jpg",
+            "IMG_1926.jpg",
+            "IMG_1981.jpg"       
+            ].map(f => `Pictures/Utah/Bryce/${f}`)
         },
         { 
             name: "Zion National Park", 
@@ -176,7 +279,14 @@ const rawLocations = {
             lat: 37.22, 
             lng: -112.96, 
             url: "https://en.wikipedia.org/wiki/Zion_National_Park",
-            img: "Pictures/Utah/Zion/IMG_2019.jpg"
+            img: "Pictures/Utah/Zion/IMG_2019.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_2019.jpg",
+            "IMG_2022.jpg",
+            "IMG_4011.jpg"       
+            ].map(f => `Pictures/Utah/Zion/${f}`)
         },
         { 
             name: "White Sands National Park", 
@@ -212,7 +322,14 @@ const rawLocations = {
             lat: 40.30, 
             lng: -105.66, 
             url: "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
-            img: "Pictures/Colorado/Rocky Mountain/IMG_9406.jpg"
+            img: "Pictures/Colorado/Rocky_Mountain/IMG_9406.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_9005.jpg",
+            "IMG_9387.jpg",
+            "IMG_9406.jpg"      
+            ].map(f => `Pictures/Colorado/Rocky_Mountain/${f}`)
         },
         { 
             name: "Everglades National Park", 
@@ -342,7 +459,15 @@ const rawLocations = {
             lat: 36.578, 
             lng: -118.292, 
             url: "https://en.wikipedia.org/wiki/Mount_Whitney",
-            img: "Pictures/California/Whitney/IMG_8933.jpg"
+            img: "Pictures/California/Whitney/IMG_8933.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_8933.jpg",
+            "IMG_8989.jpg",
+            "IMG_9003.jpg",
+            "IMG_9040.jpg"    
+            ].map(f => `Pictures/California/Whitney/${f}`)
         },
         { 
             name: "Mt. Elbert", 
@@ -360,7 +485,14 @@ const rawLocations = {
             lat: 35.346, 
             lng: -111.677, 
             url: "https://en.wikipedia.org/wiki/Humphreys_Peak",
-            img: "Pictures/Arizona/Humphreys/IMG_6070.jpg"
+            img: "Pictures/Arizona/Humphreys/IMG_6070.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6020.jpg",
+            "IMG_6046.jpg",
+            "IMG_6070.jpg"    
+            ].map(f => `Pictures/Arizona/Humphreys/${f}`)
         },
         { 
             name: "Wheeler Peak", 
