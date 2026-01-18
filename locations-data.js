@@ -211,7 +211,12 @@ const rawLocations = {
             lat: 32.27, 
             lng: -111.19, 
             url: "https://en.wikipedia.org/wiki/Saguaro_National_Park",
-            img: "Pictures/Arizona/IMG_8402.jpg"
+            img: "Pictures/Arizona/Saguaro/IMG_8402.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_8402.jpg"     
+            ].map(f => `Pictures/Arizona/Saguaro/${f}`)
         },
         { 
             name: "Canyonlands National Park", 
@@ -253,7 +258,12 @@ const rawLocations = {
             lat: 38.08, 
             lng: -111.13, 
             url: "https://en.wikipedia.org/wiki/Capitol_Reef_National_Park",
-            img: "Pictures/Utah/Capitol Reef/IMG_3702.jpg"
+            img: "Pictures/Utah/Capitol_Reef/IMG_3702.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3702.jpg"       
+            ].map(f => `Pictures/Utah/Capitol_Reef/${f}`)
         },
         { 
             name: "Bryce Canyon National Park", 
@@ -295,16 +305,27 @@ const rawLocations = {
             lat: 32.78, 
             lng: -106.32, 
             url: "https://en.wikipedia.org/wiki/White_Sands_National_Park",
-            img: "Pictures/New Mexico/IMG_8276.jpg"
+            img: "Pictures/New Mexico/White_Sands/IMG_8276.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_8276.jpg"    
+            ].map(f => `Pictures/New Mexico/White_Sands/${f}`)
         },
         { 
-            name: "Guadualupe Mountains National Park", 
+            name: "Guadalupe Mountains National Park", 
             country: "US",
             region: "Southwest",
             lat: 31.89, 
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_7818.jpg",
+            "IMG_8216.jpg"       
+            ].map(f => `Pictures/Texas/Guadalupe/${f}`)
         },
         { 
             name: "Great Sand Dunes National Park", 
@@ -313,7 +334,14 @@ const rawLocations = {
             lat: 37.74, 
             lng: -105.52, 
             url: "https://en.wikipedia.org/wiki/Great_Sand_Dunes_National_Park_and_Preserve",
-            img: "Pictures/Colorado/IMG_0979.jpg"
+            img: "Pictures/Colorado/Great_Dunes/IMG_0979.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0975.jpg",
+            "IMG_0979.jpg",
+            "IMG_3844.jpg"       
+            ].map(f => `Pictures/Colorado/Great_Dunes/${f}`)
         },
         { 
             name: "Rocky Mountain National Park", 
@@ -338,7 +366,12 @@ const rawLocations = {
             lat: 25.76, 
             lng: -80.77, 
             url: "https://en.wikipedia.org/wiki/Everglades_National_Park",
-            img: "Pictures/Florida/IMG_3699.JPG"
+            img: "Pictures/Florida/Everglades/IMG_3699.JPG",
+
+            //carousel images
+            gallery: [
+            "IMG_3699.jpg"    
+            ].map(f => `Pictures/Florida/Everglades/${f}`)
         },
         { 
             name: "Biscayne National Park", 
@@ -347,7 +380,12 @@ const rawLocations = {
             lat: 25.49, 
             lng: -80.18, 
             url: "https://en.wikipedia.org/wiki/Biscayne_National_Park",
-            img: "Pictures/Florida/IMG_0501.jpg"
+            img: "Pictures/Florida/Biscayne/IMG_0501.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0501.jpg"    
+            ].map(f => `Pictures/Florida/Biscayne/${f}`)
         },
         { 
             name: "Dry Tortugas National Park", 
@@ -356,7 +394,17 @@ const rawLocations = {
             lat: 24.63, 
             lng: -82.87, 
             url: "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park",
-            img: "Pictures/Florida/IMG_0540.jpg"
+            img: "Pictures/Florida/Dry_Tortugas/IMG_0540.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0223.jpg",
+            "IMG_0526.jpg",
+            "IMG_0536.jpg",
+            "IMG_0540.jpg",
+            "IMG_0551.jpg",
+            "IMG_3836.jpg"    
+            ].map(f => `Pictures/Florida/Dry_Tortugas/${f}`)
         },
         { 
             name: "Carlsbad Caverns National Park", 
@@ -365,7 +413,13 @@ const rawLocations = {
             lat: 32.17, 
             lng: -104.44, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/New Mexico/IMG_7821.jpg"
+            img: "Pictures/New Mexico/Carlsbad/IMG_7821.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_7821.jpg",
+            "IMG_8157.jpg"       
+            ].map(f => `Pictures/New Mexico/Carlsbad/${f}`)
         },
         { 
             name: "Shenandoah National Park", 
@@ -373,8 +427,13 @@ const rawLocations = {
             region: "Appalachian",
             lat: 38.475, 
             lng: -78.453, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Virginia/IMG_4318.jpg"
+            url: "https://en.wikipedia.org/wiki/Shenandoah_National_Park",
+            img: "Pictures/Virginia/Shenandoah/IMG_4318.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4318.jpg"    
+            ].map(f => `Pictures/Virginia/Shenandoah/${f}`)
         },
         { 
             name: "New River Gorge National Park", 
@@ -382,8 +441,13 @@ const rawLocations = {
             region: "Appalachian",
             lat: 38.068, 
             lng: -81.082, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/West Virginia/IMG_4323.jpg"
+            url: "https://en.wikipedia.org/wiki/New_River_Gorge_National_Park",
+            img: "Pictures/West Virginia/New_River/IMG_4323.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4323.jpg"    
+            ].map(f => `Pictures/West Virginia/New_River/${f}`)
         },
         { 
             name: "Mesa Verde National Park", 
@@ -391,8 +455,13 @@ const rawLocations = {
             region: "Rocky Mountain",
             lat: 37.183, 
             lng: -108.487, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Colorado/IMG_5322.jpg"
+            url: "https://en.wikipedia.org/wiki/Mesa_Verde_National_Park",
+            img: "Pictures/Colorado/Mesa_Verde/IMG_5322.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5322.jpg"
+            ].map(f => `Pictures/Colorado/Mesa_Verde/${f}`)
         },
         { 
             name: "Black Canyon of the Gunnison National Park", 
@@ -400,8 +469,13 @@ const rawLocations = {
             region: "Rocky Mountain",
             lat: 38.544, 
             lng: -107.686, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Colorado/IMG_5380.jpg"
+            url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Gunnison_National_Park",
+            img: "Pictures/Colorado/Black_Canyon/IMG_5380.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5380.jpg"    
+            ].map(f => `Pictures/Colorado/Black_Canyon/${f}`)
         },
         { 
             name: "Petrified Forest National Park", 
@@ -409,8 +483,13 @@ const rawLocations = {
             region: "Southwest",
             lat: 35.083, 
             lng: -109.787, 
-            url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
-            img: "Pictures/Arizona/IMG_5506.jpg"
+            url: "https://en.wikipedia.org/wiki/Petrified_Forest_National_Park",
+            img: "Pictures/Arizona/Petrified/IMG_5506.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5506.jpg"    
+            ].map(f => `Pictures/Arizona/Petrified/${f}`)
         },
         { 
             name: "Olympic National Park", 
@@ -419,7 +498,12 @@ const rawLocations = {
             lat: 47.895, 
             lng: -123.934, 
             url: "https://en.wikipedia.org/wiki/Olympic_National_Park",
-            img: "Pictures/Washington/IMG_5671.jpg"
+            img: "Pictures/Washington/Olympic/IMG_5671.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5671.jpg"    
+            ].map(f => `Pictures/Washington/Olympic/${f}`)
         },
         { 
             name: "North Cascades National Park", 
@@ -428,7 +512,12 @@ const rawLocations = {
             lat: 48.713, 
             lng: -121.114, 
             url: "https://en.wikipedia.org/wiki/North_Cascades_National_Park",
-            img: "Pictures/Washington/IMG_5839.jpg"
+            img: "Pictures/Washington/North_Cascades/IMG_5839.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5839.jpg"     
+            ].map(f => `Pictures/Washington/North_Cascades/${f}`)
         },
         { 
             name: "Mount Rainier National Park", 
@@ -437,7 +526,12 @@ const rawLocations = {
             lat: 46.825, 
             lng: -121.760, 
             url: "https://en.wikipedia.org/wiki/Mount_Rainier_National_Park",
-            img: "Pictures/Washington/IMG_5862.jpg"
+            img: "Pictures/Washington/Rainier/IMG_5862.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5862.jpg"     
+            ].map(f => `Pictures/Washington/Rainier/${f}`)
         },
         { 
             name: "Cuyahoga Valley National Park", 
@@ -446,7 +540,12 @@ const rawLocations = {
             lat: 41.280, 
             lng: -81.565, 
             url: "https://en.wikipedia.org/wiki/Cuyahoga_Valley_National_Park",
-            img: "Pictures/Ohio/IMG_6613.jpg"
+            img: "Pictures/Ohio/Cuyahoga/IMG_6613.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6613.jpg"     
+            ].map(f => `Pictures/Ohio/Cuyahoga/${f}`)
         }
             
     ],
@@ -476,7 +575,12 @@ const rawLocations = {
             lat: 39.117, 
             lng: -106.445, 
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
-            img: "Pictures/Colorado/IMG_9119.JPG"
+            img: "Pictures/Colorado/Elbert/IMG_9119.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_9119.jpg"     
+            ].map(f => `Pictures/Colorado/Elbert/${f}`)
         },
         { 
             name: "Humphreys Peak", 
@@ -501,7 +605,13 @@ const rawLocations = {
             lat: 36.556, 
             lng: -105.416, 
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
-            img: "Pictures/New Mexico/Wheeler/IMG_0960.jpg"
+            img: "Pictures/New Mexico/Wheeler/IMG_0960.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0955.jpg",
+            "IMG_0960.jpg"       
+            ].map(f => `Pictures/New Mexico/Wheeler/${f}`)
         },
         { 
             name: "Borah Peak", 
@@ -510,7 +620,12 @@ const rawLocations = {
             lat: 44.136, 
             lng: -113.78, 
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
-            img: "Pictures/Idaho/Borah/borah.JPG"
+            img: "Pictures/Idaho/Borah/borah.JPG",
+
+            //carousel images
+            gallery: [
+            "borah.JPG"     
+            ].map(f => `Pictures/Idaho/Borah/${f}`)
         },
         { 
             name: "Black Mesa", 
@@ -519,7 +634,13 @@ const rawLocations = {
             lat: 36.932, 
             lng: -102.997, 
             url: "https://en.wikipedia.org/wiki/Black_Mesa_(Oklahoma,_Colorado,_New_Mexico)",
-            img: "Pictures/Oklahoma/IMG_0921.jpg"
+            img: "Pictures/Oklahoma/Black_Mesa/IMG_0921.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0921.jpg",
+            "IMG_0934.jpg"       
+            ].map(f => `Pictures/Oklahoma/Black_Mesa/${f}`)
         },
         { 
             name: "Mount Sunflower", 
@@ -528,7 +649,12 @@ const rawLocations = {
             lat: 39.022, 
             lng: -102.037, 
             url: "https://en.wikipedia.org/wiki/Mount_Sunflower",
-            img: "Pictures/Kansas/IMG_9297.jpg"
+            img: "Pictures/Kansas/Sunflower/IMG_9297.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_9297.jpg"     
+            ].map(f => `Pictures/Kansas/Sunflower/${f}`)
         },
         { 
             name: "Panorama Point", 
@@ -537,16 +663,27 @@ const rawLocations = {
             lat: 41.007, 
             lng: -104.031, 
             url: "https://en.wikipedia.org/wiki/Panorama_Point",
-            img: "Pictures/Nebraska/IMG_9312.jpg"
+            img: "Pictures/Nebraska/Panorama/IMG_9312.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_9312.jpg"      
+            ].map(f => `Pictures/Nebraska/Panorama/${f}`)
         },
         { 
-            name: "Guadualupe Mountains National Park", 
+            name: "Guadalupe Mountains National Park", 
             country: "US",
             region: "Southwest",
             lat: 31.89, 
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Texas/IMG_7818.jpg"
+            img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_7818.jpg",
+            "IMG_8216.jpg"       
+            ].map(f => `Pictures/Texas/Guadalupe/${f}`)
         },
         { 
             name: "Mt. Rogers", 
@@ -555,7 +692,12 @@ const rawLocations = {
             lat: 36.659, 
             lng: -81.154, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Virginia/IMG_4354.jpg"
+            img: "Pictures/Virginia/Rogers/IMG_4354.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4354.jpg"     
+            ].map(f => `Pictures/Virginia/Rogers/${f}`)
         },
         { 
             name: "Black Mountain", 
@@ -564,7 +706,12 @@ const rawLocations = {
             lat: 36.914, 
             lng: -82.893, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Kentucky/IMG_4335.jpg"
+            img: "Pictures/Kentucky/Black/IMG_4335.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4335.jpg"     
+            ].map(f => `Pictures/Kentucky/Black/${f}`)
         },
         { 
             name: "Spruce Knob", 
@@ -573,7 +720,12 @@ const rawLocations = {
             lat: 38.699, 
             lng: -79.532, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/West Virginia/IMG_4372.jpg"
+            img: "Pictures/West Virginia/Spruce_Knob/IMG_4372.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4372.jpg"     
+            ].map(f => `Pictures/West Virginia/Spruce_Knob/${f}`)
         },
         { 
             name: "Backbone Mountain", 
@@ -582,7 +734,12 @@ const rawLocations = {
             lat: 39.237, 
             lng: -79.485, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Maryland/IMG_4378.jpg"
+            img: "Pictures/Maryland/Backbone/IMG_4378.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4378.jpg"      
+            ].map(f => `Pictures/Maryland/Backbone/${f}`)
         },
         { 
             name: "Mt. Davis", 
@@ -591,7 +748,12 @@ const rawLocations = {
             lat: 39.786, 
             lng: -79.177, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Pennsylvania/IMG_4390.jpg"
+            img: "Pictures/Pennsylvania/Davis/IMG_4390.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4390.jpg"       
+            ].map(f => `Pictures/Pennsylvania/Davis/${f}`)
         },
         { 
             name: "Ebright Azimuth", 
@@ -600,7 +762,12 @@ const rawLocations = {
             lat: 39.836, 
             lng: -75.52, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Delaware/IMG_4402.jpg"
+            img: "Pictures/Delaware/Ebright/IMG_4402.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4402.jpg"       
+            ].map(f => `Pictures/Delaware/Ebright/${f}`)
         },
         { 
             name: "High Point", 
@@ -609,7 +776,12 @@ const rawLocations = {
             lat: 41.321, 
             lng: -74.661, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/New Jersey/IMG_6587.jpg"
+            img: "Pictures/New Jersey/High_Point/IMG_6587.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6587.jpg"       
+            ].map(f => `Pictures/New Jersey/High_Point/${f}`)
         },
         { 
             name: "Mt. Frissell", 
@@ -618,7 +790,12 @@ const rawLocations = {
             lat: 42.051, 
             lng: -73.482, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Connecticut/IMG_6640.jpg"
+            img: "Pictures/Connecticut/Frissell/IMG_6640.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6640.jpg"     
+            ].map(f => `Pictures/Connecticut/Frissell/${f}`)
         },
         { 
             name: "Mt. Greylock", 
@@ -627,7 +804,12 @@ const rawLocations = {
             lat: 42.637, 
             lng: -73.166, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Massachusets/IMG_6597.jpg"
+            img: "Pictures/Massachusets/Greylock/IMG_6597.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6597.jpg"      
+            ].map(f => `Pictures/Massachusets/Greylock/${f}`)
         },
         { 
             name: "Jerimoth Hill", 
@@ -636,7 +818,12 @@ const rawLocations = {
             lat: 41.849, 
             lng: -71.779, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Rhode Island/IMG_6634.jpg"
+            img: "Pictures/Rhode Island/Jerimoth/IMG_6634.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6634.jpg"      
+            ].map(f => `Pictures/Rhode Island/Jerimoth/${f}`)
         },
         { 
             name: "Campbell Hill", 
@@ -645,7 +832,12 @@ const rawLocations = {
             lat: 40.370, 
             lng: -83.720, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Ohio/IMG_6628.jpg"
+            img: "Pictures/Ohio/Campbell/IMG_6628.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6628.jpg"      
+            ].map(f => `Pictures/Ohio/Campbell/${f}`)
         },
         { 
             name: "Hoosier Hill", 
@@ -654,7 +846,12 @@ const rawLocations = {
             lat: 40.001, 
             lng: -84.848, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
-            img: "Pictures/Indiana/IMG_6629.jpg"
+            img: "Pictures/Indiana/Hoosier/IMG_6629.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6629.jpg"       
+            ].map(f => `Pictures/Indiana/Hoosier/${f}`)
         }
             
     ],
