@@ -864,7 +864,15 @@ const rawLocations = {
             lat: 44.079, 
             lng: -115.658, 
             url: "https://en.wikipedia.org/wiki/Payette_River",
-            img: "Pictures/Idaho/Rafting/CAN_0009.jpg"
+            img: "Pictures/Idaho/Rafting/CAN_0009.jpg",
+
+            //carousel images
+            gallery: [
+            "CAN_0008.jpg",
+            "CAN_0009.jpg",
+            "CAN_0043.jpg",
+            "CAN_0104.jpg"       
+            ].map(f => `Pictures/Idaho/Rafting/${f}`)
         },
         { 
             name: "Antelope Canyon Kayak", 
@@ -873,7 +881,16 @@ const rawLocations = {
             lat: 36.939, 
             lng: -111.431, 
             url: "https://www.kayakpowell.com/",
-            img: "Pictures/Arizona/Antelope Canyon/IMG_1167.jpg"
+            img: "Pictures/Arizona/Antelope/IMG_1167.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1120.jpg",
+            "IMG_1130.jpg",
+            "IMG_1167.jpg",
+            "IMG_3842.jpg",
+            "IMG_3843.jpg"       
+            ].map(f => `Pictures/Arizona/Antelope/${f}`)
         },
         { 
             name: "Mt. Adams", 
@@ -882,7 +899,15 @@ const rawLocations = {
             lat: 46.202, 
             lng: -121.491, 
             url: "https://en.wikipedia.org/wiki/Mount_Adams_(Washington)",
-            img: "Pictures/Washington/Adams/IMG_1551.jpg"
+            img: "Pictures/Washington/Adams/IMG_1551.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1523.jpg",
+            "IMG_1551.jpg",
+            "IMG_3840.jpg",
+            "IMG_3841.jpg"      
+            ].map(f => `Pictures/Washington/Adams/${f}`)
         },
         { 
             name: "Black Canyon of the Colorado River", 
@@ -891,7 +916,13 @@ const rawLocations = {
             lat: 35.993, 
             lng: -114.739, 
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Colorado",
-            img: "Pictures/Nevada/Black Canyon/IMG_2313.jpg"
+            img: "Pictures/Nevada/Black_Canyon/IMG_2313.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_2291.jpg",
+            "IMG_2313.jpg"       
+            ].map(f => `Pictures/Nevada/Black_Canyon/${f}`)
         },
         { 
             name: "La Jolla Paragliding", 
@@ -900,7 +931,16 @@ const rawLocations = {
             lat: 32.980, 
             lng: -117.251, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/California/La Jolla/GEO_0408.jpg"
+            img: "Pictures/California/La_Jolla/GEO_0408.jpg",
+
+            //carousel images
+            gallery: [
+            "GEO_0341.jpg",
+            "GEO_0402.jpg",
+            "GEO_0404.jpg",
+            "GEO_0408.jpg",
+            "GEO_0411.jpg",       
+            ].map(f => `Pictures/California/La_Jolla/${f}`)
         },
         { 
             name: "Lower Calf Creek", 
@@ -909,7 +949,12 @@ const rawLocations = {
             lat: 37.829, 
             lng: -111.420, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Grand Staircase/IMG_1885.jpg"
+            img: "Pictures/Utah/Calf_Creek/IMG_1885.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1885.jpg"     
+            ].map(f => `Pictures/Utah/Calf_Creek/${f}`)
         },
         { 
             name: "Sedona", 
@@ -918,7 +963,19 @@ const rawLocations = {
             lat: 34.869, 
             lng: -111.760, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Sedona/IMG_3131.jpg"
+            img: "Pictures/Arizona/Sedona/IMG_3131.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3131.jpg",
+            "IMG_3141.jpg",
+            "IMG_3188.jpg",
+            "IMG_3202.jpg",
+            "IMG_3585.jpg",
+            "IMG_3590.jpg",
+            "IMG_3614.jpg",
+            "sedonastand.jpg"       
+            ].map(f => `Pictures/Arizona/Sedona/${f}`)
         },
         { 
             name: "Pfeifferhorn", 
@@ -927,7 +984,14 @@ const rawLocations = {
             lat: 40.533, 
             lng: -111.706, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Pfeifferhorn/IMG_0087.JPG"
+            img: "Pictures/Utah/Pfeifferhorn/IMG_0087.JPG",
+
+            //carousel images
+            gallery: [
+            "IMG_0087.JPG",
+            "IMG_8670.jpg",
+            "IMG_8680.jpg"       
+            ].map(f => `Pictures/Utah/Pfeifferhorn/${f}`)
         },
         { 
             name: "Sawtooths", 
@@ -936,7 +1000,13 @@ const rawLocations = {
             lat: 44.141, 
             lng: -115.010, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Idaho/Thompson Peak/IMG_9159.jpg"
+            img: "Pictures/Idaho/Thompson/IMG_9159.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_9159.jpg",
+            "IMG_9232.jpg"       
+            ].map(f => `Pictures/Idaho/Thompson/${f}`)
         },
         { 
             name: "Goat Canyon Trestle", 
@@ -945,7 +1015,18 @@ const rawLocations = {
             lat: 32.729, 
             lng: -116.183, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/California/Goat Canyon/GOPR4197.JPG"
+            img: "Pictures/California/Goat_Canyon/GOPR4197.JPG",
+
+            //carousel images
+            gallery: [
+            "GoatCanyonDown.jpg",
+            "GoatCanyonDrone.jpg",
+            "IMG_3832.jpg",
+            "IMG_3833.jpg",
+            "RailroadDown.jpg",
+            "GOPR4197.JPG",
+            "TunnelDrone.jpg"       
+            ].map(f => `Pictures/California/Goat_Canyon/${f}`)
         },
         { 
             name: "Salome Jug", 
@@ -954,7 +1035,12 @@ const rawLocations = {
             lat: 33.770, 
             lng: -111.119, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Sightseeing/IMG_3823.jpg"
+            img: "Pictures/Arizona/Jug/IMG_3823.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3823.jpg"
+            ].map(f => `Pictures/Arizona/Jug/${f}`)
         },
         { 
             name: "Buckskin Gulch", 
@@ -963,7 +1049,13 @@ const rawLocations = {
             lat: 37.017, 
             lng: -112.001, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Buckskin/IMG_3949.jpg"
+            img: "Pictures/Utah/Buckskin/IMG_3949.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3949.jpg"
+            ].map(f => `Pictures/Utah/Buckskin/${f}`)
+            
         },
         { 
             name: "Ausangate", 
@@ -972,7 +1064,12 @@ const rawLocations = {
             lat: -13.758, 
             lng: -71.218, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Peru/IMG_4894.jpg"
+            img: "Pictures/Peru/Ausangate/IMG_4894.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4894.jpg"
+            ].map(f => `Pictures/Peru/Ausangate/${f}`)
         },
         { 
             name: "Salkantay", 
@@ -981,7 +1078,12 @@ const rawLocations = {
             lat: -13.381, 
             lng: -72.584, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Peru/IMG_4672.jpg"
+            img: "Pictures/Peru/Salkantay/IMG_4672.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_4672.jpg"
+            ].map(f => `Pictures/Peru/Salkantay/${f}`)
         },
         { 
             name: "Ice Lake Basin", 
@@ -990,7 +1092,12 @@ const rawLocations = {
             lat: 37.814, 
             lng: -107.808, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Colorado/IMG_5476.jpg"
+            img: "Pictures/Colorado/Ice_Lake/IMG_5476.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_5476.jpg"
+            ].map(f => `Pictures/Colorado/Ice_Lake/${f}`)
         },
         { 
             name: "Great Barrier Reef", 
@@ -999,7 +1106,12 @@ const rawLocations = {
             lat: -16.73, 
             lng: 146.271, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Australia/IMG_6500.jpg"
+            img: "Pictures/Australia/GBR/IMG_6500.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_6500.jpg"
+            ].map(f => `Pictures/Australia/GBR/${f}`)
         },
         { 
             name: "Wallaman Falls", 
@@ -1008,7 +1120,12 @@ const rawLocations = {
             lat: -18.59, 
             lng: 145.802, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Australia/wallamanfalls.jpg"
+            img: "Pictures/Australia/Wallaman/wallamanfalls.jpg",
+
+            //carousel images
+            gallery: [
+            "wallamanfalls.jpg"
+            ].map(f => `Pictures/Australia/Wallaman/${f}`)
         }
     ],
 
@@ -1020,7 +1137,17 @@ const rawLocations = {
             lat: 33.438, 
             lng: -111.454, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Superstitions/IMG_3812.jpg"
+            img: "Pictures/Arizona/Superstitions/IMG_3812.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3522.jpg",
+            "IMG_3812.jpg",
+            "IMG_3813.jpg",
+            "IMG_3831.jpg",
+            "IMG_3834.jpg",
+            "IMG_3839.jpg"
+            ].map(f => `Pictures/Arizona/Superstitions/${f}`)
         },
         {
             name: "Kirkham Hot Springs",
@@ -1029,7 +1156,12 @@ const rawLocations = {
             lat: 44.072, 
             lng: -115.546, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Idaho/Sightseeing/IMG_3497.jpg"
+            img: "Pictures/Idaho/Kirkham/IMG_3497.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3497.jpg"
+            ].map(f => `Pictures/Idaho/Kirkham/${f}`)
         },
         {
             name: "Fossil Creek",
@@ -1038,7 +1170,12 @@ const rawLocations = {
             lat: 34.145, 
             lng: -111.605, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Sightseeing/IMG_3822.jpg"
+            img: "Pictures/Arizona/Fossil/IMG_3822.jpg",
+            
+            //carousel images
+            gallery: [
+            "IMG_3822.jpg"
+            ].map(f => `Pictures/Arizona/Fossil/${f}`)
         },
         { 
             name: "Pikes Peak", 
@@ -1047,7 +1184,15 @@ const rawLocations = {
             lat: 38.840, 
             lng: -105.042, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Colorado/Pikes/IMG_0909.jpg"
+            img: "Pictures/Colorado/Pikes/IMG_0909.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0888.jpg",
+            "IMG_0898.jpg",
+            "IMG_0904.jpg",
+            "IMG_0909.jpg"
+            ].map(f => `Pictures/Colorado/Pikes/${f}`)
         },
         {
             name: "Coal Mine Canyon",
@@ -1056,7 +1201,12 @@ const rawLocations = {
             lat: 36.012, 
             lng: -110.989, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Sightseeing/IMG_0825.jpg"
+            img: "Pictures/Arizona/Coal_Mine/IMG_0825.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_0825.jpg"
+            ].map(f => `Pictures/Arizona/Coal_Mine/${f}`)
         },
         {
             name: "Panther Creek Falls",
@@ -1065,7 +1215,14 @@ const rawLocations = {
             lat: 45.867, 
             lng: -121.828, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Washington/Sightseeing/IMG_1502.jpg"
+            img: "Pictures/Washington/Panther/IMG_1502.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1498.jpg",
+            "IMG_1502.jpg",
+            "IMG_1508.jpg"
+            ].map(f => `Pictures/Washington/Panther/${f}`)
         },
         {
             name: "Blue Heart Springs",
@@ -1074,7 +1231,12 @@ const rawLocations = {
             lat: 42.170, 
             lng: -114.829, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Idaho/Sightseeing/IMG_1605.jpg"
+            img: "Pictures/Idaho/Blue_Heart/IMG_1605.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1605.jpg"
+            ].map(f => `Pictures/Idaho/Blue_Heart/${f}`)
         },
         {
             name: "Donut Falls",
@@ -1083,7 +1245,13 @@ const rawLocations = {
             lat: 40.613, 
             lng: -111.654, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Sightseeing/IMG_1650.jpg"
+            img: "Pictures/Utah/Donut/IMG_1650.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_1647.jpg",
+            "IMG_1650.jpg"
+            ].map(f => `Pictures/Utah/Donut/${f}`)
         },
         {
             name: "Imperial Sand Dunes",
@@ -1092,7 +1260,13 @@ const rawLocations = {
             lat: 32.982, 
             lng: -115.132, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/California/Sightseeing/IMG_3759.jpg"
+            img: "Pictures/California/Imperial/IMG_3759.jpg",
+
+            //carousel images
+            gallery: [
+            "IMG_3759.jpg",
+            "SandDuneDown.jpg"
+            ].map(f => `Pictures/California/Imperial/${f}`)
         },
         {
             name: "Black Sands Beach",
@@ -1101,7 +1275,11 @@ const rawLocations = {
             lat: 37.824, 
             lng: -122.508, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/California/Sightseeing/IMG_7640.jpg"
+            img: "Pictures/California/Black_Sand/IMG_7640.jpg",
+            
+            gallery: [
+            "IMG_7640.jpg"
+            ].map(f => `Pictures/California/Black_Sand/${f}`)
         },
         {
             name: "Four Peaks",
@@ -1110,7 +1288,11 @@ const rawLocations = {
             lat: 33.684, 
             lng: -111.325, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Sightseeing/IMG_7751.jpg"
+            img: "Pictures/Arizona/Four_Peaks/IMG_7751.jpg",
+
+            gallery: [
+            "IMG_7751.jpg"
+            ].map(f => `Pictures/Arizona/Four_Peaks/${f}`)
         },
         {
             name: "Chiricahua National Monument",
@@ -1119,7 +1301,11 @@ const rawLocations = {
             lat: 32.008, 
             lng: -109.319, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/Sightseeing/IMG_8082.jpg"
+            img: "Pictures/Arizona/Chiricahua/IMG_8082.jpg",
+
+            gallery: [
+            "IMG_8082.jpg"
+            ].map(f => `Pictures/Arizona/Chiricahua/${f}`)
         },
         {
             name: "Valley of Fire",
@@ -1128,7 +1314,11 @@ const rawLocations = {
             lat: 36.482, 
             lng: -114.552, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Nevada/Valley of Fire/IMG_4058.jpg"
+            img: "Pictures/Nevada/Valley_of_Fire/IMG_4058.jpg",
+
+            gallery: [
+            "IMG_4058.jpg"
+            ].map(f => `Pictures/Nevada/Valley_of_Fire/${f}`)
         },
         {
             name: "Grand Staircase Escalante",
@@ -1137,7 +1327,12 @@ const rawLocations = {
             lat: 37.460, 
             lng: -111.594, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Grand Staircase/Grand Staircase.jpg"
+            img: "Pictures/Utah/Grand_Staircase/Grand_Staircase.jpg",
+
+            gallery: [
+            "Grand_Staircase.jpg",
+            "IMG_3922.jpg"
+            ].map(f => `Pictures/Utah/Grand_Staircase/${f}`)
         },
         { 
             name: "Machu Picchu", 
@@ -1146,7 +1341,11 @@ const rawLocations = {
             lat: -13.163, 
             lng: -72.545, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Peru/IMG_4832.jpg"
+            img: "Pictures/Peru/Salkantay/IMG_4832.jpg",
+
+            gallery: [
+            "IMG_4832.jpg"
+            ].map(f => `Pictures/Peru/Salkantay/${f}`)
         },
         { 
             name: "Pallay Punchu", 
@@ -1155,7 +1354,11 @@ const rawLocations = {
             lat: -14.463, 
             lng: -71.136, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Peru/pallay_punchu.jpg"
+            img: "Pictures/Peru/Pallay_Punchu/pallay_punchu.jpg",
+
+            gallery: [
+            "pallay_punchu.jpg"
+            ].map(f => `Pictures/Peru/Pallay_Punchu/${f}`)
         },
         { 
             name: "Monument Valley", 
@@ -1164,7 +1367,11 @@ const rawLocations = {
             lat: 36.951, 
             lng: -110.082, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Arizona/IMG_5606.jpg"
+            img: "Pictures/Arizona/Monument/IMG_5606.jpg",
+
+            gallery: [
+            "IMG_5606.jpg"
+            ].map(f => `Pictures/Arizona/Monument/${f}`)
         },
         { 
             name: "Whitehaven Beach", 
@@ -1173,7 +1380,11 @@ const rawLocations = {
             lat: -20.251, 
             lng: 149.021, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Australia/IMG_6216.jpg"
+            img: "Pictures/Australia/Whitehaven/IMG_6216.jpg",
+
+            gallery: [
+            "IMG_6216.jpg"
+            ].map(f => `Pictures/Australia/Whitehaven/${f}`)
         },
         { 
             name: "Daintree Rainforest", 
@@ -1182,7 +1393,11 @@ const rawLocations = {
             lat: -16.075, 
             lng: 145.469, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Australia/IMG_6107.jpg"
+            img: "Pictures/Australia/Daintree/IMG_6107.jpg",
+
+            gallery: [
+            "IMG_6107.jpg"
+            ].map(f => `Pictures/Australia/Daintree/${f}`)
         },
         { 
             name: "Sydney Opera House", 
@@ -1191,7 +1406,11 @@ const rawLocations = {
             lat: -33.857, 
             lng: 151.215, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Australia/IMG_6367.jpg"
+            img: "Pictures/Australia/Sydney/IMG_6367.jpg",
+
+            gallery: [
+            "IMG_6367.jpg"
+            ].map(f => `Pictures/Australia/Sydney/${f}`)
         }
         
     ]
