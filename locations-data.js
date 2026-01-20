@@ -144,7 +144,8 @@ const rawLocations = {
             gallery: [
             "IMG_0659.jpg",
             "IMG_0669.jpg",
-            "IMG_0702.jpg"        
+            "IMG_0702.jpg",
+            "IMG_4206.jpg"        
             ].map(f => `Pictures/California/Channel_Islands/${f}`)
         },
         { 
@@ -160,7 +161,11 @@ const rawLocations = {
             gallery: [
             "IMG_8823.jpg",
             "IMG_8837.jpg",
-            "IMG_8850.jpg"       
+            "IMG_8850.jpg",
+            "IMG_4231.jpg",
+            "IMG_4234.jpg",
+            "IMG_4242.jpg",
+            "IMG_4277.jpg"       
             ].map(f => `Pictures/California/Joshua_Tree/${f}`)
         },
         { 
@@ -294,8 +299,10 @@ const rawLocations = {
             //carousel images
             gallery: [
             "IMG_2019.jpg",
-            "IMG_2022.jpg",
-            "IMG_4011.jpg"       
+            "GOPR4345.jpg",
+            "IMG_4011.jpg",
+            "IMG_3982.jpg",
+            "IMG_3986.jpg"       
             ].map(f => `Pictures/Utah/Zion/${f}`)
         },
         { 
@@ -356,7 +363,8 @@ const rawLocations = {
             gallery: [
             "IMG_9005.jpg",
             "IMG_9387.jpg",
-            "IMG_9406.jpg"      
+            "IMG_9406.jpg",
+            "IMG_8950.jpg",      
             ].map(f => `Pictures/Colorado/Rocky_Mountain/${f}`)
         },
         { 
@@ -432,7 +440,9 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4318.jpg"    
+            "IMG_4318.jpg",
+            "IMG_4308.jpg",
+            "IMG_4303.jpg",    
             ].map(f => `Pictures/Virginia/Shenandoah/${f}`)
         },
         { 
@@ -446,7 +456,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4323.jpg"    
+            "IMG_4323.jpg",
+            "IMG_4331.jpg"    
             ].map(f => `Pictures/West Virginia/New_River/${f}`)
         },
         { 
@@ -502,7 +513,12 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_5671.jpg"    
+            "IMG_5671.jpg",
+            "IMG_5683.jpg",
+            "IMG_5729.jpg",
+            "IMG_5765.jpg",
+            "olympic1.jpg",
+            "olympic2.jpg"    
             ].map(f => `Pictures/Washington/Olympic/${f}`)
         },
         { 
@@ -516,7 +532,12 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_5839.jpg"     
+            "IMG_5839.jpg",
+            "IMG_5812.jpg",
+            "cascades1.jpg",
+            "cascades2.jpg",
+            "cascades3.jpg",
+            "cascades4.jpg"     
             ].map(f => `Pictures/Washington/North_Cascades/${f}`)
         },
         { 
@@ -544,7 +565,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_6613.jpg"     
+            "IMG_6613.jpg",
+            "IMG_6616.jpg",     
             ].map(f => `Pictures/Ohio/Cuyahoga/${f}`)
         }
             
@@ -667,7 +689,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_9312.jpg"      
+            "IMG_9312.jpg",
+            "IMG_8931.jpg",      
             ].map(f => `Pictures/Nebraska/Panorama/${f}`)
         },
         { 
@@ -696,7 +719,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4354.jpg"     
+            "IMG_4354.jpg",
+            "IMG_4363.jpg"     
             ].map(f => `Pictures/Virginia/Rogers/${f}`)
         },
         { 
@@ -710,7 +734,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4335.jpg"     
+            "IMG_4335.jpg",
+            "IMG_4346.jpg"     
             ].map(f => `Pictures/Kentucky/Black/${f}`)
         },
         { 
@@ -738,7 +763,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4378.jpg"      
+            "IMG_4378.jpg",
+            "IMG_4383.jpg"      
             ].map(f => `Pictures/Maryland/Backbone/${f}`)
         },
         { 
@@ -752,7 +778,10 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4390.jpg"       
+            "IMG_4390.jpg",
+            "IMG_4385.jpg",
+            "IMG_4388.jpg",
+            "IMG_4396.jpg",       
             ].map(f => `Pictures/Pennsylvania/Davis/${f}`)
         },
         { 
@@ -766,7 +795,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4402.jpg"       
+            "IMG_4402.jpg",
+            "IMG_4405.jpg"       
             ].map(f => `Pictures/Delaware/Ebright/${f}`)
         },
         { 
@@ -780,7 +810,10 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_6587.jpg"       
+            "IMG_6587.jpg",
+            "IMG_6584.jpg",
+            "IMG_6586.jpg",
+            "IMG_6593.jpg"       
             ].map(f => `Pictures/New Jersey/High_Point/${f}`)
         },
         { 
@@ -822,7 +855,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_6634.jpg"      
+            "IMG_6634.jpg",
+            "IMG_6659.jpg"      
             ].map(f => `Pictures/Rhode Island/Jerimoth/${f}`)
         },
         { 
@@ -949,11 +983,11 @@ const rawLocations = {
             lat: 37.829, 
             lng: -111.420, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
-            img: "Pictures/Utah/Calf_Creek/IMG_1885.jpg",
+            img: "Pictures/Utah/Calf_Creek/IMG_2109.jpg",
 
             //carousel images
             gallery: [
-            "IMG_1885.jpg"     
+            "IMG_2109.jpg"     
             ].map(f => `Pictures/Utah/Calf_Creek/${f}`)
         },
         { 
@@ -974,7 +1008,8 @@ const rawLocations = {
             "IMG_3585.jpg",
             "IMG_3590.jpg",
             "IMG_3614.jpg",
-            "sedonastand.jpg"       
+            "sedonastand.jpg",
+            "DJI_0008.jpg"       
             ].map(f => `Pictures/Arizona/Sedona/${f}`)
         },
         { 
@@ -1025,7 +1060,8 @@ const rawLocations = {
             "IMG_3833.jpg",
             "RailroadDown.jpg",
             "GOPR4197.JPG",
-            "TunnelDrone.jpg"       
+            "TunnelDrone.jpg",
+            "goat1.jpg",       
             ].map(f => `Pictures/California/Goat_Canyon/${f}`)
         },
         { 
@@ -1053,7 +1089,10 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_3949.jpg"
+            "IMG_3949.jpg",
+            "IMG_3943.jpg",
+            "IMG_3955.jpg",
+            "buckskin1.jpg",
             ].map(f => `Pictures/Utah/Buckskin/${f}`)
             
         },
@@ -1068,7 +1107,10 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4894.jpg"
+            "IMG_4894.jpg",
+            "DJI_0053.jpg",
+            "IMG_5217.jpg",
+            "IMG_5218.jpg"
             ].map(f => `Pictures/Peru/Ausangate/${f}`)
         },
         { 
@@ -1082,7 +1124,16 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_4672.jpg"
+            "IMG_4672.jpg",
+            "IMG_4799.jpg",
+            "IMG_4699.jpg",
+            "salkantay1.jpg",
+            "salkantay2.jpg",
+            "salkantay3.jpg",
+            "salkantay4.jpg",
+            "salkantay5.jpg",
+            "salkantay6.jpg",
+            "salkantay7.jpg"
             ].map(f => `Pictures/Peru/Salkantay/${f}`)
         },
         { 
@@ -1096,7 +1147,12 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_5476.jpg"
+            "IMG_5476.jpg",
+            "IMG_5481.jpg",
+            "dji_0037.jpg",
+            "ice_lake.jpg",
+            "icelake1.jpg",
+            "icelake2.jpg",
             ].map(f => `Pictures/Colorado/Ice_Lake/${f}`)
         },
         { 
@@ -1110,7 +1166,10 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_6500.jpg"
+            "IMG_6500.jpg",
+            "gbr1.jpg",
+            "gbr2.jpg",
+            "gbr3.jpg"
             ].map(f => `Pictures/Australia/GBR/${f}`)
         },
         { 
@@ -1124,7 +1183,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "wallamanfalls.jpg"
+            "wallamanfalls.jpg",
+            "IMG_6263.jpg"
             ].map(f => `Pictures/Australia/Wallaman/${f}`)
         }
     ],
@@ -1146,7 +1206,8 @@ const rawLocations = {
             "IMG_3813.jpg",
             "IMG_3831.jpg",
             "IMG_3834.jpg",
-            "IMG_3839.jpg"
+            "IMG_3839.jpg",
+            "IMG_6730.jpg"
             ].map(f => `Pictures/Arizona/Superstitions/${f}`)
         },
         {
@@ -1160,7 +1221,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_3497.jpg"
+            "IMG_3497.jpg",
+            "dji_0012.jpg",
             ].map(f => `Pictures/Idaho/Kirkham/${f}`)
         },
         {
@@ -1205,7 +1267,8 @@ const rawLocations = {
 
             //carousel images
             gallery: [
-            "IMG_0825.jpg"
+            "IMG_0825.jpg",
+            "IMG_5296.jpg",
             ].map(f => `Pictures/Arizona/Coal_Mine/${f}`)
         },
         {
@@ -1265,7 +1328,7 @@ const rawLocations = {
             //carousel images
             gallery: [
             "IMG_3759.jpg",
-            "SandDuneDown.jpg"
+            "imperial1.jpg"
             ].map(f => `Pictures/California/Imperial/${f}`)
         },
         {
@@ -1317,7 +1380,8 @@ const rawLocations = {
             img: "Pictures/Nevada/Valley_of_Fire/IMG_4058.jpg",
 
             gallery: [
-            "IMG_4058.jpg"
+            "IMG_4058.jpg",
+            "IMG_4055.jpg",
             ].map(f => `Pictures/Nevada/Valley_of_Fire/${f}`)
         },
         {
@@ -1331,7 +1395,8 @@ const rawLocations = {
 
             gallery: [
             "Grand_Staircase.jpg",
-            "IMG_3922.jpg"
+            "IMG_3922.jpg",
+            "escalante1.jpg",
             ].map(f => `Pictures/Utah/Grand_Staircase/${f}`)
         },
         { 
@@ -1344,7 +1409,8 @@ const rawLocations = {
             img: "Pictures/Peru/Salkantay/IMG_4832.jpg",
 
             gallery: [
-            "IMG_4832.jpg"
+            "IMG_4832.jpg",
+            "IMG_4841.jpg"
             ].map(f => `Pictures/Peru/Salkantay/${f}`)
         },
         { 
@@ -1357,7 +1423,12 @@ const rawLocations = {
             img: "Pictures/Peru/Pallay_Punchu/pallay_punchu.jpg",
 
             gallery: [
-            "pallay_punchu.jpg"
+            "pallay_punchu.jpg",
+            "2.7.1.jpg",
+            "IMG_5003.jpg",
+            "pallay1.jpg",
+            "pallay2.jpg",
+            "pallay3.jpg"
             ].map(f => `Pictures/Peru/Pallay_Punchu/${f}`)
         },
         { 
@@ -1383,7 +1454,8 @@ const rawLocations = {
             img: "Pictures/Australia/Whitehaven/IMG_6216.jpg",
 
             gallery: [
-            "IMG_6216.jpg"
+            "IMG_6216.jpg",
+            "whitehaven1.jpg",
             ].map(f => `Pictures/Australia/Whitehaven/${f}`)
         },
         { 
@@ -1396,7 +1468,11 @@ const rawLocations = {
             img: "Pictures/Australia/Daintree/IMG_6107.jpg",
 
             gallery: [
-            "IMG_6107.jpg"
+            "IMG_6107.jpg",
+            "dji_0006.jpg",
+            "daintree1.jpg",
+            "daintree2.jpg",
+            "daintree3.jpg"
             ].map(f => `Pictures/Australia/Daintree/${f}`)
         },
         { 
