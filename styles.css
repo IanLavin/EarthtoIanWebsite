@@ -1,462 +1,349 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
+/* =========================================
+   Theme + Base (shared variables)
+========================================= */
+
+:root {
+  --bg: #0b1220;
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.14);
+
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  --radius: 16px;
+
+  --accent: #4aa3ff;
 }
 
-h1 {
-    font-size: 32px;
-    color: #2c3e50;
-    margin-bottom: 20px;
+* { box-sizing: border-box; }
+
+/* =========================================
+   HOME PAGE ONLY (scope everything to .page-home)
+   Add <body class="page-home"> in index.html
+========================================= */
+
+.page-home {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  color: var(--text);
+
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(80, 130, 255, 0.25), transparent 60%),
+    radial-gradient(800px 450px at 85% 15%, rgba(255, 160, 90, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 60% 95%, rgba(60, 220, 180, 0.12), transparent 60%),
+    var(--bg);
 }
 
-#map {
-    height: 80vh;
-    width: 60%;
-    margin: auto;
-    border: 3px solid #2c3e50;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+.page-home a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+.page-home a:hover { text-decoration: underline; }
+
+/* =========================================
+   Topbar (home)
+========================================= */
+
+.page-home .topbar {
+  padding: 14px 16px 8px;
+  text-align: center;
 }
 
-#filter-container {
-    position: absolute;
-    top: 10%;
-    left: 10px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 18px;
-    width: 220px;
-    justify-content: center;
-    z-index: 1000;
+.page-home #page-title {
+  margin: 0;
+  font-size: clamp(22px, 2.6vw, 40px);
+  text-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
 }
 
-#filter-container label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;  /* More touch-friendly */
+/* =========================================
+   App Layout (home)
+========================================= */
+
+.page-home .app-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 14px;
+  padding: 12px 12px 16px;
+  height: calc(100vh - 64px);
 }
 
-#filter-container input[type="checkbox"] {
-    transform: scale(1.8);
-    margin-right: 10px;
+/* =========================================
+   Sidebar (home)
+========================================= */
+
+.page-home .sidebar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
 }
 
-
-/* Styles for the location list box */
-#location-list {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 99%;
-    background: white;
-    padding: 15px;
-    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.3);
-    font-size: 15px;
-    max-height: 20%;
-    z-index: 1000;
-    border-top: 3px solid #2c3e50;
-    flex-wrap: wrap; /* Make columns stack on smaller screens */
-    gap: 15px; /* Add spacing between columns */
+.page-home .sidebar-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
-#location-list h3 {
-    margin: 0;
-    font-size: 20px;
-    text-align: center;
+.page-home .sidebar-btn {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.18s ease;
 }
 
-.category-column {
-    width: 23%;
-    overflow-y: auto;
-    max-height: 250px;
-    padding: 10px;
-    background: #ecf0f1;
-    border-radius: 5px;
-    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+.page-home .sidebar-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
-.category-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.page-home .sidebar-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(74, 163, 255, 0.18);
 }
 
-.category-column li {
-    padding: 8px;
-    cursor: pointer;
-    border-bottom: 1px solid #bdc3c7;
-    transition: background 0.3s;
+.page-home #searchBox {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  outline: none;
 }
 
-.category-column li:hover {
-    background: #d5dbdb;
+.page-home #searchBox::placeholder { color: rgba(255, 255, 255, 0.55); }
+
+.page-home #searchBox:focus {
+  border-color: rgba(74, 163, 255, 0.65);
+  box-shadow: 0 0 0 4px rgba(74, 163, 255, 0.18);
 }
 
-/* Style for the search box */
-#searchBox {
-    width: 280px;
-    padding: 10px;
-    margin: 15px;
-    border: 2px solid #2c3e50;
-    border-radius: 6px;
-    font-size: 16px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* Tabs (home) */
+.page-home .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-/* Home button styles */
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 12px 16px;
-    background-color: #2980b9;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-    z-index: 1001;
+.page-home .tab {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.12s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
-.home-button:hover {
-    background-color: #1f618d;
+.page-home .tab:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.08);
 }
 
-/* World button styles */
-.world-button {
-    position: absolute;
-    top: 70px;
-    left: 20px;
-    padding: 12px 16px;
-    background-color: #2980b9;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-    z-index: 1001;
+.page-home .tab.active {
+  border-color: rgba(74, 163, 255, 0.75);
+  box-shadow: 0 0 0 3px rgba(74, 163, 255, 0.15);
 }
 
-.world-button:hover {
-    background-color: #1f618d;
+/* Sidebar list (home) */
+.page-home .sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  flex: 1;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
 }
 
-.popup-image {
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.page-home .sidebar-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.12s ease, transform 0.12s ease;
 }
 
-.popup-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+.page-home .sidebar-item:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(2px);
 }
 
-/* Make markers feel interactive */
+.page-home .sidebar-empty {
+  padding: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Highlight card (home) */
+.page-home .highlight-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.page-home .highlight-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.page-home .highlight-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  display: block;
+}
+
+.page-home .highlight-card p {
+  margin: 10px 0 0;
+  color: rgba(255,255,255,0.75);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* =========================================
+   Map (home)
+========================================= */
+
+.page-home .map-area {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.page-home #map {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================
+   Popups + Marker Hover (keep global marker hover OK,
+   but popup styling is scoped to home)
+========================================= */
+
+.page-home .popup { text-align: center; }
+
+.page-home .popup-image {
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.page-home .popup-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.45);
+}
+
+.page-home .country-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Markers: can stay global so it works wherever the map appears */
 .leaflet-marker-icon {
   transition: transform 0.15s ease, filter 0.15s ease;
   cursor: pointer;
 }
-
-/* Hover effect */
 .leaflet-marker-icon:hover {
-  transform: scale(1.25);
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
-  z-index: 1000;
+  transform: scale(1.22);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.65));
 }
 
+/* =========================================
+   Responsive (home)
+========================================= */
 
-#random-location {
-    position: fixed;
-    top: 15%;
-    right: 10px;
-    background: white;
-    padding: 20px;
-    width: 15%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    z-index: 1000;
-}
+@media (max-width: 980px) {
+  .page-home .app-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 
-#random-location h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-#random-location img {
-    max-height: 300px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-#random-location p {
-    font-size: 16px;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    #map {
-        width: 100%;
-        height: 70vh; /* Larger map area */
-    }
-
-    #filter-container {
-        position: absolute;
-        top: 15%;
-        left: 5%;
-        width: 80%;
-        transition: all 0.3s ease-in-out;
-    }
-
-    #searchBox {
-        width: 90%;
-    }
-
-    #location-list {
-        flex-direction: column; /* Stack categories vertically */
-    }
-
-    .category-column {
-        width: 100%; /* Make each category take full width on mobile */
-        margin-bottom: 15px; /* Add space between categories */
-    }
-
-    #random-location {
-        width: 80%;
-        top: 10%;
-        right: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    #searchBox {
-        width: 100%;
-    }
-
-    #random-location {
-        bottom: 20px;
-        top: auto;
-        width: 90%;
-        right: 5%;
-    }
-}
-.home-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
-}
-
-.world-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(41, 128, 185, 0.8);
-}
-
-.category-column li:hover {
-    background: #d5dbdb;
-    transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
-}
-
-.category-column {
-    scroll-behavior: smooth;
-}
-
-.carousel {
-  position: relative;
-  width: 70%;
-  max-width: 900px;
-  margin: 30px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-.carousel img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  font-size: 32px;
-  padding: 10px 16px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-
-.carousel-btn:hover {
-  background: rgba(0,0,0,0.8);
-}
-
-.popup {
-  text-align: center;
-}
-
-.popup-image {
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 6px;
-}
-
-.country-link {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #2c3e50;
-}
-
-.country-link:hover {
-  text-decoration: underline;
-}
-
-.location-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.location-header {
-  text-align: center;
-}
-
-.location-hero {
-  max-width: 600px;
-  width: 100%;
-  border-radius: 10px;
-  margin: 15px auto;
-  display: block;
-}
-
-.page-nav {
-  padding: 15px;
-}
-
-.location-itinerary ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.location-journal {
-  margin-top: 30px;
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.location-journal p {
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-/* Carousel container on location page */
-.location-carousel-section {
-  margin: 20px 0;
-}
-
-.carousel {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Carousel image: show full photo without cropping */
-.carousel-inner,
-.carousel {
-  width: 100%;
-}
-
-.carousel-img {
-  width: 100%;
-  height: 520px;
-  object-fit: contain;
-  background: #111;
-  border-radius: 12px;
-  display: block;
-}
-
-@media (max-width: 900px) {
-  #location-carousel img,
-  #location-carousel .carousel-img {
-    height: 340px;
+  .page-home .map-area {
+    height: 70vh;
   }
 }
 
-@media (max-width: 520px) {
-  .carousel-img { height: 240px; }
+/* =========================================
+   LOCATION PAGE RESTORE (light theme)
+   Add <body class="page-location"> in location.html
+   (and you can keep your existing location styles below)
+========================================= */
+
+.page-location {
+  background: #f4f4f4;
+  color: #333;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
 }
 
-/* Never crop carousel images */
-#location-carousel img,
-#location-carousel .carousel-img {
-  width: 100%;
-  height: 520px;        /* adjust if you want taller/shorter */
-  object-fit: contain;  /* IMPORTANT: show whole image */
-  object-position: center;
-  background: #111;     /* letterbox background */
-  display: block;
+.page-location a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+.page-location a:hover { text-decoration: underline; }
+
+/* =========================================================
+   LOCATION PAGE (restore prior layout)
+   Requires: <body class="page-location">
+========================================================= */
+
+.page-location {
+  background: #f4f4f4;
+  color: #333;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
 }
 
+.page-location a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+.page-location a:hover { text-decoration: underline; }
 
-
-/* -------------------------
-   Location page layout
-------------------------- */
-
-.location-page {
+/* Page container */
+.page-location .location-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px;
 }
 
-/* Banner across the top */
-.location-banner {
+/* Top banner: thumbnail + title */
+.page-location .location-banner {
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 16px;
   align-items: center;
-  background: white;
+
+  background: #fff;
   border-radius: 12px;
   padding: 14px 16px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
   margin-bottom: 16px;
 }
 
-/* Small image in top-left */
-.location-thumb {
+.page-location .location-thumb {
   width: 90px;
   height: 90px;
   border-radius: 12px;
@@ -465,80 +352,476 @@ h1 {
   border: 2px solid rgba(0,0,0,0.08);
 }
 
-/* Title block */
-.banner-title h1 {
+.page-location .banner-title h1,
+.page-location #location-title {
   margin: 0;
   font-size: 28px;
   line-height: 1.1;
+  color: #1f2d3d;
 }
 
-.location-subtitle {
+.page-location .location-subtitle {
   margin: 6px 0 0;
   color: #555;
   font-size: 14px;
 }
 
-/* Two-column split */
-.location-grid {
+/* Two-column layout */
+.page-location .location-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* carousel bigger than writing */
+  grid-template-columns: 1.2fr 0.8fr; /* left bigger */
   gap: 16px;
   align-items: start;
 }
 
-/* Left column */
-.location-media {
-  background: white;
+/* Left column: media */
+.page-location .location-media {
+  background: #fff;
   border-radius: 12px;
   padding: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* Right column */
-.location-writing {
-  background: white;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
-}
-
-.location-writing section + section {
+.page-location .location-media section + section {
   margin-top: 16px;
 }
 
-.location-writing h2 {
+/* Right column: writing */
+.page-location .location-writing {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.page-location .location-writing section + section {
+  margin-top: 16px;
+}
+
+.page-location .location-writing h2 {
   margin: 0 0 8px;
   font-size: 18px;
+  color: #1f2d3d;
   border-bottom: 2px solid rgba(0,0,0,0.08);
   padding-bottom: 6px;
 }
 
-/* Journal content styling (HTML content option) */
-.journal-entry p {
-  margin: 0 0 12px;
-  line-height: 1.6;
+/* Itinerary list formatting */
+.page-location .location-writing ul {
+  margin: 0;
+  padding-left: 18px;
 }
 
-.journal-entry h3 {
-  margin: 18px 0 8px;
+.page-location .location-writing li {
+  margin: 6px 0;
+  line-height: 1.4;
 }
 
-/* Responsive: stack columns on smaller screens */
+/* Carousel sizing + "no crop" support */
+.page-location .carousel {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+.page-location #location-carousel img,
+.page-location #location-carousel .carousel-img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;  /* show whole image */
+  object-position: center;
+  background: #111;     /* letterbox background */
+  display: block;
+}
+
 @media (max-width: 900px) {
-  .location-grid {
+  .page-location #location-carousel img,
+  .page-location #location-carousel .carousel-img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-location #location-carousel img,
+  .page-location #location-carousel .carousel-img {
+    height: 240px;
+  }
+}
+
+/* Journal under carousel (left column) */
+.page-location .location-journal {
+  margin-top: 16px;
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.page-location .location-journal h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #1f2d3d;
+}
+
+.page-location .journal-entry p,
+.page-location .location-journal p {
+  margin: 0 0 12px;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Responsive: stack columns */
+@media (max-width: 900px) {
+  .page-location .location-grid {
     grid-template-columns: 1fr;
   }
 
-  .location-banner {
+  .page-location .location-banner {
     grid-template-columns: 72px 1fr;
   }
 
-  .location-thumb {
+  .page-location .location-thumb {
     width: 72px;
     height: 72px;
   }
 
-  .banner-title h1 {
+  .page-location .banner-title h1,
+  .page-location #location-title {
     font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   LOCATION PAGE — match homepage theme + style carousel arrows
+========================================================= */
+
+.page-location {
+  /* same background as homepage */
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(80, 130, 255, 0.25), transparent 60%),
+    radial-gradient(800px 450px at 85% 15%, rgba(255, 160, 90, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 60% 95%, rgba(60, 220, 180, 0.12), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+
+.page-location a {
+  color: rgba(255, 255, 255, 0.85);
+}
+.page-location a:hover { text-decoration: underline; }
+
+/* Cards become "glass" like homepage */
+.page-location .location-banner,
+.page-location .location-media,
+.page-location .location-writing,
+.page-location .location-journal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  color: var(--text);
+}
+
+/* Title text on dark */
+.page-location .banner-title h1,
+.page-location #location-title {
+  color: var(--text);
+}
+
+.page-location .location-subtitle {
+  color: var(--muted);
+}
+
+/* Section headings */
+.page-location .location-writing h2,
+.page-location .location-journal h2 {
+  color: var(--text);
+  border-bottom: 2px solid rgba(255,255,255,0.10);
+}
+
+/* Lists + paragraph text */
+.page-location .location-writing li,
+.page-location .location-writing p,
+.page-location .location-journal p,
+.page-location .journal-entry p {
+  color: rgba(255,255,255,0.88);
+}
+
+/* Journal “card” look (still slightly distinct) */
+.page-location .location-journal {
+  background: rgba(255,255,255,0.06);
+}
+
+/* =========================================================
+   Carousel arrows/buttons styling (dark theme)
+========================================================= */
+
+.page-location .carousel {
+  position: relative;
+}
+
+/* If your carousel buttons exist, this will make them match */
+.page-location .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.92);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+  line-height: 1;
+
+  cursor: pointer;
+  z-index: 5;
+
+  transition: transform 0.12s ease, background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.page-location .carousel-btn.prev { left: 10px; }
+.page-location .carousel-btn.next { right: 10px; }
+
+.page-location .carousel-btn:hover {
+  background: rgba(0,0,0,0.70);
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 0 0 4px rgba(74,163,255,0.18);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.page-location .carousel-btn:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.page-location .carousel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(74,163,255,0.22);
+}
+
+/* Optional: hide arrows until hover (feels modern) */
+.page-location .carousel-btn {
+  opacity: 0.92;
+}
+.page-location .carousel:hover .carousel-btn {
+  opacity: 1;
+}
+
+
+/* =========================================
+   Hamburger Menu
+========================================= */
+
+.menu-container {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3000;
+}
+
+/* Button */
+.menu-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 2px;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle:hover {
+  box-shadow: 0 0 0 4px rgba(74,163,255,0.18);
+}
+
+/* Dropdown */
+.menu-dropdown {
+  position: absolute;
+  top: 54px;
+  right: 0;
+
+  min-width: 200px;
+  padding: 8px;
+
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-dropdown a {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.menu-dropdown a:hover {
+  background: rgba(255,255,255,0.10);
+  transform: translateX(2px);
+}
+
+/* Open state */
+.menu-container.open .menu-dropdown {
+  display: flex;
+}
+
+/* Animate hamburger to X */
+.menu-container.open .menu-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-container.open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.menu-container.open .menu-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================
+   About Page
+========================================= */
+
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  display: grid;
+  gap: 18px;
+}
+
+.about-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  padding: 18px 20px;
+}
+
+.about-section h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  border-bottom: 2px solid rgba(255,255,255,0.12);
+  padding-bottom: 6px;
+}
+
+.about-section p {
+  margin: 0;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.85);
+}
+
+/* =========================================
+   About Hero + Stats
+========================================= */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: center;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+
+  padding: 18px 20px;
+}
+
+.about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+.about-hero-text h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+.about-muted {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.stat-label {
+  margin-top: 4px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .about-avatar {
+    width: 100%;
+    height: 220px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
   }
 }

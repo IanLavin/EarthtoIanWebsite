@@ -5,8 +5,8 @@ import icons from './icons.js';
    CONFIG
 ===================== */
 
-const DEFAULT_VIEW = { center: [35.8283, -95.5795], zoom: 5 };
-const WORLD_VIEW   = { center: [10.8283, -9.5795], zoom: 2 };
+const DEFAULT_VIEW = { center: [37.8283, -95.5795], zoom: 5 };
+const WORLD_VIEW   = { center: [10.8283, -9.5795], zoom: 3 };
 
 const CATEGORIES = ['park', 'mountain', 'adventure', 'sightseeing'];
 
@@ -14,7 +14,7 @@ const CATEGORIES = ['park', 'mountain', 'adventure', 'sightseeing'];
    MAP SETUP
 ===================== */
 
-const map = L.map('map').setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
+const map = L.map('map').setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
 
 L.tileLayer(
   'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -22,131 +22,39 @@ L.tileLayer(
 ).addTo(map);
 
 /* =====================
-   DOM REFERENCES
+   DOM
 ===================== */
 
-const locationLists = {
-  park: document.getElementById('parks-list'),
-  mountain: document.getElementById('highpoints-list'),
-  adventure: document.getElementById('adventures-list'),
-  sightseeing: document.getElementById('sightseeing-list')
-};
+const sidebarList = document.getElementById('sidebar-list');
+const searchBox = document.getElementById('searchBox');
+const tabs = Array.from(document.querySelectorAll('.tab'));
 
-const checkboxes = {
-  park: document.getElementById('toggleParks'),
-  mountain: document.getElementById('toggleHighpoints'),
-  adventure: document.getElementById('toggleAdventures'),
-  sightseeing: document.getElementById('toggleSightseeing')
-};
+const homeButton = document.getElementById('homeButton');
+const worldButton = document.getElementById('worldButton');
+
+const randomName = document.getElementById('random-location-name');
+const randomImg = document.getElementById('random-location-img');
 
 /* =====================
-   MARKER LAYERS
+   STATE
+===================== */
+
+let activeCategory = 'all';
+let searchTerm = '';
+
+/* =====================
+   MARKERS
 ===================== */
 
 const markerLayers = Object.fromEntries(
   CATEGORIES.map(cat => [cat, L.layerGroup().addTo(map)])
 );
 
+// Used for list click -> open popup
+const markerById = new Map();
+
 /* =====================
    HELPERS
-===================== */
-
-function createPopup(place, category) {
-  return `
-    <div class="popup">
-      <b>${place.name}</b><br>
-      <a href="country.html?country=${place.country}">
-        <img
-          src="${place.img}"
-          alt="${place.name}"
-          width="200"
-          class="popup-image"
-          onerror="this.onerror=null; this.src='fallback.jpg';"
-        >
-      </a>
-      <br>
-      <i>${place.country} • ${place.region ?? category}</i>
-    </div>
-  `;
-}
-
-function createListItem(place, marker) {
-  const li = document.createElement('li');
-  li.textContent = place.name;
-  li.addEventListener('click', () => {
-    map.setView([place.lat, place.lng], 12);
-    marker.openPopup();
-  });
-  return li;
-}
-
-/* =====================
-   LOAD MARKERS
-===================== */
-
-function loadMarkers() {
-  CATEGORIES.forEach(category => {
-    locations[category].forEach(place => {
-      const marker = L.marker([place.lat, place.lng], {
-        icon: icons[category]
-      }).bindPopup(`
-  <div class="popup">
-    <h3>${place.name}</h3>
-
-    <!-- Location page -->
-    <a href="location.html?id=${place.id}">
-      <img
-        src="${place.img}"
-        alt="${place.name}"
-        width="200"
-        class="popup-image"
-        onerror="this.onerror=null; this.src='fallback.jpg';"
-      />
-    </a>
-
-    <div class="popup-meta">
-      <span>${place.region ?? ""}</span>
-    </div>
-
-    <!-- Country page -->
-    <a
-      class="country-link"
-      href="country.html?country=${place.country}"
-      title="View all locations in this country"
-    >
-      🌍 ${place.country}
-    </a>
-  </div>
-`);
-
-
-      markerLayers[category].addLayer(marker);
-      locationLists[category].appendChild(createListItem(place, marker));
-    });
-  });
-}
-
-/* =====================
-   UI CONTROLS
-===================== */
-
-function toggleCategories() {
-  CATEGORIES.forEach(cat => {
-    map[checkboxes[cat].checked ? 'addLayer' : 'removeLayer'](markerLayers[cat]);
-  });
-}
-
-document.getElementById('filter-container')
-  .addEventListener('change', e => e.target.type === 'checkbox' && toggleCategories());
-
-document.getElementById('homeButton')
-  .addEventListener('click', () => map.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom));
-
-document.getElementById('worldButton')
-  .addEventListener('click', () => map.setView(WORLD_VIEW.center, WORLD_VIEW.zoom));
-
-/* =====================
-   SEARCH
 ===================== */
 
 function debounce(fn, delay = 300) {
@@ -157,38 +65,183 @@ function debounce(fn, delay = 300) {
   };
 }
 
-document.getElementById('searchBox').addEventListener(
-  'input',
-  debounce(e => {
-    const term = e.target.value.toLowerCase();
-    CATEGORIES.forEach(cat => {
-      [...locationLists[cat].children].forEach(li => {
-        li.style.display = li.textContent.toLowerCase().includes(term) ? '' : 'none';
-      });
+function setActiveTab(category) {
+  activeCategory = category;
+
+  tabs.forEach(btn => {
+    const isActive = btn.dataset.category === category;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+
+  applyCategoryToMap();
+  renderSidebarList();
+}
+
+function applyCategoryToMap() {
+  // Show all layers if "all"
+  if (activeCategory === 'all') {
+    CATEGORIES.forEach(cat => map.addLayer(markerLayers[cat]));
+    return;
+  }
+
+  // Otherwise show just one layer
+  CATEGORIES.forEach(cat => {
+    if (cat === activeCategory) map.addLayer(markerLayers[cat]);
+    else map.removeLayer(markerLayers[cat]);
+  });
+}
+
+function createPopup(place, category) {
+  return `
+    <div class="popup">
+      <h3>${place.name}</h3>
+
+      <!-- Location page -->
+      <a href="location.html?id=${place.id}">
+        <img
+          src="${place.img}"
+          alt="${place.name}"
+          width="200"
+          class="popup-image"
+          onerror="this.onerror=null; this.src='fallback.jpg';"
+        />
+      </a>
+
+      <div class="popup-meta">
+        <span>${place.country ?? ""}${place.region ? " • " + place.region : ""}</span>
+      </div>
+
+      <!-- Country page -->
+      <a class="country-link" href="country.html?country=${place.country}" title="View all locations in this country">
+        🌍 ${place.country}
+      </a>
+    </div>
+  `;
+}
+
+function getPlacesForSidebar() {
+  const all = Object.values(locations).flat();
+
+  const byCategory =
+    activeCategory === 'all'
+      ? all
+      : (locations[activeCategory] || []);
+
+  const filtered = byCategory.filter(p =>
+    p.name.toLowerCase().includes(searchTerm)
+  );
+
+  // A stable sort makes the list nicer to scan
+  filtered.sort((a, b) => a.name.localeCompare(b.name));
+  return filtered;
+}
+
+function renderSidebarList() {
+  sidebarList.innerHTML = '';
+
+  const places = getPlacesForSidebar();
+
+  if (!places.length) {
+    const li = document.createElement('li');
+    li.className = 'sidebar-empty';
+    li.textContent = 'No matches.';
+    sidebarList.appendChild(li);
+    return;
+  }
+
+  places.forEach(place => {
+    const li = document.createElement('li');
+    li.className = 'sidebar-item';
+    li.textContent = place.name;
+
+    li.addEventListener('click', () => {
+      map.setView([place.lat, place.lng], 12);
+
+      const marker = markerById.get(place.id);
+      if (marker) marker.openPopup();
     });
-  })
-);
+
+    sidebarList.appendChild(li);
+  });
+}
 
 /* =====================
-   RANDOM LOCATION
+   LOAD MARKERS
+===================== */
+
+function loadMarkers() {
+  CATEGORIES.forEach(category => {
+    (locations[category] || []).forEach(place => {
+      const marker = L.marker([place.lat, place.lng], { icon: icons[category] })
+        .bindPopup(createPopup(place, category));
+
+      markerLayers[category].addLayer(marker);
+      markerById.set(place.id, marker);
+    });
+  });
+}
+
+/* =====================
+   RANDOM HIGHLIGHT
 ===================== */
 
 const allLocations = Object.values(locations).flat();
 
 function showRandomLocation() {
   const loc = allLocations[Math.floor(Math.random() * allLocations.length)];
-  document.getElementById('random-location-name').textContent = loc.name;
+  randomName.textContent = loc.name;
 
-  const img = document.getElementById('random-location-img');
-  img.src = loc.img;
-  img.onerror = () => (img.src = 'fallback.jpg');
+  randomImg.src = loc.img;
+  randomImg.onerror = () => (randomImg.src = 'fallback.jpg');
 }
 
 setInterval(showRandomLocation, 10000);
+
+/* =====================
+   EVENTS
+===================== */
+
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => setActiveTab(btn.dataset.category));
+});
+
+searchBox.addEventListener(
+  'input',
+  debounce(e => {
+    searchTerm = e.target.value.trim().toLowerCase();
+    renderSidebarList();
+  })
+);
+
+homeButton.addEventListener('click', () => {
+  map.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
+});
+
+worldButton.addEventListener('click', () => {
+  map.setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
+});
 
 /* =====================
    INIT
 ===================== */
 
 loadMarkers();
+setActiveTab('all');
 showRandomLocation();
+
+// Hamburger menu toggle
+const menuContainer = document.querySelector(".menu-container");
+const menuToggle = document.getElementById("menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+  menuContainer.classList.toggle("open");
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (!menuContainer.contains(e.target)) {
+    menuContainer.classList.remove("open");
+  }
+});
+

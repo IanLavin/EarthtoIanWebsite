@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map</title>
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarthtoIan's Adventures</title>
 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
-<body>
 
-    <!-- Title for the webpage -->
+<body class="page-home">
+
+  <header class="topbar">
     <h1 id="page-title">EarthtoIan's Adventures</h1>
+  </header>
 
-    <!-- Home button -->
-    <button id="homeButton" class="home-button">United States</button>
+  <!-- Hamburger Menu -->
+  <div class="menu-container">
+  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <!-- Worldwide button -->
-    <button id="worldButton" class="world-button">Worldwide</button>
+  <nav id="menu-dropdown" class="menu-dropdown">
+    <a href="index.html">Home</a>
+    <a href="countries.html">Countries</a>
+    <a href="highpoints.html">Highpoints</a>
+    <a href="about.html">About</a>
+  </nav>
+</div>
 
-    <!-- Container for checkboxes -->
-    <div id="filter-container">
-        <label><input type="checkbox" id="toggleParks" checked> Show National Parks</label>
-        <label><input type="checkbox" id="toggleHighpoints" checked> Show State Highpoints</label>
-        <label><input type="checkbox" id="toggleAdventures" checked> Show Various Adventures</label>
-        <label><input type="checkbox" id="toggleSightseeing" checked> Show Various Sights</label>
 
-    </div>
+  <div class="app-layout">
 
-    <div id="random-location">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-controls">
+        <button id="homeButton" class="sidebar-btn">United States</button>
+        <button id="worldButton" class="sidebar-btn">Worldwide</button>
+      </div>
+
+      <input type="text" id="searchBox" placeholder="Search..." />
+
+      <div class="tabs" role="tablist" aria-label="Categories">
+        <button class="tab active" data-category="all" role="tab" aria-selected="true">All</button>
+        <button class="tab" data-category="park" role="tab" aria-selected="false">Parks</button>
+        <button class="tab" data-category="mountain" role="tab" aria-selected="false">Highpoints</button>
+        <button class="tab" data-category="adventure" role="tab" aria-selected="false">Adventures</button>
+        <button class="tab" data-category="sightseeing" role="tab" aria-selected="false">Sightseeing</button>
+      </div>
+
+      <ul id="sidebar-list" class="sidebar-list"></ul>
+
+      <div id="random-location" class="highlight-card">
         <h3>Highlights</h3>
-        <img id="random-location-img" src="" alt="Random Adventure" width="100%" />
+        <img id="random-location-img" src="" alt="Random Adventure" />
         <p id="random-location-name"></p>
-    </div>
-    
+      </div>
 
-    <!-- Search box for filtering locations -->
-    <input type="text" id="searchBox" placeholder="Search..." />
+    </aside>
 
-    <div id="map"></div>
-    
-    <!-- Box showing list of locations -->
-    <div id="location-list">
-        <div class="category-column" id="parks-column">
-            <h3>National Parks</h3>
-            <ul id="parks-list"></ul>
-        </div>
-        <div class="category-column" id="highpoints-column">
-            <h3>State Highpoints</h3>
-            <ul id="highpoints-list"></ul>
-        </div>
-        <div class="category-column" id="adventures-column">
-            <h3>Adventures</h3>
-            <ul id="adventures-list"></ul>
-        </div>
-        <div class="category-column" id="sightseeing-column">
-            <h3>Sightseeing</h3>
-            <ul id="sightseeing-list"></ul>
-        </div>
-    </div>
+    <!-- Map -->
+    <main class="map-area">
+      <div id="map"></div>
+    </main>
 
-    <!-- Load Leaflet first -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  </div>
 
-    <!-- Your main JavaScript file (type="module" for import/export to work) -->
-    <script type="module" src="script.js"></script>
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+  <!-- App JS -->
+  <script type="module" src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <h1 id="page-title">About</h1>
+  </header>
+
+  <!-- Hamburger menu (same as homepage) -->
+  <div class="menu-container">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="menu-dropdown" class="menu-dropdown">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="highpoints.html">Highpoints</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+
+  <!-- Main content -->
+  <main class="about-page">
+
+    <!-- Hero: profile + stats -->
+    <section class="about-hero">
+      <img
+        class="about-avatar"
+        src="Pictures/profile.jpg"
+        alt="Profile photo"
+        onerror="this.style.display='none';"
+      />
+
+      <div class="about-hero-text">
+        <h2>Who I Am</h2>
+        <p class="about-muted">
+          <!-- Write a short intro here -->
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number" id="stat-highpoints">—</div>
+            <div class="stat-label">Highpoints Completed</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" id="stat-parks">—</div>
+            <div class="stat-label">National Parks Visited</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission / purpose -->
+    <section class="about-section">
+      <h2>Why This Exists</h2>
+      <p>
+        <!-- Explain the goal of this project -->
+      </p>
+    </section>
+
+    <!-- Travel philosophy / style -->
+    <section class="about-section">
+      <h2>How I Travel</h2>
+      <p>
+        <!-- Your travel philosophy -->
+      </p>
+    </section>
+
+    <!-- Future / roadmap -->
+    <section class="about-section">
+      <h2>What’s Next</h2>
+      <p>
+        <!-- Future plans -->
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Auto-count stats from Locations.js -->
+  <script type="module">
+    import locations from "./Locations.js";
+
+    const highpointsCount = locations.mountain?.length ?? 0;
+    const parksCount = locations.park?.length ?? 0;
+
+    document.getElementById("stat-highpoints").textContent = highpointsCount;
+    document.getElementById("stat-parks").textContent = parksCount;
+  </script>
+
+  <!-- Menu JS (same as homepage) -->
+  <script>
+    const menuContainer = document.querySelector(".menu-container");
+    const menuToggle = document.getElementById("menu-toggle");
+
+    menuToggle.addEventListener("click", () => {
+      menuContainer.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menuContainer.contains(e.target)) {
+        menuContainer.classList.remove("open");
+      }
+    });
+  </script>
+
+</body>
+</html>
