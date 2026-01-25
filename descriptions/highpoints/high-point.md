@@ -1,0 +1,1 @@
+High Point is the highest elevation in New Jersey and is marked by a prominent obelisk monument. Located within High Point State Park, the summit offers views into New York and Pennsylvania. It’s one of the more developed highpoints, blending natural scenery with historic landmarks.

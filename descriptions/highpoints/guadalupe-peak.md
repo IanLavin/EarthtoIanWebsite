@@ -1,0 +1,1 @@
+Guadalupe Peak stands as the highest point in Texas, rising dramatically above the desert floor of West Texas. The hike is a steady climb through rugged terrain, with sweeping views of the surrounding desert and the vastness of Guadalupe Mountains National Park. Reaching the summit feels especially rewarding given how isolated and remote the landscape is.

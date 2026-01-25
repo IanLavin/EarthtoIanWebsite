@@ -1,0 +1,1 @@
+Grand Teton National Park is defined by sharp, dramatic peaks that rise abruptly from the valley floor. The Tetons feel raw and imposing, offering incredible hiking, alpine lakes, and some of the most iconic mountain scenery in the country. It’s a park where the landscape immediately commands attention.

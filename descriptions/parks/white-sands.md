@@ -1,0 +1,1 @@
+White Sands protects the world’s largest gypsum dune field, creating rolling waves of pure white sand. The landscape constantly shifts with the wind, making every visit feel different. It’s quiet, bright, and surprisingly peaceful.

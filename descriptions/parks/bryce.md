@@ -1,0 +1,1 @@
+Bryce Canyon is famous for its hoodoos—tall, thin rock spires packed tightly into natural amphitheaters. The park feels almost alien, especially when light and shadows move across the formations. Despite its small size, it’s visually unforgettable.

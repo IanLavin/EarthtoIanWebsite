@@ -1,0 +1,1 @@
+Black Mesa is Oklahoma’s highest point, located in the far western panhandle. The hike crosses grasslands and mesas, eventually reaching a quiet summit marked by a simple monument. The area feels remote and peaceful, with the surrounding landscape reflecting the transition between plains and high desert.

@@ -26,6 +26,8 @@ const rawLocations = {
             lng: -110.55, 
             url: "https://www.nps.gov/yell/index.htm",
             img: "Pictures/Wyoming/Yellowstone/IMG_2651.jpg",
+            descriptionMd: "descriptions/parks/yellowstone.md",
+            
 
             //carousel images
             gallery: [
@@ -52,6 +54,7 @@ const rawLocations = {
             lng: -110.8, 
             url: "https://en.wikipedia.org/wiki/Grand_Teton_National_Park",
             img: "Pictures/Wyoming/Grand_Teton/IMG_2769.jpg",
+            descriptionMd: "descriptions/parks/grand-teton.md",
 
             //carousel images
             gallery: [
@@ -74,6 +77,7 @@ const rawLocations = {
             lng: -122.10, 
             url: "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
             img: "Pictures/Oregon/IMG_5284.jpg",
+            descriptionMd: "descriptions/parks/crater-lake.md",
 
             //carousel images
             gallery: [
@@ -89,6 +93,7 @@ const rawLocations = {
             lng: -124.04, 
             url: "https://en.wikipedia.org/wiki/Redwood_National_and_State_Parks",
             img: "Pictures/California/Redwoods/IMG_0033.JPG",
+            descriptionMd: "descriptions/parks/redwood.md",
 
             //carousel images
             gallery: [
@@ -105,6 +110,7 @@ const rawLocations = {
             lng: -121.48, 
             url: "https://en.wikipedia.org/wiki/Pinnacles_National_Park",
             img: "Pictures/California/Pinnacles/IMG_7520.jpg",
+            descriptionMd: "descriptions/parks/pinnacles.md",
 
             //carousel images
             gallery: [
@@ -122,6 +128,7 @@ const rawLocations = {
             lng: -117.05, 
             url: "https://en.wikipedia.org/wiki/Death_Valley_National_Park",
             img: "Pictures/California/Death_Valley/IMG_2337.jpg",
+            descriptionMd: "descriptions/parks/death-valley.md",
 
             //carousel images
             gallery: [
@@ -139,6 +146,7 @@ const rawLocations = {
             lng: -119.69, 
             url: "https://en.wikipedia.org/wiki/Channel_Islands_National_Park",
             img: "Pictures/California/Channel_Islands/IMG_0669.jpg",
+            descriptionMd: "descriptions/parks/channel-islands.md",
 
             //carousel images
             gallery: [
@@ -156,6 +164,7 @@ const rawLocations = {
             lng: -115.9, 
             url: "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
             img: "Pictures/California/Joshua_Tree/IMG_8823.jpg",
+            descriptionMd: "descriptions/parks/joshua-tree.md",
 
             //carousel images
             gallery: [
@@ -176,6 +185,7 @@ const rawLocations = {
             lng: -112.14, 
             url: "https://en.wikipedia.org/wiki/Grand_Canyon",
             img: "Pictures/Arizona/Grand_Canyon/Grand_Canyon.jpg",
+            descriptionMd: "descriptions/parks/grand-canyon.md",
 
             //carousel images
             gallery: [
@@ -199,6 +209,7 @@ const rawLocations = {
             lng: -114.31, 
             url: "https://en.wikipedia.org/wiki/Great_Basin_National_Park",
             img: "Pictures/Nevada/Great Basin/IMG_1194.jpg",
+            descriptionMd: "descriptions/parks/great-basin.md",
 
             //carousel images
             gallery: [
@@ -217,6 +228,7 @@ const rawLocations = {
             lng: -111.19, 
             url: "https://en.wikipedia.org/wiki/Saguaro_National_Park",
             img: "Pictures/Arizona/Saguaro/IMG_8402.jpg",
+            descriptionMd: "descriptions/parks/saguaro.md",
 
             //carousel images
             gallery: [
@@ -231,6 +243,7 @@ const rawLocations = {
             lng: -109.86, 
             url: "https://en.wikipedia.org/wiki/Canyonlands_National_Park",
             img: "Pictures/Utah/Canyonlands/IMG_1847.jpg",
+            descriptionMd: "descriptions/parks/canyonlands.md",
 
             //carousel images
             gallery: [
@@ -246,6 +259,7 @@ const rawLocations = {
             lng: -109.57, 
             url: "https://en.wikipedia.org/wiki/Arches_National_Park",
             img: "Pictures/Utah/Arches/IMG_1782.jpg",
+            descriptionMd: "descriptions/parks/arches.md",
 
             //carousel images
             gallery: [
@@ -264,6 +278,7 @@ const rawLocations = {
             lng: -111.13, 
             url: "https://en.wikipedia.org/wiki/Capitol_Reef_National_Park",
             img: "Pictures/Utah/Capitol_Reef/IMG_3702.jpg",
+            descriptionMd: "descriptions/parks/capitol-reef.md",
 
             //carousel images
             gallery: [
@@ -278,6 +293,7 @@ const rawLocations = {
             lng: -112.16, 
             url: "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
             img: "Pictures/Utah/Bryce/IMG_1915.jpg",
+            descriptionMd: "descriptions/parks/bryce.md",
 
             //carousel images
             gallery: [
@@ -295,6 +311,7 @@ const rawLocations = {
             lng: -112.96, 
             url: "https://en.wikipedia.org/wiki/Zion_National_Park",
             img: "Pictures/Utah/Zion/IMG_2019.jpg",
+            descriptionMd: "descriptions/parks/zion.md",
 
             //carousel images
             gallery: [
@@ -313,6 +330,7 @@ const rawLocations = {
             lng: -106.32, 
             url: "https://en.wikipedia.org/wiki/White_Sands_National_Park",
             img: "Pictures/New Mexico/White_Sands/IMG_8276.jpg",
+            descriptionMd: "descriptions/parks/white-sands.md",
 
             //carousel images
             gallery: [
@@ -327,6 +345,7 @@ const rawLocations = {
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
+            descriptionMd: "descriptions/parks/guadalupe.md",
 
             //carousel images
             gallery: [
@@ -342,6 +361,7 @@ const rawLocations = {
             lng: -105.52, 
             url: "https://en.wikipedia.org/wiki/Great_Sand_Dunes_National_Park_and_Preserve",
             img: "Pictures/Colorado/Great_Dunes/IMG_0979.jpg",
+            descriptionMd: "descriptions/parks/great-sands.md",
 
             //carousel images
             gallery: [
@@ -358,6 +378,7 @@ const rawLocations = {
             lng: -105.66, 
             url: "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
             img: "Pictures/Colorado/Rocky_Mountain/IMG_9406.jpg",
+            descriptionMd: "descriptions/parks/rocky-mountain.md",
 
             //carousel images
             gallery: [
@@ -375,6 +396,7 @@ const rawLocations = {
             lng: -80.77, 
             url: "https://en.wikipedia.org/wiki/Everglades_National_Park",
             img: "Pictures/Florida/Everglades/IMG_3699.JPG",
+            descriptionMd: "descriptions/parks/everglades.md",
 
             //carousel images
             gallery: [
@@ -389,6 +411,7 @@ const rawLocations = {
             lng: -80.18, 
             url: "https://en.wikipedia.org/wiki/Biscayne_National_Park",
             img: "Pictures/Florida/Biscayne/IMG_0501.jpg",
+            descriptionMd: "descriptions/parks/biscayne.md",
 
             //carousel images
             gallery: [
@@ -403,6 +426,7 @@ const rawLocations = {
             lng: -82.87, 
             url: "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park",
             img: "Pictures/Florida/Dry_Tortugas/IMG_0540.jpg",
+            descriptionMd: "descriptions/parks/dry-tortugas.md",
 
             //carousel images
             gallery: [
@@ -422,6 +446,7 @@ const rawLocations = {
             lng: -104.44, 
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/New Mexico/Carlsbad/IMG_7821.jpg",
+            descriptionMd: "descriptions/parks/carlsbad.md",
 
             //carousel images
             gallery: [
@@ -437,6 +462,7 @@ const rawLocations = {
             lng: -78.453, 
             url: "https://en.wikipedia.org/wiki/Shenandoah_National_Park",
             img: "Pictures/Virginia/Shenandoah/IMG_4318.jpg",
+            descriptionMd: "descriptions/parks/shenandoah.md",
 
             //carousel images
             gallery: [
@@ -453,6 +479,7 @@ const rawLocations = {
             lng: -81.082, 
             url: "https://en.wikipedia.org/wiki/New_River_Gorge_National_Park",
             img: "Pictures/West Virginia/New_River/IMG_4323.jpg",
+            descriptionMd: "descriptions/parks/new-river.md",
 
             //carousel images
             gallery: [
@@ -468,6 +495,7 @@ const rawLocations = {
             lng: -108.487, 
             url: "https://en.wikipedia.org/wiki/Mesa_Verde_National_Park",
             img: "Pictures/Colorado/Mesa_Verde/IMG_5322.jpg",
+            descriptionMd: "descriptions/parks/mesa-verde.md",
 
             //carousel images
             gallery: [
@@ -482,6 +510,7 @@ const rawLocations = {
             lng: -107.686, 
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Gunnison_National_Park",
             img: "Pictures/Colorado/Black_Canyon/IMG_5380.jpg",
+            descriptionMd: "descriptions/parks/black-canyon.md",
 
             //carousel images
             gallery: [
@@ -496,6 +525,7 @@ const rawLocations = {
             lng: -109.787, 
             url: "https://en.wikipedia.org/wiki/Petrified_Forest_National_Park",
             img: "Pictures/Arizona/Petrified/IMG_5506.jpg",
+            descriptionMd: "descriptions/parks/petrified-forest.md",
 
             //carousel images
             gallery: [
@@ -510,6 +540,7 @@ const rawLocations = {
             lng: -123.934, 
             url: "https://en.wikipedia.org/wiki/Olympic_National_Park",
             img: "Pictures/Washington/Olympic/IMG_5671.jpg",
+            descriptionMd: "descriptions/parks/olympic.md",
 
             //carousel images
             gallery: [
@@ -529,6 +560,7 @@ const rawLocations = {
             lng: -121.114, 
             url: "https://en.wikipedia.org/wiki/North_Cascades_National_Park",
             img: "Pictures/Washington/North_Cascades/IMG_5839.jpg",
+            descriptionMd: "descriptions/parks/north-cascades.md",
 
             //carousel images
             gallery: [
@@ -548,6 +580,7 @@ const rawLocations = {
             lng: -121.760, 
             url: "https://en.wikipedia.org/wiki/Mount_Rainier_National_Park",
             img: "Pictures/Washington/Rainier/IMG_5862.jpg",
+            descriptionMd: "descriptions/parks/rainier.md",
 
             //carousel images
             gallery: [
@@ -562,6 +595,7 @@ const rawLocations = {
             lng: -81.565, 
             url: "https://en.wikipedia.org/wiki/Cuyahoga_Valley_National_Park",
             img: "Pictures/Ohio/Cuyahoga/IMG_6613.jpg",
+            descriptionMd: "descriptions/parks/cuyahoga.md",
 
             //carousel images
             gallery: [
@@ -581,6 +615,7 @@ const rawLocations = {
             lng: -118.292, 
             url: "https://en.wikipedia.org/wiki/Mount_Whitney",
             img: "Pictures/California/Whitney/IMG_8933.jpg",
+            descriptionMd: "descriptions/highpoints/mt-whitney.md",
 
             //carousel images
             gallery: [
@@ -598,6 +633,8 @@ const rawLocations = {
             lng: -106.445, 
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
             img: "Pictures/Colorado/Elbert/IMG_9119.jpg",
+            descriptionMd: "descriptions/highpoints/mt-elbert.md",
+
 
             //carousel images
             gallery: [
@@ -612,6 +649,8 @@ const rawLocations = {
             lng: -111.677, 
             url: "https://en.wikipedia.org/wiki/Humphreys_Peak",
             img: "Pictures/Arizona/Humphreys/IMG_6070.jpg",
+            descriptionMd: "descriptions/highpoints/humphreys-peak.md",
+
 
             //carousel images
             gallery: [
@@ -628,6 +667,7 @@ const rawLocations = {
             lng: -105.416, 
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
             img: "Pictures/New Mexico/Wheeler/IMG_0960.jpg",
+            descriptionMd: "descriptions/highpoints/wheeler-peak.md",
 
             //carousel images
             gallery: [
@@ -643,6 +683,7 @@ const rawLocations = {
             lng: -113.78, 
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
             img: "Pictures/Idaho/Borah/borah.JPG",
+            descriptionMd: "descriptions/highpoints/borah-peak.md",
 
             //carousel images
             gallery: [
@@ -657,6 +698,7 @@ const rawLocations = {
             lng: -102.997, 
             url: "https://en.wikipedia.org/wiki/Black_Mesa_(Oklahoma,_Colorado,_New_Mexico)",
             img: "Pictures/Oklahoma/Black_Mesa/IMG_0921.jpg",
+            descriptionMd: "descriptions/highpoints/black-mesa.md",
 
             //carousel images
             gallery: [
@@ -672,6 +714,7 @@ const rawLocations = {
             lng: -102.037, 
             url: "https://en.wikipedia.org/wiki/Mount_Sunflower",
             img: "Pictures/Kansas/Sunflower/IMG_9297.jpg",
+            descriptionMd: "descriptions/highpoints/mt-sunflower.md",
 
             //carousel images
             gallery: [
@@ -686,6 +729,7 @@ const rawLocations = {
             lng: -104.031, 
             url: "https://en.wikipedia.org/wiki/Panorama_Point",
             img: "Pictures/Nebraska/Panorama/IMG_9312.jpg",
+            descriptionMd: "descriptions/highpoints/panorama-point.md",
 
             //carousel images
             gallery: [
@@ -694,13 +738,14 @@ const rawLocations = {
             ].map(f => `Pictures/Nebraska/Panorama/${f}`)
         },
         { 
-            name: "Guadalupe Mountains National Park", 
+            name: "Guadalupe Peak", 
             country: "US",
             region: "Southwest",
             lat: 31.89, 
             lng: -104.86, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
+            descriptionMd: "descriptions/highpoints/guadalupe-peak.md",
 
             //carousel images
             gallery: [
@@ -716,6 +761,7 @@ const rawLocations = {
             lng: -81.154, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Virginia/Rogers/IMG_4354.jpg",
+            descriptionMd: "descriptions/highpoints/mt-rogers.md",
 
             //carousel images
             gallery: [
@@ -731,6 +777,7 @@ const rawLocations = {
             lng: -82.893, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Kentucky/Black/IMG_4335.jpg",
+            descriptionMd: "descriptions/highpoints/black-mountain.md",
 
             //carousel images
             gallery: [
@@ -746,6 +793,7 @@ const rawLocations = {
             lng: -79.532, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/West Virginia/Spruce_Knob/IMG_4372.jpg",
+            descriptionMd: "descriptions/highpoints/spruce-knob.md",
 
             //carousel images
             gallery: [
@@ -760,6 +808,7 @@ const rawLocations = {
             lng: -79.485, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Maryland/Backbone/IMG_4378.jpg",
+            descriptionMd: "descriptions/highpoints/backbone-mountain.md",
 
             //carousel images
             gallery: [
@@ -775,6 +824,7 @@ const rawLocations = {
             lng: -79.177, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Pennsylvania/Davis/IMG_4390.jpg",
+            descriptionMd: "descriptions/highpoints/mt-davis.md",
 
             //carousel images
             gallery: [
@@ -792,6 +842,7 @@ const rawLocations = {
             lng: -75.52, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Delaware/Ebright/IMG_4402.jpg",
+            descriptionMd: "descriptions/highpoints/ebright-azimuth.md",
 
             //carousel images
             gallery: [
@@ -807,6 +858,7 @@ const rawLocations = {
             lng: -74.661, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/New Jersey/High_Point/IMG_6587.jpg",
+            descriptionMd: "descriptions/highpoints/high-point.md",
 
             //carousel images
             gallery: [
@@ -824,6 +876,7 @@ const rawLocations = {
             lng: -73.482, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Connecticut/Frissell/IMG_6640.jpg",
+            descriptionMd: "descriptions/highpoints/mt-frissell.md",
 
             //carousel images
             gallery: [
@@ -838,6 +891,7 @@ const rawLocations = {
             lng: -73.166, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Massachusets/Greylock/IMG_6597.jpg",
+            descriptionMd: "descriptions/highpoints/mt-greylock.md",
 
             //carousel images
             gallery: [
@@ -852,6 +906,7 @@ const rawLocations = {
             lng: -71.779, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Rhode Island/Jerimoth/IMG_6634.jpg",
+            descriptionMd: "descriptions/highpoints/jerimoth-hill.md",
 
             //carousel images
             gallery: [
@@ -867,6 +922,7 @@ const rawLocations = {
             lng: -83.720, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Ohio/Campbell/IMG_6628.jpg",
+            descriptionMd: "descriptions/highpoints/campbell-hill.md",
 
             //carousel images
             gallery: [
@@ -881,6 +937,7 @@ const rawLocations = {
             lng: -84.848, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Indiana/Hoosier/IMG_6629.jpg",
+            descriptionMd: "descriptions/highpoints/hoosier-hill.md",
 
             //carousel images
             gallery: [

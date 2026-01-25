@@ -1,0 +1,1 @@
+Yellowstone is the world’s first national park and one of the most geologically active places on Earth. Geysers, hot springs, waterfalls, and wildlife all coexist on a massive volcanic plateau. Every area feels different, making it a park you could revisit endlessly and still find something new.

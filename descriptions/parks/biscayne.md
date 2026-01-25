@@ -1,0 +1,1 @@
+Biscayne National Park preserves coral reefs, mangrove shorelines, and clear coastal waters just south of Miami. Most of the park lies underwater, making it ideal for snorkeling and boating. It blends tropical beauty with marine exploration.

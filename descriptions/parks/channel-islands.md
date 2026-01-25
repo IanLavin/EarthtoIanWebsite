@@ -1,0 +1,1 @@
+Channel Islands National Park preserves a remote chain of islands off the California coast, accessible only by boat or plane. The islands feel wild and isolated, with sea cliffs, quiet coves, and unique wildlife. It’s one of the most untouched and least crowded parks in the country.

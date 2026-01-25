@@ -1,0 +1,1 @@
+Crater Lake protects the deepest lake in the United States, formed inside the collapsed caldera of an ancient volcano. The intense blue water and steep surrounding cliffs create a striking, almost unreal landscape. Its simplicity makes it one of the most visually powerful parks in the system.

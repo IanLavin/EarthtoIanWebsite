@@ -1,0 +1,1 @@
+The Grand Canyon is a vast, layered chasm carved by the Colorado River over millions of years. Its scale is difficult to comprehend until you stand on the rim and look out across the immense depth and color. No two viewpoints ever look the same.

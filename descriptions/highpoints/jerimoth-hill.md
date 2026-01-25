@@ -1,0 +1,1 @@
+Jerimoth Hill is the highest point in Rhode Island and is located in a quiet, wooded area. The summit is modest and peaceful, with a small clearing marking the highpoint. It’s a reminder that even subtle elevations can hold meaning in a broader journey.

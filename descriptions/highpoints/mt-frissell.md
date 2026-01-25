@@ -1,0 +1,1 @@
+Mount Frissell represents Connecticut’s highest elevation, though the summit itself lies just across the Massachusetts border. The trail winds through scenic woodland and open ridgelines. The experience reflects the subtle but beautiful terrain of the New England highlands.

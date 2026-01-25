@@ -1,0 +1,1 @@
+Backbone Mountain marks the highest point in Maryland and sits along the state’s western edge. The area is forested and quiet, with limited views but a strong sense of remoteness. It’s a subtle highpoint that reflects the rolling ridges of the Appalachian Plateau.

@@ -1,0 +1,1 @@
+Shenandoah National Park follows the crest of the Blue Ridge Mountains, offering rolling views and forested ridges. Skyline Drive provides access to countless overlooks and trailheads. It’s a peaceful, classic Appalachian landscape.

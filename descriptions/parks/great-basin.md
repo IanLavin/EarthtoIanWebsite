@@ -1,0 +1,1 @@
+Great Basin National Park is a quiet, underrated park featuring alpine peaks, ancient bristlecone pines, and Lehman Caves. The dramatic elevation change—from desert to high mountains—creates diverse landscapes in a compact area. Its remoteness adds to its appeal.

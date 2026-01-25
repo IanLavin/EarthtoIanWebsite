@@ -1,0 +1,1 @@
+Rocky Mountain National Park showcases high alpine terrain, sweeping tundra, and rugged peaks. Trail Ridge Road offers access to elevations above 12,000 feet, while countless trails explore lakes and ridgelines. Weather and scenery can change quickly here.

@@ -1,0 +1,1 @@
+Hoosier Hill is the highest point in Indiana and lies in a rural farming area. A short walk leads to a simple marker surrounded by fields and trees. The summit captures the understated nature of Indiana’s landscape and the quiet charm of Midwest highpoints.

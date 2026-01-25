@@ -1,0 +1,1 @@
+Great Sand Dunes features the tallest sand dunes in North America, rising dramatically against the backdrop of the Sangre de Cristo Mountains. The contrast between desert dunes and alpine peaks is striking. It’s a park that invites exploration and play.

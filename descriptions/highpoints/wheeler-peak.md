@@ -1,0 +1,1 @@
+Wheeler Peak is the highest point in New Mexico and sits within the Sangre de Cristo Mountains. The hike offers a blend of forested trails and exposed alpine terrain, with sweeping views of northern New Mexico and southern Colorado. The summit provides a sense of isolation and elevation rarely found in the Southwest.

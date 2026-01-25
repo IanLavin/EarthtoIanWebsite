@@ -1,0 +1,1 @@
+Panorama Point marks the highest elevation in Nebraska and sits near the convergence of Nebraska, Colorado, and Wyoming. True to its name, the summit offers expansive views across the High Plains, with rolling grasslands stretching in every direction. It’s a quiet and reflective highpoint, emphasizing openness rather than height.

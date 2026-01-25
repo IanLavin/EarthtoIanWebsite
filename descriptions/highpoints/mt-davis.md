@@ -1,0 +1,1 @@
+Mount Davis is the highest point in Pennsylvania and lies within Forbes State Forest. A short walk from the parking area leads to a viewing tower that offers views of the surrounding forested hills. The summit highlights the gentle, wooded nature of the state’s highest terrain.

@@ -1,0 +1,1 @@
+Mount Greylock is the highest point in Massachusetts and offers sweeping views across New England on clear days. The summit is crowned by a historic stone tower, giving it a dramatic and iconic feel. It’s a popular destination that blends natural beauty with regional history.

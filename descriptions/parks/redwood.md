@@ -1,0 +1,1 @@
+Redwood National Park is home to the tallest trees on Earth, creating a forest that feels ancient and humbling. Coastal fog, fern-filled groves, and quiet trails give the park a calm, almost cathedral-like atmosphere. Walking among the redwoods puts scale into perspective instantly.

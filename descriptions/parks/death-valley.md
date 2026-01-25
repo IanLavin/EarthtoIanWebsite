@@ -1,0 +1,1 @@
+Death Valley is the hottest, driest, and lowest national park in the United States. Vast salt flats, colorful badlands, towering dunes, and extreme elevation contrasts define the landscape. Its scale and harshness make it one of the most surreal places to explore.

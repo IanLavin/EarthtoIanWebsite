@@ -1,0 +1,1 @@
+Mount Whitney is the highest point in the contiguous United States and a true icon of American mountaineering. The trail climbs from high desert to alpine granite landscapes, offering expansive views of the Sierra Nevada. Standing on the summit provides a striking contrast: the lowest point in North America, Death Valley, lies just to the east.

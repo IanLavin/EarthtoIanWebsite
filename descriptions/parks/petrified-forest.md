@@ -1,0 +1,1 @@
+Petrified Forest showcases colorful badlands and ancient fossilized trees turned to stone. The landscape feels both prehistoric and otherworldly. It’s a quieter park that rewards exploration and curiosity.

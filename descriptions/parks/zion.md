@@ -1,0 +1,1 @@
+Zion National Park is defined by towering sandstone walls, narrow slot canyons, and lush river corridors. Trails like Angels Landing and The Narrows showcase the park’s dramatic vertical relief. It’s both scenic and physically engaging.

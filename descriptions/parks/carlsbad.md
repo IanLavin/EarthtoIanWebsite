@@ -1,0 +1,1 @@
+Carlsbad Caverns protects a vast underground cave system filled with enormous chambers and intricate formations. Descending into the caverns feels like entering another world entirely. Above ground, desert landscapes complete the experience.

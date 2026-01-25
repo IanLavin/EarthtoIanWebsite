@@ -1,0 +1,1 @@
+Black Mountain is the highest point in Kentucky, tucked away in the Appalachian Mountains near the Virginia border. The drive to the summit passes through dense forest and historic coal mining areas. While access is limited, the summit represents the rugged and wooded nature of Appalachia.

@@ -1,0 +1,1 @@
+Mount Rogers is the highest point in Virginia and lies within the Mount Rogers National Recreation Area. The area is known for its wild ponies, dense spruce-fir forests, and rolling highlands. Unlike many highpoints, the summit itself is forested, making the journey through the landscape more memorable than the view from the top.

@@ -1,0 +1,1 @@
+Black Canyon of the Gunnison features some of the steepest and deepest canyon walls in North America. The Gunnison River carved a narrow, dramatic gorge with sheer cliffs and limited light. It’s a park defined by raw vertical relief.

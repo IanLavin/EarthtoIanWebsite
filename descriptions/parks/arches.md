@@ -1,0 +1,1 @@
+Arches National Park is home to the largest concentration of natural stone arches in the world. The red rock formations and balanced fins create constantly changing shapes and shadows. It’s a visually dense park where nearly every turn offers a new formation.

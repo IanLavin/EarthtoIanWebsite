@@ -1,0 +1,1 @@
+Capitol Reef centers around the Waterpocket Fold, a massive geologic wrinkle stretching across southern Utah. Cliffs, domes, canyons, and orchards combine geology with a quieter, less crowded experience. It rewards slower exploration.

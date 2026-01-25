@@ -1,0 +1,1 @@
+Mount Rainier dominates the landscape as a massive glaciated volcano visible from miles away. Wildflower meadows, glaciers, and steep trails surround the peak. The mountain feels powerful and ever-present throughout the park.

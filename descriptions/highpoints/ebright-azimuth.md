@@ -1,0 +1,1 @@
+Ebright Azimuth is the highest point in Delaware and is located in a quiet residential area near the Pennsylvania border. Marked by a small monument, it’s one of the most understated state highpoints. The experience emphasizes the diversity of what “highpointing” can mean across different states.

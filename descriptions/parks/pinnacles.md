@@ -1,0 +1,1 @@
+Pinnacles National Park showcases rugged volcanic formations, narrow canyons, and talus caves carved by ancient eruptions. Though small, it packs in steep trails, high views, and unique geology. It’s a surprisingly adventurous park with a raw, desert-meets-mountains feel.

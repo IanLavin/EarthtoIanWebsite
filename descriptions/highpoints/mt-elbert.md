@@ -1,0 +1,1 @@
+Mount Elbert is the highest peak in Colorado and the Rocky Mountains, standing tall among the state’s legendary fourteeners. The ascent features classic alpine scenery, with forests, open slopes, and panoramic summit views. From the top, the Sawatch Range unfolds in every direction, making it one of the most rewarding highpoints in the country.

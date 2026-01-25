@@ -1,0 +1,1 @@
+Spruce Knob is the highest point in West Virginia and one of the most scenic in Appalachia. The summit features rocky outcrops and expansive views across the Allegheny Mountains. The combination of elevation, solitude, and sweeping vistas makes it a standout among eastern highpoints.

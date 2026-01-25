@@ -1,0 +1,1 @@
+Guadalupe Mountains National Park contains the highest point in Texas and a rugged desert mountain environment. Steep trails, exposed ridges, and fossil-rich geology define the park. It’s a place that feels remote, demanding, and rewarding.

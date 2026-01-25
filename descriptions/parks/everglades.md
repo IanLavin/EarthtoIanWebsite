@@ -1,0 +1,1 @@
+Everglades National Park protects a vast subtropical wetland unlike anywhere else in the U.S. Slow-moving water, sawgrass prairies, and abundant wildlife define the ecosystem. It’s a park experienced through patience and observation.

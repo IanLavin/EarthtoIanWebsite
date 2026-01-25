@@ -1,0 +1,1 @@
+Mount Sunflower is the highest point in Kansas, though its subtle rise is more symbolic than dramatic. Located in a quiet corner of the state near the Colorado border, the site highlights the wide-open nature of the Great Plains. The experience is less about elevation gain and more about appreciating the scale and calm of the surrounding landscape.

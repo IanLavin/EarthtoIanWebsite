@@ -1,0 +1,1 @@
+Mesa Verde preserves remarkable cliff dwellings built by the Ancestral Pueblo people. The park blends archaeology with high desert landscapes and sweeping views. Exploring the ruins offers a powerful connection to human history.

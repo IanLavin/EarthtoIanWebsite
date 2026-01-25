@@ -1,0 +1,1 @@
+Joshua Tree sits at the meeting point of the Mojave and Colorado deserts, blending rugged rock formations with iconic Joshua trees. The park is known for its otherworldly scenery, climbing routes, and stark desert beauty. Sunrise and sunset transform the landscape dramatically.
