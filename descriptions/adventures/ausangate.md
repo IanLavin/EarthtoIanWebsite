@@ -1,0 +1,1 @@
+Ausangate is a remote and powerful mountain in southern Peru, revered as a sacred peak by local communities. The trek circles towering glaciers, turquoise lakes, and wide alpine plains at extreme altitude. Its isolation and raw beauty make it one of the most demanding and rewarding routes in the Andes.

@@ -1,0 +1,1 @@
+Machu Picchu is the most iconic Incan site in Peru, perched high above the Urubamba River in the Andes. Surrounded by steep green peaks and clouds, the stone city feels both mysterious and meticulously designed. Walking among the ruins offers a rare blend of history, engineering, and dramatic mountain scenery.

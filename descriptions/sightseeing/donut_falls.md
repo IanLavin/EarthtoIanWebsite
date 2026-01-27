@@ -1,0 +1,1 @@
+Donut Falls is a unique waterfall where a stream drops through a circular hole in the rock. The hike follows a shaded canyon with creek crossings and smooth stone walls. It’s a fun and distinctive destination in the Wasatch Mountains.

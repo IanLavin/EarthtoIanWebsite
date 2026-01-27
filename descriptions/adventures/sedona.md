@@ -1,0 +1,1 @@
+Sedona is defined by towering red rock formations, winding trails, and wide desert views. The landscape feels both dramatic and expansive, with endless opportunities for hiking and exploration. Light and color shift constantly across the sandstone cliffs.

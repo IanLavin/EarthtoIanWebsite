@@ -1,0 +1,1 @@
+Pikes Peak rises prominently above the Front Range and offers sweeping views across Colorado’s plains and mountains. Reaching the summit reveals dramatic elevation changes and a sense of scale unique to the region. It’s one of Colorado’s most iconic landmarks.

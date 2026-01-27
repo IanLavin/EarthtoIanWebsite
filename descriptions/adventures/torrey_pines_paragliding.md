@@ -1,0 +1,1 @@
+Torrey Pines paragliding offers coastal flights above cliffs overlooking the Pacific Ocean. Launching from the bluffs provides sweeping views of beaches, waves, and the city below. It’s a unique way to experience Southern California from the air.

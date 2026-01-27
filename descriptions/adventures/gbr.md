@@ -1,0 +1,1 @@
+The Great Barrier Reef is the largest coral reef system on Earth, stretching along Australia’s northeast coast. Beneath the surface is a vibrant underwater world filled with coral formations, reef fish, and marine life. Snorkeling or diving here feels like entering an entirely different ecosystem.

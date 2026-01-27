@@ -1,0 +1,1 @@
+Ice Lake Basin is a high-alpine destination famous for its unreal turquoise lakes and dramatic peaks. The hike climbs steadily through wildflower-filled meadows before opening into a stunning basin of color and rock. It’s one of the most visually striking areas in the San Juan Mountains.

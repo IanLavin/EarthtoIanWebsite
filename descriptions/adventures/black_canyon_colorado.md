@@ -1,0 +1,1 @@
+The Black Canyon of the Colorado River cuts through rugged desert terrain between Nevada and Arizona. Calm stretches of water are framed by steep canyon walls and volcanic rock formations. It offers a peaceful contrast to the surrounding desert landscape.

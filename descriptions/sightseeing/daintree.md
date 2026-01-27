@@ -1,0 +1,1 @@
+The Daintree Rainforest is one of the oldest tropical rainforests in the world, where dense jungle meets the Coral Sea. Towering trees, winding rivers, and constant wildlife make it feel ancient and alive. Walking through the Daintree is less about viewpoints and more about immersion in a primeval landscape.

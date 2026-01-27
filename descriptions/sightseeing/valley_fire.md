@@ -1,0 +1,1 @@
+Valley of Fire is known for vibrant red sandstone formations and sweeping desert landscapes. Wind and erosion have carved dramatic shapes into the rock, glowing especially at sunrise and sunset. The park feels both vast and intensely colorful.

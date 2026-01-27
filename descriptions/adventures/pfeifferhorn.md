@@ -1,0 +1,1 @@
+The Pfeifferhorn rises prominently above Little Cottonwood Canyon and is one of Utah’s most recognizable alpine peaks. The route climbs past glacial lakes and steep cirques before reaching a rocky summit ridge. From the top, sweeping views stretch across the Wasatch Range.

@@ -1,0 +1,1 @@
+Monument Valley is defined by towering sandstone buttes rising from the desert floor. The wide-open space and iconic formations create a sense of timelessness. It’s one of the most recognizable landscapes in the American Southwest.

@@ -1,0 +1,1 @@
+Mount Adams is a massive stratovolcano in southern Washington that offers a long, steady climb through snowfields and volcanic terrain. The ascent rewards persistence with expansive views of the Cascades, including Mount Hood and Mount Rainier on clear days. It’s a physically demanding but approachable glaciated climb.

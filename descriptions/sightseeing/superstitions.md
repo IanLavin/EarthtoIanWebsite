@@ -1,0 +1,1 @@
+The Superstition Wilderness is a rugged and dramatic landscape filled with steep cliffs, desert canyons, and jagged peaks. Legends and history surround the area, adding to its mystique. The terrain feels wild and unforgiving.

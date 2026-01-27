@@ -1,0 +1,1 @@
+Black Sand Beach is a rugged stretch of coastline where dark volcanic sand contrasts sharply with the Pacific Ocean. Steep trails descend to the shore, creating a secluded and dramatic atmosphere. It feels raw and untamed compared to nearby beaches.

@@ -1,0 +1,1 @@
+Whitehaven Beach is known for its pure white silica sand and crystal-clear turquoise water in the Whitsunday Islands. The sand is remarkably fine and stays cool even in direct sun. The sweeping shoreline and vivid colors make it one of Australia’s most photographed beaches.

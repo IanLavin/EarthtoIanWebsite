@@ -1,0 +1,1 @@
+Wallaman Falls is Australia’s tallest permanent single-drop waterfall, plunging dramatically into a deep rainforest gorge. Mist rises from the base, often creating rainbows in the sunlight. The surrounding forest and scale of the drop make it feel powerful and secluded.

@@ -1,0 +1,1 @@
+Fossil Creek is a rare desert oasis with turquoise water, lush vegetation, and multiple waterfalls. The contrast between flowing water and surrounding desert makes it especially striking. It feels vibrant and alive compared to the arid landscape around it.

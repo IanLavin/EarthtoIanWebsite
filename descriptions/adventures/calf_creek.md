@@ -1,0 +1,1 @@
+Lower Calf Creek follows a winding desert stream through red rock canyon walls to a lush waterfall oasis. The trail contrasts arid slickrock with cool water and greenery at the end. It’s a rewarding hike that showcases Utah’s desert diversity.

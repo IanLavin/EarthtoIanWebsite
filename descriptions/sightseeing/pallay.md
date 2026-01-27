@@ -1,0 +1,1 @@
+Pallay Punchu is a striking ridge of colorful, layered rock resembling a woven Andean textile. Rising sharply from the surrounding plateau, it offers dramatic views and a sense of vast openness. The combination of altitude, color, and isolation makes it a memorable and visually unique destination.

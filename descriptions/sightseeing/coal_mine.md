@@ -1,0 +1,1 @@
+Coal Mine Canyon features layered rock formations, hoodoos, and sweeping desert views. Its colors and textures change dramatically with the light. The canyon feels quiet and expansive, offering a lesser-known alternative to nearby landmarks.

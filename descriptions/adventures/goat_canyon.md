@@ -1,0 +1,1 @@
+The Goat Canyon Trestle is one of the largest wooden railroad trestles in the world, tucked deep into the Carrizo Gorge. The hike to reach it passes through tunnels, desert canyons, and rugged terrain. Standing beneath the massive structure feels both surreal and historic.

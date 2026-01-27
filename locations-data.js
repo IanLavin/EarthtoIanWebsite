@@ -616,6 +616,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Mount_Whitney",
             img: "Pictures/California/Whitney/IMG_8933.jpg",
             descriptionMd: "descriptions/highpoints/mt-whitney.md",
+            logisticsMd: "descriptions/logistics/mt-whitney.md",
+            notesMd: "descriptions/notes/mt-whitney.md",
 
             //carousel images
             gallery: [
@@ -956,6 +958,7 @@ const rawLocations = {
             lng: -115.658, 
             url: "https://en.wikipedia.org/wiki/Payette_River",
             img: "Pictures/Idaho/Rafting/CAN_0009.jpg",
+            descriptionMd: "descriptions/adventures/south_fork.md",
 
             //carousel images
             gallery: [
@@ -973,6 +976,7 @@ const rawLocations = {
             lng: -111.431, 
             url: "https://www.kayakpowell.com/",
             img: "Pictures/Arizona/Antelope/IMG_1167.jpg",
+            descriptionMd: "descriptions/adventures/antelope.md",
 
             //carousel images
             gallery: [
@@ -991,6 +995,7 @@ const rawLocations = {
             lng: -121.491, 
             url: "https://en.wikipedia.org/wiki/Mount_Adams_(Washington)",
             img: "Pictures/Washington/Adams/IMG_1551.jpg",
+            descriptionMd: "descriptions/adventures/adams.md",
 
             //carousel images
             gallery: [
@@ -1008,6 +1013,7 @@ const rawLocations = {
             lng: -114.739, 
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Colorado",
             img: "Pictures/Nevada/Black_Canyon/IMG_2313.jpg",
+            descriptionMd: "descriptions/adventures/black_canyon_colorado.md",
 
             //carousel images
             gallery: [
@@ -1023,6 +1029,7 @@ const rawLocations = {
             lng: -117.251, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/La_Jolla/GEO_0408.jpg",
+            descriptionMd: "descriptions/adventures/torrey_pines_paragliding.md",
 
             //carousel images
             gallery: [
@@ -1041,6 +1048,7 @@ const rawLocations = {
             lng: -111.420, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Calf_Creek/IMG_2109.jpg",
+            descriptionMd: "descriptions/adventures/calf_creek.md",
 
             //carousel images
             gallery: [
@@ -1055,6 +1063,7 @@ const rawLocations = {
             lng: -111.760, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Sedona/IMG_3131.jpg",
+            descriptionMd: "descriptions/adventures/sedona.md",
 
             //carousel images
             gallery: [
@@ -1077,6 +1086,7 @@ const rawLocations = {
             lng: -111.706, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Pfeifferhorn/IMG_0087.JPG",
+            descriptionMd: "descriptions/adventures/pfeifferhorn.md",
 
             //carousel images
             gallery: [
@@ -1093,6 +1103,7 @@ const rawLocations = {
             lng: -115.010, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Thompson/IMG_9159.jpg",
+            descriptionMd: "descriptions/adventures/sawtooth.md",
 
             //carousel images
             gallery: [
@@ -1108,6 +1119,7 @@ const rawLocations = {
             lng: -116.183, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/Goat_Canyon/GOPR4197.JPG",
+            descriptionMd: "descriptions/adventures/goat_canyon.md",
 
             //carousel images
             gallery: [
@@ -1129,6 +1141,7 @@ const rawLocations = {
             lng: -111.119, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Jug/IMG_3823.jpg",
+            descriptionMd: "descriptions/adventures/jug.md",
 
             //carousel images
             gallery: [
@@ -1143,6 +1156,7 @@ const rawLocations = {
             lng: -112.001, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Buckskin/IMG_3949.jpg",
+            descriptionMd: "descriptions/adventures/buckskin.md",
 
             //carousel images
             gallery: [
@@ -1161,6 +1175,7 @@ const rawLocations = {
             lng: -71.218, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Ausangate/IMG_4894.jpg",
+            descriptionMd: "descriptions/adventures/ausangate.md",
 
             //carousel images
             gallery: [
@@ -1178,6 +1193,7 @@ const rawLocations = {
             lng: -72.584, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Salkantay/IMG_4672.jpg",
+            descriptionMd: "descriptions/adventures/salkantay.md",
 
             //carousel images
             gallery: [
@@ -1201,6 +1217,7 @@ const rawLocations = {
             lng: -107.808, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Colorado/Ice_Lake/IMG_5476.jpg",
+            descriptionMd: "descriptions/adventures/ice_lake.md",
 
             //carousel images
             gallery: [
@@ -1220,6 +1237,7 @@ const rawLocations = {
             lng: 146.271, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/GBR/IMG_6500.jpg",
+            descriptionMd: "descriptions/adventures/gbr.md",
 
             //carousel images
             gallery: [
@@ -1237,6 +1255,7 @@ const rawLocations = {
             lng: 145.802, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Wallaman/wallamanfalls.jpg",
+            descriptionMd: "descriptions/adventures/wallaman.md",
 
             //carousel images
             gallery: [
@@ -1255,6 +1274,7 @@ const rawLocations = {
             lng: -111.454, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Superstitions/IMG_3812.jpg",
+            descriptionMd: "descriptions/sightseeing/superstitions.md",
 
             //carousel images
             gallery: [
@@ -1275,6 +1295,7 @@ const rawLocations = {
             lng: -115.546, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Kirkham/IMG_3497.jpg",
+            descriptionMd: "descriptions/sightseeing/kirkham_hot_springs.md",
 
             //carousel images
             gallery: [
@@ -1290,6 +1311,7 @@ const rawLocations = {
             lng: -111.605, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Fossil/IMG_3822.jpg",
+            descriptionMd: "descriptions/sightseeing/fossil_creek.md",
             
             //carousel images
             gallery: [
@@ -1304,6 +1326,7 @@ const rawLocations = {
             lng: -105.042, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Colorado/Pikes/IMG_0909.jpg",
+            descriptionMd: "descriptions/sightseeing/pikes.md",
 
             //carousel images
             gallery: [
@@ -1321,6 +1344,7 @@ const rawLocations = {
             lng: -110.989, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Coal_Mine/IMG_0825.jpg",
+            descriptionMd: "descriptions/sightseeing/coal_mine.md",
 
             //carousel images
             gallery: [
@@ -1336,6 +1360,7 @@ const rawLocations = {
             lng: -121.828, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Washington/Panther/IMG_1502.jpg",
+            descriptionMd: "descriptions/sightseeing/panther_creek.md",
 
             //carousel images
             gallery: [
@@ -1352,6 +1377,7 @@ const rawLocations = {
             lng: -114.829, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Blue_Heart/IMG_1605.jpg",
+            descriptionMd: "descriptions/sightseeing/blue_heart.md",
 
             //carousel images
             gallery: [
@@ -1366,6 +1392,7 @@ const rawLocations = {
             lng: -111.654, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Donut/IMG_1650.jpg",
+            descriptionMd: "descriptions/sightseeing/donut_falls.md",
 
             //carousel images
             gallery: [
@@ -1381,6 +1408,7 @@ const rawLocations = {
             lng: -115.132, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/Imperial/IMG_3759.jpg",
+            descriptionMd: "descriptions/sightseeing/imperial_sand.md",
 
             //carousel images
             gallery: [
@@ -1396,6 +1424,7 @@ const rawLocations = {
             lng: -122.508, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/Black_Sand/IMG_7640.jpg",
+            descriptionMd: "descriptions/sightseeing/black_sand_beach.md",
             
             gallery: [
             "IMG_7640.jpg"
@@ -1409,6 +1438,7 @@ const rawLocations = {
             lng: -111.325, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Four_Peaks/IMG_7751.jpg",
+            descriptionMd: "descriptions/sightseeing/four_peaks.md",
 
             gallery: [
             "IMG_7751.jpg"
@@ -1422,6 +1452,7 @@ const rawLocations = {
             lng: -109.319, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Chiricahua/IMG_8082.jpg",
+            descriptionMd: "descriptions/sightseeing/chiricahua.md",
 
             gallery: [
             "IMG_8082.jpg"
@@ -1435,6 +1466,7 @@ const rawLocations = {
             lng: -114.552, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Nevada/Valley_of_Fire/IMG_4058.jpg",
+            descriptionMd: "descriptions/sightseeing/valley_fire.md",
 
             gallery: [
             "IMG_4058.jpg",
@@ -1449,6 +1481,7 @@ const rawLocations = {
             lng: -111.594, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Grand_Staircase/Grand_Staircase.jpg",
+            descriptionMd: "descriptions/sightseeing/grand_staircase.md",
 
             gallery: [
             "Grand_Staircase.jpg",
@@ -1464,6 +1497,7 @@ const rawLocations = {
             lng: -72.545, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Salkantay/IMG_4832.jpg",
+            descriptionMd: "descriptions/sightseeing/machu.md",
 
             gallery: [
             "IMG_4832.jpg",
@@ -1478,6 +1512,7 @@ const rawLocations = {
             lng: -71.136, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Pallay_Punchu/pallay_punchu.jpg",
+            descriptionMd: "descriptions/sightseeing/pallay.md",
 
             gallery: [
             "pallay_punchu.jpg",
@@ -1496,6 +1531,7 @@ const rawLocations = {
             lng: -110.082, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Monument/IMG_5606.jpg",
+            descriptionMd: "descriptions/sightseeing/monument_valley.md",
 
             gallery: [
             "IMG_5606.jpg"
@@ -1509,6 +1545,7 @@ const rawLocations = {
             lng: 149.021, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Whitehaven/IMG_6216.jpg",
+            descriptionMd: "descriptions/sightseeing/whitehaven.md",
 
             gallery: [
             "IMG_6216.jpg",
@@ -1523,6 +1560,7 @@ const rawLocations = {
             lng: 145.469, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Daintree/IMG_6107.jpg",
+            descriptionMd: "descriptions/sightseeing/daintree.md",
 
             gallery: [
             "IMG_6107.jpg",
@@ -1540,6 +1578,7 @@ const rawLocations = {
             lng: 151.215, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Sydney/IMG_6367.jpg",
+            descriptionMd: "descriptions/sightseeing/opera_house.md",
 
             gallery: [
             "IMG_6367.jpg"

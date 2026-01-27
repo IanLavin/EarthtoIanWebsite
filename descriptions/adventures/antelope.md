@@ -1,0 +1,1 @@
+Antelope Canyon is famous for its flowing sandstone walls and beams of light filtering through narrow openings above. The smooth curves and changing colors make it one of the most photographed slot canyons in the world. Every step reveals a new pattern carved by water and time.

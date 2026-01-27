@@ -1,0 +1,1 @@
+Kirkham Hot Springs features cascading hot water flowing over rock ledges beside the Payette River. Natural pools form along the hillside, offering warm soaking with river views. It’s an iconic Idaho stop that blends relaxation with rugged scenery.

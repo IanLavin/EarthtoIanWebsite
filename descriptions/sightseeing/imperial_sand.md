@@ -1,0 +1,1 @@
+The Imperial Sand Dunes stretch for miles, forming one of the largest dune systems in North America. Rolling hills of sand shift constantly with the wind. The scale and openness create a surreal desert environment.

@@ -1,0 +1,1 @@
+Four Peaks rises dramatically above the Sonoran Desert, dominating the skyline east of Phoenix. The rugged mountain range offers wide views across cactus-covered valleys. It’s especially striking when seen from nearby trails and roads.

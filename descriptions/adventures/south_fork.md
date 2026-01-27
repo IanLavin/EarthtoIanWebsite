@@ -1,0 +1,1 @@
+The South Fork of the Payette River is one of Idaho’s premier whitewater rafting destinations. Fast-moving rapids, continuous action, and scenic canyon walls make it both exciting and accessible. It’s a classic stretch of river that balances adrenaline with beautiful surroundings.

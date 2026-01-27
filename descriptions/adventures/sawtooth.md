@@ -1,0 +1,1 @@
+The Sawtooth Mountains are known for sharp granite peaks, alpine lakes, and wide-open wilderness. Trails wind through rugged basins and high passes with dramatic scenery at every turn. The range feels remote and wild, offering some of Idaho’s most iconic backcountry landscapes.

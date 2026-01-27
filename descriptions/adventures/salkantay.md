@@ -1,0 +1,1 @@
+The Salkantay Trek is a high-altitude route through remote Andean landscapes, passing beneath massive snow-covered peaks and glacial valleys. It’s known for its physical challenge, changing climates, and sweeping views. Compared to the Inca Trail, it feels wilder and more immersive.

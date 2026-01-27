@@ -1,0 +1,1 @@
+Panther Creek Falls is a tall, powerful waterfall hidden within a lush forested gorge. The short hike leads to a dramatic viewpoint where mist fills the air and the remember the constant rush of water. It feels secluded despite its accessibility.

@@ -1,0 +1,1 @@
+The Sydney Opera House is one of the most recognizable buildings in the world, set prominently on Sydney Harbour. Its sail-like design stands out against the water and skyline. Visiting it is as much about the setting and architecture as the performances inside.

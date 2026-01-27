@@ -1,0 +1,1 @@
+Blue Heart Springs is a crystal-clear spring system accessible only by water. The intense blue color and incredible visibility give it a surreal, almost tropical feel. Floating through the springs feels peaceful and otherworldly.

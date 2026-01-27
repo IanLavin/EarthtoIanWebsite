@@ -1,0 +1,1 @@
+Salome Jug is a hidden desert canyon featuring pools, waterfalls, and polished rock corridors. Reaching it requires route-finding and occasional scrambling, adding to the sense of discovery. The contrast between desert surroundings and flowing water makes it especially rewarding.
