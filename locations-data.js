@@ -27,6 +27,8 @@ const rawLocations = {
             url: "https://www.nps.gov/yell/index.htm",
             img: "Pictures/Wyoming/Yellowstone/IMG_2651.jpg",
             descriptionMd: "descriptions/parks/yellowstone.md",
+            logisticsMd: "descriptions/logistics/yellowstone.md",
+            notesMd: "descriptions/notes/yellowstone.md",
             
 
             //carousel images
@@ -55,6 +57,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Grand_Teton_National_Park",
             img: "Pictures/Wyoming/Grand_Teton/IMG_2769.jpg",
             descriptionMd: "descriptions/parks/grand-teton.md",
+            logisticsMd: "descriptions/logistics/grand-teton.md",
+            notesMd: "descriptions/notes/grand-teton.md",
 
             //carousel images
             gallery: [
@@ -78,6 +82,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
             img: "Pictures/Oregon/IMG_5284.jpg",
             descriptionMd: "descriptions/parks/crater-lake.md",
+            logisticsMd: "descriptions/logistics/crater-lake.md",
+            notesMd: "descriptions/notes/crater-lake.md",
 
             //carousel images
             gallery: [
@@ -94,6 +100,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Redwood_National_and_State_Parks",
             img: "Pictures/California/Redwoods/IMG_0033.JPG",
             descriptionMd: "descriptions/parks/redwood.md",
+            logisticsMd: "descriptions/logistics/redwood.md",
+            notesMd: "descriptions/notes/redwood.md",
 
             //carousel images
             gallery: [
@@ -111,6 +119,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Pinnacles_National_Park",
             img: "Pictures/California/Pinnacles/IMG_7520.jpg",
             descriptionMd: "descriptions/parks/pinnacles.md",
+            logisticsMd: "descriptions/logistics/pinnacles.md",
+            notesMd: "descriptions/notes/pinnacles.md",
 
             //carousel images
             gallery: [
@@ -129,6 +139,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Death_Valley_National_Park",
             img: "Pictures/California/Death_Valley/IMG_2337.jpg",
             descriptionMd: "descriptions/parks/death-valley.md",
+            logisticsMd: "descriptions/logistics/death-valley.md",
+            notesMd: "descriptions/notes/death-valley.md",
 
             //carousel images
             gallery: [
@@ -147,6 +159,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Channel_Islands_National_Park",
             img: "Pictures/California/Channel_Islands/IMG_0669.jpg",
             descriptionMd: "descriptions/parks/channel-islands.md",
+            logisticsMd: "descriptions/logistics/channel-islands.md",
+            notesMd: "descriptions/notes/channel-islands.md",
 
             //carousel images
             gallery: [
@@ -165,6 +179,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
             img: "Pictures/California/Joshua_Tree/IMG_8823.jpg",
             descriptionMd: "descriptions/parks/joshua-tree.md",
+            logisticsMd: "descriptions/logistics/joshua-tree.md",
+            notesMd: "descriptions/notes/joshua-tree.md",
 
             //carousel images
             gallery: [
@@ -186,6 +202,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Grand_Canyon",
             img: "Pictures/Arizona/Grand_Canyon/Grand_Canyon.jpg",
             descriptionMd: "descriptions/parks/grand-canyon.md",
+            logisticsMd: "descriptions/logistics/grand-canyon.md",
+            notesMd: "descriptions/notes/grand-canyon.md",
 
             //carousel images
             gallery: [
@@ -210,6 +228,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Great_Basin_National_Park",
             img: "Pictures/Nevada/Great Basin/IMG_1194.jpg",
             descriptionMd: "descriptions/parks/great-basin.md",
+            logisticsMd: "descriptions/logistics/great-basin.md",
+            notesMd: "descriptions/notes/great-basin.md",
 
             //carousel images
             gallery: [
@@ -229,6 +249,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Saguaro_National_Park",
             img: "Pictures/Arizona/Saguaro/IMG_8402.jpg",
             descriptionMd: "descriptions/parks/saguaro.md",
+            logisticsMd: "descriptions/logistics/saguaro.md",
+            notesMd: "descriptions/notes/saguaro.md",
 
             //carousel images
             gallery: [
@@ -244,6 +266,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Canyonlands_National_Park",
             img: "Pictures/Utah/Canyonlands/IMG_1847.jpg",
             descriptionMd: "descriptions/parks/canyonlands.md",
+            logisticsMd: "descriptions/logistics/canyonlands.md",
+            notesMd: "descriptions/notes/canyonlands.md",
 
             //carousel images
             gallery: [
@@ -260,6 +284,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Arches_National_Park",
             img: "Pictures/Utah/Arches/IMG_1782.jpg",
             descriptionMd: "descriptions/parks/arches.md",
+            logisticsMd: "descriptions/logistics/arches.md",
+            notesMd: "descriptions/notes/arches.md",
 
             //carousel images
             gallery: [
@@ -279,6 +305,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Capitol_Reef_National_Park",
             img: "Pictures/Utah/Capitol_Reef/IMG_3702.jpg",
             descriptionMd: "descriptions/parks/capitol-reef.md",
+            logisticsMd: "descriptions/logistics/capitol-reef.md",
+            notesMd: "descriptions/notes/capitol-reef.md",
 
             //carousel images
             gallery: [
@@ -294,6 +322,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
             img: "Pictures/Utah/Bryce/IMG_1915.jpg",
             descriptionMd: "descriptions/parks/bryce.md",
+            logisticsMd: "descriptions/logistics/bryce.md",
+            notesMd: "descriptions/notes/bryce.md",
 
             //carousel images
             gallery: [
@@ -312,6 +342,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Zion_National_Park",
             img: "Pictures/Utah/Zion/IMG_2019.jpg",
             descriptionMd: "descriptions/parks/zion.md",
+            logisticsMd: "descriptions/logistics/zion.md",
+            notesMd: "descriptions/notes/zion.md",
 
             //carousel images
             gallery: [
@@ -331,6 +363,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/White_Sands_National_Park",
             img: "Pictures/New Mexico/White_Sands/IMG_8276.jpg",
             descriptionMd: "descriptions/parks/white-sands.md",
+            logisticsMd: "descriptions/logistics/white-sands.md",
+            notesMd: "descriptions/notes/white-sands.md",
 
             //carousel images
             gallery: [
@@ -346,6 +380,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
             descriptionMd: "descriptions/parks/guadalupe.md",
+            logisticsMd: "descriptions/logistics/guadalupe.md",
+            notesMd: "descriptions/notes/guadalupe.md",
 
             //carousel images
             gallery: [
@@ -362,6 +398,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Great_Sand_Dunes_National_Park_and_Preserve",
             img: "Pictures/Colorado/Great_Dunes/IMG_0979.jpg",
             descriptionMd: "descriptions/parks/great-sands.md",
+            logisticsMd: "descriptions/logistics/great-sands.md",
+            notesMd: "descriptions/notes/great-sands.md",
 
             //carousel images
             gallery: [
@@ -379,6 +417,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
             img: "Pictures/Colorado/Rocky_Mountain/IMG_9406.jpg",
             descriptionMd: "descriptions/parks/rocky-mountain.md",
+            logisticsMd: "descriptions/logistics/rocky-mountain.md",
+            notesMd: "descriptions/notes/rocky-mountain.md",
 
             //carousel images
             gallery: [
@@ -397,6 +437,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Everglades_National_Park",
             img: "Pictures/Florida/Everglades/IMG_3699.JPG",
             descriptionMd: "descriptions/parks/everglades.md",
+            logisticsMd: "descriptions/logistics/everglades.md",
+            notesMd: "descriptions/notes/everglades.md",
 
             //carousel images
             gallery: [
@@ -412,6 +454,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Biscayne_National_Park",
             img: "Pictures/Florida/Biscayne/IMG_0501.jpg",
             descriptionMd: "descriptions/parks/biscayne.md",
+            logisticsMd: "descriptions/logistics/biscayne.md",
+            notesMd: "descriptions/notes/biscayne.md",
 
             //carousel images
             gallery: [
@@ -427,6 +471,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park",
             img: "Pictures/Florida/Dry_Tortugas/IMG_0540.jpg",
             descriptionMd: "descriptions/parks/dry-tortugas.md",
+            logisticsMd: "descriptions/logistics/dry-tortugas.md",
+            notesMd: "descriptions/notes/dry-tortugas.md",
 
             //carousel images
             gallery: [
@@ -447,6 +493,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Carlsbad_Caverns_National_Park",
             img: "Pictures/New Mexico/Carlsbad/IMG_7821.jpg",
             descriptionMd: "descriptions/parks/carlsbad.md",
+            logisticsMd: "descriptions/logistics/carlsbad.md",
+            notesMd: "descriptions/notes/carlsbad.md",
 
             //carousel images
             gallery: [
@@ -463,6 +511,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Shenandoah_National_Park",
             img: "Pictures/Virginia/Shenandoah/IMG_4318.jpg",
             descriptionMd: "descriptions/parks/shenandoah.md",
+            logisticsMd: "descriptions/logistics/shenandoah.md",
+            notesMd: "descriptions/notes/shenandoah.md",
 
             //carousel images
             gallery: [
@@ -480,6 +530,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/New_River_Gorge_National_Park",
             img: "Pictures/West Virginia/New_River/IMG_4323.jpg",
             descriptionMd: "descriptions/parks/new-river.md",
+            logisticsMd: "descriptions/logistics/new-river.md",
+            notesMd: "descriptions/notes/new-river.md",
 
             //carousel images
             gallery: [
@@ -496,6 +548,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Mesa_Verde_National_Park",
             img: "Pictures/Colorado/Mesa_Verde/IMG_5322.jpg",
             descriptionMd: "descriptions/parks/mesa-verde.md",
+            logisticsMd: "descriptions/logistics/mesa-verde.md",
+            notesMd: "descriptions/notes/mesa-verde.md",
 
             //carousel images
             gallery: [
@@ -511,6 +565,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Gunnison_National_Park",
             img: "Pictures/Colorado/Black_Canyon/IMG_5380.jpg",
             descriptionMd: "descriptions/parks/black-canyon.md",
+            logisticsMd: "descriptions/logistics/black-canyon.md",
+            notesMd: "descriptions/notes/black-canyon.md",
 
             //carousel images
             gallery: [
@@ -526,6 +582,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Petrified_Forest_National_Park",
             img: "Pictures/Arizona/Petrified/IMG_5506.jpg",
             descriptionMd: "descriptions/parks/petrified-forest.md",
+            logisticsMd: "descriptions/logistics/petrified-forest.md",
+            notesMd: "descriptions/notes/petrified-forest.md",
 
             //carousel images
             gallery: [
@@ -541,6 +599,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Olympic_National_Park",
             img: "Pictures/Washington/Olympic/IMG_5671.jpg",
             descriptionMd: "descriptions/parks/olympic.md",
+            logisticsMd: "descriptions/logistics/olympic.md",
+            notesMd: "descriptions/notes/olympic.md",
 
             //carousel images
             gallery: [
@@ -561,6 +621,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/North_Cascades_National_Park",
             img: "Pictures/Washington/North_Cascades/IMG_5839.jpg",
             descriptionMd: "descriptions/parks/north-cascades.md",
+            logisticsMd: "descriptions/logistics/north-cascades.md",
+            notesMd: "descriptions/notes/north-cascades.md",
 
             //carousel images
             gallery: [
@@ -581,6 +643,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Mount_Rainier_National_Park",
             img: "Pictures/Washington/Rainier/IMG_5862.jpg",
             descriptionMd: "descriptions/parks/rainier.md",
+            logisticsMd: "descriptions/logistics/rainier.md",
+            notesMd: "descriptions/notes/rainier.md",
 
             //carousel images
             gallery: [
@@ -596,6 +660,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Cuyahoga_Valley_National_Park",
             img: "Pictures/Ohio/Cuyahoga/IMG_6613.jpg",
             descriptionMd: "descriptions/parks/cuyahoga.md",
+            logisticsMd: "descriptions/logistics/cuyahoga.md",
+            notesMd: "descriptions/notes/cuyahoga.md",
 
             //carousel images
             gallery: [
@@ -636,6 +702,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
             img: "Pictures/Colorado/Elbert/IMG_9119.jpg",
             descriptionMd: "descriptions/highpoints/mt-elbert.md",
+            logisticsMd: "descriptions/logistics/mt-elbert.md",
+            notesMd: "descriptions/notes/mt-elbert.md",
 
 
             //carousel images
@@ -652,6 +720,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Humphreys_Peak",
             img: "Pictures/Arizona/Humphreys/IMG_6070.jpg",
             descriptionMd: "descriptions/highpoints/humphreys-peak.md",
+            logisticsMd: "descriptions/logistics/humphreys-peak.md",
+            notesMd: "descriptions/notes/humphreys-peak.md",
 
 
             //carousel images
@@ -670,6 +740,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
             img: "Pictures/New Mexico/Wheeler/IMG_0960.jpg",
             descriptionMd: "descriptions/highpoints/wheeler-peak.md",
+            logisticsMd: "descriptions/logistics/wheeler-peak.md",
+            notesMd: "descriptions/notes/wheeler-peak.md",
 
             //carousel images
             gallery: [
@@ -686,6 +758,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
             img: "Pictures/Idaho/Borah/borah.JPG",
             descriptionMd: "descriptions/highpoints/borah-peak.md",
+            logisticsMd: "descriptions/logistics/borah-peak.md",
+            notesMd: "descriptions/notes/borah-peak.md",
 
             //carousel images
             gallery: [
@@ -701,6 +775,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Black_Mesa_(Oklahoma,_Colorado,_New_Mexico)",
             img: "Pictures/Oklahoma/Black_Mesa/IMG_0921.jpg",
             descriptionMd: "descriptions/highpoints/black-mesa.md",
+            logisticsMd: "descriptions/logistics/black-mesa.md",
+            notesMd: "descriptions/notes/black-mesa.md",
 
             //carousel images
             gallery: [
@@ -717,6 +793,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Mount_Sunflower",
             img: "Pictures/Kansas/Sunflower/IMG_9297.jpg",
             descriptionMd: "descriptions/highpoints/mt-sunflower.md",
+            logisticsMd: "descriptions/logistics/mt-sunflower.md",
+            notesMd: "descriptions/notes/mt-sunflower.md",
 
             //carousel images
             gallery: [
@@ -732,6 +810,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Panorama_Point",
             img: "Pictures/Nebraska/Panorama/IMG_9312.jpg",
             descriptionMd: "descriptions/highpoints/panorama-point.md",
+            logisticsMd: "descriptions/logistics/panorama-point.md",
+            notesMd: "descriptions/notes/panorama-point.md",
 
             //carousel images
             gallery: [
@@ -748,6 +828,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
             descriptionMd: "descriptions/highpoints/guadalupe-peak.md",
+            logisticsMd: "descriptions/logistics/guadalupe-peak.md",
+            notesMd: "descriptions/notes/guadalupe-peak.md",
 
             //carousel images
             gallery: [
@@ -764,6 +846,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Virginia/Rogers/IMG_4354.jpg",
             descriptionMd: "descriptions/highpoints/mt-rogers.md",
+            logisticsMd: "descriptions/logistics/mt-rogers.md",
+            notesMd: "descriptions/notes/mt-rogers.md",
 
             //carousel images
             gallery: [
@@ -780,6 +864,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Kentucky/Black/IMG_4335.jpg",
             descriptionMd: "descriptions/highpoints/black-mountain.md",
+            logisticsMd: "descriptions/logistics/black-mountain.md",
+            notesMd: "descriptions/notes/black-mountain.md",
 
             //carousel images
             gallery: [
@@ -796,6 +882,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/West Virginia/Spruce_Knob/IMG_4372.jpg",
             descriptionMd: "descriptions/highpoints/spruce-knob.md",
+            logisticsMd: "descriptions/logistics/spruce-knob.md",
+            notesMd: "descriptions/notes/spruce-knob.md",
 
             //carousel images
             gallery: [
@@ -811,6 +899,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Maryland/Backbone/IMG_4378.jpg",
             descriptionMd: "descriptions/highpoints/backbone-mountain.md",
+            logisticsMd: "descriptions/logistics/backbone-mountain.md",
+            notesMd: "descriptions/notes/backbone-mountain.md",
 
             //carousel images
             gallery: [
@@ -827,6 +917,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Pennsylvania/Davis/IMG_4390.jpg",
             descriptionMd: "descriptions/highpoints/mt-davis.md",
+            logisticsMd: "descriptions/logistics/mt-davis.md",
+            notesMd: "descriptions/notes/mt-davis.md",
 
             //carousel images
             gallery: [
@@ -845,6 +937,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Delaware/Ebright/IMG_4402.jpg",
             descriptionMd: "descriptions/highpoints/ebright-azimuth.md",
+            logisticsMd: "descriptions/logistics/ebright-azimuth.md",
+            notesMd: "descriptions/notes/ebright-azimuth.md",
 
             //carousel images
             gallery: [
@@ -861,6 +955,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/New Jersey/High_Point/IMG_6587.jpg",
             descriptionMd: "descriptions/highpoints/high-point.md",
+            logisticsMd: "descriptions/logistics/high-point.md",
+            notesMd: "descriptions/notes/high-point.md",
 
             //carousel images
             gallery: [
@@ -879,6 +975,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Connecticut/Frissell/IMG_6640.jpg",
             descriptionMd: "descriptions/highpoints/mt-frissell.md",
+            logisticsMd: "descriptions/logistics/mt-frissell.md",
+            notesMd: "descriptions/notes/mt-frissell.md",
 
             //carousel images
             gallery: [
@@ -894,6 +992,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Massachusets/Greylock/IMG_6597.jpg",
             descriptionMd: "descriptions/highpoints/mt-greylock.md",
+            logisticsMd: "descriptions/logistics/mt-greylock.md",
+            notesMd: "descriptions/notes/mt-greylock.md",
 
             //carousel images
             gallery: [
@@ -909,6 +1009,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Rhode Island/Jerimoth/IMG_6634.jpg",
             descriptionMd: "descriptions/highpoints/jerimoth-hill.md",
+            logisticsMd: "descriptions/logistics/jerimoth-hill.md",
+            notesMd: "descriptions/notes/jerimoth-hill.md",
 
             //carousel images
             gallery: [
@@ -925,6 +1027,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Ohio/Campbell/IMG_6628.jpg",
             descriptionMd: "descriptions/highpoints/campbell-hill.md",
+            logisticsMd: "descriptions/logistics/campbell-hill.md",
+            notesMd: "descriptions/notes/campbell-hill.md",
 
             //carousel images
             gallery: [
@@ -940,6 +1044,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Indiana/Hoosier/IMG_6629.jpg",
             descriptionMd: "descriptions/highpoints/hoosier-hill.md",
+            logisticsMd: "descriptions/logistics/hoosier-hill.md",
+            notesMd: "descriptions/notes/hoosier-hill.md",
 
             //carousel images
             gallery: [
@@ -959,6 +1065,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Payette_River",
             img: "Pictures/Idaho/Rafting/CAN_0009.jpg",
             descriptionMd: "descriptions/adventures/south_fork.md",
+            logisticsMd: "descriptions/logistics/south_fork.md",
+            notesMd: "descriptions/notes/south_fork.md",
 
             //carousel images
             gallery: [
@@ -977,6 +1085,8 @@ const rawLocations = {
             url: "https://www.kayakpowell.com/",
             img: "Pictures/Arizona/Antelope/IMG_1167.jpg",
             descriptionMd: "descriptions/adventures/antelope.md",
+            logisticsMd: "descriptions/logistics/antelope.md",
+            notesMd: "descriptions/notes/antelope.md",
 
             //carousel images
             gallery: [
@@ -996,6 +1106,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Mount_Adams_(Washington)",
             img: "Pictures/Washington/Adams/IMG_1551.jpg",
             descriptionMd: "descriptions/adventures/adams.md",
+            logisticsMd: "descriptions/logistics/adams.md",
+            notesMd: "descriptions/notes/adams.md",
 
             //carousel images
             gallery: [
@@ -1014,6 +1126,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Colorado",
             img: "Pictures/Nevada/Black_Canyon/IMG_2313.jpg",
             descriptionMd: "descriptions/adventures/black_canyon_colorado.md",
+            logisticsMd: "descriptions/logistics/black_canyon_colorado.md",
+            notesMd: "descriptions/notes/black_canyon_colorado.md",
 
             //carousel images
             gallery: [
@@ -1030,6 +1144,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/La_Jolla/GEO_0408.jpg",
             descriptionMd: "descriptions/adventures/torrey_pines_paragliding.md",
+            logisticsMd: "descriptions/logistics/torrey_pines_paragliding.md",
+            notesMd: "descriptions/notes/torrey_pines_paragliding.md",
 
             //carousel images
             gallery: [
@@ -1049,6 +1165,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Calf_Creek/IMG_2109.jpg",
             descriptionMd: "descriptions/adventures/calf_creek.md",
+            logisticsMd: "descriptions/logistics/calf_creek.md",
+            notesMd: "descriptions/notes/calf_creek.md",
 
             //carousel images
             gallery: [
@@ -1064,6 +1182,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Sedona/IMG_3131.jpg",
             descriptionMd: "descriptions/adventures/sedona.md",
+            logisticsMd: "descriptions/logistics/sedona.md",
+            notesMd: "descriptions/notes/sedona.md",
 
             //carousel images
             gallery: [
@@ -1087,6 +1207,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Pfeifferhorn/IMG_0087.JPG",
             descriptionMd: "descriptions/adventures/pfeifferhorn.md",
+            logisticsMd: "descriptions/logistics/pfeifferhorn.md",
+            notesMd: "descriptions/notes/pfeifferhorn.md",
 
             //carousel images
             gallery: [
@@ -1104,6 +1226,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Thompson/IMG_9159.jpg",
             descriptionMd: "descriptions/adventures/sawtooth.md",
+            logisticsMd: "descriptions/logistics/sawtooth.md",
+            notesMd: "descriptions/notes/sawtooth.md",
 
             //carousel images
             gallery: [
@@ -1120,6 +1244,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/Goat_Canyon/GOPR4197.JPG",
             descriptionMd: "descriptions/adventures/goat_canyon.md",
+            logisticsMd: "descriptions/logistics/goat_canyon.md",
+            notesMd: "descriptions/notes/goat_canyon.md",
 
             //carousel images
             gallery: [
@@ -1142,6 +1268,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Jug/IMG_3823.jpg",
             descriptionMd: "descriptions/adventures/jug.md",
+            logisticsMd: "descriptions/logistics/jug.md",
+            notesMd: "descriptions/notes/jug.md",
 
             //carousel images
             gallery: [
@@ -1157,6 +1285,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Buckskin/IMG_3949.jpg",
             descriptionMd: "descriptions/adventures/buckskin.md",
+            logisticsMd: "descriptions/logistics/buckskin.md",
+            notesMd: "descriptions/notes/buckskin.md",
 
             //carousel images
             gallery: [
@@ -1176,6 +1306,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Ausangate/IMG_4894.jpg",
             descriptionMd: "descriptions/adventures/ausangate.md",
+            logisticsMd: "descriptions/logistics/ausangate.md",
+            notesMd: "descriptions/notes/ausangate.md",
 
             //carousel images
             gallery: [
@@ -1194,6 +1326,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Salkantay/IMG_4672.jpg",
             descriptionMd: "descriptions/adventures/salkantay.md",
+            logisticsMd: "descriptions/logistics/salkantay.md",
+            notesMd: "descriptions/notes/salkantay.md",
 
             //carousel images
             gallery: [
@@ -1218,6 +1352,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Colorado/Ice_Lake/IMG_5476.jpg",
             descriptionMd: "descriptions/adventures/ice_lake.md",
+            logisticsMd: "descriptions/logistics/ice_lake.md",
+            notesMd: "descriptions/notes/ice_lake.md",
 
             //carousel images
             gallery: [
@@ -1238,6 +1374,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/GBR/IMG_6500.jpg",
             descriptionMd: "descriptions/adventures/gbr.md",
+            logisticsMd: "descriptions/logistics/gbr.md",
+            notesMd: "descriptions/notes/gbr.md",
 
             //carousel images
             gallery: [
@@ -1256,6 +1394,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Wallaman/wallamanfalls.jpg",
             descriptionMd: "descriptions/adventures/wallaman.md",
+            logisticsMd: "descriptions/logistics/wallaman.md",
+            notesMd: "descriptions/notes/wallaman.md",
 
             //carousel images
             gallery: [
@@ -1275,6 +1415,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Superstitions/IMG_3812.jpg",
             descriptionMd: "descriptions/sightseeing/superstitions.md",
+            logisticsMd: "descriptions/logistics/superstitions.md",
+            notesMd: "descriptions/notes/superstitions.md",
 
             //carousel images
             gallery: [
@@ -1296,6 +1438,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Kirkham/IMG_3497.jpg",
             descriptionMd: "descriptions/sightseeing/kirkham_hot_springs.md",
+            logisticsMd: "descriptions/logistics/kirkham_hot_springs.md",
+            notesMd: "descriptions/notes/kirkham_hot_springs.md",
 
             //carousel images
             gallery: [
@@ -1312,7 +1456,9 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Fossil/IMG_3822.jpg",
             descriptionMd: "descriptions/sightseeing/fossil_creek.md",
-            
+            logisticsMd: "descriptions/logistics/fossil_creek.md",
+            notesMd: "descriptions/notes/fossil_creek.md",
+
             //carousel images
             gallery: [
             "IMG_3822.jpg"
@@ -1327,6 +1473,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Colorado/Pikes/IMG_0909.jpg",
             descriptionMd: "descriptions/sightseeing/pikes.md",
+            logisticsMd: "descriptions/logistics/pikes.md",
+            notesMd: "descriptions/notes/pikes.md",
 
             //carousel images
             gallery: [
@@ -1345,6 +1493,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Coal_Mine/IMG_0825.jpg",
             descriptionMd: "descriptions/sightseeing/coal_mine.md",
+            logisticsMd: "descriptions/logistics/coal_mine.md",
+            notesMd: "descriptions/notes/coal_mine.md",
 
             //carousel images
             gallery: [
@@ -1361,6 +1511,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Washington/Panther/IMG_1502.jpg",
             descriptionMd: "descriptions/sightseeing/panther_creek.md",
+            logisticsMd: "descriptions/logistics/panther_creek.md",
+            notesMd: "descriptions/notes/panther_creek.md",
 
             //carousel images
             gallery: [
@@ -1378,6 +1530,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Blue_Heart/IMG_1605.jpg",
             descriptionMd: "descriptions/sightseeing/blue_heart.md",
+            logisticsMd: "descriptions/logistics/blue_heart.md",
+            notesMd: "descriptions/notes/blue_heart.md",
 
             //carousel images
             gallery: [
@@ -1393,6 +1547,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Donut/IMG_1650.jpg",
             descriptionMd: "descriptions/sightseeing/donut_falls.md",
+            logisticsMd: "descriptions/logistics/donut_falls.md",
+            notesMd: "descriptions/notes/donut_falls.md",
 
             //carousel images
             gallery: [
@@ -1409,6 +1565,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/Imperial/IMG_3759.jpg",
             descriptionMd: "descriptions/sightseeing/imperial_sand.md",
+            logisticsMd: "descriptions/logistics/imperial_sand.md",
+            notesMd: "descriptions/notes/imperial_sand.md",
 
             //carousel images
             gallery: [
@@ -1425,7 +1583,9 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/California/Black_Sand/IMG_7640.jpg",
             descriptionMd: "descriptions/sightseeing/black_sand_beach.md",
-            
+            logisticsMd: "descriptions/logistics/black_sand_beach.md",
+            notesMd: "descriptions/notes/black_sand_beach.md",
+
             gallery: [
             "IMG_7640.jpg"
             ].map(f => `Pictures/California/Black_Sand/${f}`)
@@ -1439,6 +1599,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Four_Peaks/IMG_7751.jpg",
             descriptionMd: "descriptions/sightseeing/four_peaks.md",
+            logisticsMd: "descriptions/logistics/four_peaks.md",
+            notesMd: "descriptions/notes/four_peaks.md",
 
             gallery: [
             "IMG_7751.jpg"
@@ -1453,6 +1615,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Chiricahua/IMG_8082.jpg",
             descriptionMd: "descriptions/sightseeing/chiricahua.md",
+            logisticsMd: "descriptions/logistics/chiricahua.md",
+            notesMd: "descriptions/notes/chiricahua.md",
 
             gallery: [
             "IMG_8082.jpg"
@@ -1467,6 +1631,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Nevada/Valley_of_Fire/IMG_4058.jpg",
             descriptionMd: "descriptions/sightseeing/valley_fire.md",
+            logisticsMd: "descriptions/logistics/valley_fire.md",
+            notesMd: "descriptions/notes/valley_fire.md",
 
             gallery: [
             "IMG_4058.jpg",
@@ -1482,6 +1648,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Utah/Grand_Staircase/Grand_Staircase.jpg",
             descriptionMd: "descriptions/sightseeing/grand_staircase.md",
+            logisticsMd: "descriptions/logistics/antelope.md",
+            notesMd: "descriptions/notes/antelope.md",
 
             gallery: [
             "Grand_Staircase.jpg",
@@ -1498,6 +1666,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Salkantay/IMG_4832.jpg",
             descriptionMd: "descriptions/sightseeing/machu.md",
+            logisticsMd: "descriptions/logistics/machu.md",
+            notesMd: "descriptions/notes/machu.md",
 
             gallery: [
             "IMG_4832.jpg",
@@ -1513,6 +1683,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Peru/Pallay_Punchu/pallay_punchu.jpg",
             descriptionMd: "descriptions/sightseeing/pallay.md",
+            logisticsMd: "descriptions/logistics/pallay.md",
+            notesMd: "descriptions/notes/pallay.md",
 
             gallery: [
             "pallay_punchu.jpg",
@@ -1532,6 +1704,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Arizona/Monument/IMG_5606.jpg",
             descriptionMd: "descriptions/sightseeing/monument_valley.md",
+            logisticsMd: "descriptions/logistics/monument_valley.md",
+            notesMd: "descriptions/notes/monument_valley.md",
 
             gallery: [
             "IMG_5606.jpg"
@@ -1546,6 +1720,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Whitehaven/IMG_6216.jpg",
             descriptionMd: "descriptions/sightseeing/whitehaven.md",
+            logisticsMd: "descriptions/logistics/whitehaven.md",
+            notesMd: "descriptions/notes/whitehaven.md",
 
             gallery: [
             "IMG_6216.jpg",
@@ -1561,6 +1737,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Daintree/IMG_6107.jpg",
             descriptionMd: "descriptions/sightseeing/daintree.md",
+            logisticsMd: "descriptions/logistics/daintree.md",
+            notesMd: "descriptions/notes/daintree.md",
 
             gallery: [
             "IMG_6107.jpg",
@@ -1579,6 +1757,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Australia/Sydney/IMG_6367.jpg",
             descriptionMd: "descriptions/sightseeing/opera_house.md",
+            logisticsMd: "descriptions/logistics/opera_house.md",
+            notesMd: "descriptions/notes/opera_house.md",
 
             gallery: [
             "IMG_6367.jpg"

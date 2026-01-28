@@ -11,7 +11,7 @@ async function main() {
 
   const selectedLocation = Object.values(locations)
     .flat()
-    .find(loc => loc.id === id);
+    .find((loc) => loc.id === id);
 
   if (!selectedLocation) {
     document.body.innerHTML = "<h1>Location not found</h1>";
@@ -35,44 +35,50 @@ async function main() {
   heroImg.onerror = () => (heroImg.src = "fallback.jpg");
 
   // -------------------------
-  // Markdown description (fetch + render)
+  // Overview (markdown)
   // -------------------------
-  const descEl = document.getElementById("description");
+  await renderMarkdownSection({
+    el: document.getElementById("description"),
+    mdPath: selectedLocation.descriptionMd,
+    fallbackHtml: "<p>More details coming soon.</p>",
+  });
 
-  // If you switch #description from <p> to <div>, this works great
-  // (recommended so headings/lists render properly)
-  try {
-    if (selectedLocation.descriptionMd) {
-      const md = await loadMarkdown(selectedLocation.descriptionMd);
-      descEl.innerHTML = markdownToHtml(md);
-      descEl.classList.add("markdown");
-    } else if (selectedLocation.descriptionHtml) {
-      // Optional: if you ever want to store HTML directly
-      descEl.innerHTML = selectedLocation.descriptionHtml;
-      descEl.classList.add("markdown");
-    } else if (selectedLocation.description) {
-      // Plain text fallback
-      descEl.textContent = selectedLocation.description;
-    } else {
-      descEl.innerHTML = "<p>More details coming soon.</p>";
-    }
-  } catch (err) {
-    console.warn("Description load failed:", err);
-    descEl.innerHTML = "<p>More details coming soon.</p>";
+  // -------------------------
+  // Logistics (markdown, with itinerary fallback)
+  // -------------------------
+  const logisticsEl = document.getElementById("logistics");
+
+  if (selectedLocation.logisticsMd) {
+    await renderMarkdownSection({
+      el: logisticsEl,
+      mdPath: selectedLocation.logisticsMd,
+      fallbackHtml: "<p>No logistics added yet.</p>",
+    });
+  } else if (Array.isArray(selectedLocation.itinerary) && selectedLocation.itinerary.length) {
+    // Backward compatible: render old itinerary array as a list inside Logistics
+    logisticsEl.innerHTML = `<ul>${selectedLocation.itinerary
+      .map((item) => `<li>${escapeHtml(item)}</li>`)
+      .join("")}</ul>`;
+  } else {
+    logisticsEl.innerHTML = "<p>No logistics added yet.</p>";
   }
 
   // -------------------------
-  // Itinerary
+  // Notes (markdown)
   // -------------------------
-  const itineraryEl = document.getElementById("itinerary");
-  if (selectedLocation.itinerary?.length) {
-    selectedLocation.itinerary.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      itineraryEl.appendChild(li);
+  const notesSection = document.querySelector(".location-notes");
+  const notesEl = document.getElementById("notes-container");
+
+  if (selectedLocation.notesMd) {
+    await renderMarkdownSection({
+      el: notesEl,
+      mdPath: selectedLocation.notesMd,
+      fallbackHtml: "<p>No notes yet.</p>",
     });
   } else {
-    itineraryEl.innerHTML = "<li>No itinerary added yet.</li>";
+    // If you’d rather always show the Notes section, replace this with:
+    // notesEl.innerHTML = "<p>No notes yet.</p>";
+    notesSection?.remove();
   }
 
   // -------------------------
@@ -85,9 +91,10 @@ async function main() {
     journalSection?.remove();
   } else {
     journalSection.querySelector("h2").textContent = journal.title ?? "Journal";
+
     document.getElementById("journal-container").innerHTML = `
       <div class="journal-meta">
-        <span class="journal-date">${journal.date ?? ""}</span>
+        <span class="journal-date">${escapeHtml(journal.date ?? "")}</span>
       </div>
       <article class="journal-entry">
         ${journal.content ?? ""}
@@ -107,8 +114,6 @@ async function main() {
 
   if (gallery.length) {
     initCarousel("location-carousel", gallery);
-  } else {
-    document.querySelector(".location-carousel-section")?.remove();
   }
 }
 
@@ -117,6 +122,24 @@ main();
 /* =========================
    Markdown helpers
 ========================= */
+
+async function renderMarkdownSection({ el, mdPath, fallbackHtml }) {
+  if (!el) return;
+
+  if (!mdPath) {
+    el.innerHTML = fallbackHtml ?? "";
+    return;
+  }
+
+  try {
+    const md = await loadMarkdown(mdPath);
+    el.innerHTML = markdownToHtml(md);
+    el.classList.add("markdown");
+  } catch (err) {
+    console.warn("Markdown load failed:", mdPath, err);
+    el.innerHTML = fallbackHtml ?? "";
+  }
+}
 
 async function loadMarkdown(path) {
   const res = await fetch(path);
@@ -140,12 +163,12 @@ function markdownToHtml(md) {
 
   // unordered lists
   html = html.replace(/^\s*-\s+(.*)$/gm, "<li>$1</li>");
-  html = html.replace(/(?:<li>.*<\/li>\n?)+/g, match => `<ul>${match}</ul>`);
+  html = html.replace(/(?:<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`);
 
   // paragraphs: split on blank lines
   html = html
     .split("\n\n")
-    .map(block => {
+    .map((block) => {
       const t = block.trim();
       if (!t) return "";
       if (t.startsWith("<h") || t.startsWith("<ul")) return t;
@@ -154,4 +177,14 @@ function markdownToHtml(md) {
     .join("\n");
 
   return html;
+}
+
+// Prevent accidental HTML injection when rendering fallback lists/dates
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }

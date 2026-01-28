@@ -15,52 +15,53 @@
 
   <main class="location-page">
 
-  <!-- Top banner -->
-  <header class="location-banner">
-    <div class="banner-left">
-      <img id="hero-image" class="location-thumb" alt="" />
-    </div>
+    <!-- Top banner -->
+    <header class="location-banner">
+      <div class="banner-left">
+        <img id="hero-image" class="location-thumb" alt="" />
+      </div>
 
-    <div class="banner-title">
-      <h1 id="location-title"></h1>
-      <p id="location-subtitle" class="location-subtitle"></p>
-    </div>
-  </header>
+      <div class="banner-title">
+        <h1 id="location-title"></h1>
+        <p id="location-subtitle" class="location-subtitle"></p>
+      </div>
+    </header>
 
-  <!-- Two-column layout -->
-  <section class="location-grid">
+    <!-- Two-column layout -->
+    <section class="location-grid">
 
-    <div class="location-media">
-  <div id="location-carousel" class="carousel"></div>
+      <!-- Left column: media -->
+      <div class="location-media">
+        <div id="location-carousel" class="carousel"></div>
 
-  <!-- Journal under carousel -->
-  <section class="location-journal">
-    <h2>Journal</h2>
-    <div id="journal-container"></div>
-  </section>
-  </div>
+        <!-- Journal under carousel -->
+        <section class="location-journal">
+          <h2>Journal</h2>
+          <div id="journal-container"></div>
+        </section>
+      </div>
 
-  <div class="location-writing">
-  <section class="location-description">
-    <h2>Overview</h2>
-    <div id="description" class="markdown"></div>
-  </section>
+      <!-- Right column: writing -->
+      <div class="location-writing">
 
-  <section class="location-itinerary">
-    <h2>Logistics</h2>
-    <ul id="itinerary"></ul>
-  </section>
+        <section class="location-overview">
+          <h2>Overview</h2>
+          <div id="description" class="markdown"></div>
+        </section>
 
-  <section class="location-notes">
-    <h2>Notes</h2>
-    <div id="notes-container"></div>
-  </section>
-  </div>
+        <section class="location-logistics">
+          <h2>Logistics</h2>
+          <div id="logistics" class="markdown"></div>
+        </section>
 
+        <section class="location-notes">
+          <h2>Notes</h2>
+          <div id="notes-container" class="markdown"></div>
+        </section>
 
-  </section>
+      </div>
+    </section>
   </main>
-
 
   <!-- Load once, at the end -->
   <script type="module" src="location.js"></script>

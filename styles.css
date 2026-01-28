@@ -853,3 +853,11 @@
   border-radius: 4px;
   background: linear-gradient(90deg, var(--accent), rgba(74,163,255,0.4));
 }
+
+/* Center only main section headers */
+.location-overview > h2,
+.location-logistics > h2,
+.location-notes > h2 {
+  text-align: center;
+  margin-bottom: 12px;
+}
