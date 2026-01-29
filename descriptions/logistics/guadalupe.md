@@ -1,14 +1,15 @@
-### Getting There
-Located in far west Texas, roughly 2 hours from El Paso. Very remote with limited services nearby.
+## Getting there
+- Closest airport: El Paso is the only reasonably close one.
+- Drive time: 2 hour drive from El Paso.
+- Trailhead / entry point: National Park Pass required for entry.
 
-### Time & Season
-Fall and spring are best. Summer heat can be intense and dangerous.
+## Time & season
+- Best months: October - May. Its the desert so generally the biggest concern will be the heat.
 
-### Getting Around
-Hiking is the primary activity. Trails are long, exposed, and physically demanding.
+## What to pair it with
+- Good multi-day combo: Due to its remote location you are almost certainly going to be pairing this with the other nearby national parks including Carlsbad Caverns and/or White Sands.
 
-### What to Pair With
-Perfect pairing with Carlsbad Caverns for a combined trip.
-
-### Notes
-Strong winds are common. Bring extra water and sun protection.
+## Safety & prep
+- Gear notes: Regular hiking gear.
+- Water: Plenty of water fill stations in the park.
+- Weather hazards: Heat is the biggest concern in the desert. The lack of shade can be brutal.

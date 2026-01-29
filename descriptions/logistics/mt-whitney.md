@@ -8,24 +8,20 @@
 - **Total time needed:** Hike can take anywhere between 9 hours on the fast end and 18 hours on the slow. Alpine starts between 12am and 2am are almost always required to finish before following sunset.
 - **Distance:**  22 miles roundtrip.
 - **Elevation gain:**  6000ft +
-- **Difficulty:**  
+- **Difficulty:**  8.25/10 subjectivly. During peak season its mostly just a long gradual incline hike but in high snow years or early season it can be more challenging, especially section between trail crest and trail camp.
 
 ## Permits / fees
-- **Permits required:**  
-- **Entry / parking fees:**  
-- **Seasonal restrictions:**  
+- **Permits required:**  Absolutely required. Permits are extremly high demand and hard to get. Yearly lottery applications occur first two weeks of Febuary. Rangers will check for permits on trail.
+- **Entry / parking fees:**  Summit is technically within Sequoia National Park but no one will check at 13,000 feet.
+- **Seasonal restrictions:**  Can technically be climbed year round but road to portal is not plowed during winter add an additional few thousand feet of climbing.
 
 ## Best time to go
-- **Best months:**  
-- **Weather notes:**  
-- **Crowds:**  
+- **Best months:**  July-Sept is peak season. Trail generally becomes snow free by first or second week of July but varies year to year. 
+- **Weather notes:**  The final few miles from trail crest to summit are extremly exposed to the elements and difficult to quickly descend from.. Do not be in this area if there is a chance of lighting.
+- **Crowds:**  Strict permitting alliviates a lot of the crowd issues. Expect to still see nearly all permit slots being utilized during peak season. 
 
 ## What to pair it with
-- **Nearby spots:**  
-- **Good combos / itineraries:**  
-- **If you only have half a day:**  
+- **Nearby spots:**  Death Valley is a logical closest choice pairing. You can go from seeing the lowest to the highest points in the contiguous United States. Alabama Hills is another a scenic nearby stop.
+- **Good combos / itineraries:**  Arrive at the campsite the day before your climb and try to get to sleep as soon as possible, ideally 6pm or so. Expect midnight wake up and start depending on hiking pace. 
 
-## Tips
--  
--  
--  
+
