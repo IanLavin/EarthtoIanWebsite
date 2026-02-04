@@ -1,14 +1,18 @@
-### Getting There
-Located in western Colorado near Montrose. Access is split between north and south rims.
+## Getting there
+- Closest airport: While there are small region airports at some of the ski valleys, the closest major airport is probably Denver.
+- Drive time: Around 5 hours from Denver.
+- Trailhead / entry point: Most hikes/viewpoints are accessable from Rim Drive Rd.
 
-### Time & Season
-Late spring through fall is best. Winter limits access to the north rim.
+## Time & season
+- Best months: Road is closed Nov-April. Outside of that late summer/fall is the most plesant time.
+- Typical start time: Most hikes are short so start time isnt critical, if hiking into canyon however the earlier the better.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Rim drives provide dramatic viewpoints. Inner canyon hikes are extremely steep and strenuous.
+## What to pair it with
+- Nearby stops: Maroon Bells or Telluride are both fantastic mountain towns with stunning vistas.
+- Good multi-day combo: Best expereinced as part of a road trip across southwest Colorado. Telluride, Mesa Verde National Park, and Ourays million dollar highway are a nice combo.
 
-### What to Pair With
-Combines well with Ouray, Telluride, or other western Colorado destinations.
-
-### Notes
-Depth and exposure are real—use caution near canyon edges.
+## Safety & prep
+- Gear notes: Standard hiking gear.
+- Water: Bring your own.
+- Weather hazards: Closed due to snowfall in winter.

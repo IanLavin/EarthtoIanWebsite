@@ -1,0 +1,1 @@
+While Florida as a state isn't exactly known for dramatic variations in elevation, it must still have a highest point somewhere. That point can be found in the far northwest of the panhandle known as Britton Hill. A modest hill near the border of Alabama, it holds the distinct honor of being the lowest of the highpoints. 

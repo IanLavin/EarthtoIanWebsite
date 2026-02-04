@@ -19,6 +19,8 @@ import jerimothHill from "./jerimoth-hill.js";
 import campbellHill from "./campbell-hill.js";
 import hoosierHill from "./hoosier-hill.js";
 import borahPeak from "./borah-peak.js";
+import brittonHill from "./britton-hill.js";
+
 
 export default {
   [humphreysPeak.id]: humphreysPeak,
@@ -41,7 +43,9 @@ export default {
   [jerimothHill.id]: jerimothHill,
   [campbellHill.id]: campbellHill,
   [hoosierHill.id]: hoosierHill,
-  [borahPeak.id]: borahPeak
+  [borahPeak.id]: borahPeak,
+  [brittonHill.id]: brittonHill,
+
 
 };
 

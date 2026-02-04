@@ -1051,7 +1051,25 @@ const rawLocations = {
             gallery: [
             "IMG_6629.jpg"       
             ].map(f => `Pictures/Indiana/Hoosier/${f}`)
-        }
+        },
+        { 
+            name: "Britton Hill", 
+            country: "US",
+            region: "Southeast",
+            lat: 30.986, 
+            lng: -86.281, 
+            url: "https://en.wikipedia.org/wiki/Britton_Hill",
+            img: "Pictures/Florida/Britton/IMG_6907.jpg",
+            descriptionMd: "descriptions/highpoints/britton-hill.md",
+            logisticsMd: "descriptions/logistics/britton-hill.md",
+            notesMd: "descriptions/notes/britton-hill.md",
+
+            //carousel images
+            gallery: [
+            "IMG_6907.jpg",
+            "IMG_6905.jpg"      
+            ].map(f => `Pictures/Florida/Britton/${f}`)
+        },
             
     ],
 
