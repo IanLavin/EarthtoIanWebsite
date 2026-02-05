@@ -1,18 +1,17 @@
 ## Getting there
-- Closest airport:
-- Drive time:
-- Trailhead / entry point:
+- Closest airport: Boise
+- Drive time: 2 hours
+- Trailhead / entry point: Redfish lake
 
 ## Time & season
-- Best months:
-- Typical start time:
-- Permit / reservation:
+- Best months: Summer when snows melt. June - Sept
+- Typical start time: Flexible
+- Permit / reservation: None
 
 ## What to pair it with
-- Nearby stops:
-- Good multi-day combo:
+- Good multi-day combo: If you have the time/money the nearby Salmon river is a world famous whitewater rafting trip.l
 
 ## Safety & prep
-- Gear notes:
-- Water:
-- Weather hazards:
+- Gear notes: Standard hiking gear
+- Water: Bring your own.
+- Weather hazards: Summer storms are always possible.

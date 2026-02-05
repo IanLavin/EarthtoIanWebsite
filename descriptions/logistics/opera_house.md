@@ -1,18 +1,15 @@
 ## Getting there
-- Closest airport:
-- Drive time:
-- Trailhead / entry point:
+- Closest airport: Sydney
+- Drive time: 1 hour depending on traffic.
+- Trailhead / entry point: You'll probably be approaching on foot from the botanical gardens.
 
 ## Time & season
-- Best months:
-- Typical start time:
-- Permit / reservation:
+- Best months: Australian summer Nov - March
+- Typical start time: Flexible
+- Permit / reservation: None
 
 ## What to pair it with
-- Nearby stops:
-- Good multi-day combo:
+- Nearby stops: Royal Botanical Garden, The Rocks District, Sydney Harbor Bridge
 
 ## Safety & prep
-- Gear notes:
-- Water:
-- Weather hazards:
+- Gear notes: Normal walking gear

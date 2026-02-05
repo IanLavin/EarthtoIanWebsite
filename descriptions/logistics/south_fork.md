@@ -1,18 +1,17 @@
 ## Getting there
-- Closest airport:
-- Drive time:
-- Trailhead / entry point:
+- Closest airport: Boise
+- Drive time: 1 hour
+- Trailhead / entry point: Most rafting trips start near Gardena
 
 ## Time & season
-- Best months:
-- Typical start time:
-- Permit / reservation:
+- Best months: Early summer when river flows are peak and temperatures warm. June - August
+- Typical start time: Early morning departure 8AM
+- Permit / reservation: None but usually booked through rafting companies
 
 ## What to pair it with
-- Nearby stops:
-- Good multi-day combo:
+- Nearby stops: Mccall is only an hour away and has nice lake and mountain views
 
 ## Safety & prep
-- Gear notes:
-- Water:
-- Weather hazards:
+- Gear notes: Helmet, Paddle, Lifejacket, Splash Jacket
+- Water: Bring your own
+

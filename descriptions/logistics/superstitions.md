@@ -1,18 +1,17 @@
 ## Getting there
-- Closest airport:
-- Drive time:
-- Trailhead / entry point:
+- Closest airport: Phoenix
+- Drive time: 45 mins
+- Trailhead / entry point: Siphon Draw Trailhead is the most popular
 
 ## Time & season
-- Best months:
-- Typical start time:
-- Permit / reservation:
+- Best months: Spring and fall for the best weather and wildflowers. Feb - April or Oct - Dec
+- Typical start time: Early morning for hiking
+- Permit / reservation: State park pass required if visiting Lost Dutchman.
 
 ## What to pair it with
-- Nearby stops:
-- Good multi-day combo:
+- Nearby stops: Canyon Lake is nearby and has nice views. 
 
 ## Safety & prep
-- Gear notes:
-- Water:
-- Weather hazards:
+- Gear notes: Standard hiking gear
+- Water: Bring your own
+- Weather hazards: Heat and sun are the biggest concern typically.
