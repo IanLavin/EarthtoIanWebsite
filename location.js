@@ -1,4 +1,4 @@
-import locations from "./locations-data.js";
+﻿import locations from "./locations-data.js";
 import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 
@@ -26,7 +26,7 @@ async function main() {
   const subtitleEl = document.getElementById("location-subtitle");
   if (subtitleEl) {
     const parts = [selectedLocation.region, selectedLocation.country].filter(Boolean);
-    subtitleEl.textContent = parts.join(" • ");
+    subtitleEl.textContent = parts.join(" - ");
   }
 
   const heroImg = document.getElementById("hero-image");
@@ -76,7 +76,7 @@ async function main() {
       fallbackHtml: "<p>No notes yet.</p>",
     });
   } else {
-    // If you’d rather always show the Notes section, replace this with:
+    // If youâ€™d rather always show the Notes section, replace this with:
     // notesEl.innerHTML = "<p>No notes yet.</p>";
     notesSection?.remove();
   }
@@ -188,3 +188,4 @@ function escapeHtml(str) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
+

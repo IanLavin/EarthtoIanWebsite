@@ -1,4 +1,4 @@
-import locations from './locations-data.js';
+﻿import locations from './locations-data.js';
 import icons from './icons.js';
 
 /* =====================
@@ -109,12 +109,12 @@ function createPopup(place, category) {
       </a>
 
       <div class="popup-meta">
-        <span>${place.country ?? ""}${place.region ? " • " + place.region : ""}</span>
+        <span>${place.country ?? ""}${place.region ? " - " + place.region : ""}</span>
       </div>
 
       <!-- Country page -->
       <a class="country-link" href="country.html?country=${place.country}" title="View all locations in this country">
-        🌍 ${place.country}
+        World: ${place.country}
       </a>
     </div>
   `;
@@ -244,4 +244,5 @@ document.addEventListener("click", (e) => {
     menuContainer.classList.remove("open");
   }
 });
+
 

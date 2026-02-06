@@ -1,4 +1,4 @@
-import locations from "./Locations.js";
+import locations from "./locations-data.js";
 
 const params = new URLSearchParams(window.location.search);
 const countryCode = params.get("country");
