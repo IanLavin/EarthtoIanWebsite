@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countries</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-countries">
+
+  <header class="topbar">
+    <h1 id="page-title">Countries</h1>
+  </header>
+
+  <div class="menu-container">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="menu-dropdown" class="menu-dropdown">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+
+  <main class="countries-page">
+    <p class="countries-intro">All countries with at least one location visited.</p>
+    <ul id="countries-list" class="countries-list"></ul>
+  </main>
+
+  <script type="module" src="countries.js"></script>
+  <script>
+    const menuContainer = document.querySelector(".menu-container");
+    const menuToggle = document.getElementById("menu-toggle");
+
+    menuToggle.addEventListener("click", () => {
+      menuContainer.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menuContainer.contains(e.target)) {
+        menuContainer.classList.remove("open");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,11 +1,11 @@
-// locations-data.js
+﻿// locations-data.js
 
 function slugify(text) {
   return text
     .toLowerCase()
     .trim()
     .replace(/[^\w\s-]/g, "") // remove punctuation
-    .replace(/\s+/g, "-");    // spaces → hyphens
+    .replace(/\s+/g, "-");    // spaces -> hyphens
 }
 
 function generateId(name) {
@@ -1798,4 +1798,5 @@ Object.entries(rawLocations).forEach(([category, places]) => {
 
 
 export default locations;
+
 

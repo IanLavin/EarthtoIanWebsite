@@ -1,6 +1,6 @@
 ## Notes
-- Sample Text
-- Sample Text
-- Sample Text
-
-
+- Biscayne is unique in that unlike nearly every other national park most of it lies beneath the water.
+- This means that to truly expereince the park you will need to get on/in the water.
+- Snorkeling especially is the best way to experience the park.
+- While snorkeling through mangroves is decent, the best location by far is the Mandalay wreck, a shallow water shipwreck.
+- Due to its location far from the coast access is often unavailable, but if you luck out and visit on a day where access is possible it provides amazing views.

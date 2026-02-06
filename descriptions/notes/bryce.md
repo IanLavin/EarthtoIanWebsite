@@ -1,6 +1,4 @@
 ## Notes
+- Most of the park and its iconic hoodoos are actually formed via frost weathering and stream erosion.
+- The high elevation of the park results in it experiencing dramatic temperature variations throughout the year, from over 100 degrees during the peak of summer, to below 0 in the winter.
 - Sample Text
-- Sample Text
-- Sample Text
-
-

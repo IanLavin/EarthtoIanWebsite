@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-about">
 
   <!-- Top bar -->
   <header class="topbar">
@@ -24,8 +24,8 @@
 
     <nav id="menu-dropdown" class="menu-dropdown">
       <a href="index.html">Home</a>
+      <a href="index.html">Map</a>
       <a href="countries.html">Countries</a>
-      <a href="highpoints.html">Highpoints</a>
       <a href="about.html">About</a>
     </nav>
   </div>
@@ -50,13 +50,18 @@
 
         <div class="about-stats">
           <div class="stat-card">
-            <div class="stat-number" id="stat-highpoints">—</div>
+            <div class="stat-number" id="stat-highpoints">--</div>
             <div class="stat-label">Highpoints Completed</div>
           </div>
 
           <div class="stat-card">
-            <div class="stat-number" id="stat-parks">—</div>
+            <div class="stat-number" id="stat-parks">--</div>
             <div class="stat-label">National Parks Visited</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" id="stat-countries">--</div>
+            <div class="stat-label">Countries Visited</div>
           </div>
         </div>
       </div>
@@ -80,7 +85,7 @@
 
     <!-- Future / roadmap -->
     <section class="about-section">
-      <h2>What’s Next</h2>
+      <h2>What's Next</h2>
       <p>
         <!-- Future plans -->
       </p>
@@ -88,15 +93,18 @@
 
   </main>
 
-  <!-- Auto-count stats from Locations.js -->
+  <!-- Auto-count stats from locations-data.js -->
   <script type="module">
-    import locations from "./Locations.js";
+    import locations from "./locations-data.js";
 
     const highpointsCount = locations.mountain?.length ?? 0;
     const parksCount = locations.park?.length ?? 0;
+    const allLocations = Object.values(locations).flat();
+    const countriesCount = new Set(allLocations.map((loc) => loc.country).filter(Boolean)).size;
 
     document.getElementById("stat-highpoints").textContent = highpointsCount;
     document.getElementById("stat-parks").textContent = parksCount;
+    document.getElementById("stat-countries").textContent = countriesCount;
   </script>
 
   <!-- Menu JS (same as homepage) -->
@@ -117,3 +125,4 @@
 
 </body>
 </html>
+

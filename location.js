@@ -76,7 +76,7 @@ async function main() {
       fallbackHtml: "<p>No notes yet.</p>",
     });
   } else {
-    // If youâ€™d rather always show the Notes section, replace this with:
+    // If you'd rather always show the Notes section, replace this with:
     // notesEl.innerHTML = "<p>No notes yet.</p>";
     notesSection?.remove();
   }
@@ -188,4 +188,5 @@ function escapeHtml(str) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
+
 
