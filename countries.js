@@ -1,4 +1,5 @@
 import locations from "./locations-data.js";
+import { countryName } from "./country-names.js";
 
 const listEl = document.getElementById("countries-list");
 
@@ -22,11 +23,12 @@ if (!countries.length) {
   listEl.appendChild(li);
 } else {
   countries.forEach(({ country, total }) => {
+    const name = countryName(country);
     const li = document.createElement("li");
     li.className = "countries-item";
     li.innerHTML = `
       <a href="country.html?country=${country}">
-        <span class="countries-name">${country}</span>
+        <span class="countries-name">${name}</span>
         <span class="countries-count">${total}</span>
       </a>
     `;

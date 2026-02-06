@@ -1,4 +1,5 @@
 import locations from "./locations-data.js";
+import { countryName } from "./country-names.js";
 
 const params = new URLSearchParams(window.location.search);
 const countryCode = params.get("country");
@@ -8,7 +9,7 @@ if (!countryCode) {
   throw new Error("Missing country param");
 }
 
-document.getElementById("country-title").textContent = countryCode;
+document.getElementById("country-title").textContent = countryName(countryCode);
 
 // Flatten locations
 const allLocations = Object.values(locations).flat();
