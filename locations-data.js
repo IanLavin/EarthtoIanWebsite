@@ -37,20 +37,7 @@ const rawLocations = {
             
 
             //carousel images
-            gallery: [
-            "IMG_2521.jpg",
-            "IMG_2532.jpg",
-            "IMG_2542.jpg",
-            "IMG_2561.jpg",
-            "IMG_2592.jpg",
-            "IMG_2614.jpg",
-            "IMG_2651.jpg",
-            "IMG_2669.jpg",
-            "IMG_2677.jpg",
-            "IMG_2704.jpg",
-            "IMG_2707.jpg",
-            "IMG_2838.jpg"          
-            ].map(f => `Pictures/Wyoming/Yellowstone/${f}`)
+            galleryDir: "Pictures/Wyoming/Yellowstone/"
             
         },
         { 
@@ -71,17 +58,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_2504.jpg",
-            "IMG_2720.jpg",
-            "IMG_2735.jpg",
-            "IMG_2769.jpg",
-            "IMG_2831.jpg",
-            "IMG_2833.jpg",
-            "IMG_2837.jpg",
-            "IMG_2842.jpg",
-            "IMG_2845.jpg"          
-            ].map(f => `Pictures/Wyoming/Grand_Teton/${f}`)
+            galleryDir: "Pictures/Wyoming/Grand_Teton/"
         },
         { 
             name: "Crater Lake National Park",
@@ -96,10 +73,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/crater-lake.md",
 
             //carousel images
-            gallery: [
-            "IMG_0117.jpg",
-            "IMG_5284.jpg"          
-            ].map(f => `Pictures/Oregon/${f}`)
+            galleryDir: "Pictures/Oregon/"
         },
         { 
             name: "Redwood National Park", 
@@ -114,11 +88,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/redwood.md",
 
             //carousel images
-            gallery: [
-            "IMG_0033.jpg",
-            "IMG_0374.jpg",
-            "IMG_5260.jpg"          
-            ].map(f => `Pictures/California/Redwoods/${f}`)
+            galleryDir: "Pictures/California/Redwoods/"
         },
         { 
             name: "Pinnacles National Park", 
@@ -133,12 +103,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/pinnacles.md",
 
             //carousel images
-            gallery: [
-            "IMG_7520.jpg",
-            "IMG_7542.jpg",
-            "IMG_7550.jpg",
-            "IMG_7559.jpg"        
-            ].map(f => `Pictures/California/Pinnacles/${f}`)
+            galleryDir: "Pictures/California/Pinnacles/"
         },
         { 
             name: "Death Valley National Park", 
@@ -153,12 +118,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/death-valley.md",
 
             //carousel images
-            gallery: [
-            "IMG_2337.jpg",
-            "IMG_2356.jpg",
-            "IMG_2381.jpg",
-            "IMG_2386.jpg"        
-            ].map(f => `Pictures/California/Death_Valley/${f}`)
+            galleryDir: "Pictures/California/Death_Valley/"
         },
         { 
             name: "Channel Islands National Park", 
@@ -178,12 +138,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_0659.jpg",
-            "IMG_0669.jpg",
-            "IMG_0702.jpg",
-            "IMG_4206.jpg"        
-            ].map(f => `Pictures/California/Channel_Islands/${f}`)
+            galleryDir: "Pictures/California/Channel_Islands/"
         },
         { 
             name: "Joshua Tree National Park", 
@@ -198,15 +153,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/joshua-tree.md",
 
             //carousel images
-            gallery: [
-            "IMG_8823.jpg",
-            "IMG_8837.jpg",
-            "IMG_8850.jpg",
-            "IMG_4231.jpg",
-            "IMG_4234.jpg",
-            "IMG_4242.jpg",
-            "IMG_4277.jpg"       
-            ].map(f => `Pictures/California/Joshua_Tree/${f}`)
+            galleryDir: "Pictures/California/Joshua_Tree/"
         },
         { 
             name: "Grand Canyon National Park", 
@@ -226,18 +173,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "Grand_Canyon.jpg",
-            "IMG_0726.jpg",
-            "IMG_0743.jpg",
-            "IMG_0744.jpg",
-            "IMG_0745.jpg",
-            "IMG_0765.jpg",
-            "IMG_0797.jpg",
-            "IMG_7904.jpg",
-            "IMG_7953.jpg",
-            "IMG_9774.jpg"        
-            ].map(f => `Pictures/Arizona/Grand_Canyon/${f}`)
+            galleryDir: "Pictures/Arizona/Grand_Canyon/"
         },
         { 
             name: "Great Basin National Park", 
@@ -252,13 +188,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/great-basin.md",
 
             //carousel images
-            gallery: [
-            "IMG_1194.jpg",
-            "IMG_1196.jpg",
-            "IMG_1200.jpg",
-            "IMG_1209.jpg",
-            "IMG_1220.jpg"       
-            ].map(f => `Pictures/Nevada/Great Basin/${f}`)
+            galleryDir: "Pictures/Nevada/Great Basin/"
         },
         { 
             name: "Saguaro National Park", 
@@ -273,9 +203,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/saguaro.md",
 
             //carousel images
-            gallery: [
-            "IMG_8402.jpg"     
-            ].map(f => `Pictures/Arizona/Saguaro/${f}`)
+            galleryDir: "Pictures/Arizona/Saguaro/"
         },
         { 
             name: "Canyonlands National Park", 
@@ -290,10 +218,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/canyonlands.md",
 
             //carousel images
-            gallery: [
-            "IMG_1836.jpg",
-            "IMG_1847.jpg"       
-            ].map(f => `Pictures/Utah/Canyonlands/${f}`)
+            galleryDir: "Pictures/Utah/Canyonlands/"
         },
         { 
             name: "Arches National Park", 
@@ -308,13 +233,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/arches.md",
 
             //carousel images
-            gallery: [
-            "IMG_1664.jpg",
-            "IMG_1669.jpg",
-            "IMG_1690.jpg",
-            "IMG_1782.jpg",
-            "IMG_2127.jpg"       
-            ].map(f => `Pictures/Utah/Arches/${f}`)
+            galleryDir: "Pictures/Utah/Arches/"
         },
         { 
             name: "Capitol Reef National Park", 
@@ -329,9 +248,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/capitol-reef.md",
 
             //carousel images
-            gallery: [
-            "IMG_3702.jpg"       
-            ].map(f => `Pictures/Utah/Capitol_Reef/${f}`)
+            galleryDir: "Pictures/Utah/Capitol_Reef/"
         },
         { 
             name: "Bryce Canyon National Park", 
@@ -346,12 +263,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/bryce.md",
 
             //carousel images
-            gallery: [
-            "IMG_1915.jpg",
-            "IMG_1916.jpg",
-            "IMG_1926.jpg",
-            "IMG_1981.jpg"       
-            ].map(f => `Pictures/Utah/Bryce/${f}`)
+            galleryDir: "Pictures/Utah/Bryce/"
         },
         { 
             name: "Zion National Park", 
@@ -366,13 +278,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/zion.md",
 
             //carousel images
-            gallery: [
-            "IMG_2019.jpg",
-            "GOPR4345.jpg",
-            "IMG_4011.jpg",
-            "IMG_3982.jpg",
-            "IMG_3986.jpg"       
-            ].map(f => `Pictures/Utah/Zion/${f}`)
+            galleryDir: "Pictures/Utah/Zion/"
         },
         { 
             name: "White Sands National Park", 
@@ -387,9 +293,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/white-sands.md",
 
             //carousel images
-            gallery: [
-            "IMG_8276.jpg"    
-            ].map(f => `Pictures/New Mexico/White_Sands/${f}`)
+            galleryDir: "Pictures/New Mexico/White_Sands/"
         },
         { 
             name: "Guadalupe Mountains National Park", 
@@ -404,10 +308,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/guadalupe.md",
 
             //carousel images
-            gallery: [
-            "IMG_7818.jpg",
-            "IMG_8216.jpg"       
-            ].map(f => `Pictures/Texas/Guadalupe/${f}`)
+            galleryDir: "Pictures/Texas/Guadalupe/"
         },
         { 
             name: "Great Sand Dunes National Park", 
@@ -422,11 +323,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/great-sands.md",
 
             //carousel images
-            gallery: [
-            "IMG_0975.jpg",
-            "IMG_0979.jpg",
-            "IMG_3844.jpg"       
-            ].map(f => `Pictures/Colorado/Great_Dunes/${f}`)
+            galleryDir: "Pictures/Colorado/Great_Dunes/"
         },
         { 
             name: "Rocky Mountain National Park", 
@@ -441,12 +338,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/rocky-mountain.md",
 
             //carousel images
-            gallery: [
-            "IMG_9005.jpg",
-            "IMG_9387.jpg",
-            "IMG_9406.jpg",
-            "IMG_8950.jpg",      
-            ].map(f => `Pictures/Colorado/Rocky_Mountain/${f}`)
+            galleryDir: "Pictures/Colorado/Rocky_Mountain/"
         },
         { 
             name: "Everglades National Park", 
@@ -461,9 +353,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/everglades.md",
 
             //carousel images
-            gallery: [
-            "IMG_3699.jpg"    
-            ].map(f => `Pictures/Florida/Everglades/${f}`)
+            galleryDir: "Pictures/Florida/Everglades/"
         },
         { 
             name: "Biscayne National Park", 
@@ -483,9 +373,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_0501.jpg"    
-            ].map(f => `Pictures/Florida/Biscayne/${f}`)
+            galleryDir: "Pictures/Florida/Biscayne/"
         },
         { 
             name: "Dry Tortugas National Park", 
@@ -505,14 +393,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_0223.jpg",
-            "IMG_0526.jpg",
-            "IMG_0536.jpg",
-            "IMG_0540.jpg",
-            "IMG_0551.jpg",
-            "IMG_3836.jpg"    
-            ].map(f => `Pictures/Florida/Dry_Tortugas/${f}`)
+            galleryDir: "Pictures/Florida/Dry_Tortugas/"
         },
         { 
             name: "Carlsbad Caverns National Park", 
@@ -527,10 +408,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/carlsbad.md",
 
             //carousel images
-            gallery: [
-            "IMG_7821.jpg",
-            "IMG_8157.jpg"       
-            ].map(f => `Pictures/New Mexico/Carlsbad/${f}`)
+            galleryDir: "Pictures/New Mexico/Carlsbad/"
         },
         { 
             name: "Shenandoah National Park", 
@@ -545,11 +423,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/shenandoah.md",
 
             //carousel images
-            gallery: [
-            "IMG_4318.jpg",
-            "IMG_4308.jpg",
-            "IMG_4303.jpg",    
-            ].map(f => `Pictures/Virginia/Shenandoah/${f}`)
+            galleryDir: "Pictures/Virginia/Shenandoah/"
         },
         { 
             name: "New River Gorge National Park", 
@@ -564,10 +438,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/new-river.md",
 
             //carousel images
-            gallery: [
-            "IMG_4323.jpg",
-            "IMG_4331.jpg"    
-            ].map(f => `Pictures/West Virginia/New_River/${f}`)
+            galleryDir: "Pictures/West Virginia/New_River/"
         },
         { 
             name: "Mesa Verde National Park", 
@@ -582,9 +453,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/mesa-verde.md",
 
             //carousel images
-            gallery: [
-            "IMG_5322.jpg"
-            ].map(f => `Pictures/Colorado/Mesa_Verde/${f}`)
+            galleryDir: "Pictures/Colorado/Mesa_Verde/"
         },
         { 
             name: "Black Canyon of the Gunnison National Park", 
@@ -599,9 +468,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/black-canyon.md",
 
             //carousel images
-            gallery: [
-            "IMG_5380.jpg"    
-            ].map(f => `Pictures/Colorado/Black_Canyon/${f}`)
+            galleryDir: "Pictures/Colorado/Black_Canyon/"
         },
         { 
             name: "Petrified Forest National Park", 
@@ -616,9 +483,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/petrified-forest.md",
 
             //carousel images
-            gallery: [
-            "IMG_5506.jpg"    
-            ].map(f => `Pictures/Arizona/Petrified/${f}`)
+            galleryDir: "Pictures/Arizona/Petrified/"
         },
         { 
             name: "Olympic National Park", 
@@ -638,14 +503,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_5671.jpg",
-            "IMG_5683.jpg",
-            "IMG_5729.jpg",
-            "IMG_5765.jpg",
-            "olympic1.jpg",
-            "olympic2.jpg"    
-            ].map(f => `Pictures/Washington/Olympic/${f}`)
+            galleryDir: "Pictures/Washington/Olympic/"
         },
         { 
             name: "North Cascades National Park", 
@@ -665,14 +523,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_5839.jpg",
-            "IMG_5812.jpg",
-            "cascades1.jpg",
-            "cascades2.jpg",
-            "cascades3.jpg",
-            "cascades4.jpg"     
-            ].map(f => `Pictures/Washington/North_Cascades/${f}`)
+            galleryDir: "Pictures/Washington/North_Cascades/"
         },
         { 
             name: "Mount Rainier National Park", 
@@ -692,9 +543,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_5862.jpg"     
-            ].map(f => `Pictures/Washington/Rainier/${f}`)
+            galleryDir: "Pictures/Washington/Rainier/"
         },
         { 
             name: "Cuyahoga Valley National Park", 
@@ -709,10 +558,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/cuyahoga.md",
 
             //carousel images
-            gallery: [
-            "IMG_6613.jpg",
-            "IMG_6616.jpg",     
-            ].map(f => `Pictures/Ohio/Cuyahoga/${f}`)
+            galleryDir: "Pictures/Ohio/Cuyahoga/"
         }
             
     ],
@@ -736,12 +582,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_8933.jpg",
-            "IMG_8989.jpg",
-            "IMG_9003.jpg",
-            "IMG_9040.jpg"    
-            ].map(f => `Pictures/California/Whitney/${f}`)
+            galleryDir: "Pictures/California/Whitney/"
         },
         { 
             name: "Mt. Elbert", 
@@ -762,9 +603,7 @@ const rawLocations = {
 
 
             //carousel images
-            gallery: [
-            "IMG_9119.jpg"     
-            ].map(f => `Pictures/Colorado/Elbert/${f}`)
+            galleryDir: "Pictures/Colorado/Elbert/"
         },
         { 
             name: "Humphreys Peak", 
@@ -780,11 +619,7 @@ const rawLocations = {
 
 
             //carousel images
-            gallery: [
-            "IMG_6020.jpg",
-            "IMG_6046.jpg",
-            "IMG_6070.jpg"    
-            ].map(f => `Pictures/Arizona/Humphreys/${f}`)
+            galleryDir: "Pictures/Arizona/Humphreys/"
         },
         { 
             name: "Wheeler Peak", 
@@ -799,10 +634,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/wheeler-peak.md",
 
             //carousel images
-            gallery: [
-            "IMG_0955.jpg",
-            "IMG_0960.jpg"       
-            ].map(f => `Pictures/New Mexico/Wheeler/${f}`)
+            galleryDir: "Pictures/New Mexico/Wheeler/"
         },
         { 
             name: "Borah Peak", 
@@ -817,9 +649,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/borah-peak.md",
 
             //carousel images
-            gallery: [
-            "borah.JPG"     
-            ].map(f => `Pictures/Idaho/Borah/${f}`)
+            galleryDir: "Pictures/Idaho/Borah/"
         },
         { 
             name: "Black Mesa", 
@@ -834,10 +664,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/black-mesa.md",
 
             //carousel images
-            gallery: [
-            "IMG_0921.jpg",
-            "IMG_0934.jpg"       
-            ].map(f => `Pictures/Oklahoma/Black_Mesa/${f}`)
+            galleryDir: "Pictures/Oklahoma/Black_Mesa/"
         },
         { 
             name: "Mount Sunflower", 
@@ -852,9 +679,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/mt-sunflower.md",
 
             //carousel images
-            gallery: [
-            "IMG_9297.jpg"     
-            ].map(f => `Pictures/Kansas/Sunflower/${f}`)
+            galleryDir: "Pictures/Kansas/Sunflower/"
         },
         { 
             name: "Panorama Point", 
@@ -869,10 +694,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/panorama-point.md",
 
             //carousel images
-            gallery: [
-            "IMG_9312.jpg",
-            "IMG_8931.jpg",      
-            ].map(f => `Pictures/Nebraska/Panorama/${f}`)
+            galleryDir: "Pictures/Nebraska/Panorama/"
         },
         { 
             name: "Guadalupe Peak", 
@@ -887,10 +709,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/guadalupe-peak.md",
 
             //carousel images
-            gallery: [
-            "IMG_7818.jpg",
-            "IMG_8216.jpg"       
-            ].map(f => `Pictures/Texas/Guadalupe/${f}`)
+            galleryDir: "Pictures/Texas/Guadalupe/"
         },
         { 
             name: "Mt. Rogers", 
@@ -905,10 +724,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/mt-rogers.md",
 
             //carousel images
-            gallery: [
-            "IMG_4354.jpg",
-            "IMG_4363.jpg"     
-            ].map(f => `Pictures/Virginia/Rogers/${f}`)
+            galleryDir: "Pictures/Virginia/Rogers/"
         },
         { 
             name: "Black Mountain", 
@@ -923,10 +739,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/black-mountain.md",
 
             //carousel images
-            gallery: [
-            "IMG_4335.jpg",
-            "IMG_4346.jpg"     
-            ].map(f => `Pictures/Kentucky/Black/${f}`)
+            galleryDir: "Pictures/Kentucky/Black/"
         },
         { 
             name: "Spruce Knob", 
@@ -941,9 +754,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/spruce-knob.md",
 
             //carousel images
-            gallery: [
-            "IMG_4372.jpg"     
-            ].map(f => `Pictures/West Virginia/Spruce_Knob/${f}`)
+            galleryDir: "Pictures/West Virginia/Spruce_Knob/"
         },
         { 
             name: "Backbone Mountain", 
@@ -958,10 +769,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/backbone-mountain.md",
 
             //carousel images
-            gallery: [
-            "IMG_4378.jpg",
-            "IMG_4383.jpg"      
-            ].map(f => `Pictures/Maryland/Backbone/${f}`)
+            galleryDir: "Pictures/Maryland/Backbone/"
         },
         { 
             name: "Mt. Davis", 
@@ -976,12 +784,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/mt-davis.md",
 
             //carousel images
-            gallery: [
-            "IMG_4390.jpg",
-            "IMG_4385.jpg",
-            "IMG_4388.jpg",
-            "IMG_4396.jpg",       
-            ].map(f => `Pictures/Pennsylvania/Davis/${f}`)
+            galleryDir: "Pictures/Pennsylvania/Davis/"
         },
         { 
             name: "Ebright Azimuth", 
@@ -996,10 +799,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/ebright-azimuth.md",
 
             //carousel images
-            gallery: [
-            "IMG_4402.jpg",
-            "IMG_4405.jpg"       
-            ].map(f => `Pictures/Delaware/Ebright/${f}`)
+            galleryDir: "Pictures/Delaware/Ebright/"
         },
         { 
             name: "High Point", 
@@ -1014,12 +814,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/high-point.md",
 
             //carousel images
-            gallery: [
-            "IMG_6587.jpg",
-            "IMG_6584.jpg",
-            "IMG_6586.jpg",
-            "IMG_6593.jpg"       
-            ].map(f => `Pictures/New Jersey/High_Point/${f}`)
+            galleryDir: "Pictures/New Jersey/High_Point/"
         },
         { 
             name: "Mt. Frissell", 
@@ -1034,9 +829,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/mt-frissell.md",
 
             //carousel images
-            gallery: [
-            "IMG_6640.jpg"     
-            ].map(f => `Pictures/Connecticut/Frissell/${f}`)
+            galleryDir: "Pictures/Connecticut/Frissell/"
         },
         { 
             name: "Mt. Greylock", 
@@ -1051,9 +844,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/mt-greylock.md",
 
             //carousel images
-            gallery: [
-            "IMG_6597.jpg"      
-            ].map(f => `Pictures/Massachusets/Greylock/${f}`)
+            galleryDir: "Pictures/Massachusets/Greylock/"
         },
         { 
             name: "Jerimoth Hill", 
@@ -1068,10 +859,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/jerimoth-hill.md",
 
             //carousel images
-            gallery: [
-            "IMG_6634.jpg",
-            "IMG_6659.jpg"      
-            ].map(f => `Pictures/Rhode Island/Jerimoth/${f}`)
+            galleryDir: "Pictures/Rhode Island/Jerimoth/"
         },
         { 
             name: "Campbell Hill", 
@@ -1086,9 +874,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/campbell-hill.md",
 
             //carousel images
-            gallery: [
-            "IMG_6628.jpg"      
-            ].map(f => `Pictures/Ohio/Campbell/${f}`)
+            galleryDir: "Pictures/Ohio/Campbell/"
         },
         { 
             name: "Hoosier Hill", 
@@ -1103,9 +889,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/hoosier-hill.md",
 
             //carousel images
-            gallery: [
-            "IMG_6629.jpg"       
-            ].map(f => `Pictures/Indiana/Hoosier/${f}`)
+            galleryDir: "Pictures/Indiana/Hoosier/"
         },
         { 
             name: "Britton Hill", 
@@ -1120,10 +904,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/britton-hill.md",
 
             //carousel images
-            gallery: [
-            "IMG_6907.jpg",
-            "IMG_6905.jpg"      
-            ].map(f => `Pictures/Florida/Britton/${f}`)
+            galleryDir: "Pictures/Florida/Britton/"
         },
             
     ],
@@ -1142,12 +923,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/south_fork.md",
 
             //carousel images
-            gallery: [
-            "CAN_0008.jpg",
-            "CAN_0009.jpg",
-            "CAN_0043.jpg",
-            "CAN_0104.jpg"       
-            ].map(f => `Pictures/Idaho/Rafting/${f}`)
+            galleryDir: "Pictures/Idaho/Rafting/"
         },
         { 
             name: "Antelope Canyon Kayak", 
@@ -1162,13 +938,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/antelope.md",
 
             //carousel images
-            gallery: [
-            "IMG_1120.jpg",
-            "IMG_1130.jpg",
-            "IMG_1167.jpg",
-            "IMG_3842.jpg",
-            "IMG_3843.jpg"       
-            ].map(f => `Pictures/Arizona/Antelope/${f}`)
+            galleryDir: "Pictures/Arizona/Antelope/"
         },
         { 
             name: "Mt. Adams", 
@@ -1183,12 +953,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/adams.md",
 
             //carousel images
-            gallery: [
-            "IMG_1523.jpg",
-            "IMG_1551.jpg",
-            "IMG_3840.jpg",
-            "IMG_3841.jpg"      
-            ].map(f => `Pictures/Washington/Adams/${f}`)
+            galleryDir: "Pictures/Washington/Adams/"
         },
         { 
             name: "Black Canyon of the Colorado River", 
@@ -1208,10 +973,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_2291.jpg",
-            "IMG_2313.jpg"       
-            ].map(f => `Pictures/Nevada/Black_Canyon/${f}`)
+            galleryDir: "Pictures/Nevada/Black_Canyon/"
         },
         { 
             name: "La Jolla Paragliding", 
@@ -1226,13 +988,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/torrey_pines_paragliding.md",
 
             //carousel images
-            gallery: [
-            "GEO_0341.jpg",
-            "GEO_0402.jpg",
-            "GEO_0404.jpg",
-            "GEO_0408.jpg",
-            "GEO_0411.jpg",       
-            ].map(f => `Pictures/California/La_Jolla/${f}`)
+            galleryDir: "Pictures/California/La_Jolla/"
         },
         { 
             name: "Lower Calf Creek", 
@@ -1247,9 +1003,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/calf_creek.md",
 
             //carousel images
-            gallery: [
-            "IMG_2109.jpg"     
-            ].map(f => `Pictures/Utah/Calf_Creek/${f}`)
+            galleryDir: "Pictures/Utah/Calf_Creek/"
         },
         { 
             name: "Sedona", 
@@ -1264,17 +1018,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/sedona.md",
 
             //carousel images
-            gallery: [
-            "IMG_3131.jpg",
-            "IMG_3141.jpg",
-            "IMG_3188.jpg",
-            "IMG_3202.jpg",
-            "IMG_3585.jpg",
-            "IMG_3590.jpg",
-            "IMG_3614.jpg",
-            "sedonastand.jpg",
-            "DJI_0008.jpg"       
-            ].map(f => `Pictures/Arizona/Sedona/${f}`)
+            galleryDir: "Pictures/Arizona/Sedona/"
         },
         { 
             name: "Pfeifferhorn", 
@@ -1294,11 +1038,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_0087.JPG",
-            "IMG_8670.jpg",
-            "IMG_8680.jpg"       
-            ].map(f => `Pictures/Utah/Pfeifferhorn/${f}`)
+            galleryDir: "Pictures/Utah/Pfeifferhorn/"
         },
         { 
             name: "Sawtooths", 
@@ -1318,10 +1058,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_9159.jpg",
-            "IMG_9232.jpg"       
-            ].map(f => `Pictures/Idaho/Thompson/${f}`)
+            galleryDir: "Pictures/Idaho/Thompson/"
         },
         { 
             name: "Goat Canyon Trestle", 
@@ -1336,16 +1073,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/goat_canyon.md",
 
             //carousel images
-            gallery: [
-            "GoatCanyonDown.jpg",
-            "GoatCanyonDrone.jpg",
-            "IMG_3832.jpg",
-            "IMG_3833.jpg",
-            "RailroadDown.jpg",
-            "GOPR4197.JPG",
-            "TunnelDrone.jpg",
-            "goat1.jpg",       
-            ].map(f => `Pictures/California/Goat_Canyon/${f}`)
+            galleryDir: "Pictures/California/Goat_Canyon/"
         },
         { 
             name: "Salome Jug", 
@@ -1360,9 +1088,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/jug.md",
 
             //carousel images
-            gallery: [
-            "IMG_3823.jpg"
-            ].map(f => `Pictures/Arizona/Jug/${f}`)
+            galleryDir: "Pictures/Arizona/Jug/"
         },
         { 
             name: "Buckskin Gulch", 
@@ -1382,12 +1108,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_3949.jpg",
-            "IMG_3943.jpg",
-            "IMG_3955.jpg",
-            "buckskin1.jpg",
-            ].map(f => `Pictures/Utah/Buckskin/${f}`)
+            galleryDir: "Pictures/Utah/Buckskin/"
             
         },
         { 
@@ -1408,12 +1129,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_4894.jpg",
-            "DJI_0053.jpg",
-            "IMG_5217.jpg",
-            "IMG_5218.jpg"
-            ].map(f => `Pictures/Peru/Ausangate/${f}`)
+            galleryDir: "Pictures/Peru/Ausangate/"
         },
         { 
             name: "Salkantay", 
@@ -1433,18 +1149,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_4672.jpg",
-            "IMG_4799.jpg",
-            "IMG_4699.jpg",
-            "salkantay1.jpg",
-            "salkantay2.jpg",
-            "salkantay3.jpg",
-            "salkantay4.jpg",
-            "salkantay5.jpg",
-            "salkantay6.jpg",
-            "salkantay7.jpg"
-            ].map(f => `Pictures/Peru/Salkantay/${f}`)
+            galleryDir: "Pictures/Peru/Salkantay/"
         },
         { 
             name: "Ice Lake Basin", 
@@ -1464,14 +1169,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_5476.jpg",
-            "IMG_5481.jpg",
-            "dji_0037.jpg",
-            "ice_lake.jpg",
-            "icelake1.jpg",
-            "icelake2.jpg",
-            ].map(f => `Pictures/Colorado/Ice_Lake/${f}`)
+            galleryDir: "Pictures/Colorado/Ice_Lake/"
         },
         { 
             name: "Great Barrier Reef", 
@@ -1491,12 +1189,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "IMG_6500.jpg",
-            "gbr1.jpg",
-            "gbr2.jpg",
-            "gbr3.jpg"
-            ].map(f => `Pictures/Australia/GBR/${f}`)
+            galleryDir: "Pictures/Australia/GBR/"
         },
         { 
             name: "Wallaman Falls", 
@@ -1516,10 +1209,7 @@ const rawLocations = {
             },
 
             //carousel images
-            gallery: [
-            "wallamanfalls.jpg",
-            "IMG_6263.jpg"
-            ].map(f => `Pictures/Australia/Wallaman/${f}`)
+            galleryDir: "Pictures/Australia/Wallaman/"
         }
     ],
 
@@ -1537,15 +1227,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/superstitions.md",
 
             //carousel images
-            gallery: [
-            "IMG_3522.jpg",
-            "IMG_3812.jpg",
-            "IMG_3813.jpg",
-            "IMG_3831.jpg",
-            "IMG_3834.jpg",
-            "IMG_3839.jpg",
-            "IMG_6730.jpg"
-            ].map(f => `Pictures/Arizona/Superstitions/${f}`)
+            galleryDir: "Pictures/Arizona/Superstitions/"
         },
         {
             name: "Kirkham Hot Springs",
@@ -1560,10 +1242,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/kirkham_hot_springs.md",
 
             //carousel images
-            gallery: [
-            "IMG_3497.jpg",
-            "dji_0012.jpg",
-            ].map(f => `Pictures/Idaho/Kirkham/${f}`)
+            galleryDir: "Pictures/Idaho/Kirkham/"
         },
         {
             name: "Fossil Creek",
@@ -1578,9 +1257,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/fossil_creek.md",
 
             //carousel images
-            gallery: [
-            "IMG_3822.jpg"
-            ].map(f => `Pictures/Arizona/Fossil/${f}`)
+            galleryDir: "Pictures/Arizona/Fossil/"
         },
         { 
             name: "Pikes Peak", 
@@ -1595,12 +1272,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/pikes.md",
 
             //carousel images
-            gallery: [
-            "IMG_0888.jpg",
-            "IMG_0898.jpg",
-            "IMG_0904.jpg",
-            "IMG_0909.jpg"
-            ].map(f => `Pictures/Colorado/Pikes/${f}`)
+            galleryDir: "Pictures/Colorado/Pikes/"
         },
         {
             name: "Coal Mine Canyon",
@@ -1615,10 +1287,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/coal_mine.md",
 
             //carousel images
-            gallery: [
-            "IMG_0825.jpg",
-            "IMG_5296.jpg",
-            ].map(f => `Pictures/Arizona/Coal_Mine/${f}`)
+            galleryDir: "Pictures/Arizona/Coal_Mine/"
         },
         {
             name: "Panther Creek Falls",
@@ -1633,11 +1302,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/panther_creek.md",
 
             //carousel images
-            gallery: [
-            "IMG_1498.jpg",
-            "IMG_1502.jpg",
-            "IMG_1508.jpg"
-            ].map(f => `Pictures/Washington/Panther/${f}`)
+            galleryDir: "Pictures/Washington/Panther/"
         },
         {
             name: "Blue Heart Springs",
@@ -1652,9 +1317,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/blue_heart.md",
 
             //carousel images
-            gallery: [
-            "IMG_1605.jpg"
-            ].map(f => `Pictures/Idaho/Blue_Heart/${f}`)
+            galleryDir: "Pictures/Idaho/Blue_Heart/"
         },
         {
             name: "Donut Falls",
@@ -1669,10 +1332,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/donut_falls.md",
 
             //carousel images
-            gallery: [
-            "IMG_1647.jpg",
-            "IMG_1650.jpg"
-            ].map(f => `Pictures/Utah/Donut/${f}`)
+            galleryDir: "Pictures/Utah/Donut/"
         },
         {
             name: "Imperial Sand Dunes",
@@ -1687,10 +1347,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/imperial_sand.md",
 
             //carousel images
-            gallery: [
-            "IMG_3759.jpg",
-            "imperial1.jpg"
-            ].map(f => `Pictures/California/Imperial/${f}`)
+            galleryDir: "Pictures/California/Imperial/"
         },
         {
             name: "Black Sands Beach",
@@ -1704,9 +1361,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black_sand_beach.md",
             notesMd: "descriptions/notes/black_sand_beach.md",
 
-            gallery: [
-            "IMG_7640.jpg"
-            ].map(f => `Pictures/California/Black_Sand/${f}`)
+            galleryDir: "Pictures/California/Black_Sand/"
         },
         {
             name: "Four Peaks",
@@ -1720,9 +1375,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/four_peaks.md",
             notesMd: "descriptions/notes/four_peaks.md",
 
-            gallery: [
-            "IMG_7751.jpg"
-            ].map(f => `Pictures/Arizona/Four_Peaks/${f}`)
+            galleryDir: "Pictures/Arizona/Four_Peaks/"
         },
         {
             name: "Chiricahua National Monument",
@@ -1736,9 +1389,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/chiricahua.md",
             notesMd: "descriptions/notes/chiricahua.md",
 
-            gallery: [
-            "IMG_8082.jpg"
-            ].map(f => `Pictures/Arizona/Chiricahua/${f}`)
+            galleryDir: "Pictures/Arizona/Chiricahua/"
         },
         {
             name: "Valley of Fire",
@@ -1757,10 +1408,7 @@ const rawLocations = {
                 title: "Valley of Fire"
             },
 
-            gallery: [
-            "IMG_4058.jpg",
-            "IMG_4055.jpg",
-            ].map(f => `Pictures/Nevada/Valley_of_Fire/${f}`)
+            galleryDir: "Pictures/Nevada/Valley_of_Fire/"
         },
         {
             name: "Grand Staircase Escalante",
@@ -1774,11 +1422,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/antelope.md",
             notesMd: "descriptions/notes/antelope.md",
 
-            gallery: [
-            "Grand_Staircase.jpg",
-            "IMG_3922.jpg",
-            "escalante1.jpg",
-            ].map(f => `Pictures/Utah/Grand_Staircase/${f}`)
+            galleryDir: "Pictures/Utah/Grand_Staircase/"
         },
         { 
             name: "Machu Picchu", 
@@ -1792,10 +1436,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/machu.md",
             notesMd: "descriptions/notes/machu.md",
 
-            gallery: [
-            "IMG_4832.jpg",
-            "IMG_4841.jpg"
-            ].map(f => `Pictures/Peru/Salkantay/${f}`)
+            galleryDir: "Pictures/Peru/Salkantay/"
         },
         { 
             name: "Pallay Punchu", 
@@ -1814,14 +1455,7 @@ const rawLocations = {
                 title: "Pallay Punchu"
             },
 
-            gallery: [
-            "pallay_punchu.jpg",
-            "2.7.1.jpg",
-            "IMG_5003.jpg",
-            "pallay1.jpg",
-            "pallay2.jpg",
-            "pallay3.jpg"
-            ].map(f => `Pictures/Peru/Pallay_Punchu/${f}`)
+            galleryDir: "Pictures/Peru/Pallay_Punchu/"
         },
         { 
             name: "Monument Valley", 
@@ -1835,9 +1469,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/monument_valley.md",
             notesMd: "descriptions/notes/monument_valley.md",
 
-            gallery: [
-            "IMG_5606.jpg"
-            ].map(f => `Pictures/Arizona/Monument/${f}`)
+            galleryDir: "Pictures/Arizona/Monument/"
         },
         { 
             name: "Whitehaven Beach", 
@@ -1856,10 +1488,7 @@ const rawLocations = {
                 title: "Whitehaven Beach"
             },
 
-            gallery: [
-            "IMG_6216.jpg",
-            "whitehaven1.jpg",
-            ].map(f => `Pictures/Australia/Whitehaven/${f}`)
+            galleryDir: "Pictures/Australia/Whitehaven/"
         },
         { 
             name: "Daintree Rainforest", 
@@ -1878,13 +1507,7 @@ const rawLocations = {
                 title: "Daintree Rainforest"
             },
 
-            gallery: [
-            "IMG_6107.jpg",
-            "dji_0006.jpg",
-            "daintree1.jpg",
-            "daintree2.jpg",
-            "daintree3.jpg"
-            ].map(f => `Pictures/Australia/Daintree/${f}`)
+            galleryDir: "Pictures/Australia/Daintree/"
         },
         { 
             name: "Sydney Opera House", 
@@ -1898,9 +1521,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/opera_house.md",
             notesMd: "descriptions/notes/opera_house.md",
 
-            gallery: [
-            "IMG_6367.jpg"
-            ].map(f => `Pictures/Australia/Sydney/${f}`)
+            galleryDir: "Pictures/Australia/Sydney/"
         }
         
     ]
@@ -1918,5 +1539,6 @@ Object.entries(rawLocations).forEach(([category, places]) => {
 
 
 export default locations;
+
 
 

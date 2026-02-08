@@ -1,4 +1,5 @@
 import locations from "./locations-data.js";
+import galleryManifest from "./gallery-manifest.js";
 import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 
@@ -119,12 +120,7 @@ async function main() {
     videoSection?.remove();
   }
 
-  const gallery =
-    Array.isArray(selectedLocation.gallery) && selectedLocation.gallery.length
-      ? selectedLocation.gallery
-      : selectedLocation.img
-        ? [selectedLocation.img]
-        : [];
+  const gallery = getGalleryForLocation(selectedLocation);
 
   if (gallery.length) {
     initCarousel("location-carousel", gallery);
@@ -189,4 +185,20 @@ function escapeHtml(str) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function getGalleryForLocation(location) {
+  if (Array.isArray(location.gallery) && location.gallery.length) {
+    return location.gallery;
+  }
+
+  if (location.galleryDir) {
+    const normalizedDir = location.galleryDir.replace(/\/+$/, "");
+    const fromManifest = galleryManifest[normalizedDir];
+    if (Array.isArray(fromManifest) && fromManifest.length) {
+      return fromManifest;
+    }
+  }
+
+  return location.img ? [location.img] : [];
 }
