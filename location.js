@@ -89,8 +89,9 @@ async function main() {
   } else if (video.provider === "vimeo" && video.id) {
     const title = escapeHtml(video.title ?? selectedLocation.name);
     const hash = video.hash ? `?h=${encodeURIComponent(video.hash)}` : "";
+    const aspectClass = getVideoAspectClass(video);
     videoContainer.innerHTML = `
-      <div class="video-embed">
+      <div class="video-embed ${aspectClass}">
         <iframe
           src="https://player.vimeo.com/video/${encodeURIComponent(video.id)}${hash}"
           title="${title}"
@@ -103,8 +104,9 @@ async function main() {
     `;
   } else if (video.provider === "youtube" && video.id) {
     const title = escapeHtml(video.title ?? selectedLocation.name);
+    const aspectClass = getVideoAspectClass(video);
     videoContainer.innerHTML = `
-      <div class="video-embed">
+      <div class="video-embed ${aspectClass}">
         <iframe
           src="https://www.youtube.com/embed/${encodeURIComponent(video.id)}"
           title="${title}"
@@ -201,4 +203,8 @@ function getGalleryForLocation(location) {
   }
 
   return location.img ? [location.img] : [];
+}
+
+function getVideoAspectClass(video) {
+  return video?.aspect === "landscape" ? "landscape" : "portrait";
 }

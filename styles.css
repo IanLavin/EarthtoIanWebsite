@@ -568,12 +568,19 @@
 
 .page-location .video-embed {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+  width: min(100%, 420px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
   background: rgba(0,0,0,0.55);
   border: 1px solid rgba(255,255,255,0.12);
+}
+
+.page-location .video-embed.landscape {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 16 / 9;
 }
 
 .page-location .video-embed iframe {
