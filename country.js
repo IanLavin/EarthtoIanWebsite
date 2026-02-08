@@ -1,6 +1,8 @@
 import locations from "./locations-data.js";
 import { countryName } from "./country-names.js";
 
+const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
+
 const params = new URLSearchParams(window.location.search);
 const countryCode = params.get("country");
 
@@ -11,70 +13,70 @@ if (!countryCode) {
 
 document.getElementById("country-title").textContent = countryName(countryCode);
 
-// Flatten locations
 const allLocations = Object.values(locations).flat();
-
-// Filter by country
-const countryLocations = allLocations.filter(
-  loc => loc.country === countryCode
-);
+const countryLocations = allLocations.filter((loc) => loc.country === countryCode);
 
 if (!countryLocations.length) {
   document.body.innerHTML = "<h2>No locations found for this country</h2>";
   throw new Error("No locations for country");
 }
 
-// Populate list
-const list = document.getElementById("country-locations");
-
-// ---------- GROUP BY REGION ----------
-const regions = {};
-
-countryLocations.forEach(loc => {
-  if (!regions[loc.region]) {
-    regions[loc.region] = [];
-  }
-  regions[loc.region].push(loc);
+const regions = new Map();
+countryLocations.forEach((location) => {
+  const region = location.region || "Other";
+  if (!regions.has(region)) regions.set(region, []);
+  regions.get(region).push(location);
 });
 
 const container = document.getElementById("country-locations");
 container.innerHTML = "";
 
-// Render regions
-Object.keys(regions).forEach(region => {
-  const section = document.createElement("li");
-  section.innerHTML = `<h3>${region}</h3>`;
+Array.from(regions.keys())
+  .sort((a, b) => a.localeCompare(b))
+  .forEach((region) => {
+    const section = document.createElement("li");
+    const heading = document.createElement("h3");
+    heading.textContent = region;
+    section.appendChild(heading);
 
-  const ul = document.createElement("ul");
+    const regionList = document.createElement("ul");
+    regions
+      .get(region)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .forEach((location) => {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `location.html?id=${location.id}`;
+        link.textContent = location.name;
+        li.appendChild(link);
+        regionList.appendChild(li);
+      });
 
-  regions[region].forEach(loc => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <a href="location.html?id=${loc.id}">
-        ${loc.name}
-      </a>
-    `;
-    ul.appendChild(li);
+    section.appendChild(regionList);
+    container.appendChild(section);
   });
 
-  section.appendChild(ul);
-  container.appendChild(section);
-});
-
-// ---------- IMAGE CAROUSEL ----------
-const images = countryLocations.map(loc => loc.img);
+const images = countryLocations.map((location) => location.img).filter(Boolean);
 let currentIndex = 0;
 
 const carouselImg = document.getElementById("carousel-image");
-carouselImg.src = images[0];
+carouselImg.src = images[0] ?? IMAGE_FALLBACK;
+carouselImg.onerror = () => {
+  carouselImg.src = IMAGE_FALLBACK;
+};
+
+function renderImage() {
+  carouselImg.src = images[currentIndex] ?? IMAGE_FALLBACK;
+}
 
 document.querySelector(".carousel-btn.next").onclick = () => {
+  if (!images.length) return;
   currentIndex = (currentIndex + 1) % images.length;
-  carouselImg.src = images[currentIndex];
+  renderImage();
 };
 
 document.querySelector(".carousel-btn.prev").onclick = () => {
+  if (!images.length) return;
   currentIndex = (currentIndex - 1 + images.length) % images.length;
-  carouselImg.src = images[currentIndex];
+  renderImage();
 };
-

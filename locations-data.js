@@ -29,6 +29,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/yellowstone.md",
             logisticsMd: "descriptions/logistics/yellowstone.md",
             notesMd: "descriptions/notes/yellowstone.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Yellowstone National Park"
+            },
             
 
             //carousel images
@@ -59,6 +64,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/grand-teton.md",
             logisticsMd: "descriptions/logistics/grand-teton.md",
             notesMd: "descriptions/notes/grand-teton.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Grand Teton National Park"
+            },
 
             //carousel images
             gallery: [
@@ -161,6 +171,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/channel-islands.md",
             logisticsMd: "descriptions/logistics/channel-islands.md",
             notesMd: "descriptions/notes/channel-islands.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Channel Islands National Park"
+            },
 
             //carousel images
             gallery: [
@@ -204,6 +219,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/grand-canyon.md",
             logisticsMd: "descriptions/logistics/grand-canyon.md",
             notesMd: "descriptions/notes/grand-canyon.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Grand Canyon National Park"
+            },
 
             //carousel images
             gallery: [
@@ -456,6 +476,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/biscayne.md",
             logisticsMd: "descriptions/logistics/biscayne.md",
             notesMd: "descriptions/notes/biscayne.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Biscayne National Park"
+            },
 
             //carousel images
             gallery: [
@@ -473,6 +498,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/dry-tortugas.md",
             logisticsMd: "descriptions/logistics/dry-tortugas.md",
             notesMd: "descriptions/notes/dry-tortugas.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Dry Tortugas National Park"
+            },
 
             //carousel images
             gallery: [
@@ -601,6 +631,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/olympic.md",
             logisticsMd: "descriptions/logistics/olympic.md",
             notesMd: "descriptions/notes/olympic.md",
+            video: {
+                provider: "vimeo",
+                id: "1162903093",
+                title: "Olympic National Park"
+            },
 
             //carousel images
             gallery: [
@@ -623,6 +658,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/north-cascades.md",
             logisticsMd: "descriptions/logistics/north-cascades.md",
             notesMd: "descriptions/notes/north-cascades.md",
+            video: {
+                provider: "vimeo",
+                id: "1162896575",
+                title: "North Cascades National Park"
+            },
 
             //carousel images
             gallery: [
@@ -645,6 +685,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/rainier.md",
             logisticsMd: "descriptions/logistics/rainier.md",
             notesMd: "descriptions/notes/rainier.md",
+            video: {
+                provider: "vimeo",
+                id: "1162903093",
+                title: "Rainier National Park"
+            },
 
             //carousel images
             gallery: [
@@ -684,6 +729,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-whitney.md",
             logisticsMd: "descriptions/logistics/mt-whitney.md",
             notesMd: "descriptions/notes/mt-whitney.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Mt. Whitney"
+            },
 
             //carousel images
             gallery: [
@@ -704,6 +754,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-elbert.md",
             logisticsMd: "descriptions/logistics/mt-elbert.md",
             notesMd: "descriptions/notes/mt-elbert.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Mt. Elbert"
+            },
 
 
             //carousel images
@@ -1146,6 +1201,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/black_canyon_colorado.md",
             logisticsMd: "descriptions/logistics/black_canyon_colorado.md",
             notesMd: "descriptions/notes/black_canyon_colorado.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Black Canyon of the Colorado River"
+            },
 
             //carousel images
             gallery: [
@@ -1227,6 +1287,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/pfeifferhorn.md",
             logisticsMd: "descriptions/logistics/pfeifferhorn.md",
             notesMd: "descriptions/notes/pfeifferhorn.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Pfeifferhorn"
+            },
 
             //carousel images
             gallery: [
@@ -1246,6 +1311,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/sawtooth.md",
             logisticsMd: "descriptions/logistics/sawtooth.md",
             notesMd: "descriptions/notes/sawtooth.md",
+            video: {
+                provider: "",
+                id: "",
+                title: "Sawtooths"
+            },
 
             //carousel images
             gallery: [
@@ -1305,6 +1375,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/buckskin.md",
             logisticsMd: "descriptions/logistics/buckskin.md",
             notesMd: "descriptions/notes/buckskin.md",
+            video: {
+                provider: "vimeo",
+                id: "1162901298",
+                title: "Buckskin Gulch"
+            },
 
             //carousel images
             gallery: [
@@ -1326,6 +1401,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/ausangate.md",
             logisticsMd: "descriptions/logistics/ausangate.md",
             notesMd: "descriptions/notes/ausangate.md",
+            video: {
+                provider: "vimeo",
+                id: "1162901859",
+                title: "Ausangate"
+            },
 
             //carousel images
             gallery: [
@@ -1346,6 +1426,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/salkantay.md",
             logisticsMd: "descriptions/logistics/salkantay.md",
             notesMd: "descriptions/notes/salkantay.md",
+            video: {
+                provider: "vimeo",
+                id: "1162402790",
+                title: "Salkantay"
+            },
 
             //carousel images
             gallery: [
@@ -1372,6 +1457,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/ice_lake.md",
             logisticsMd: "descriptions/logistics/ice_lake.md",
             notesMd: "descriptions/notes/ice_lake.md",
+            video: {
+                provider: "vimeo",
+                id: "1162907965",
+                title: "Ice Lake Basin"
+            },
 
             //carousel images
             gallery: [
@@ -1394,6 +1484,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/gbr.md",
             logisticsMd: "descriptions/logistics/gbr.md",
             notesMd: "descriptions/notes/gbr.md",
+            video: {
+                provider: "vimeo",
+                id: "1162895387",
+                title: "Great Barrier Reef"
+            },
 
             //carousel images
             gallery: [
@@ -1414,6 +1509,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/wallaman.md",
             logisticsMd: "descriptions/logistics/wallaman.md",
             notesMd: "descriptions/notes/wallaman.md",
+            video: {
+                provider: "vimeo",
+                id: "1162896032",
+                title: "Wallaman Falls"
+            },
 
             //carousel images
             gallery: [
@@ -1651,6 +1751,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/valley_fire.md",
             logisticsMd: "descriptions/logistics/valley_fire.md",
             notesMd: "descriptions/notes/valley_fire.md",
+            video: {
+                provider: "vimeo",
+                id: "1162901298",
+                title: "Valley of Fire"
+            },
 
             gallery: [
             "IMG_4058.jpg",
@@ -1703,6 +1808,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/pallay.md",
             logisticsMd: "descriptions/logistics/pallay.md",
             notesMd: "descriptions/notes/pallay.md",
+            video: {
+                provider: "vimeo",
+                id: "1162901859",
+                title: "Pallay Punchu"
+            },
 
             gallery: [
             "pallay_punchu.jpg",
@@ -1740,6 +1850,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/whitehaven.md",
             logisticsMd: "descriptions/logistics/whitehaven.md",
             notesMd: "descriptions/notes/whitehaven.md",
+            video: {
+                provider: "vimeo",
+                id: "1162896032",
+                title: "Whitehaven Beach"
+            },
 
             gallery: [
             "IMG_6216.jpg",
@@ -1757,6 +1872,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/daintree.md",
             logisticsMd: "descriptions/logistics/daintree.md",
             notesMd: "descriptions/notes/daintree.md",
+            video: {
+                provider: "vimeo",
+                id: "1162896032",
+                title: "Daintree Rainforest"
+            },
 
             gallery: [
             "IMG_6107.jpg",

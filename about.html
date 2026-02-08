@@ -107,20 +107,9 @@
     document.getElementById("stat-countries").textContent = countriesCount;
   </script>
 
-  <!-- Menu JS (same as homepage) -->
-  <script>
-    const menuContainer = document.querySelector(".menu-container");
-    const menuToggle = document.getElementById("menu-toggle");
-
-    menuToggle.addEventListener("click", () => {
-      menuContainer.classList.toggle("open");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!menuContainer.contains(e.target)) {
-        menuContainer.classList.remove("open");
-      }
-    });
+  <script type="module">
+    import { initMenu } from "./js/menu.js";
+    initMenu();
   </script>
 
 </body>

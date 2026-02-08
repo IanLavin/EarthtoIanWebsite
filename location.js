@@ -1,11 +1,10 @@
-﻿import locations from "./locations-data.js";
+import locations from "./locations-data.js";
 import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 
+const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
+
 async function main() {
-  // -------------------------
-  // Load selected location from URL
-  // -------------------------
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
 
@@ -18,9 +17,6 @@ async function main() {
     throw new Error("Invalid location ID");
   }
 
-  // -------------------------
-  // Basic page content
-  // -------------------------
   document.getElementById("location-title").textContent = selectedLocation.name;
 
   const subtitleEl = document.getElementById("location-subtitle");
@@ -32,22 +28,15 @@ async function main() {
   const heroImg = document.getElementById("hero-image");
   heroImg.src = selectedLocation.img;
   heroImg.alt = selectedLocation.name;
-  heroImg.onerror = () => (heroImg.src = "fallback.jpg");
+  heroImg.onerror = () => (heroImg.src = IMAGE_FALLBACK);
 
-  // -------------------------
-  // Overview (markdown)
-  // -------------------------
   await renderMarkdownSection({
     el: document.getElementById("description"),
     mdPath: selectedLocation.descriptionMd,
     fallbackHtml: "<p>More details coming soon.</p>",
   });
 
-  // -------------------------
-  // Logistics (markdown, with itinerary fallback)
-  // -------------------------
   const logisticsEl = document.getElementById("logistics");
-
   if (selectedLocation.logisticsMd) {
     await renderMarkdownSection({
       el: logisticsEl,
@@ -55,7 +44,6 @@ async function main() {
       fallbackHtml: "<p>No logistics added yet.</p>",
     });
   } else if (Array.isArray(selectedLocation.itinerary) && selectedLocation.itinerary.length) {
-    // Backward compatible: render old itinerary array as a list inside Logistics
     logisticsEl.innerHTML = `<ul>${selectedLocation.itinerary
       .map((item) => `<li>${escapeHtml(item)}</li>`)
       .join("")}</ul>`;
@@ -63,12 +51,8 @@ async function main() {
     logisticsEl.innerHTML = "<p>No logistics added yet.</p>";
   }
 
-  // -------------------------
-  // Notes (markdown)
-  // -------------------------
   const notesSection = document.querySelector(".location-notes");
   const notesEl = document.getElementById("notes-container");
-
   if (selectedLocation.notesMd) {
     await renderMarkdownSection({
       el: notesEl,
@@ -76,22 +60,15 @@ async function main() {
       fallbackHtml: "<p>No notes yet.</p>",
     });
   } else {
-    // If you'd rather always show the Notes section, replace this with:
-    // notesEl.innerHTML = "<p>No notes yet.</p>";
     notesSection?.remove();
   }
 
-  // -------------------------
-  // Journal logic (mountain + journal must exist)
-  // -------------------------
   const journalSection = document.querySelector(".location-journal");
   const journal = journals?.[selectedLocation.id];
-
   if (selectedLocation.category !== "mountain" || !journal) {
     journalSection?.remove();
   } else {
     journalSection.querySelector("h2").textContent = journal.title ?? "Journal";
-
     document.getElementById("journal-container").innerHTML = `
       <div class="journal-meta">
         <span class="journal-date">${escapeHtml(journal.date ?? "")}</span>
@@ -102,9 +79,46 @@ async function main() {
     `;
   }
 
-  // -------------------------
-  // Image carousel
-  // -------------------------
+  const videoSection = document.querySelector(".location-video");
+  const videoContainer = document.getElementById("video-container");
+  const video = selectedLocation.video;
+
+  if (!video || !videoContainer) {
+    videoSection?.remove();
+  } else if (video.provider === "vimeo" && video.id) {
+    const title = escapeHtml(video.title ?? selectedLocation.name);
+    const hash = video.hash ? `?h=${encodeURIComponent(video.hash)}` : "";
+    videoContainer.innerHTML = `
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/${encodeURIComponent(video.id)}${hash}"
+          title="${title}"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    `;
+  } else if (video.provider === "youtube" && video.id) {
+    const title = escapeHtml(video.title ?? selectedLocation.name);
+    videoContainer.innerHTML = `
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/${encodeURIComponent(video.id)}"
+          title="${title}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    `;
+  } else {
+    videoSection?.remove();
+  }
+
   const gallery =
     Array.isArray(selectedLocation.gallery) && selectedLocation.gallery.length
       ? selectedLocation.gallery
@@ -118,10 +132,6 @@ async function main() {
 }
 
 main();
-
-/* =========================
-   Markdown helpers
-========================= */
 
 async function renderMarkdownSection({ el, mdPath, fallbackHtml }) {
   if (!el) return;
@@ -147,11 +157,6 @@ async function loadMarkdown(path) {
   return await res.text();
 }
 
-// Lightweight markdown renderer:
-// - headings (#, ##, ###)
-// - bold/italics
-// - unordered lists (- item)
-// - paragraphs
 function markdownToHtml(md) {
   let html = md
     .replace(/\r\n/g, "\n")
@@ -161,11 +166,9 @@ function markdownToHtml(md) {
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.*?)\*/g, "<em>$1</em>");
 
-  // unordered lists
   html = html.replace(/^\s*-\s+(.*)$/gm, "<li>$1</li>");
   html = html.replace(/(?:<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`);
 
-  // paragraphs: split on blank lines
   html = html
     .split("\n\n")
     .map((block) => {
@@ -179,7 +182,6 @@ function markdownToHtml(md) {
   return html;
 }
 
-// Prevent accidental HTML injection when rendering fallback lists/dates
 function escapeHtml(str) {
   return String(str)
     .replaceAll("&", "&amp;")
@@ -188,5 +190,3 @@ function escapeHtml(str) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 }
-
-
