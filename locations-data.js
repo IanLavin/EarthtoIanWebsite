@@ -276,6 +276,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/zion.md",
             logisticsMd: "descriptions/logistics/zion.md",
             notesMd: "descriptions/notes/zion.md",
+            video: {
+                provider: "vimeo",
+                id: "1163088085",
+                title: "Zion National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Zion/"
@@ -451,6 +456,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/mesa-verde.md",
             logisticsMd: "descriptions/logistics/mesa-verde.md",
             notesMd: "descriptions/notes/mesa-verde.md",
+            video: {
+                provider: "vimeo",
+                id: "1162907965",
+                title: "Mesa Verde National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Colorado/Mesa_Verde/"
@@ -466,6 +476,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/black-canyon.md",
             logisticsMd: "descriptions/logistics/black-canyon.md",
             notesMd: "descriptions/notes/black-canyon.md",
+            video: {
+                provider: "vimeo",
+                id: "1162907965",
+                title: "Black Canyon of the Gunnison National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Colorado/Black_Canyon/"
@@ -1071,6 +1086,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/goat_canyon.md",
             logisticsMd: "descriptions/logistics/goat_canyon.md",
             notesMd: "descriptions/notes/goat_canyon.md",
+            video: {
+                provider: "vimeo",
+                id: "1163089983",
+                title: "Goat Canyon Trestle"
+            },
 
             //carousel images
             galleryDir: "Pictures/California/Goat_Canyon/"
@@ -1144,7 +1164,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/salkantay.md",
             video: {
                 provider: "vimeo",
-                id: "1162402790",
+                id: "1163085518",
                 title: "Salkantay"
             },
 
@@ -1435,6 +1455,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/machu.md",
             logisticsMd: "descriptions/logistics/machu.md",
             notesMd: "descriptions/notes/machu.md",
+            video: {
+                provider: "vimeo",
+                id: "1163085518",
+                title: "Machu Picchu"
+            },
 
             galleryDir: "Pictures/Peru/Salkantay/"
         },
@@ -1468,6 +1493,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/monument_valley.md",
             logisticsMd: "descriptions/logistics/monument_valley.md",
             notesMd: "descriptions/notes/monument_valley.md",
+            video: {
+                provider: "vimeo",
+                id: "1162907965",
+                title: "Monument Valley"
+            },
 
             galleryDir: "Pictures/Arizona/Monument/"
         },

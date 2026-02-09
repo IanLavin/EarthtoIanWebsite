@@ -126,7 +126,7 @@ function createPopup(place) {
         <img
           src="${place.img}"
           alt="${placeName}"
-          width="200"
+          width="260"
           class="popup-image"
         />
       </a>

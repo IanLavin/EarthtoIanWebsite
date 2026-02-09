@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Countries</title>
+  <title>Year In Review</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="page-countries">
+<body class="page-years">
 
   <header class="topbar">
-    <h1 id="page-title">Countries</h1>
+    <h1 id="page-title">Year In Review</h1>
   </header>
 
   <div class="menu-container">
@@ -27,15 +27,11 @@
     </nav>
   </div>
 
-  <main class="countries-page">
-    <p class="countries-intro">All countries with at least one location visited.</p>
-    <ul id="countries-list" class="countries-list"></ul>
+  <main class="years-page">
+    <p class="years-intro">A look back at each year of travel.</p>
+    <section id="years-list" class="years-grid"></section>
   </main>
 
-  <script type="module" src="countries.js"></script>
-  <script type="module">
-    import { initMenu } from "./js/menu.js";
-    initMenu();
-  </script>
+  <script type="module" src="year-in-review.js"></script>
 </body>
 </html>
