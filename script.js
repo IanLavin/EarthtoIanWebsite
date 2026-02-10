@@ -31,6 +31,7 @@ const searchBox = document.getElementById("searchBox");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const homeButton = document.getElementById("homeButton");
 const worldButton = document.getElementById("worldButton");
+const mapArea = document.querySelector(".map-area");
 const randomName = document.getElementById("random-location-name");
 const randomImg = document.getElementById("random-location-img");
 
@@ -87,6 +88,10 @@ function escapeHtml(str) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function shouldAutoScrollToMap() {
+  return window.matchMedia("(max-width: 980px)").matches;
 }
 
 function setActiveTab(category) {
@@ -167,6 +172,11 @@ function renderSidebarList() {
       map.setView([place.lat, place.lng], 12);
       const marker = markerById.get(place.id);
       if (marker) marker.openPopup();
+
+      if (shouldAutoScrollToMap() && mapArea) {
+        mapArea.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(() => map.invalidateSize(), 260);
+      }
     });
 
     sidebarList.appendChild(li);

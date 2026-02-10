@@ -1328,7 +1328,7 @@ const rawLocations = {
             name: "Blue Heart Springs",
             country: "US",
             region: "Rocky Mountain",
-            lat: 42.170, 
+            lat: 42.710, 
             lng: -114.829, 
             url: "https://en.wikipedia.org/wiki/La_Jolla",
             img: "Pictures/Idaho/Blue_Heart/IMG_1605.jpg",
