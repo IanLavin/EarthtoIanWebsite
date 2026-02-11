@@ -36,12 +36,14 @@
 
     <!-- Hero: profile + stats -->
     <section class="about-hero">
-      <img
-        class="about-avatar"
-        src="Pictures/profile.jpg"
-        alt="Profile photo"
-        onerror="this.style.display='none';"
-      />
+      <div class="about-avatar-wrap">
+        <img
+          class="about-avatar"
+          src="Pictures/profile.jpg"
+          alt="Profile photo"
+          onerror="this.onerror=null; this.src='Pictures/Icons/camera-circle.svg'; this.classList.add('about-avatar-fallback');"
+        />
+      </div>
 
       <div class="about-hero-text">
         <h2>Who I Am</h2>
