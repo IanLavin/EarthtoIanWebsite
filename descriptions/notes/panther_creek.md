@@ -1,6 +1,4 @@
 ## Notes
-- Sample Text
-- Sample Text
-- Sample Text
+- The waterfall consists of two drops with the highest being 102 feet.
 
 

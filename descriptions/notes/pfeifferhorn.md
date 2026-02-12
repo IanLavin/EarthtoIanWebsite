@@ -1,6 +1,4 @@
 ## Notes
-- Sample Text
-- Sample Text
-- Sample Text
+- The mountain is popularly referred to as the little matterhorn, referencing the famous peak in the Alps.
 
 
