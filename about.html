@@ -39,7 +39,7 @@
       <div class="about-avatar-wrap">
         <img
           class="about-avatar"
-          src="Pictures/profile.jpg"
+          src="Pictures/aboutphoto.jpg"
           alt="Profile photo"
           onerror="this.onerror=null; this.src='Pictures/Icons/camera-circle.svg'; this.classList.add('about-avatar-fallback');"
         />
@@ -47,9 +47,7 @@
 
       <div class="about-hero-text">
         <h2>Who I Am</h2>
-        <p class="about-muted">
-          <!-- Write a short intro here -->
-        </p>
+        <div id="about-who" class="about-muted"></div>
 
         <div class="about-stats">
           <div class="stat-card">
@@ -73,47 +71,24 @@
     <!-- Mission / purpose -->
     <section class="about-section">
       <h2>Why This Exists</h2>
-      <p>
-        <!-- Explain the goal of this project -->
-      </p>
+      <div id="about-why"></div>
     </section>
 
     <!-- Travel philosophy / style -->
     <section class="about-section">
       <h2>How I Travel</h2>
-      <p>
-        <!-- Your travel philosophy -->
-      </p>
+      <div id="about-how"></div>
     </section>
 
     <!-- Future / roadmap -->
     <section class="about-section">
       <h2>What's Next</h2>
-      <p>
-        <!-- Future plans -->
-      </p>
+      <div id="about-next"></div>
     </section>
 
   </main>
 
-  <!-- Auto-count stats from locations-data.js -->
-  <script type="module">
-    import locations from "./locations-data.js";
-
-    const highpointsCount = locations.mountain?.length ?? 0;
-    const parksCount = locations.park?.length ?? 0;
-    const allLocations = Object.values(locations).flat();
-    const countriesCount = new Set(allLocations.map((loc) => loc.country).filter(Boolean)).size;
-
-    document.getElementById("stat-highpoints").textContent = highpointsCount;
-    document.getElementById("stat-parks").textContent = parksCount;
-    document.getElementById("stat-countries").textContent = countriesCount;
-  </script>
-
-  <script type="module">
-    import { initMenu } from "./js/menu.js";
-    initMenu();
-  </script>
+  <script type="module" src="about.js"></script>
 
 </body>
 </html>

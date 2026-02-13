@@ -27,11 +27,19 @@
       </div>
     </header>
 
+    <nav id="location-mini-nav" class="location-mini-nav">
+      <a href="#overview">Overview</a>
+      <a href="#logistics-section">Logistics</a>
+      <a href="#notes">Notes</a>
+      <a href="#related">Related</a>
+      <a href="#media">Media</a>
+    </nav>
+
     <!-- Two-column layout -->
     <section class="location-grid">
 
       <!-- Left column: media -->
-      <div class="location-media">
+      <div id="media" class="location-media">
         <div id="location-carousel" class="carousel"></div>
 
         <section class="location-video">
@@ -49,24 +57,31 @@
       <!-- Right column: writing -->
       <div class="location-writing">
 
-        <section class="location-overview">
+        <section id="overview" class="location-overview">
           <h2>Overview</h2>
           <div id="description" class="markdown"></div>
         </section>
 
-        <section class="location-logistics">
+        <section id="logistics-section" class="location-logistics">
           <h2>Logistics</h2>
           <div id="logistics" class="markdown"></div>
         </section>
 
-        <section class="location-notes">
+        <section id="notes" class="location-notes">
           <h2>Notes</h2>
           <div id="notes-container" class="markdown"></div>
+        </section>
+
+        <section id="related" class="location-related">
+          <h2>Related Locations</h2>
+          <ul id="related-locations" class="related-locations-list"></ul>
         </section>
 
       </div>
     </section>
   </main>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">Top</button>
 
   <!-- Load once, at the end -->
   <script type="module" src="location.js"></script>

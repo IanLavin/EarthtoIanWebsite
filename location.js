@@ -4,6 +4,7 @@ import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 
 const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
+const MAX_RELATED = 6;
 
 async function main() {
   const params = new URLSearchParams(window.location.search);
@@ -63,6 +64,8 @@ async function main() {
   } else {
     notesSection?.remove();
   }
+
+  renderRelatedLocations(selectedLocation);
 
   const journalSection = document.querySelector(".location-journal");
   const journal = journals?.[selectedLocation.id];
@@ -127,6 +130,9 @@ async function main() {
   if (gallery.length) {
     initCarousel("location-carousel", gallery);
   }
+
+  initMiniNav();
+  initBackToTop();
 }
 
 main();
@@ -207,4 +213,100 @@ function getGalleryForLocation(location) {
 
 function getVideoAspectClass(video) {
   return video?.aspect === "landscape" ? "landscape" : "portrait";
+}
+
+function initMiniNav() {
+  const nav = document.getElementById("location-mini-nav");
+  if (!nav) return;
+
+  const links = Array.from(nav.querySelectorAll("a[href^=\"#\"]"));
+  links.forEach((link) => {
+    const targetId = link.getAttribute("href")?.slice(1);
+    if (!targetId) return;
+    const target = document.getElementById(targetId);
+    if (!target) {
+      link.remove();
+      return;
+    }
+
+    const isVisible = target.offsetParent !== null;
+    if (!isVisible) link.remove();
+  });
+
+  if (!nav.querySelector("a")) nav.remove();
+}
+
+function initBackToTop() {
+  const button = document.getElementById("back-to-top");
+  if (!button) return;
+
+  const toggle = () => {
+    button.classList.toggle("show", window.scrollY > 500);
+  };
+
+  button.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
+}
+
+function renderRelatedLocations(currentLocation) {
+  const section = document.querySelector(".location-related");
+  const listEl = document.getElementById("related-locations");
+  if (!section || !listEl) return;
+
+  const all = Object.values(locations).flat();
+  const related = all
+    .filter((loc) => loc.id !== currentLocation.id)
+    .map((loc) => ({ loc, score: scoreRelatedLocation(currentLocation, loc) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return a.loc.name.localeCompare(b.loc.name);
+    })
+    .slice(0, MAX_RELATED)
+    .map((entry) => entry.loc);
+
+  if (!related.length) {
+    section.remove();
+    return;
+  }
+
+  listEl.innerHTML = "";
+  related.forEach((loc) => {
+    const item = document.createElement("li");
+    item.className = "related-location-item";
+
+    const link = document.createElement("a");
+    link.href = `location.html?id=${encodeURIComponent(loc.id)}`;
+    link.textContent = loc.name;
+
+    const meta = document.createElement("span");
+    meta.className = "related-location-meta";
+    meta.textContent = [loc.region, loc.country].filter(Boolean).join(" - ");
+
+    item.appendChild(link);
+    item.appendChild(meta);
+    listEl.appendChild(item);
+  });
+}
+
+function scoreRelatedLocation(currentLocation, candidate) {
+  let score = 0;
+
+  if (currentLocation.region && candidate.region && currentLocation.region === candidate.region) {
+    score += 4;
+  }
+
+  if (currentLocation.country && candidate.country && currentLocation.country === candidate.country) {
+    score += 3;
+  }
+
+  if (currentLocation.category && candidate.category && currentLocation.category === candidate.category) {
+    score += 2;
+  }
+
+  return score;
 }

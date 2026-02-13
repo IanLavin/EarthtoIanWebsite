@@ -94,6 +94,35 @@ function shouldAutoScrollToMap() {
   return window.matchMedia("(max-width: 980px)").matches;
 }
 
+function syncStateToUrl() {
+  const params = new URLSearchParams(window.location.search);
+
+  if (activeCategory && activeCategory !== "all") params.set("category", activeCategory);
+  else params.delete("category");
+
+  if (searchTerm) params.set("q", searchTerm);
+  else params.delete("q");
+
+  const query = params.toString();
+  const target = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+  window.history.replaceState(null, "", target);
+}
+
+function restoreStateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  const q = params.get("q");
+
+  if (category && (category === "all" || CATEGORIES.includes(category))) {
+    activeCategory = category;
+  }
+
+  if (q) {
+    searchTerm = q.trim().toLowerCase();
+    searchBox.value = q;
+  }
+}
+
 function setActiveTab(category) {
   activeCategory = category;
 
@@ -105,6 +134,7 @@ function setActiveTab(category) {
 
   applyCategoryToMap();
   renderSidebarList();
+  syncStateToUrl();
 }
 
 function applyCategoryToMap() {
@@ -251,6 +281,7 @@ searchBox.addEventListener(
   debounce((event) => {
     searchTerm = event.target.value.trim().toLowerCase();
     renderSidebarList();
+    syncStateToUrl();
   })
 );
 
@@ -267,6 +298,7 @@ worldButton.addEventListener("click", () => {
 ===================== */
 
 loadMarkers();
-setActiveTab("all");
+restoreStateFromUrl();
+setActiveTab(activeCategory);
 showRandomLocation();
 initMenu();
