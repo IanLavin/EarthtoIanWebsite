@@ -30,8 +30,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/yellowstone.md",
             notesMd: "descriptions/notes/yellowstone.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "geZ6cnGRJ5Y",
                 title: "Yellowstone National Park"
             },
             
@@ -52,8 +52,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/grand-teton.md",
             notesMd: "descriptions/notes/grand-teton.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "Lh5fXupAQ_Q",
                 title: "Grand Teton National Park"
             },
 
@@ -277,8 +277,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/zion.md",
             notesMd: "descriptions/notes/zion.md",
             video: {
-                provider: "vimeo",
-                id: "1163088085",
+                provider: "youtube",
+                id: "8RfgPvu8Nwo",
                 title: "Zion National Park"
             },
 
@@ -457,8 +457,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mesa-verde.md",
             notesMd: "descriptions/notes/mesa-verde.md",
             video: {
-                provider: "vimeo",
-                id: "1162907965",
+                provider: "youtube",
+                id: "K0A16jg1hIg",
                 title: "Mesa Verde National Park"
             },
 
@@ -477,8 +477,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black-canyon.md",
             notesMd: "descriptions/notes/black-canyon.md",
             video: {
-                provider: "vimeo",
-                id: "1162907965",
+                provider: "youtube",
+                id: "K0A16jg1hIg",
                 title: "Black Canyon of the Gunnison National Park"
             },
 
@@ -512,8 +512,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/olympic.md",
             notesMd: "descriptions/notes/olympic.md",
             video: {
-                provider: "vimeo",
-                id: "1162903093",
+                provider: "youtube",
+                id: "r0Eurg3WRIg",
                 title: "Olympic National Park"
             },
 
@@ -532,8 +532,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/north-cascades.md",
             notesMd: "descriptions/notes/north-cascades.md",
             video: {
-                provider: "vimeo",
-                id: "1162896575",
+                provider: "youtube",
+                id: "H6KO-betylg",
                 title: "North Cascades National Park"
             },
 
@@ -552,8 +552,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/rainier.md",
             notesMd: "descriptions/notes/rainier.md",
             video: {
-                provider: "vimeo",
-                id: "1162903093",
+                provider: "youtube",
+                id: "r0Eurg3WRIg",
                 title: "Rainier National Park"
             },
 
@@ -1087,8 +1087,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/goat_canyon.md",
             notesMd: "descriptions/notes/goat_canyon.md",
             video: {
-                provider: "vimeo",
-                id: "1163089983",
+                provider: "youtube",
+                id: "SDrLnDs12EI",
                 title: "Goat Canyon Trestle"
             },
 
@@ -1106,6 +1106,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/jug.md",
             logisticsMd: "descriptions/logistics/jug.md",
             notesMd: "descriptions/notes/jug.md",
+            video: {
+                provider: "youtube",
+                id: "miEzLRUMHD8",
+                title: "Salome Jug"
+            },
 
             //carousel images
             galleryDir: "Pictures/Arizona/Jug/"
@@ -1122,8 +1127,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/buckskin.md",
             notesMd: "descriptions/notes/buckskin.md",
             video: {
-                provider: "vimeo",
-                id: "1162901298",
+                provider: "youtube",
+                id: "y22yx8XXa14",
                 title: "Buckskin Gulch"
             },
 
@@ -1143,8 +1148,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/ausangate.md",
             notesMd: "descriptions/notes/ausangate.md",
             video: {
-                provider: "vimeo",
-                id: "1162901859",
+                provider: "youtube",
+                id: "rIGaGZw_XeI",
                 title: "Ausangate"
             },
 
@@ -1163,8 +1168,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/salkantay.md",
             notesMd: "descriptions/notes/salkantay.md",
             video: {
-                provider: "vimeo",
-                id: "1163085518",
+                provider: "youtube",
+                id: "ZqSTk2njJH8",
                 title: "Salkantay"
             },
 
@@ -1183,8 +1188,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/ice_lake.md",
             notesMd: "descriptions/notes/ice_lake.md",
             video: {
-                provider: "vimeo",
-                id: "1162907965",
+                provider: "youtube",
+                id: "K0A16jg1hIg",
                 title: "Ice Lake Basin"
             },
 
@@ -1203,8 +1208,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/gbr.md",
             notesMd: "descriptions/notes/gbr.md",
             video: {
-                provider: "vimeo",
-                id: "1162895387",
+                provider: "youtube",
+                id: "_zcbBXvOS9E",
                 title: "Great Barrier Reef"
             },
 
@@ -1223,8 +1228,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/wallaman.md",
             notesMd: "descriptions/notes/wallaman.md",
             video: {
-                provider: "vimeo",
-                id: "1162896032",
+                provider: "youtube",
+                id: "2TUXGEB_C_o",
                 title: "Wallaman Falls"
             },
 
@@ -1423,8 +1428,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/valley_fire.md",
             notesMd: "descriptions/notes/valley_fire.md",
             video: {
-                provider: "vimeo",
-                id: "1162901298",
+                provider: "youtube",
+                id: "y22yx8XXa14",
                 title: "Valley of Fire"
             },
 
@@ -1456,8 +1461,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/machu.md",
             notesMd: "descriptions/notes/machu.md",
             video: {
-                provider: "vimeo",
-                id: "1163085518",
+                provider: "youtube",
+                id: "ZqSTk2njJH8",
                 title: "Machu Picchu"
             },
 
@@ -1475,8 +1480,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/pallay.md",
             notesMd: "descriptions/notes/pallay.md",
             video: {
-                provider: "vimeo",
-                id: "1162901859",
+                provider: "youtube",
+                id: "rIGaGZw_XeI",
                 title: "Pallay Punchu"
             },
 
@@ -1494,8 +1499,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/monument_valley.md",
             notesMd: "descriptions/notes/monument_valley.md",
             video: {
-                provider: "vimeo",
-                id: "1162907965",
+                provider: "youtube",
+                id: "K0A16jg1hIg",
                 title: "Monument Valley"
             },
 
@@ -1513,8 +1518,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/whitehaven.md",
             notesMd: "descriptions/notes/whitehaven.md",
             video: {
-                provider: "vimeo",
-                id: "1162896032",
+                provider: "youtube",
+                id: "2TUXGEB_C_o",
                 title: "Whitehaven Beach"
             },
 
@@ -1532,8 +1537,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/daintree.md",
             notesMd: "descriptions/notes/daintree.md",
             video: {
-                provider: "vimeo",
-                id: "1162896032",
+                provider: "youtube",
+                id: "2TUXGEB_C_o",
                 title: "Daintree Rainforest"
             },
 
