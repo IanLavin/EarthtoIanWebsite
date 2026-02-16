@@ -1,14 +1,17 @@
-### Getting There
-Located just south of Miami. Most of the park is only accessible by boat.
+## Getting there
+- Closest airport: Almost certainly you'll fly into Miami
+- Drive time: 1 hour
+- Trailhead / entry point: Nearly all boat tours depart from Dante Fascell visitor center
 
-### Time & Season
-Winter and spring offer the best weather. Summer is hot with frequent storms.
+## Time & season
+- Best months: Outside hurricane season. Spring and fall are plesant Mar - May or Oct - Dec
+- Typical start time: Most boat tours leave either early morning or afternoon.
+- Permit / reservation: Standard national park pass
 
-### Getting Around
-Kayaking, boating, and snorkeling are the primary ways to explore.
+## What to pair it with
+- Good multi-day combo: Best combined with other nearby national parks including Everglades and Dry Tortugas
 
-### What to Pair With
-Great addition to a Miami or Florida Keys trip.
-
-### Notes
-Plan activities in advance—services within the park are limited.
+## Safety & prep
+- Gear notes: Sunscreen, swimsuit, towel.
+- Water: Bring a bottle
+- Weather hazards: Tours often will not opperate of weather does not permit, especially during hurricane season.

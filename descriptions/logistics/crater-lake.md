@@ -1,14 +1,17 @@
-### Getting There
-Crater Lake is located in southern Oregon, roughly 1.5 hours from Medford or Bend. Access is via Rim Drive, though some roads close seasonally due to snow.
+## Getting there
+- Closest airport: Portland is the biggest but Eugene or Salem can also work
+- Drive time: 2-4 hours depending on airport.
+- Trailhead / entry point: Most hikes will begin from the rim visitor center on along rim drive.
 
-### Time & Season
-Late July through September is the best window, when most roads and trails are fully open. Winter access is limited but stunning, with deep snow and fewer visitors.
+## Time & season
+- Best months: Summer as the winter can have snowy blocked roads. May - Sept
+- Typical start time: Early morning is best for parking.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Rim Drive provides access to major viewpoints, but hiking is required to reach features like Cleetwood Cove. Expect significant elevation changes.
+## What to pair it with
+- Nearby stops: Redwood national park is only a few hours away. Bend is also close by and sisters has a number of interesting hikes.
 
-### What to Pair With
-Pairs well with Bend, Umpqua Hot Springs, or a broader Oregon road trip including the Cascades or coast.
-
-### Notes
-Weather can change quickly even in summer. Check road conditions before arrival, especially outside peak season.
+## Safety & prep
+- Gear notes: Standard Hiking Gear.
+- Water: Bring your own.
+- Weather hazards: Prone to large ammounts of snow during the winter months.

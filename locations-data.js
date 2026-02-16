@@ -351,6 +351,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/great-sands.md",
             logisticsMd: "descriptions/logistics/great-sands.md",
             notesMd: "descriptions/notes/great-sands.md",
+            video: {
+                provider: "youtube",
+                id: "3i2FexVpfUM",
+                title: "Great Sand Dunes National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Colorado/Great_Dunes/"
@@ -672,6 +677,12 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/wheeler-peak.md",
             logisticsMd: "descriptions/logistics/wheeler-peak.md",
             notesMd: "descriptions/notes/wheeler-peak.md",
+            video: {
+                provider: "youtube",
+                id: "3i2FexVpfUM",
+                title: "Wheeler Peak"
+            },
+
 
             //carousel images
             galleryDir: "Pictures/New Mexico/Wheeler/"
@@ -702,6 +713,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/black-mesa.md",
             logisticsMd: "descriptions/logistics/black-mesa.md",
             notesMd: "descriptions/notes/black-mesa.md",
+            video: {
+                provider: "youtube",
+                id: "3i2FexVpfUM",
+                title: "Black Mesa"
+            },
 
             //carousel images
             galleryDir: "Pictures/Oklahoma/Black_Mesa/"
@@ -961,6 +977,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/south_fork.md",
             logisticsMd: "descriptions/logistics/south_fork.md",
             notesMd: "descriptions/notes/south_fork.md",
+            video: {
+                provider: "youtube",
+                id: "--ck5EwiccYbw",
+                title: "Whitewater Rafting"
+            },
 
             //carousel images
             galleryDir: "Pictures/Idaho/Rafting/"
@@ -996,6 +1017,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/adams.md",
             logisticsMd: "descriptions/logistics/adams.md",
             notesMd: "descriptions/notes/adams.md",
+            video: {
+                provider: "youtube",
+                id: "--ck5EwiccYbw",
+                title: "Mt. Adams"
+            },
 
             //carousel images
             galleryDir: "Pictures/Washington/Adams/"
@@ -1012,8 +1038,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black_canyon_colorado.md",
             notesMd: "descriptions/notes/black_canyon_colorado.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "TCg3fATvpNc",
                 title: "Black Canyon of the Colorado River"
             },
 
@@ -1330,6 +1356,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/pikes.md",
             logisticsMd: "descriptions/logistics/pikes.md",
             notesMd: "descriptions/notes/pikes.md",
+            video: {
+                provider: "youtube",
+                id: "3i2FexVpfUM",
+                title: "Pikes Peak"
+            },
 
             //carousel images
             galleryDir: "Pictures/Colorado/Pikes/"
@@ -1360,6 +1391,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/panther_creek.md",
             logisticsMd: "descriptions/logistics/panther_creek.md",
             notesMd: "descriptions/notes/panther_creek.md",
+            video: {
+                provider: "youtube",
+                id: "--ck5EwiccYbw",
+                title: "Panther Creek Falls"
+            },
 
             //carousel images
             galleryDir: "Pictures/Washington/Panther/"
