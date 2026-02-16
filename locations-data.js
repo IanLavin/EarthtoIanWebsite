@@ -186,6 +186,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/great-basin.md",
             logisticsMd: "descriptions/logistics/great-basin.md",
             notesMd: "descriptions/notes/great-basin.md",
+            video: {
+                provider: "youtube",
+                id: "--QMBKcCAyY",
+                title: "Great Basin National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Nevada/Great Basin/"
@@ -216,6 +221,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/canyonlands.md",
             logisticsMd: "descriptions/logistics/canyonlands.md",
             notesMd: "descriptions/notes/canyonlands.md",
+            video: {
+                provider: "youtube",
+                id: "dLRhdqfoVQU",
+                title: "Canyonlands National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Canyonlands/"
@@ -231,6 +241,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/arches.md",
             logisticsMd: "descriptions/logistics/arches.md",
             notesMd: "descriptions/notes/arches.md",
+            video: {
+                provider: "youtube",
+                id: "dLRhdqfoVQU",
+                title: "Arches National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Arches/"
@@ -246,6 +261,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/capitol-reef.md",
             logisticsMd: "descriptions/logistics/capitol-reef.md",
             notesMd: "descriptions/notes/capitol-reef.md",
+            video: {
+                provider: "youtube",
+                id: "dLRhdqfoVQU",
+                title: "Capitol Reef National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Capitol_Reef/"
@@ -261,6 +281,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/bryce.md",
             logisticsMd: "descriptions/logistics/bryce.md",
             notesMd: "descriptions/notes/bryce.md",
+            video: {
+                provider: "youtube",
+                id: "dLRhdqfoVQU",
+                title: "Bryce Canyon National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Bryce/"
@@ -372,8 +397,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/biscayne.md",
             notesMd: "descriptions/notes/biscayne.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "vqrTiSpibi4",
                 title: "Biscayne National Park"
             },
 
@@ -392,8 +417,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/dry-tortugas.md",
             notesMd: "descriptions/notes/dry-tortugas.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "vqrTiSpibi4",
                 title: "Dry Tortugas National Park"
             },
 
@@ -951,6 +976,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/antelope.md",
             logisticsMd: "descriptions/logistics/antelope.md",
             notesMd: "descriptions/notes/antelope.md",
+            video: {
+                provider: "youtube",
+                id: "--QMBKcCAyY",
+                title: "Antelope Canyon Kayak"
+            },
 
             //carousel images
             galleryDir: "Pictures/Arizona/Antelope/"
@@ -1016,6 +1046,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/calf_creek.md",
             logisticsMd: "descriptions/logistics/calf_creek.md",
             notesMd: "descriptions/notes/calf_creek.md",
+            video: {
+                provider: "youtube",
+                id: "dLRhdqfoVQU",
+                title: "Lower Calf Creek"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Calf_Creek/"
