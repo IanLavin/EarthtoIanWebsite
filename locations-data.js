@@ -116,6 +116,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/death-valley.md",
             logisticsMd: "descriptions/logistics/death-valley.md",
             notesMd: "descriptions/notes/death-valley.md",
+            video: {
+                provider: "youtube",
+                id: "TCg3fATvpNc",
+                title: "Death Valley National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/California/Death_Valley/"
@@ -132,8 +137,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/channel-islands.md",
             notesMd: "descriptions/notes/channel-islands.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "5v8PHOO0CC4",
                 title: "Channel Islands National Park"
             },
 
@@ -151,6 +156,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/joshua-tree.md",
             logisticsMd: "descriptions/logistics/joshua-tree.md",
             notesMd: "descriptions/notes/joshua-tree.md",
+            video: {
+                provider: "vimeo",
+                id: "1165548842",
+                title: "Joshua Tree National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/California/Joshua_Tree/"
@@ -167,8 +177,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/grand-canyon.md",
             notesMd: "descriptions/notes/grand-canyon.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "gDmYIRtXbOk",
                 title: "Grand Canyon National Park"
             },
 
@@ -206,6 +216,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/saguaro.md",
             logisticsMd: "descriptions/logistics/saguaro.md",
             notesMd: "descriptions/notes/saguaro.md",
+            video: {
+                provider: "youtube",
+                id: "GRCy2U0L0GU",
+                title: "Saguaro National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Arizona/Saguaro/"
@@ -321,6 +336,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/white-sands.md",
             logisticsMd: "descriptions/logistics/white-sands.md",
             notesMd: "descriptions/notes/white-sands.md",
+            video: {
+                provider: "youtube",
+                id: "_ltXpHNJNdE",
+                title: "White Sands National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/New Mexico/White_Sands/"
@@ -336,6 +356,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/guadalupe.md",
             logisticsMd: "descriptions/logistics/guadalupe.md",
             notesMd: "descriptions/notes/guadalupe.md",
+            video: {
+                provider: "youtube",
+                id: "_ltXpHNJNdE",
+                title: "Guadalupe Mountains National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Texas/Guadalupe/"
@@ -371,6 +396,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/rocky-mountain.md",
             logisticsMd: "descriptions/logistics/rocky-mountain.md",
             notesMd: "descriptions/notes/rocky-mountain.md",
+            video: {
+                provider: "youtube",
+                id: "gFtNhW_NI7Y",
+                title: "Rocky Mountain National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Colorado/Rocky_Mountain/"
@@ -386,6 +416,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/everglades.md",
             logisticsMd: "descriptions/logistics/everglades.md",
             notesMd: "descriptions/notes/everglades.md",
+            video: {
+                provider: "youtube",
+                id: "YkKwDmb07H4",
+                title: "Everglades National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/Florida/Everglades/"
@@ -441,6 +476,11 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/carlsbad.md",
             logisticsMd: "descriptions/logistics/carlsbad.md",
             notesMd: "descriptions/notes/carlsbad.md",
+            video: {
+                provider: "youtube",
+                id: "_ltXpHNJNdE",
+                title: "Carlsbad Caverns National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/New Mexico/Carlsbad/"
@@ -621,8 +661,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mt-whitney.md",
             notesMd: "descriptions/notes/mt-whitney.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "vimeo",
+                id: "1165548842",
                 title: "Mt. Whitney"
             },
 
@@ -641,8 +681,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mt-elbert.md",
             notesMd: "descriptions/notes/mt-elbert.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "CLewVnWePh4",
                 title: "Mt. Elbert"
             },
 
@@ -733,6 +773,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-sunflower.md",
             logisticsMd: "descriptions/logistics/mt-sunflower.md",
             notesMd: "descriptions/notes/mt-sunflower.md",
+            video: {
+                provider: "youtube",
+                id: "gFtNhW_NI7Y",
+                title: "Mount Sunflower"
+            },
 
             //carousel images
             galleryDir: "Pictures/Kansas/Sunflower/"
@@ -748,6 +793,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/panorama-point.md",
             logisticsMd: "descriptions/logistics/panorama-point.md",
             notesMd: "descriptions/notes/panorama-point.md",
+            video: {
+                provider: "youtube",
+                id: "gFtNhW_NI7Y",
+                title: "Panorama Point"
+            },
 
             //carousel images
             galleryDir: "Pictures/Nebraska/Panorama/"
@@ -763,6 +813,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/guadalupe-peak.md",
             logisticsMd: "descriptions/logistics/guadalupe-peak.md",
             notesMd: "descriptions/notes/guadalupe-peak.md",
+            video: {
+                provider: "youtube",
+                id: "_ltXpHNJNdE",
+                title: "Guadalupe Peak"
+            },
 
             //carousel images
             galleryDir: "Pictures/Texas/Guadalupe/"
@@ -979,7 +1034,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/south_fork.md",
             video: {
                 provider: "youtube",
-                id: "--ck5EwiccYbw",
+                id: "ck5EwiccYbw",
                 title: "Whitewater Rafting"
             },
 
@@ -1019,7 +1074,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/adams.md",
             video: {
                 provider: "youtube",
-                id: "--ck5EwiccYbw",
+                id: "ck5EwiccYbw",
                 title: "Mt. Adams"
             },
 
@@ -1029,7 +1084,7 @@ const rawLocations = {
         { 
             name: "Black Canyon of the Colorado River", 
             country: "US",
-            region: "Rocky Mountain",
+            region: "Southwest",
             lat: 35.993, 
             lng: -114.739, 
             url: "https://en.wikipedia.org/wiki/Black_Canyon_of_the_Colorado",
@@ -1057,6 +1112,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/torrey_pines_paragliding.md",
             logisticsMd: "descriptions/logistics/torrey_pines_paragliding.md",
             notesMd: "descriptions/notes/torrey_pines_paragliding.md",
+            video: {
+                provider: "youtube",
+                id: "E1dSGvSlN7k",
+                title: "La Jolla Paragliding"
+            },
 
             //carousel images
             galleryDir: "Pictures/California/La_Jolla/"
@@ -1092,6 +1152,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/sedona.md",
             logisticsMd: "descriptions/logistics/sedona.md",
             notesMd: "descriptions/notes/sedona.md",
+            video: {
+                provider: "youtube",
+                id: "V4teaEamomE",
+                title: "Sedona"
+            },
 
             //carousel images
             galleryDir: "Pictures/Arizona/Sedona/"
@@ -1128,8 +1193,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/sawtooth.md",
             notesMd: "descriptions/notes/sawtooth.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "youtube",
+                id: "y8mbyq_AgH4",
                 title: "Sawtooths"
             },
 
@@ -1341,6 +1406,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/fossil_creek.md",
             logisticsMd: "descriptions/logistics/fossil_creek.md",
             notesMd: "descriptions/notes/fossil_creek.md",
+            video: {
+                provider: "youtube",
+                id: "fxspDquRst0",
+                title: "Fossil Springs"
+            },
 
             //carousel images
             galleryDir: "Pictures/Arizona/Fossil/"
@@ -1393,7 +1463,7 @@ const rawLocations = {
             notesMd: "descriptions/notes/panther_creek.md",
             video: {
                 provider: "youtube",
-                id: "--ck5EwiccYbw",
+                id: "ck5EwiccYbw",
                 title: "Panther Creek Falls"
             },
 
@@ -1441,6 +1511,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/imperial_sand.md",
             logisticsMd: "descriptions/logistics/imperial_sand.md",
             notesMd: "descriptions/notes/imperial_sand.md",
+            video: {
+                provider: "youtube",
+                id: "E1dSGvSlN7k",
+                title: "Imperial Sand Dunes"
+            },
 
             //carousel images
             galleryDir: "Pictures/California/Imperial/"
@@ -1484,6 +1559,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/chiricahua.md",
             logisticsMd: "descriptions/logistics/chiricahua.md",
             notesMd: "descriptions/notes/chiricahua.md",
+            video: {
+                provider: "youtube",
+                id: "_ltXpHNJNdE",
+                title: "Chiricahua National Monument"
+            },
 
             galleryDir: "Pictures/Arizona/Chiricahua/"
         },
