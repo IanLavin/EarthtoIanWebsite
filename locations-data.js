@@ -701,6 +701,11 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/humphreys-peak.md",
             logisticsMd: "descriptions/logistics/humphreys-peak.md",
             notesMd: "descriptions/notes/humphreys-peak.md",
+            video: {
+                provider: "youtube",
+                id: "6jPaJobwN1s",
+                title: "Mt. Elbert"
+            },
 
 
             //carousel images
@@ -709,7 +714,7 @@ const rawLocations = {
         { 
             name: "Wheeler Peak", 
             country: "US",
-            region: "Southwest",
+            region: "Rocky Mountain",
             lat: 36.556, 
             lng: -105.416, 
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
@@ -1173,8 +1178,8 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/pfeifferhorn.md",
             notesMd: "descriptions/notes/pfeifferhorn.md",
             video: {
-                provider: "",
-                id: "",
+                provider: "vimeo",
+                id: "1165862465",
                 title: "Pfeifferhorn"
             },
 
@@ -1376,6 +1381,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/superstitions.md",
             logisticsMd: "descriptions/logistics/superstitions.md",
             notesMd: "descriptions/notes/superstitions.md",
+            video: {
+                provider: "youtube",
+                id: "XTLuTiATB3M",
+                title: "Superstitions"
+            },
 
             //carousel images
             galleryDir: "Pictures/Arizona/Superstitions/"
@@ -1481,6 +1491,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/blue_heart.md",
             logisticsMd: "descriptions/logistics/blue_heart.md",
             notesMd: "descriptions/notes/blue_heart.md",
+            video: {
+                provider: "youtube",
+                id: "IztlBA11xus",
+                title: "Blue Heart Springs"
+            },
 
             //carousel images
             galleryDir: "Pictures/Idaho/Blue_Heart/"
@@ -1496,6 +1511,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/donut_falls.md",
             logisticsMd: "descriptions/logistics/donut_falls.md",
             notesMd: "descriptions/notes/donut_falls.md",
+            video: {
+                provider: "youtube",
+                id: "IztlBA11xus",
+                title: "Donut Falls"
+            },
 
             //carousel images
             galleryDir: "Pictures/Utah/Donut/"
