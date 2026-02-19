@@ -1,4 +1,3 @@
-## Notes
 - During a major 1983 earthquake the peak rose about 1 foot while the surrounding valley dropped by 8 feet.
 - Borah has the only recognized glacier in Idaho.
 - It is one of the 57 ultras of the United States.

@@ -1,4 +1,3 @@
-## Notes
 - Biscayne is unique in that unlike nearly every other national park most of it lies beneath the water.
 - This means that to truly expereince the park you will need to get on/in the water.
 - Snorkeling especially is the best way to experience the park.

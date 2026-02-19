@@ -1,7 +1,1 @@
-I usually optimize for early starts, shoulder seasons, and simple logistics.
-
-I prefer:
-
-- Trail-heavy itineraries over dense city hopping
-- A few key objectives each day
-- Clear backup plans for weather and access changes
+I love being outside and exploring nature, and as such nearly all of my travel locations are themed around that. My itineraries are often jam packed with the goal of seeing and doing as much as possible when visiting a given area. Since I am such a big believer in trying to see and do as much as you can while visiting a new place for each location I will try and recoomend nearby activites or things to see that it can be combined with if you have additional time available. 

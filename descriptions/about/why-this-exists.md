@@ -1,8 +1,9 @@
-I wanted one place to organize every trip with a consistent structure:
+Every location within this website follows more or less the same structure and formula. The sections of each webpage can be roughly broken down as follows.
 
-- Overview
+- Overview            
+- Photo Gallery
 - Logistics
 - Notes
-- Photos and video
-
-The goal is to make each location useful for future planning, not just a photo dump.
+- Journal Entry (Highpoints only)
+- Associated Video Post
+- Additional similar location.

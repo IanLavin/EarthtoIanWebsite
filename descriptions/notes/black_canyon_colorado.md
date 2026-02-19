@@ -1,4 +1,3 @@
-## Notes
 - The black canyon is a long region with many things to discover within it. While many can be accessed by hiking, the best way is to spend a full day kayaking down the Colorado River 
 - The kayak path is 12 miles and will often take a full day 8 hours to traverse.
 - Some major highlights along the way include Arizona Hot Springs and Gold Strike Hot Springs.
