@@ -1,14 +1,16 @@
-### Getting There
-Located in southwestern Colorado near Cortez. Access involves a long drive up to the mesa top.
+## Getting there
+- Closest airport: Albuquerque is the closest major airport
+- Drive time: 3-4 hours from Albuquerque
+- Trailhead / entry point: The most popular trail to do is Cliff Palace. Required an advance reservation to walk through.
 
-### Time & Season
-Late spring through early fall is ideal. Winter access is limited.
+## Time & season
+- Best months: Summer through fall is the most plensant and snow free. May - Sept
+- Typical start time: Flexible
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Driving connects overlooks, but ranger-led tours are required for cliff dwellings.
+## What to pair it with
+- Nearby stops: Telluride and Ouray are less than 2 hours away and provide exceptional views.
 
-### What to Pair With
-Pairs well with Durango, Monument Valley, or a Four Corners trip.
-
-### Notes
-Tours often sell out—book in advance during peak season.
+## Safety & prep
+- Gear notes: Standard hiking gear
+- Water: Bring your own

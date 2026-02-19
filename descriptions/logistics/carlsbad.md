@@ -1,14 +1,16 @@
-### Getting There
-Located in southeastern New Mexico, about an hour from Carlsbad. Remote but well-signed.
+## Getting there
+- Closest airport: El Paso is the closest major airport
+- Drive time: 2 hours from El Paso
+- Trailhead / entry point: Nearly all hikes/ descents into the cave will begin at the visitor center.
 
-### Time & Season
-Year-round access, though summer is popular for evening bat flights.
+## Time & season
+- Best months: Below ground the temperature remains constant throughout the year. Since you're probably pairing this with Guadalupe or White Sands however the best season is spring or fall. Mar - May or Sept - Nov 
+- Typical start time: Early morning to beat the heat.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Most activity centers around the cavern entrance. Underground exploration involves significant walking and elevation change.
+## What to pair it with
+- Nearby stops: Very likely you will be pairing this with Guadalupe Mountains national park as they share the same mountain range and are less than an hour apart.
 
-### What to Pair With
-Combines well with Guadalupe Mountains National Park, just across the Texas border.
-
-### Notes
-Inside the caverns stays cool year-round—bring layers regardless of season.
+## Safety & prep
+- Gear notes: Standard hiking gear
+- Water: Bring your own

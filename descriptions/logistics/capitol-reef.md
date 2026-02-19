@@ -1,14 +1,16 @@
-### Getting There
-Located in south-central Utah, accessible via Highway 24. Less crowded than nearby Utah parks.
+## Getting there
+- Closest airport: SLC is the closest major airport
+- Drive time: 3-4 hours from SLC
+- Trailhead / entry point: Depends on which part you visit, Fruita is the most popular stopping area.
 
-### Time & Season
-Spring and fall are best. Summers are hot but manageable.
+## Time & season
+- Best months: Shoulder seasons are the most plesant. Mar - May or Sept - Nov
+- Typical start time: Early morning to beat the heat.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Scenic drives and short hikes highlight the park. Some roads require high clearance.
+## What to pair it with
+- Nearby stops: Grand Staircase Escalante and Bentonite hills are both nearby and provide exceptional views with a fractions of the crowds.
 
-### What to Pair With
-Excellent addition to a Utah parks road trip with Bryce, Canyonlands, or Zion.
-
-### Notes
-Fruit orchards are open seasonally—check timing if visiting in late summer or fall.
+## Safety & prep
+- Gear notes: Standard hiking gear
+- Water: Bring your own

@@ -1,14 +1,16 @@
-### Getting There
-Located along I-40 in northeastern Arizona, making it one of the easiest parks to access.
+## Getting there
+- Closest airport: Phoenix
+- Drive time: 3-4 hours
+- Trailhead / entry point: Nearly every trailhead connects to the main park road Petrified Forest Rd
 
-### Time & Season
-Open year-round. Spring and fall offer the best weather.
+## Time & season
+- Best months: Can be accessed year round but is best during shoulder months. Mar - May or Sept - Nov
+- Typical start time: The gate to access the park road closes at 5PM so make sure you are done by then.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-A scenic drive connects most viewpoints, with short hikes into colorful badlands.
+## What to pair it with
+- Nearby stops: Meteor Crater and Flagstaff are both a few hours west. Shiprock is a bit further but still only a few hours drive away.
 
-### What to Pair With
-Pairs well with the Painted Desert, Flagstaff, or a Route 66 road trip.
-
-### Notes
-The park is more exposed than it looks—sun and wind can be intense.
+## Safety & prep
+- Gear notes: Standard hiking gear
+- Water: Bring your own

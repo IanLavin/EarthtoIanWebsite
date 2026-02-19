@@ -1,14 +1,16 @@
-### Getting There
-Located in central California, about 2 hours south of San Jose. East and west entrances are not connected by road.
+## Getting there
+- Closest airport: San Jose is the closest major airport but any of the bay area airports will work equally fine.
+- Drive time: 2-3 hours depending on airport.
+- Trailhead / entry point: The park is split into two distinct sides east and west, with a large 10 mile loop trail connecting the two.
 
-### Time & Season
-Best visited in spring or fall. Summers are extremely hot with limited shade.
+## Time & season
+- Best months: Shoulder seasons are the most plesant. Mar - May or Sept - Nov
+- Typical start time: Early morning to beat the heat.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Most exploration is done on foot via well-maintained trails, including talus caves and ridge hikes.
+## What to pair it with
+- Nearby stops: The Pacific Crest Highway is only a short detour away and places like Monterey or Pfeiffer Big Sur are worth going out of your way to visit.
 
-### What to Pair With
-Pairs nicely with Big Sur, Monterey, or central California wine country.
-
-### Notes
-Bring plenty of water. Cave access can close seasonally due to bat activity or flooding.
+## Safety & prep
+- Gear notes: Standard hiking gear
+- Water: Bring your own

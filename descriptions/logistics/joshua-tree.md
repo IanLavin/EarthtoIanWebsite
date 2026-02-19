@@ -1,14 +1,16 @@
-### Getting There
-Accessible from Palm Springs or the Mojave Desert via multiple entrances. About 2.5 hours from Los Angeles.
+## Getting there
+- Closest airport: LAX
+- Drive time: 2-3 hours from LAX
+- Trailhead / entry point: The most popular include Skull Rock. Barker Dam, Hidden Valley, and Arch rock.
 
-### Time & Season
-Fall through spring is ideal. Summers are dangerously hot for hiking.
+## Time & season
+- Best months: Shoulder seasons are the most plesant. Mar - May or Sept - Nov
+- Typical start time: Early morning to beat the heat.
+- Permit / reservation: Standard national park pass.
 
-### Getting Around
-Driving between areas is essential. Short walks lead to many highlights; longer hikes explore quieter desert sections.
+## What to pair it with
+- Nearby stops: Imperial Sand Dunes is only an hour or so away, but a bit further drive away you can hit Death Valley or Channel Islands.
 
-### What to Pair With
-Great alongside Palm Springs, Anza-Borrego, or a Southern California road trip.
-
-### Notes
-Temperatures swing dramatically between day and night. Stargazing here is exceptional.
+## Safety & prep
+- Gear notes: Standard hiking gear
+- Water: Bring your own

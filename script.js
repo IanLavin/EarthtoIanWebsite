@@ -15,11 +15,23 @@ const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
    MAP SETUP
 ===================== */
 
-const map = L.map("map").setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
+const WORLD_BOUNDS = L.latLngBounds(
+  L.latLng(-85, -180),
+  L.latLng(85, 180)
+);
+
+const map = L.map("map", {
+  maxBounds: WORLD_BOUNDS,
+  maxBoundsViscosity: 1.0,
+}).setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
 
 L.tileLayer(
   "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-  { attribution: "&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics" }
+  {
+    attribution: "&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics",
+    noWrap: true,
+    bounds: WORLD_BOUNDS,
+  }
 ).addTo(map);
 
 /* =====================
