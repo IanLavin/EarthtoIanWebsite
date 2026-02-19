@@ -419,6 +419,41 @@ input {
   padding: 16px;
 }
 
+.page-location .page-nav {
+  max-width: 1200px;
+  margin: 10px auto 0;
+  padding: 0 16px;
+}
+
+.page-location .page-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  transition: transform 0.12s ease, background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.page-location .page-nav a:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.26);
+}
+
+.page-location .page-nav a:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(74,163,255,0.2);
+}
+
 .page-location .location-mini-nav {
   position: sticky;
   top: 10px;
@@ -614,6 +649,16 @@ input {
 }
 
 @media (max-width: 640px) {
+  .page-location .page-nav {
+    margin-top: 8px;
+    padding: 0 10px;
+  }
+
+  .page-location .page-nav a {
+    padding: 8px 11px;
+    font-size: 14px;
+  }
+
   .page-location .location-page {
     padding: 10px;
   }
