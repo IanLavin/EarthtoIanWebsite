@@ -676,7 +676,7 @@ const rawLocations = {
             lat: 39.117, 
             lng: -106.445, 
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
-            img: "Pictures/Colorado/Elbert/IMG_9119.jpg",
+            img: "Pictures/Colorado/Elbert/IMG_9119.JPG",
             descriptionMd: "descriptions/highpoints/mt-elbert.md",
             logisticsMd: "descriptions/logistics/mt-elbert.md",
             notesMd: "descriptions/notes/mt-elbert.md",
