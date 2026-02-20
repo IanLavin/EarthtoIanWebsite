@@ -6,7 +6,7 @@
 ## Time & season
 - Best months: Spring and fall for the best weather and wildflowers. Feb - April or Oct - Dec
 - Typical start time: Early morning for hiking
-- Permit / reservation: State park pass required if visiting Lost Dutchman.
+- Permit / reservation: State Park pass required if visiting Lost Dutchman.
 
 ## What to pair it with
 - Nearby stops: Canyon Lake is nearby and has nice views. 
@@ -15,3 +15,4 @@
 - Gear notes: Standard hiking gear
 - Water: Bring your own
 - Weather hazards: Heat and sun are the biggest concern typically.
+

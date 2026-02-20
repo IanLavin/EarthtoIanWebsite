@@ -1,7 +1,7 @@
 ## Getting there
 - Closest airport: Albany (ALB)
 - Drive time: ~1–1.5 hrs from ALB
-- Trailhead / entry point: Mt Greylock State Reservation; summit access depends on season (road closures). Hike options from multiple trailheads
+- Trailhead / entry point: Mt. Greylock State Reservation; summit access depends on season (road closures). Hike options from multiple trailheads
 
 ## Time & season
 - Best months: Late spring–fall; fall foliage is top-tier

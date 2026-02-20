@@ -9,7 +9,7 @@
 - Permit / reservation: Standard national park pass.
 
 ## What to pair it with
-- Nearby stops: Picacho Peak State park is a popular nearby area, especially during wildflower season in spring. Mt. Wrightson is an hour away and can provide welcome relief from the heat.
+- Nearby stops: Picacho Peak State Park is a popular nearby area, especially during wildflower season in spring. Mt. Wrightson is an hour away and can provide welcome relief from the heat.
 
 ## Safety & prep
 - Gear notes: Standard hiking gear

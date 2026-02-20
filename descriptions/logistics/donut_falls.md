@@ -15,5 +15,5 @@
 ## Safety & prep
 - Gear notes: Standard hiking gear, water shoes recommended.
 - Water: Bring your own.
-- Weather hazards: Like anywhere in the rockies summer storms can occur. Check the weather forecast and be aware.
+- Weather hazards: Like anywhere in the Rockies summer storms can occur. Check the weather forecast and be aware.
 

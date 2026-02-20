@@ -15,4 +15,5 @@
 ## Safety & prep
 - Gear notes: Standard hiking gear, Bear Spray is a necessity
 - Water: Bring your own.
-- Weather hazards: Can get thunderstorms like any part of the rockies. Also potential for snowstorms late season.
+- Weather hazards: Can get thunderstorms like any part of the Rockies. Also potential for snowstorms late season.
+

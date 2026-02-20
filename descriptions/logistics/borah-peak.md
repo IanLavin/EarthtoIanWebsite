@@ -14,5 +14,5 @@
 ## Safety & prep
 - Gear notes: Normal hiking gear required. If early season or after recent snows shoe spikes and ice axe can be helpful.
 - Water: None available on mountain or nearby. Bring all you need you're on your own.
-- Weather hazards: Like all mountains in the Rockies can be susceptable to afternoon thunderstorms. Check weather forecasts and be aware of lightning as there is very little shelter near the top.
+- Weather hazards: Like all mountains in the Rockies can be susceptible to afternoon thunderstorms. Check weather forecasts and be aware of lightning as there is very little shelter near the top.
 

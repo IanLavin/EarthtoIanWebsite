@@ -1308,7 +1308,7 @@ const rawLocations = {
             galleryDir: "Pictures/Peru/Salkantay/"
         },
         { 
-            name: "Ice Lake Basin", 
+            name: "San Juan Mountains", 
             country: "US",
             region: "Rocky Mountain",
             lat: 37.814, 

@@ -15,4 +15,4 @@
 ## Safety & prep
 - Gear notes: Kayak, Lifejacket, Sunscreen if going via lower canyon. Standard hiking gear for the upper canyon.
 - Water: Bring your own and plenty.
-- Weather hazards: Canyon is prone to flash flooding, especially during monsoon season midsummer. Watch the weather forecast and be aware that even distant rain can produce flash flooding.
+- Weather hazards: Canyon is prone to flash flooding, especially during monsoon season in midsummer. Watch the weather forecast and be aware that even distant rain can produce flash flooding.

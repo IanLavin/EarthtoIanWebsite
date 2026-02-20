@@ -9,10 +9,10 @@
 - Permit / reservation: Online permit required but no hard quota on number available.
 
 ## What to pair it with
-- Nearby stops: There are some nearby nice waterfalls throughout the area such as Panther Creek Falls. Mt St-Helens is a bit further away but also very scenic.
+- Nearby stops: There are some nearby nice waterfalls throughout the area such as Panther Creek Falls. Mt. St. Helens is a bit further away but also very scenic.
 
 ## Safety & prep
 - Gear notes: Highly recommended - Ice Axe, Crampons/Shoe Spikes, Waterproof Shoes/Boots. Additionaly Useful - Glacier/Sunglasses, Warm Socks, Winter Coat Layers, Trekking Poles, Transponder
 - Water: You can generally melt snow or filter from creeks if needed.
-- Weather hazards: The cascades are infamous for forming their own weather systems. Blizzards can and will happen throughout the year even in summer. Be aware of weather forecast and don't be afraid to turn around if necessary.
+- Weather hazards: The cascades are infamous for forming their own weather systems. Blizzards can and will happen throughout the year even in summer. Be aware of the weather forecast and don't be afraid to turn around if necessary.
 

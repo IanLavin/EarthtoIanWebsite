@@ -9,7 +9,7 @@
 - Permit / reservation: None
 
 ## What to pair it with
-- Good multi-day combo: If you're in the whitsundays you're very likely here to also explore the Great Barrier Reef. While there are nearby sections you can visit the most impressive areas are a few hours north or south.
+- Good multi-day combo: If you're in the Whitsundays you're very likely here to also explore the Great Barrier Reef. While there are nearby sections you can visit the most impressive areas are a few hours north or south.
 
 ## Safety & prep
 - Gear notes: Swimsuit, Towel, Sunscreen

@@ -284,13 +284,22 @@ input {
 
 .page-home .popup { text-align: center; }
 
+.page-home .leaflet-popup-content-wrapper {
+  background: #fff;
+  color: #111;
+}
+
+.page-home .leaflet-popup-tip {
+  background: #fff;
+}
+
 .page-home .popup-title {
   margin: 0 0 6px;
   font-size: 16px;
 }
 
 .page-home .popup-title a {
-  color: rgba(255,255,255,0.94);
+  color: #111;
   text-decoration: none;
 }
 

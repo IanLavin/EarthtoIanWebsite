@@ -6,7 +6,7 @@
 ## Time & season
 - Best months: Spring or Fall. March - May or Oct - Dec
 - Typical start time: Flexible
-- Permit / reservation: State park pass required
+- Permit / reservation: State Park pass required
 
 ## What to pair it with
 - Nearby stops: Only a few hour drive away from Zion national park.
@@ -16,3 +16,4 @@
 - Gear notes: Standard hiking gear
 - Water: Bring your own.
 - Weather hazards: Like all of the southwest sun and heat and the biggest concerns.
+
