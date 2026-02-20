@@ -216,7 +216,14 @@ function renderSidebarList() {
     li.textContent = place.name;
 
     li.addEventListener("click", () => {
-      map.setView([place.lat, place.lng], 12);
+      const targetLatLng = L.latLng(place.lat, place.lng);
+      const targetZoom = 12;
+      const size = map.getSize();
+      const targetPoint = map.project(targetLatLng, targetZoom);
+      const adjustedCenterPoint = L.point(targetPoint.x, targetPoint.y - size.y / 4);
+      const adjustedCenter = map.unproject(adjustedCenterPoint, targetZoom);
+
+      map.setView(adjustedCenter, targetZoom);
       const marker = markerById.get(place.id);
       if (marker) marker.openPopup();
 
