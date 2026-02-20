@@ -14,6 +14,7 @@
   --radius: 16px;
 
   --accent: #4aa3ff;
+  --category-glow-rgb: 74, 163, 255;
 }
 
 * { box-sizing: border-box; }
@@ -27,6 +28,66 @@ button,
 a,
 input {
   touch-action: manipulation;
+}
+
+.page-home,
+.page-about,
+.page-countries,
+.page-country,
+.page-years,
+.page-location {
+  position: relative;
+  overflow-x: clip;
+}
+
+.page-home::before,
+.page-about::before,
+.page-countries::before,
+.page-country::before,
+.page-years::before,
+.page-location::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  background-image:
+    radial-gradient(circle at 20% 16%, rgba(255,255,255,0.85) 0 1px, transparent 1px),
+    radial-gradient(circle at 78% 66%, rgba(255,255,255,0.7) 0 1px, transparent 1px);
+  background-size: 42px 42px, 56px 56px;
+  mix-blend-mode: soft-light;
+}
+
+.page-home::after,
+.page-about::after,
+.page-countries::after,
+.page-country::after,
+.page-years::after,
+.page-location::after {
+  content: "";
+  position: fixed;
+  right: clamp(10px, 2.2vw, 26px);
+  bottom: clamp(14px, 2.4vw, 30px);
+  width: clamp(110px, 12vw, 160px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  background:
+    radial-gradient(circle at center, transparent 34%, rgba(255,255,255,0.82) 34.8% 35.8%, transparent 36.6% 52%, rgba(255,255,255,0.5) 52.8% 53.6%, transparent 54%),
+    conic-gradient(from 0deg, transparent 0 6%, rgba(255,255,255,0.6) 6% 7%, transparent 7% 24%, rgba(255,255,255,0.45) 24% 25%, transparent 25% 49%, rgba(255,255,255,0.45) 49% 50%, transparent 50% 74%, rgba(255,255,255,0.45) 74% 75%, transparent 75% 93%, rgba(255,255,255,0.6) 93% 94%, transparent 94% 100%);
+}
+
+.page-home > *,
+.page-about > *,
+.page-countries > *,
+.page-country > *,
+.page-years > *,
+.page-location > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================
@@ -69,7 +130,10 @@ input {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.32);
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(var(--category-glow-rgb), 0.24),
+    0 0 32px rgba(var(--category-glow-rgb), 0.18);
   backdrop-filter: blur(10px);
   animation: title-rise 420ms ease-out both;
 }
@@ -263,8 +327,31 @@ input {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    0 0 0 1px rgba(var(--category-glow-rgb), 0.18),
+    0 0 24px rgba(var(--category-glow-rgb), 0.12);
   overflow: hidden;
+}
+
+.page-home[data-active-category="all"] {
+  --category-glow-rgb: 74, 163, 255;
+}
+
+.page-home[data-active-category="park"] {
+  --category-glow-rgb: 86, 201, 133;
+}
+
+.page-home[data-active-category="mountain"] {
+  --category-glow-rgb: 90, 170, 255;
+}
+
+.page-home[data-active-category="adventure"] {
+  --category-glow-rgb: 255, 166, 94;
+}
+
+.page-home[data-active-category="sightseeing"] {
+  --category-glow-rgb: 133, 227, 217;
 }
 
 .page-home #map {
@@ -310,9 +397,10 @@ input {
 .page-home .popup-image {
   width: 260px;
   max-width: min(70vw, 260px);
+  display: block;
+  margin: 0 auto 6px;
   border-radius: 10px;
   cursor: pointer;
-  margin-bottom: 6px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -349,11 +437,12 @@ input {
 }
 
 .page-home .popup-cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 30px;
-  margin-top: 6px;
+  width: fit-content;
+  margin: 6px auto 0;
   padding: 5px 10px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.22);

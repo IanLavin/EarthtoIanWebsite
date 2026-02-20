@@ -137,6 +137,7 @@ function restoreStateFromUrl() {
 
 function setActiveTab(category) {
   activeCategory = category;
+  document.body?.setAttribute("data-active-category", category);
 
   tabs.forEach((btn) => {
     const isActive = btn.dataset.category === category;
