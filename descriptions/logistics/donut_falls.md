@@ -1,4 +1,4 @@
-## Getting there
+﻿## Getting there
 - Closest airport: Salt Lake City
 - Drive time: 90 mins
 - Trailhead / entry point: Cardiff Fork Trailhead/ Donut Falls Trailhead depending on time of year.
@@ -13,6 +13,7 @@
 - Good multi-day combo: You will almost certainly be staying in Salt Lake City. The bonneville salt flats are interesting to see and only a few hours drive away.
 
 ## Safety & prep
-- Gear notes: Standard hiking gear, water shoes reccomended.
+- Gear notes: Standard hiking gear, water shoes recommended.
 - Water: Bring your own.
 - Weather hazards: Like anywhere in the rockies summer storms can occur. Check the weather forecast and be aware.
+

@@ -1,4 +1,4 @@
-## Getting there
+﻿## Getting there
 - Closest airport: Las Vegas is the closest major airport.
 - Drive time: 4 hours from Vegas.
 - Trailhead / entry point: Technically you can start from either end but most everyone will start at wire pass trailhead.
@@ -15,4 +15,5 @@
 ## Safety & prep
 - Gear notes: Standard hiking gear.
 - Water: Bring more than you think you will need.
-- Weather hazards: Canyon is extremly prone to flash flooding. Due to its depth and length you have almost no options for a quick exit once inside. Be aware of the weather forecast and play it safe if rain is forecast.
+- Weather hazards: Canyon is extremely prone to flash flooding. Due to its depth and length you have almost no options for a quick exit once inside. Be aware of the weather forecast and play it safe if rain is forecast.
+

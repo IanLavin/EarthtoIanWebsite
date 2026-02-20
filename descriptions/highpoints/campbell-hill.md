@@ -1,1 +1,1 @@
-Campbell Hill is the highest point in Ohio and sits within a technical college near Dayton. Accessed via a small sideroad through the campus, the site is clearly marked and maintained. It reflects the flat nature of much of Ohio’s landscape and stands out for its unique setting.
+﻿Campbell Hill is the highest point in Ohio and sits within a technical college near Dayton. Accessed via a small side road through the campus, the site is clearly marked and maintained. It reflects the flat nature of much of Ohioâ€™s landscape and stands out for its unique setting.

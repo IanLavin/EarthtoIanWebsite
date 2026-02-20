@@ -1,4 +1,4 @@
-## Getting there
+﻿## Getting there
 - Closest airport: Seattle Tacoma Airport
 - Drive time: 2-3 Hours
 - Trailhead / entry point: Almost all major hikes start from Paradise.
@@ -15,4 +15,5 @@
 ## Safety & prep
 - Gear notes: Standard hiking gear if doing lower trails, ice axe/ crampons if headed to Camp Muir.
 - Water: Bring your own
-- Weather hazards: Rainer makes its own weather and storms can happen year round. Mountain frequently expereinces zero visibilty and blizzards are possible even during summer.
+- Weather hazards: Rainier makes its own weather and storms can happen year round. Mountain frequently experiences zero visibility and blizzards are possible even during summer.
+

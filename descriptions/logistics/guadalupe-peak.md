@@ -1,4 +1,4 @@
-## Getting there
+﻿## Getting there
 - Closest airport: El Paso is the only reasonably close one.
 - Drive time: 2 hour drive from El Paso.
 - Trailhead / entry point: National Park Pass required for entry.
@@ -14,4 +14,5 @@
 ## Safety & prep
 - Gear notes: Regular hiking gear.
 - Water: Plenty of water fill stations in the park.
-- Weather hazards: While not extremly prominent, the summit can still be subjected to bad weather. Lightning espcially can be a risk due to the exposed nature of the final few hundered feet.
+- Weather hazards: While not extremely prominent, the summit can still be subjected to bad weather. Lightning especially can be a risk due to the exposed nature of the final few hundred feet.
+

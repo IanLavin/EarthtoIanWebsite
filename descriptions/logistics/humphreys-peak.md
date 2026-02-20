@@ -1,4 +1,4 @@
-## Getting there
+﻿## Getting there
 - Closest airport: You will probably choose Phoenix but Flagstaff has its own small airport as well.
 - Drive time: 2 hours or so from Phoenix.
 - Trailhead / entry point: The hike starts at the Snowbowl resort. You will probably be parking in their parking lot.
@@ -15,4 +15,5 @@
 ## Safety & prep
 - Gear notes: Regular hiking gear.
 - Water: None on mountain, bring your own.
-- Weather hazards: Summer thunderstorms should be taken seriously. People can and have been struck by lighting while on the summit ridge. Be aware of the forecast and start early.
+- Weather hazards: Summer thunderstorms should be taken seriously. People can and have been struck by lightning while on the summit ridge. Be aware of the forecast and start early.
+
