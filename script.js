@@ -168,7 +168,9 @@ function createPopup(place) {
 
   return `
     <div class="popup">
-      <h3>${placeName}</h3>
+      <h3 class="popup-title">
+        <a href="location.html?id=${place.id}">${placeName}</a>
+      </h3>
       <a href="location.html?id=${place.id}">
         <img
           src="${place.img}"
@@ -177,6 +179,8 @@ function createPopup(place) {
           class="popup-image"
         />
       </a>
+      <a class="popup-cta" href="location.html?id=${place.id}">View Details</a>
+      <p class="popup-hint">Tap the photo or button for the full location page.</p>
       <div class="popup-meta">
         <span>${country}${region ? " - " + region : ""}</span>
       </div>
