@@ -1366,6 +1366,48 @@ const rawLocations = {
 
             //carousel images
             galleryDir: "Pictures/Australia/Wallaman/"
+        },
+        { 
+            name: "Acatenango and Fuego Volcanoes", 
+            country: "GT",
+            region: "Chimaltenango",
+            lat: 14.474, 
+            lng: -90.88, 
+            url: "https://en.wikipedia.org/wiki/Acatenango",
+            img: "Pictures/Guatemala/Acatenango/GOPR6401.JPG",
+            descriptionMd: "descriptions/adventures/acatenango.md",
+            logisticsMd: "descriptions/logistics/acatenango.md",
+            notesMd: "descriptions/notes/acatenango.md",
+
+            galleryDir: "Pictures/Guatemala/Acatenango/"
+        },
+        { 
+            name: "Arenal", 
+            country: "CR",
+            region: "Alajuela",
+            lat: 10.461, 
+            lng: -84.704, 
+            url: "https://en.wikipedia.org/wiki/Arenal",
+            img: "Pictures/Costa_Rica/Arenal/GOPR6080.JPG",
+            descriptionMd: "descriptions/adventures/arenal.md",
+            logisticsMd: "descriptions/logistics/arenal.md",
+            notesMd: "descriptions/notes/arenal.md",
+
+            galleryDir: "Pictures/Costa_Rica/Arenal/"
+        },
+        { 
+            name: "Tenorio National Park", 
+            country: "CR",
+            region: "Alajuela",
+            lat: 10.703, 
+            lng: -84.990, 
+            url: "https://en.wikipedia.org/wiki/Tenorio_National_Park",
+            img: "Pictures/Costa_Rica/Tenorio/GOPR6060.JPG",
+            descriptionMd: "descriptions/adventures/tenorio.md",
+            logisticsMd: "descriptions/logistics/tenorio.md",
+            notesMd: "descriptions/notes/tenorio.md",
+
+            galleryDir: "Pictures/Costa_Rica/Tenorio/"
         }
     ],
 
@@ -1728,7 +1770,35 @@ const rawLocations = {
             notesMd: "descriptions/notes/opera_house.md",
 
             galleryDir: "Pictures/Australia/Sydney/"
-        }
+        },
+        { 
+            name: "Lake Atitlan", 
+            country: "GT",
+            region: "Sololá",
+            lat: 14.703, 
+            lng: -91.197, 
+            url: "https://en.wikipedia.org/wiki/Lake_Atitlan",
+            img: "Pictures/Guatemala/Atitlan/GOPR6430.JPG",
+            descriptionMd: "descriptions/sightseeing/atitlan.md",
+            logisticsMd: "descriptions/logistics/atitlan.md",
+            notesMd: "descriptions/notes/atitlan.md",
+
+            galleryDir: "Pictures/Guatemala/Atitlan/"
+        },
+        { 
+            name: "Manuel Antonio National Park", 
+            country: "CR",
+            region: "Puntarenas",
+            lat: 9.381, 
+            lng: -84.146, 
+            url: "https://en.wikipedia.org/wiki/Manuel_Antonio_National_Park",
+            img: "Pictures/Costa_Rica/Manuel_Antonio/GOPR6230.JPG",
+            descriptionMd: "descriptions/sightseeing/manuel_antonio.md",
+            logisticsMd: "descriptions/logistics/manuel_antonio.md",
+            notesMd: "descriptions/notes/manuel_antonio.md",
+
+            galleryDir: "Pictures/Costa_Rica/Manuel_Antonio/"
+        },
         
     ]
 };

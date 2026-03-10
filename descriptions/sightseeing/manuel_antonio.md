@@ -1,0 +1,1 @@
+Manuel Antonio is the most popular beach along the Pacific side of Costa Rica and is a small national park home to a large number of different plants and animals. It is most well known for its tombolo, or natural land bridge forming a two sided beach. 

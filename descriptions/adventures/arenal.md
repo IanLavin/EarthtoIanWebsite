@@ -1,0 +1,1 @@
+Arenal is a nearly perfectly conical stratovolcano located in the northwestern region of Costa Rica. It has become world famous for its setting as an eco tourism adventure hub, hosting everything from hiking, whitewater rafting, rappeling, zipling, horseback riding, and more.

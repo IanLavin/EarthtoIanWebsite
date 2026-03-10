@@ -1,0 +1,1 @@
+Acatenango is a stratovolcano located in the central Guatemalan mountain range known as the Sierra Madre. It is connected to neighboring Volcan de Fuego which is one of the most active volcanos in central america and frequently climbed to view the regular eruptions of Fuego.

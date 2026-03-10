@@ -1,0 +1,1 @@
+Located in the far northwestern region of Costa Rica, Tenorio is world renowned for its iconic blue river the Rio Celeste. This stream gets its color from an optical illusion of volcanic minerals reflecting light back to the eye.

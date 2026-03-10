@@ -1,0 +1,1 @@
+Lake Atitlan is a lake formed in a massive volcanic crater and is the deepest lake in Central America at 1,120 feet. It is known for its colorful towns located across the lake with a strong presence of Mayan Culture.
