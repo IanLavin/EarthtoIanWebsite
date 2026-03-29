@@ -1378,6 +1378,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/acatenango.md",
             logisticsMd: "descriptions/logistics/acatenango.md",
             notesMd: "descriptions/notes/acatenango.md",
+            video: {
+                provider: "youtube",
+                id: "myA9L93JyPM",
+                title: "Acatenango and Fuego Volcanoes"
+            },
 
             galleryDir: "Pictures/Guatemala/Acatenango/"
         },
@@ -1782,6 +1787,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/atitlan.md",
             logisticsMd: "descriptions/logistics/atitlan.md",
             notesMd: "descriptions/notes/atitlan.md",
+            video: {
+                provider: "youtube",
+                id: "myA9L93JyPM",
+                title: "Lake Atitlan"
+            },
 
             galleryDir: "Pictures/Guatemala/Atitlan/"
         },
