@@ -1,0 +1,1 @@
+Located deep with a remote tributary of the Grand Canyon, Havasupai is a hidden oasis in the desert. It is world renowned for its vibrant blue waterfalls contrasted against the bright red rock of the canyon.

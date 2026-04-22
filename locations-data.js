@@ -1413,6 +1413,20 @@ const rawLocations = {
             notesMd: "descriptions/notes/tenorio.md",
 
             galleryDir: "Pictures/Costa_Rica/Tenorio/"
+        },
+        { 
+            name: "Havasupai", 
+            country: "US",
+            region: "Arizona",
+            lat: 36.260, 
+            lng: -112.706, 
+            url: "https://en.wikipedia.org/wiki/Havasupai",
+            img: "Pictures/Arizona/Havasupai/GOPR6642.JPG",
+            descriptionMd: "descriptions/adventures/havasupai.md",
+            logisticsMd: "descriptions/logistics/havasupai.md",
+            notesMd: "descriptions/notes/havasupai.md",
+
+            galleryDir: "Pictures/Arizona/Havasupai/"
         }
     ],
 

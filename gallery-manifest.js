@@ -38,6 +38,12 @@ const galleryManifest = {
     "Pictures/Arizona/Grand_Canyon/IMG_7953.jpg",
     "Pictures/Arizona/Grand_Canyon/IMG_9774.jpg",
   ],
+  "Pictures/Arizona/Havasupai": [
+    "Pictures/Arizona/Havasupai/GOPR6511.JPG",
+    "Pictures/Arizona/Havasupai/GOPR6549.JPG",
+    "Pictures/Arizona/Havasupai/GOPR6642.JPG",
+    "Pictures/Arizona/Havasupai/GOPR6663.JPG",
+  ],
   "Pictures/Arizona/Humphreys": [
     "Pictures/Arizona/Humphreys/IMG_6020.jpg",
     "Pictures/Arizona/Humphreys/IMG_6046.jpg",
