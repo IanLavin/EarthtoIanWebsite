@@ -3,6 +3,10 @@ const galleryManifest = {
   "Pictures": [
     "Pictures/aboutphoto.jpg",
   ],
+  "Pictures/Alabama/Cheaha": [
+    "Pictures/Alabama/Cheaha/GOPR6738.JPG",
+    "Pictures/Alabama/Cheaha/GOPR6744.JPG",
+  ],
   "Pictures/Arizona": [
     "Pictures/Arizona/IMG_3539.jpg",
   ],
@@ -41,7 +45,9 @@ const galleryManifest = {
   "Pictures/Arizona/Havasupai": [
     "Pictures/Arizona/Havasupai/GOPR6511.JPG",
     "Pictures/Arizona/Havasupai/GOPR6549.JPG",
+    "Pictures/Arizona/Havasupai/GOPR6630.jpg",
     "Pictures/Arizona/Havasupai/GOPR6642.JPG",
+    "Pictures/Arizona/Havasupai/GOPR6657.jpg",
     "Pictures/Arizona/Havasupai/GOPR6663.JPG",
   ],
   "Pictures/Arizona/Humphreys": [
@@ -168,6 +174,7 @@ const galleryManifest = {
   ],
   "Pictures/California/Redwoods": [
     "Pictures/California/Redwoods/IMG_0033.JPG",
+    "Pictures/California/Redwoods/IMG_0117.JPG",
     "Pictures/California/Redwoods/IMG_0374.JPG",
     "Pictures/California/Redwoods/IMG_5260.jpg",
   ],
@@ -256,6 +263,10 @@ const galleryManifest = {
   ],
   "Pictures/Florida/Everglades": [
     "Pictures/Florida/Everglades/IMG_3699.JPG",
+  ],
+  "Pictures/Georgia/Brasstown": [
+    "Pictures/Georgia/Brasstown/GOPR6731.JPG",
+    "Pictures/Georgia/Brasstown/GOPR6735.JPG",
   ],
   "Pictures/Guatemala/Acatenango": [
     "Pictures/Guatemala/Acatenango/DJI_20260305170707_0031_D.JPG",
@@ -348,6 +359,10 @@ const galleryManifest = {
   "Pictures/New Mexico/White_Sands": [
     "Pictures/New Mexico/White_Sands/IMG_8276.jpg",
   ],
+  "Pictures/North_Carolina/Mitchell": [
+    "Pictures/North_Carolina/Mitchell/GOPR6684.JPG",
+    "Pictures/North_Carolina/Mitchell/GOPR6695.JPG",
+  ],
   "Pictures/Ohio/Campbell": [
     "Pictures/Ohio/Campbell/IMG_6628.jpg",
   ],
@@ -359,9 +374,8 @@ const galleryManifest = {
     "Pictures/Oklahoma/Black_Mesa/IMG_0921.jpg",
     "Pictures/Oklahoma/Black_Mesa/IMG_0934.jpg",
   ],
-  "Pictures/Oregon": [
-    "Pictures/Oregon/IMG_0117.JPG",
-    "Pictures/Oregon/IMG_5284.jpg",
+  "Pictures/Oregon/Crater": [
+    "Pictures/Oregon/Crater/IMG_5284.jpg",
   ],
   "Pictures/Pennsylvania/Davis": [
     "Pictures/Pennsylvania/Davis/IMG_4385.jpg",
@@ -399,6 +413,22 @@ const galleryManifest = {
   "Pictures/Rhode Island/Jerimoth": [
     "Pictures/Rhode Island/Jerimoth/IMG_6599.jpg",
     "Pictures/Rhode Island/Jerimoth/IMG_6634.jpg",
+  ],
+  "Pictures/South_Carolina/Congaree": [
+    "Pictures/South_Carolina/Congaree/GOPR6750.JPG",
+    "Pictures/South_Carolina/Congaree/GOPR6756.JPG",
+    "Pictures/South_Carolina/Congaree/GOPR6768.JPG",
+  ],
+  "Pictures/South_Carolina/Sassafras": [
+    "Pictures/South_Carolina/Sassafras/GOPR6704.JPG",
+  ],
+  "Pictures/Tennessee/Clingmans": [
+    "Pictures/Tennessee/Clingmans/GOPR6714.JPG",
+    "Pictures/Tennessee/Clingmans/GOPR6716.JPG",
+  ],
+  "Pictures/Tennessee/Smoky": [
+    "Pictures/Tennessee/Smoky/GOPR6720.JPG",
+    "Pictures/Tennessee/Smoky/GOPR6724.JPG",
   ],
   "Pictures/Texas/Guadalupe": [
     "Pictures/Texas/Guadalupe/IMG_7818.jpg",

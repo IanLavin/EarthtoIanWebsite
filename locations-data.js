@@ -67,13 +67,13 @@ const rawLocations = {
             lat: 42.94, 
             lng: -122.10, 
             url: "https://en.wikipedia.org/wiki/Crater_Lake_National_Park",
-            img: "Pictures/Oregon/IMG_5284.jpg",
+            img: "Pictures/Oregon/Crater/IMG_5284.jpg",
             descriptionMd: "descriptions/parks/crater-lake.md",
             logisticsMd: "descriptions/logistics/crater-lake.md",
             notesMd: "descriptions/notes/crater-lake.md",
 
             //carousel images
-            galleryDir: "Pictures/Oregon/"
+            galleryDir: "Pictures/Oregon/Crater/"
         },
         { 
             name: "Redwood National Park", 
@@ -644,7 +644,115 @@ const rawLocations = {
 
             //carousel images
             galleryDir: "Pictures/Ohio/Cuyahoga/"
-        }
+        },
+        { 
+            name: "Great Smoky Mountains National Park", 
+            country: "US",
+            region: "Appalachian",
+            lat: 35.609, 
+            lng: -83.552, 
+            url: "https://en.wikipedia.org/wiki/Great_Smoky_Mountains_National_Park",
+            img: "Pictures/Tennessee/Smoky/GOPR6724.JPG",
+            descriptionMd: "descriptions/parks/great-smoky-mountains.md",
+            logisticsMd: "descriptions/logistics/great-smoky-mountains.md",
+            notesMd: "descriptions/notes/great-smoky-mountains.md",
+
+            //carousel images
+            galleryDir: "Pictures/Tennessee/Smoky/"
+        },
+        { 
+            name: "Congaree National Park", 
+            country: "US",
+            region: "Southeast",
+            lat: 33.829, 
+            lng: -80.823, 
+            url: "https://en.wikipedia.org/wiki/Congaree_National_Park",
+            img: "Pictures/South_Carolina/Congaree/GOPR6756.JPG",
+            descriptionMd: "descriptions/parks/congaree-national-park.md",
+            logisticsMd: "descriptions/logistics/congaree.md",
+            notesMd: "descriptions/notes/congaree.md",
+
+            //carousel images
+            galleryDir: "Pictures/South Carolina/Congaree/"
+        },
+        /*
+        { 
+            name: "Lassen Volcanic National Park", 
+            country: "US",
+            region: "West Coast",
+            lat: 40.487, 
+            lng: -121.505, 
+            url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park",
+            img: "Pictures/California/Lassen/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/lassen-volcanic.md",
+            logisticsMd: "descriptions/logistics/lassen-volcanic.md",
+            notesMd: "descriptions/notes/lassen-volcanic.md",
+
+            //carousel images
+            galleryDir: "Pictures/California/Lassen/"
+        },
+        { 
+            name: "Glacier National Park", 
+            country: "US",
+            region: "Rocky Mountain",
+            lat: 48.697, 
+            lng: -113.717, 
+            url: "https://en.wikipedia.org/wiki/Glacier_National_Park",
+            img: "Pictures/Montana/Glacier/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/glacier.md",
+            logisticsMd: "descriptions/logistics/glacier.md",
+            notesMd: "descriptions/notes/glacier.md",
+
+            //carousel images
+            galleryDir: "Pictures/Montana/Glacier/"
+        },
+        /*
+        { 
+            name: "Sequoia National Park", 
+            country: "US",
+            region: "West Coast",
+            lat: 36.581, 
+            lng: -118.751, 
+            url: "https://en.wikipedia.org/wiki/Sequoia_National_Park",
+            img: "Pictures/California/Sequoia/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/sequoia.md",
+            logisticsMd: "descriptions/logistics/sequoia.md",
+            notesMd: "descriptions/notes/sequoia.md",
+
+            //carousel images
+            galleryDir: "Pictures/California/Sequoia/"
+        },
+        { 
+            name: "Kings Canyon National Park", 
+            country: "US",
+            region: "West Coast",
+            lat: 36.739, 
+            lng: -118.963, 
+            url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park",
+            img: "Pictures/California/Kings_Canyon/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/kings-canyon.md",
+            logisticsMd: "descriptions/logistics/kings-canyon.md",
+            notesMd: "descriptions/notes/kings-canyon.md",
+
+            //carousel images
+            galleryDir: "Pictures/California/Kings_Canyon/"
+        },
+        { 
+            name: "Yosemite National Park", 
+            country: "US",
+            region: "West Coast",
+            lat: 37.745, 
+            lng: -119.533, 
+            url: "https://en.wikipedia.org/wiki/Yosemite_National_Park",
+            img: "Pictures/California/Yosemite/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/yosemite.md",
+            logisticsMd: "descriptions/logistics/yosemite.md",
+            notesMd: "descriptions/notes/yosemite.md",
+
+            //carousel images
+            galleryDir: "Pictures/California/Yosemite/"
+        },
+        */
             
     ],
 
@@ -1022,6 +1130,82 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Florida/Britton/"
         },
+        { 
+            name: "Mt. Mitchell", 
+            country: "US",
+            region: "Appalachian",
+            lat: 35.7649, 
+            lng: -82.2651, 
+            url: "https://en.wikipedia.org/wiki/Mount_Mitchell",
+            img: "Pictures/North_Carolina/Mitchell/GOPR6684.JPG",
+            descriptionMd: "descriptions/highpoints/mt-mitchell.md",
+            logisticsMd: "descriptions/logistics/mt-mitchell.md",
+            notesMd: "descriptions/notes/mt-mitchell.md",
+
+            //carousel images
+            galleryDir: "Pictures/North_Carolina/Mitchell/"
+        },
+        { 
+            name: "Clingmans Dome", 
+            country: "US",
+            region: "Appalachian",
+            lat: 35.5629, 
+            lng: -83.4983, 
+            url: "https://en.wikipedia.org/wiki/Clingmans_Dome",
+            img: "Pictures/Tennessee/Clingmans/GOPR6714.JPG",
+            descriptionMd: "descriptions/highpoints/clingmans-dome.md",
+            logisticsMd: "descriptions/logistics/clingmans-dome.md",
+            notesMd: "descriptions/notes/clingmans-dome.md",
+
+            //carousel images
+            galleryDir: "Pictures/Tennessee/Clingmans/"
+        },
+        { 
+            name: "Sassafras Mountain", 
+            country: "US",
+            region: "Appalachian",
+            lat: 35.0652, 
+            lng: -82.7773, 
+            url: "https://en.wikipedia.org/wiki/Sassafras_Mountain",
+            img: "Pictures/South_Carolina/Sassafras/GOPR6704.JPG",
+            descriptionMd: "descriptions/highpoints/sassafras-mountain.md",
+            logisticsMd: "descriptions/logistics/sassafras-mountain.md",
+            notesMd: "descriptions/notes/sassafras-mountain.md",
+
+            //carousel images
+            galleryDir: "Pictures/South_Carolina/Sassafras/"
+        },
+        { 
+            name: "Brasstown Bald", 
+            country: "US",
+            region: "Appalachian",
+            lat: 34.8745, 
+            lng: -83.8113, 
+            url: "https://en.wikipedia.org/wiki/Brasstown_Bald",
+            img: "Pictures/Georgia/Brasstown/GOPR6731.JPG",
+            descriptionMd: "descriptions/highpoints/brasstown-bald.md",
+            logisticsMd: "descriptions/logistics/brasstown-bald.md",
+            notesMd: "descriptions/notes/brasstown-bald.md",
+
+            //carousel images
+            galleryDir: "Pictures/Georgia/Brasstown/"
+        },
+        { 
+            name: "Cheaha Mountain", 
+            country: "US",
+            region: "Southeast",
+            lat: 33.485, 
+            lng: -85.808, 
+            url: "https://en.wikipedia.org/wiki/Cheaha_Mountain",
+            img: "Pictures/Alabama/Cheaha/GOPR6744.JPG",
+            descriptionMd: "descriptions/highpoints/cheaha-mountain.md",
+            logisticsMd: "descriptions/logistics/cheaha-mountain.md",
+            notesMd: "descriptions/notes/cheaha-mountain.md",
+
+            //carousel images
+            galleryDir: "Pictures/Alabama/Cheaha/"
+        },
+        
             
     ],
 
@@ -1427,7 +1611,39 @@ const rawLocations = {
             notesMd: "descriptions/notes/havasupai.md",
 
             galleryDir: "Pictures/Arizona/Havasupai/"
-        }
+        },
+        /*
+        { 
+            name: "South Sister", 
+            country: "US",
+            region: "Pacific Northwest",
+            lat: 44.103, 
+            lng: -121.769, 
+            url: "https://en.wikipedia.org/wiki/South_Sister",
+            img: "Pictures/Oregon/South_Sister/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/south_sister.md",
+            logisticsMd: "descriptions/logistics/south_sister.md",
+            notesMd: "descriptions/notes/south_sister.md",
+
+            //carousel images
+            galleryDir: "Pictures/Oregon/South_Sister/"
+        },
+        { 
+            name: "Banff National Park", 
+            country: "CA",
+            region: "Alberta",
+            lat: 51.417, 
+            lng: -116.218, 
+            url: "https://en.wikipedia.org/wiki/Banff_National_Park",
+            img: "Pictures/Canada/Banff/IMG_6907.jpg",
+            descriptionMd: "descriptions/parks/banff.md",
+            logisticsMd: "descriptions/logistics/banff.md",
+            notesMd: "descriptions/notes/banff.md",
+
+            //carousel images
+            galleryDir: "Pictures/Canada/Banff/"
+        },
+        */
     ],
 
     sightseeing: [
@@ -1823,7 +2039,36 @@ const rawLocations = {
 
             galleryDir: "Pictures/Costa_Rica/Manuel_Antonio/"
         },
-        
+        /*
+        { 
+            name: "Samuel H Boardman State Scenic Corridor", 
+            country: "US",
+            region: "Pacific Northwest",
+            lat: 42.188, 
+            lng: -124.368, 
+            url: "https://en.wikipedia.org/wiki/Samuel_H_Boardman_State_Scenic_Corridor",
+            img: "Pictures/Oregon/Boardman/GOPR6230.JPG",
+            descriptionMd: "descriptions/sightseeing/boardman.md",
+            logisticsMd: "descriptions/logistics/boardman.md",
+            notesMd: "descriptions/notes/boardman.md",
+
+            galleryDir: "Pictures/Oregon/Boardman/"
+        },
+        { 
+            name: "Burney Falls", 
+            country: "US",
+            region: "West Coast",
+            lat: 41.012, 
+            lng: -121.651, 
+            url: "https://en.wikipedia.org/wiki/Burney_Falls",
+            img: "Pictures/California/Burney/GOPR6230.JPG",
+            descriptionMd: "descriptions/sightseeing/burney.md",
+            logisticsMd: "descriptions/logistics/burney.md",
+            notesMd: "descriptions/notes/burney.md",
+
+            galleryDir: "Pictures/California/Burney/"
+        },
+        */
     ]
 };
 
