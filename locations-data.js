@@ -1,13 +1,5 @@
 ﻿// locations-data.js
 
-function slugify(text) {
-  return text
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "") // remove punctuation
-    .replace(/\s+/g, "-");    // spaces -> hyphens
-}
-
 function generateId(name) {
   return name
     .toLowerCase()
@@ -676,84 +668,13 @@ const rawLocations = {
             galleryDir: "Pictures/South Carolina/Congaree/"
         },
         /*
-        { 
-            name: "Lassen Volcanic National Park", 
-            country: "US",
-            region: "West Coast",
-            lat: 40.487, 
-            lng: -121.505, 
-            url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park",
-            img: "Pictures/California/Lassen/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/lassen-volcanic.md",
-            logisticsMd: "descriptions/logistics/lassen-volcanic.md",
-            notesMd: "descriptions/notes/lassen-volcanic.md",
-
-            //carousel images
-            galleryDir: "Pictures/California/Lassen/"
-        },
-        { 
-            name: "Glacier National Park", 
-            country: "US",
-            region: "Rocky Mountain",
-            lat: 48.697, 
-            lng: -113.717, 
-            url: "https://en.wikipedia.org/wiki/Glacier_National_Park",
-            img: "Pictures/Montana/Glacier/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/glacier.md",
-            logisticsMd: "descriptions/logistics/glacier.md",
-            notesMd: "descriptions/notes/glacier.md",
-
-            //carousel images
-            galleryDir: "Pictures/Montana/Glacier/"
-        },
-        /*
-        { 
-            name: "Sequoia National Park", 
-            country: "US",
-            region: "West Coast",
-            lat: 36.581, 
-            lng: -118.751, 
-            url: "https://en.wikipedia.org/wiki/Sequoia_National_Park",
-            img: "Pictures/California/Sequoia/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/sequoia.md",
-            logisticsMd: "descriptions/logistics/sequoia.md",
-            notesMd: "descriptions/notes/sequoia.md",
-
-            //carousel images
-            galleryDir: "Pictures/California/Sequoia/"
-        },
-        { 
-            name: "Kings Canyon National Park", 
-            country: "US",
-            region: "West Coast",
-            lat: 36.739, 
-            lng: -118.963, 
-            url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park",
-            img: "Pictures/California/Kings_Canyon/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/kings-canyon.md",
-            logisticsMd: "descriptions/logistics/kings-canyon.md",
-            notesMd: "descriptions/notes/kings-canyon.md",
-
-            //carousel images
-            galleryDir: "Pictures/California/Kings_Canyon/"
-        },
-        { 
-            name: "Yosemite National Park", 
-            country: "US",
-            region: "West Coast",
-            lat: 37.745, 
-            lng: -119.533, 
-            url: "https://en.wikipedia.org/wiki/Yosemite_National_Park",
-            img: "Pictures/California/Yosemite/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/yosemite.md",
-            logisticsMd: "descriptions/logistics/yosemite.md",
-            notesMd: "descriptions/notes/yosemite.md",
-
-            //carousel images
-            galleryDir: "Pictures/California/Yosemite/"
-        },
+        { name: "Lassen Volcanic National Park", country: "US", region: "West Coast", lat: 40.487, lng: -121.505, url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park", img: "Pictures/California/Lassen/IMG_6907.jpg", descriptionMd: "descriptions/parks/lassen-volcanic.md", galleryDir: "Pictures/California/Lassen/" },
+        { name: "Glacier National Park", country: "US", region: "Rocky Mountain", lat: 48.697, lng: -113.717, url: "https://en.wikipedia.org/wiki/Glacier_National_Park", img: "Pictures/Montana/Glacier/IMG_6907.jpg", descriptionMd: "descriptions/parks/glacier.md", galleryDir: "Pictures/Montana/Glacier/" },
+        { name: "Sequoia National Park", country: "US", region: "West Coast", lat: 36.581, lng: -118.751, url: "https://en.wikipedia.org/wiki/Sequoia_National_Park", img: "Pictures/California/Sequoia/IMG_6907.jpg", descriptionMd: "descriptions/parks/sequoia.md", galleryDir: "Pictures/California/Sequoia/" },
+        { name: "Kings Canyon National Park", country: "US", region: "West Coast", lat: 36.739, lng: -118.963, url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park", img: "Pictures/California/Kings_Canyon/IMG_6907.jpg", descriptionMd: "descriptions/parks/kings-canyon.md", galleryDir: "Pictures/California/Kings_Canyon/" },
+        { name: "Yosemite National Park", country: "US", region: "West Coast", lat: 37.745, lng: -119.533, url: "https://en.wikipedia.org/wiki/Yosemite_National_Park", img: "Pictures/California/Yosemite/IMG_6907.jpg", descriptionMd: "descriptions/parks/yosemite.md", galleryDir: "Pictures/California/Yosemite/" },
         */
-            
+
     ],
 
     mountain: [
@@ -935,13 +856,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Texas/Guadalupe/"
         },
-        { 
-            name: "Mt. Rogers", 
+        {
+            name: "Mt. Rogers",
             country: "US",
             region: "Appalachian",
-            lat: 36.659, 
-            lng: -81.154, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 36.659,
+            lng: -81.154,
+            url: "https://en.wikipedia.org/wiki/Mount_Rogers",
             img: "Pictures/Virginia/Rogers/IMG_4354.jpg",
             descriptionMd: "descriptions/highpoints/mt-rogers.md",
             logisticsMd: "descriptions/logistics/mt-rogers.md",
@@ -950,13 +871,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Virginia/Rogers/"
         },
-        { 
-            name: "Black Mountain", 
+        {
+            name: "Black Mountain",
             country: "US",
             region: "Appalachian",
-            lat: 36.914, 
-            lng: -82.893, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 36.914,
+            lng: -82.893,
+            url: "https://en.wikipedia.org/wiki/Black_Mountain_(Kentucky)",
             img: "Pictures/Kentucky/Black/IMG_4335.jpg",
             descriptionMd: "descriptions/highpoints/black-mountain.md",
             logisticsMd: "descriptions/logistics/black-mountain.md",
@@ -965,13 +886,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Kentucky/Black/"
         },
-        { 
-            name: "Spruce Knob", 
+        {
+            name: "Spruce Knob",
             country: "US",
             region: "Appalachian",
-            lat: 38.699, 
-            lng: -79.532, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 38.699,
+            lng: -79.532,
+            url: "https://en.wikipedia.org/wiki/Spruce_Knob",
             img: "Pictures/West Virginia/Spruce_Knob/IMG_4372.jpg",
             descriptionMd: "descriptions/highpoints/spruce-knob.md",
             logisticsMd: "descriptions/logistics/spruce-knob.md",
@@ -980,13 +901,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/West Virginia/Spruce_Knob/"
         },
-        { 
-            name: "Backbone Mountain", 
+        {
+            name: "Backbone Mountain",
             country: "US",
             region: "Appalachian",
-            lat: 39.237, 
-            lng: -79.485, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 39.237,
+            lng: -79.485,
+            url: "https://en.wikipedia.org/wiki/Backbone_Mountain",
             img: "Pictures/Maryland/Backbone/IMG_4378.jpg",
             descriptionMd: "descriptions/highpoints/backbone-mountain.md",
             logisticsMd: "descriptions/logistics/backbone-mountain.md",
@@ -995,13 +916,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Maryland/Backbone/"
         },
-        { 
-            name: "Mt. Davis", 
+        {
+            name: "Mt. Davis",
             country: "US",
             region: "Appalachian",
-            lat: 39.786, 
-            lng: -79.177, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 39.786,
+            lng: -79.177,
+            url: "https://en.wikipedia.org/wiki/Mount_Davis_(Pennsylvania)",
             img: "Pictures/Pennsylvania/Davis/IMG_4390.jpg",
             descriptionMd: "descriptions/highpoints/mt-davis.md",
             logisticsMd: "descriptions/logistics/mt-davis.md",
@@ -1010,13 +931,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Pennsylvania/Davis/"
         },
-        { 
-            name: "Ebright Azimuth", 
+        {
+            name: "Ebright Azimuth",
             country: "US",
             region: "Northeast",
-            lat: 39.836, 
-            lng: -75.52, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 39.836,
+            lng: -75.52,
+            url: "https://en.wikipedia.org/wiki/Ebright_Azimuth",
             img: "Pictures/Delaware/Ebright/IMG_4402.jpg",
             descriptionMd: "descriptions/highpoints/ebright-azimuth.md",
             logisticsMd: "descriptions/logistics/ebright-azimuth.md",
@@ -1025,13 +946,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Delaware/Ebright/"
         },
-        { 
-            name: "High Point", 
+        {
+            name: "High Point",
             country: "US",
             region: "Northeast",
-            lat: 41.321, 
-            lng: -74.661, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 41.321,
+            lng: -74.661,
+            url: "https://en.wikipedia.org/wiki/High_Point_(New_Jersey)",
             img: "Pictures/New Jersey/High_Point/IMG_6587.jpg",
             descriptionMd: "descriptions/highpoints/high-point.md",
             logisticsMd: "descriptions/logistics/high-point.md",
@@ -1040,13 +961,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/New Jersey/High_Point/"
         },
-        { 
-            name: "Mt. Frissell", 
+        {
+            name: "Mt. Frissell",
             country: "US",
             region: "Northeast",
-            lat: 42.051, 
-            lng: -73.482, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 42.051,
+            lng: -73.482,
+            url: "https://en.wikipedia.org/wiki/Mount_Frissell",
             img: "Pictures/Connecticut/Frissell/IMG_6640.jpg",
             descriptionMd: "descriptions/highpoints/mt-frissell.md",
             logisticsMd: "descriptions/logistics/mt-frissell.md",
@@ -1055,13 +976,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Connecticut/Frissell/"
         },
-        { 
-            name: "Mt. Greylock", 
+        {
+            name: "Mt. Greylock",
             country: "US",
             region: "Northeast",
-            lat: 42.637, 
-            lng: -73.166, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 42.637,
+            lng: -73.166,
+            url: "https://en.wikipedia.org/wiki/Mount_Greylock",
             img: "Pictures/Massachusets/Greylock/IMG_6597.jpg",
             descriptionMd: "descriptions/highpoints/mt-greylock.md",
             logisticsMd: "descriptions/logistics/mt-greylock.md",
@@ -1070,13 +991,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Massachusets/Greylock/"
         },
-        { 
-            name: "Jerimoth Hill", 
+        {
+            name: "Jerimoth Hill",
             country: "US",
             region: "Northeast",
-            lat: 41.849, 
-            lng: -71.779, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 41.849,
+            lng: -71.779,
+            url: "https://en.wikipedia.org/wiki/Jerimoth_Hill",
             img: "Pictures/Rhode Island/Jerimoth/IMG_6634.jpg",
             descriptionMd: "descriptions/highpoints/jerimoth-hill.md",
             logisticsMd: "descriptions/logistics/jerimoth-hill.md",
@@ -1085,13 +1006,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Rhode Island/Jerimoth/"
         },
-        { 
-            name: "Campbell Hill", 
+        {
+            name: "Campbell Hill",
             country: "US",
             region: "Midwest",
-            lat: 40.370, 
-            lng: -83.720, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 40.370,
+            lng: -83.720,
+            url: "https://en.wikipedia.org/wiki/Campbell_Hill_(Ohio)",
             img: "Pictures/Ohio/Campbell/IMG_6628.jpg",
             descriptionMd: "descriptions/highpoints/campbell-hill.md",
             logisticsMd: "descriptions/logistics/campbell-hill.md",
@@ -1100,13 +1021,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Ohio/Campbell/"
         },
-        { 
-            name: "Hoosier Hill", 
+        {
+            name: "Hoosier Hill",
             country: "US",
             region: "Midwest",
-            lat: 40.001, 
-            lng: -84.848, 
-            url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
+            lat: 40.001,
+            lng: -84.848,
+            url: "https://en.wikipedia.org/wiki/Hoosier_Hill",
             img: "Pictures/Indiana/Hoosier/IMG_6629.jpg",
             descriptionMd: "descriptions/highpoints/hoosier-hill.md",
             logisticsMd: "descriptions/logistics/hoosier-hill.md",
@@ -1115,12 +1036,12 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Indiana/Hoosier/"
         },
-        { 
-            name: "Britton Hill", 
+        {
+            name: "Britton Hill",
             country: "US",
             region: "Southeast",
-            lat: 30.986, 
-            lng: -86.281, 
+            lat: 30.986,
+            lng: -86.281,
             url: "https://en.wikipedia.org/wiki/Britton_Hill",
             img: "Pictures/Florida/Britton/IMG_6907.jpg",
             descriptionMd: "descriptions/highpoints/britton-hill.md",

@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EarthtoIan's Adventures</title>
+  <title>Earth to Ian — Adventure Atlas</title>
+  <meta name="description" content="An interactive travel atlas documenting national parks, state highpoints, and adventures around the world — with photos, journals, and trip details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Earth to Ian" />
+  <meta property="og:title" content="Earth to Ian — Adventure Atlas" />
+  <meta property="og:description" content="An interactive travel atlas documenting national parks, state highpoints, and adventures around the world — with photos, journals, and trip details." />
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -47,6 +52,11 @@
       <div class="sidebar-controls">
         <button id="homeButton" class="sidebar-btn">United States</button>
         <button id="worldButton" class="sidebar-btn">Worldwide</button>
+      </div>
+
+      <div class="map-style-toggle">
+        <button class="map-style-btn active" data-style="satellite">Satellite</button>
+        <button class="map-style-btn" data-style="terrain">Terrain</button>
       </div>
 
       <input type="text" id="searchBox" placeholder="Search..." />

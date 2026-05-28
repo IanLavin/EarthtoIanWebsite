@@ -1,5 +1,6 @@
 import locations from "./locations-data.js";
 import { initMenu } from "./js/menu.js";
+import { loadMarkdown, markdownToHtml } from "./js/utils.js";
 
 const ABOUT_CONTENT = {
   who: "descriptions/about/who-i-am.md",
@@ -50,31 +51,3 @@ async function renderMarkdownSection(elementId, path, fallbackHtml) {
   }
 }
 
-async function loadMarkdown(path) {
-  const response = await fetch(path);
-  if (!response.ok) throw new Error(`Could not load markdown: ${path}`);
-  return response.text();
-}
-
-function markdownToHtml(markdown) {
-  let html = markdown
-    .replace(/\r\n/g, "\n")
-    .replace(/^### (.*)$/gm, "<h3>$1</h3>")
-    .replace(/^## (.*)$/gm, "<h2>$1</h2>")
-    .replace(/^# (.*)$/gm, "<h1>$1</h1>")
-    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.*?)\*/g, "<em>$1</em>");
-
-  html = html.replace(/^\s*-\s+(.*)$/gm, "<li>$1</li>");
-  html = html.replace(/(?:<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`);
-
-  return html
-    .split("\n\n")
-    .map((block) => {
-      const text = block.trim();
-      if (!text) return "";
-      if (text.startsWith("<h") || text.startsWith("<ul")) return text;
-      return `<p>${text.replace(/\n/g, "<br>")}</p>`;
-    })
-    .join("\n");
-}

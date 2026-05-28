@@ -2,8 +2,9 @@ import locations from "./locations-data.js";
 import galleryManifest from "./gallery-manifest.js";
 import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
+import { initMenu } from "./js/menu.js";
+import { escapeHtml, IMAGE_FALLBACK, loadMarkdown, markdownToHtml, setPageMeta } from "./js/utils.js";
 
-const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
 const MAX_RELATED = 6;
 
 async function main() {
@@ -19,7 +20,18 @@ async function main() {
     throw new Error("Invalid location ID");
   }
 
+  const preload = document.createElement("link");
+  preload.rel = "preload";
+  preload.as = "image";
+  preload.href = selectedLocation.img;
+  document.head.appendChild(preload);
+
   document.getElementById("location-title").textContent = selectedLocation.name;
+  setPageMeta({
+    title: selectedLocation.name,
+    description: `Explore Ian's adventure at ${selectedLocation.name} — photos, trip details, and travel notes.`,
+    image: selectedLocation.img,
+  });
 
   const subtitleEl = document.getElementById("location-subtitle");
   if (subtitleEl) {
@@ -128,11 +140,12 @@ async function main() {
   const gallery = getGalleryForLocation(selectedLocation);
 
   if (gallery.length) {
-    initCarousel("location-carousel", gallery);
+    initCarousel("location-carousel", gallery, { altText: selectedLocation.name });
   }
 
   initMiniNav();
   initBackToTop();
+  initMenu();
 }
 
 main();
@@ -153,46 +166,6 @@ async function renderMarkdownSection({ el, mdPath, fallbackHtml }) {
     console.warn("Markdown load failed:", mdPath, err);
     el.innerHTML = fallbackHtml ?? "";
   }
-}
-
-async function loadMarkdown(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`Could not load markdown: ${path}`);
-  return await res.text();
-}
-
-function markdownToHtml(md) {
-  let html = md
-    .replace(/\r\n/g, "\n")
-    .replace(/^### (.*)$/gm, "<h3>$1</h3>")
-    .replace(/^## (.*)$/gm, "<h2>$1</h2>")
-    .replace(/^# (.*)$/gm, "<h1>$1</h1>")
-    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.*?)\*/g, "<em>$1</em>");
-
-  html = html.replace(/^\s*-\s+(.*)$/gm, "<li>$1</li>");
-  html = html.replace(/(?:<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`);
-
-  html = html
-    .split("\n\n")
-    .map((block) => {
-      const t = block.trim();
-      if (!t) return "";
-      if (t.startsWith("<h") || t.startsWith("<ul")) return t;
-      return `<p>${t.replace(/\n/g, "<br>")}</p>`;
-    })
-    .join("\n");
-
-  return html;
-}
-
-function escapeHtml(str) {
-  return String(str)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
 }
 
 function getGalleryForLocation(location) {

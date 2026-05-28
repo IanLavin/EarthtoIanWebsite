@@ -1,5 +1,8 @@
 import locations from "./locations-data.js";
 import { countryName } from "./country-names.js";
+import { initMenu } from "./js/menu.js";
+
+initMenu();
 
 const listEl = document.getElementById("countries-list");
 const allLocations = Object.values(locations).flat();

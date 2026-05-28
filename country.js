@@ -1,7 +1,8 @@
 import locations from "./locations-data.js";
 import { countryName } from "./country-names.js";
-
-const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
+import { initCarousel } from "./js/carousel.js";
+import { initMenu } from "./js/menu.js";
+import { setPageMeta } from "./js/utils.js";
 
 const params = new URLSearchParams(window.location.search);
 const countryCode = params.get("country");
@@ -11,7 +12,8 @@ if (!countryCode) {
   throw new Error("Missing country param");
 }
 
-document.getElementById("country-title").textContent = countryName(countryCode);
+const name = countryName(countryCode);
+document.getElementById("country-title").textContent = name;
 
 const allLocations = Object.values(locations).flat();
 const countryLocations = allLocations.filter((loc) => loc.country === countryCode);
@@ -21,11 +23,29 @@ if (!countryLocations.length) {
   throw new Error("No locations for country");
 }
 
+setPageMeta({
+  title: name,
+  description: `Explore Ian's adventures in ${name} — national parks, hikes, and travel highlights.`,
+  image: countryLocations[0]?.img,
+});
+
+/* =====================
+   CAROUSEL
+===================== */
+
+const images = countryLocations.map((loc) => loc.img).filter(Boolean);
+initCarousel("country-carousel", images, { altText: name, random: false });
+initMenu();
+
+/* =====================
+   LOCATION LIST
+===================== */
+
 const regions = new Map();
-countryLocations.forEach((location) => {
-  const region = location.region || "Other";
+countryLocations.forEach((loc) => {
+  const region = loc.region || "Other";
   if (!regions.has(region)) regions.set(region, []);
-  regions.get(region).push(location);
+  regions.get(region).push(loc);
 });
 
 const container = document.getElementById("country-locations");
@@ -35,6 +55,7 @@ Array.from(regions.keys())
   .sort((a, b) => a.localeCompare(b))
   .forEach((region) => {
     const section = document.createElement("li");
+
     const heading = document.createElement("h3");
     heading.textContent = region;
     section.appendChild(heading);
@@ -43,11 +64,11 @@ Array.from(regions.keys())
     regions
       .get(region)
       .sort((a, b) => a.name.localeCompare(b.name))
-      .forEach((location) => {
+      .forEach((loc) => {
         const li = document.createElement("li");
         const link = document.createElement("a");
-        link.href = `location.html?id=${location.id}`;
-        link.textContent = location.name;
+        link.href = `location.html?id=${loc.id}`;
+        link.textContent = loc.name;
         li.appendChild(link);
         regionList.appendChild(li);
       });
@@ -55,28 +76,3 @@ Array.from(regions.keys())
     section.appendChild(regionList);
     container.appendChild(section);
   });
-
-const images = countryLocations.map((location) => location.img).filter(Boolean);
-let currentIndex = 0;
-
-const carouselImg = document.getElementById("carousel-image");
-carouselImg.src = images[0] ?? IMAGE_FALLBACK;
-carouselImg.onerror = () => {
-  carouselImg.src = IMAGE_FALLBACK;
-};
-
-function renderImage() {
-  carouselImg.src = images[currentIndex] ?? IMAGE_FALLBACK;
-}
-
-document.querySelector(".carousel-btn.next").onclick = () => {
-  if (!images.length) return;
-  currentIndex = (currentIndex + 1) % images.length;
-  renderImage();
-};
-
-document.querySelector(".carousel-btn.prev").onclick = () => {
-  if (!images.length) return;
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  renderImage();
-};

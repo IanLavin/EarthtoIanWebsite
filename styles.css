@@ -213,6 +213,38 @@ input {
   box-shadow: 0 0 0 4px rgba(74, 163, 255, 0.18);
 }
 
+.page-home .map-style-toggle {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.page-home .map-style-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.page-home .map-style-btn:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.page-home .map-style-btn.active {
+  background: rgba(74, 163, 255, 0.22);
+  color: #fff;
+  font-weight: 600;
+}
+
+.page-home .map-style-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .page-home #searchBox {
   width: 100%;
   padding: 12px 14px;
@@ -538,41 +570,8 @@ input {
 }
 
 /* =========================================
-   LOCATION PAGE RESTORE (light theme)
-   Add <body class="page-location"> in location.html
-   (and you can keep your existing location styles below)
+   LOCATION PAGE
 ========================================= */
-
-.page-location {
-  background: #f4f4f4;
-  color: #333;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  margin: 0;
-}
-
-.page-location a {
-  color: #2c3e50;
-  text-decoration: none;
-}
-.page-location a:hover { text-decoration: underline; }
-
-/* =========================================================
-   LOCATION PAGE (restore prior layout)
-   Requires: <body class="page-location">
-========================================================= */
-
-.page-location {
-  background: #f4f4f4;
-  color: #333;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  margin: 0;
-}
-
-.page-location a {
-  color: #2c3e50;
-  text-decoration: none;
-}
-.page-location a:hover { text-decoration: underline; }
 
 /* Page container */
 .page-location .location-page {
@@ -880,9 +879,7 @@ input {
 }
 
 
-/* =========================================================
-   LOCATION PAGE — match homepage theme + style carousel arrows
-========================================================= */
+/* Location page theme + carousel arrows */
 
 .page-location {
   /* same background as homepage */

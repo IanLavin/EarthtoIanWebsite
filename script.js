@@ -1,6 +1,7 @@
 import locations from "./locations-data.js";
 import icons from "./icons.js";
 import { initMenu } from "./js/menu.js";
+import { escapeHtml, IMAGE_FALLBACK } from "./js/utils.js";
 
 /* =====================
    CONFIG
@@ -9,8 +10,6 @@ import { initMenu } from "./js/menu.js";
 const DEFAULT_VIEW = { center: [37.8283, -95.5795], zoom: 5 };
 const WORLD_VIEW = { center: [10.8283, -9.5795], zoom: 3 };
 const CATEGORIES = ["park", "mountain", "adventure", "sightseeing"];
-const IMAGE_FALLBACK = "Pictures/Icons/camera-circle.svg";
-
 /* =====================
    MAP SETUP
 ===================== */
@@ -25,14 +24,27 @@ const map = L.map("map", {
   maxBoundsViscosity: 1.0,
 }).setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
 
-L.tileLayer(
+const satelliteLayer = L.tileLayer(
   "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
   {
     attribution: "&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics",
     noWrap: true,
     bounds: WORLD_BOUNDS,
   }
-).addTo(map);
+);
+
+const terrainLayer = L.tileLayer(
+  "https://tile.opentopomap.org/{z}/{x}/{y}.png",
+  {
+    attribution: "&copy; <a href='https://opentopomap.org'>OpenTopoMap</a> contributors",
+    noWrap: true,
+    bounds: WORLD_BOUNDS,
+    maxZoom: 17,
+  }
+);
+
+satelliteLayer.addTo(map);
+let activeMapStyle = "satellite";
 
 /* =====================
    DOM
@@ -43,6 +55,7 @@ const searchBox = document.getElementById("searchBox");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const homeButton = document.getElementById("homeButton");
 const worldButton = document.getElementById("worldButton");
+const mapStyleBtns = Array.from(document.querySelectorAll(".map-style-btn"));
 const mapArea = document.querySelector(".map-area");
 const randomName = document.getElementById("random-location-name");
 const randomImg = document.getElementById("random-location-img");
@@ -91,15 +104,6 @@ function debounce(fn, delay = 300) {
     clearTimeout(timer);
     timer = setTimeout(() => fn(...args), delay);
   };
-}
-
-function escapeHtml(str) {
-  return String(str)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
 }
 
 function shouldAutoScrollToMap() {
@@ -315,6 +319,22 @@ homeButton.addEventListener("click", () => {
 
 worldButton.addEventListener("click", () => {
   map.setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
+});
+
+mapStyleBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const style = btn.dataset.style;
+    if (style === activeMapStyle) return;
+    activeMapStyle = style;
+    if (style === "terrain") {
+      map.removeLayer(satelliteLayer);
+      terrainLayer.addTo(map);
+    } else {
+      map.removeLayer(terrainLayer);
+      satelliteLayer.addTo(map);
+    }
+    mapStyleBtns.forEach((b) => b.classList.toggle("active", b.dataset.style === style));
+  });
 });
 
 /* =====================

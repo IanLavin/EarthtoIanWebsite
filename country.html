@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Country</title>
+  <title>Country — Earth to Ian</title>
+  <meta name="description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Earth to Ian" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="page-country">
 
+  <div class="menu-container">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="menu-dropdown" class="menu-dropdown">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="year-in-review.html">Year In Review</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+
   <main class="country-page">
     <nav class="page-nav">
-      <a href="countries.html"><- Back to Countries</a>
+      <a href="countries.html">&#8592; Back to Countries</a>
     </nav>
 
     <section class="country-hero">
       <h1 id="country-title"></h1>
     </section>
 
-    <section class="country-carousel carousel">
-      <button class="carousel-btn prev" aria-label="Previous image"><</button>
-      <img id="carousel-image" alt="" />
-      <button class="carousel-btn next" aria-label="Next image">></button>
-    </section>
+    <div id="country-carousel" class="country-carousel carousel"></div>
 
     <section class="places-card">
       <h2>Places Visited</h2>

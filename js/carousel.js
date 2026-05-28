@@ -6,6 +6,7 @@ export function initCarousel(containerId, images = [], options = {}) {
     autoAdvance: true,
     intervalMs: 3000,
     random: true,
+    altText: "",
     ...options,
   };
 
@@ -14,9 +15,9 @@ export function initCarousel(containerId, images = [], options = {}) {
 
   container.innerHTML = `
     <div class="carousel-inner">
-      <button class="carousel-btn prev" aria-label="Previous"><</button>
-      <img class="carousel-img" alt="" />
-      <button class="carousel-btn next" aria-label="Next">></button>
+      <button class="carousel-btn prev" aria-label="Previous">&#8249;</button>
+      <img class="carousel-img" alt="" loading="lazy" />
+      <button class="carousel-btn next" aria-label="Next">&#8250;</button>
     </div>
   `;
 
@@ -35,6 +36,9 @@ export function initCarousel(containerId, images = [], options = {}) {
 
   function render() {
     imgEl.src = images[currentIndex];
+    imgEl.alt = opts.altText
+      ? `${opts.altText} — photo ${currentIndex + 1} of ${images.length}`
+      : "";
     imgEl.onerror = () => {
       goToNext();
     };
