@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "_gpxType": "trk",
+        "name": "The Confluence from Supai Village",
+        "coordinateProperties": {}
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          
+        ]
+      }
+    }
+  ]
+}

@@ -21,6 +21,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/yellowstone.md",
             logisticsMd: "descriptions/logistics/yellowstone.md",
             notesMd: "descriptions/notes/yellowstone.md",
+            routeGeoJson: "routes/yellowstone.geojson",
+
             video: {
                 provider: "youtube",
                 id: "geZ6cnGRJ5Y",
@@ -43,6 +45,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/grand-teton.md",
             logisticsMd: "descriptions/logistics/grand-teton.md",
             notesMd: "descriptions/notes/grand-teton.md",
+            routeGeoJson: "routes/grand-teton.geojson",
+
             video: {
                 provider: "youtube",
                 id: "Lh5fXupAQ_Q",
@@ -86,13 +90,15 @@ const rawLocations = {
             name: "Pinnacles National Park", 
             country: "US",
             region: "West Coast",
-            lat: 36.49, 
-            lng: -121.48, 
+            lat: 36.4979, 
+            lng: -121.203, 
             url: "https://en.wikipedia.org/wiki/Pinnacles_National_Park",
             img: "Pictures/California/Pinnacles/IMG_7520.jpg",
             descriptionMd: "descriptions/parks/pinnacles.md",
             logisticsMd: "descriptions/logistics/pinnacles.md",
             notesMd: "descriptions/notes/pinnacles.md",
+            routeGeoJson: "routes/pinnacles.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/California/Pinnacles/"
@@ -108,6 +114,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/death-valley.md",
             logisticsMd: "descriptions/logistics/death-valley.md",
             notesMd: "descriptions/notes/death-valley.md",
+            routeGeoJson: "routes/death-valley.geojson",
+
             video: {
                 provider: "youtube",
                 id: "TCg3fATvpNc",
@@ -148,6 +156,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/joshua-tree.md",
             logisticsMd: "descriptions/logistics/joshua-tree.md",
             notesMd: "descriptions/notes/joshua-tree.md",
+            routeGeoJson: "routes/joshua-tree.geojson",
+
             video: {
                 provider: "vimeo",
                 id: "1165548842",
@@ -181,13 +191,15 @@ const rawLocations = {
             name: "Great Basin National Park", 
             country: "US",
             region: "Southwest",
-            lat: 38.98, 
-            lng: -114.31, 
+            lat: 38.986, 
+            lng: -114.312, 
             url: "https://en.wikipedia.org/wiki/Great_Basin_National_Park",
             img: "Pictures/Nevada/Great Basin/IMG_1194.jpg",
             descriptionMd: "descriptions/parks/great-basin.md",
             logisticsMd: "descriptions/logistics/great-basin.md",
             notesMd: "descriptions/notes/great-basin.md",
+            routeGeoJson: "routes/great-basin.geojson",
+
             video: {
                 provider: "youtube",
                 id: "--QMBKcCAyY",
@@ -228,6 +240,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/canyonlands.md",
             logisticsMd: "descriptions/logistics/canyonlands.md",
             notesMd: "descriptions/notes/canyonlands.md",
+            routeGeoJson: "routes/canyonlands.geojson",
+
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -248,6 +262,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/arches.md",
             logisticsMd: "descriptions/logistics/arches.md",
             notesMd: "descriptions/notes/arches.md",
+            routeGeoJson: "routes/arches.geojson",
+
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -288,6 +304,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/bryce.md",
             logisticsMd: "descriptions/logistics/bryce.md",
             notesMd: "descriptions/notes/bryce.md",
+            routeGeoJson: "routes/bryce.geojson",
+
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -301,13 +319,15 @@ const rawLocations = {
             name: "Zion National Park", 
             country: "US",
             region: "Southwest",
-            lat: 37.22, 
+            lat: 37.25, 
             lng: -112.96, 
             url: "https://en.wikipedia.org/wiki/Zion_National_Park",
             img: "Pictures/Utah/Zion/IMG_2019.jpg",
             descriptionMd: "descriptions/parks/zion.md",
             logisticsMd: "descriptions/logistics/zion.md",
             notesMd: "descriptions/notes/zion.md",
+            routeGeoJson: "routes/zion.geojson",
+
             video: {
                 provider: "youtube",
                 id: "8RfgPvu8Nwo",
@@ -368,6 +388,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/great-sands.md",
             logisticsMd: "descriptions/logistics/great-sands.md",
             notesMd: "descriptions/notes/great-sands.md",
+            routeGeoJson: "routes/great-sands.geojson",
+
             video: {
                 provider: "youtube",
                 id: "3i2FexVpfUM",
@@ -381,13 +403,15 @@ const rawLocations = {
             name: "Rocky Mountain National Park", 
             country: "US",
             region: "Rocky Mountain",
-            lat: 40.30, 
+            lat: 40.305, 
             lng: -105.66, 
             url: "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
             img: "Pictures/Colorado/Rocky_Mountain/IMG_9406.jpg",
             descriptionMd: "descriptions/parks/rocky-mountain.md",
             logisticsMd: "descriptions/logistics/rocky-mountain.md",
             notesMd: "descriptions/notes/rocky-mountain.md",
+            routeGeoJson: "routes/rocky-mountain.geojson",
+
             video: {
                 provider: "youtube",
                 id: "gFtNhW_NI7Y",
@@ -538,6 +562,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/black-canyon.md",
             logisticsMd: "descriptions/logistics/black-canyon.md",
             notesMd: "descriptions/notes/black-canyon.md",
+            routeGeoJson: "routes/black-canyon-gunnison.geojson",
+
             video: {
                 provider: "youtube",
                 id: "K0A16jg1hIg",
@@ -573,6 +599,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/olympic.md",
             logisticsMd: "descriptions/logistics/olympic.md",
             notesMd: "descriptions/notes/olympic.md",
+            routeGeoJson: "routes/olympic.geojson",
+
             video: {
                 provider: "youtube",
                 id: "r0Eurg3WRIg",
@@ -593,6 +621,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/north-cascades.md",
             logisticsMd: "descriptions/logistics/north-cascades.md",
             notesMd: "descriptions/notes/north-cascades.md",
+            routeGeoJson: "routes/north-cascades.geojson",
+
             video: {
                 provider: "youtube",
                 id: "H6KO-betylg",
@@ -606,13 +636,15 @@ const rawLocations = {
             name: "Mount Rainier National Park", 
             country: "US",
             region: "West Coast",
-            lat: 46.825, 
-            lng: -121.760, 
+            lat: 46.829, 
+            lng: -121.730, 
             url: "https://en.wikipedia.org/wiki/Mount_Rainier_National_Park",
             img: "Pictures/Washington/Rainier/IMG_5862.jpg",
             descriptionMd: "descriptions/parks/rainier.md",
             logisticsMd: "descriptions/logistics/rainier.md",
             notesMd: "descriptions/notes/rainier.md",
+            routeGeoJson: "routes/rainier-national-park.geojson",
+
             video: {
                 provider: "youtube",
                 id: "r0Eurg3WRIg",
@@ -633,6 +665,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/cuyahoga.md",
             logisticsMd: "descriptions/logistics/cuyahoga.md",
             notesMd: "descriptions/notes/cuyahoga.md",
+            routeGeoJson: "routes/cuyahoga.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/Ohio/Cuyahoga/"
@@ -682,13 +716,15 @@ const rawLocations = {
             name: "Mt. Whitney", 
             country: "US",
             region: "West Coast",
-            lat: 36.578, 
-            lng: -118.292, 
+            lat: 36.5786, 
+            lng: -118.2923, 
             url: "https://en.wikipedia.org/wiki/Mount_Whitney",
             img: "Pictures/California/Whitney/IMG_8933.jpg",
             descriptionMd: "descriptions/highpoints/mt-whitney.md",
             logisticsMd: "descriptions/logistics/mt-whitney.md",
             notesMd: "descriptions/notes/mt-whitney.md",
+            routeGeoJson: "routes/mt-whitney.geojson",
+
             video: {
                 provider: "vimeo",
                 id: "1165548842",
@@ -702,13 +738,15 @@ const rawLocations = {
             name: "Mt. Elbert", 
             country: "US",
             region: "Rocky Mountain",
-            lat: 39.117, 
-            lng: -106.445, 
+            lat: 39.1177, 
+            lng: -106.4454, 
             url: "https://en.wikipedia.org/wiki/Mount_Elbert",
             img: "Pictures/Colorado/Elbert/IMG_9119.JPG",
             descriptionMd: "descriptions/highpoints/mt-elbert.md",
             logisticsMd: "descriptions/logistics/mt-elbert.md",
             notesMd: "descriptions/notes/mt-elbert.md",
+            routeGeoJson: "routes/mt-elbert.geojson",
+
             video: {
                 provider: "youtube",
                 id: "CLewVnWePh4",
@@ -723,17 +761,19 @@ const rawLocations = {
             name: "Humphreys Peak", 
             country: "US",
             region: "Southwest",
-            lat: 35.346, 
-            lng: -111.677, 
+            lat: 35.3464, 
+            lng: -111.678, 
             url: "https://en.wikipedia.org/wiki/Humphreys_Peak",
             img: "Pictures/Arizona/Humphreys/IMG_6070.jpg",
             descriptionMd: "descriptions/highpoints/humphreys-peak.md",
             logisticsMd: "descriptions/logistics/humphreys-peak.md",
             notesMd: "descriptions/notes/humphreys-peak.md",
+            routeGeoJson: "routes/humphreys-peak.geojson",
+
             video: {
                 provider: "youtube",
                 id: "6jPaJobwN1s",
-                title: "Mt. Elbert"
+                title: "Humphreys Peak"
             },
 
 
@@ -744,13 +784,15 @@ const rawLocations = {
             name: "Wheeler Peak", 
             country: "US",
             region: "Rocky Mountain",
-            lat: 36.556, 
-            lng: -105.416, 
+            lat: 36.5567, 
+            lng: -105.4168, 
             url: "https://en.wikipedia.org/wiki/Wheeler_Peak_(New_Mexico)",
             img: "Pictures/New Mexico/Wheeler/IMG_0960.jpg",
             descriptionMd: "descriptions/highpoints/wheeler-peak.md",
             logisticsMd: "descriptions/logistics/wheeler-peak.md",
             notesMd: "descriptions/notes/wheeler-peak.md",
+            routeGeoJson: "routes/wheeler-peak-nm.geojson",
+
             video: {
                 provider: "youtube",
                 id: "3i2FexVpfUM",
@@ -765,13 +807,14 @@ const rawLocations = {
             name: "Borah Peak", 
             country: "US",
             region: "Rocky Mountain",
-            lat: 44.136, 
-            lng: -113.78, 
+            lat: 44.1374, 
+            lng: -113.7807, 
             url: "https://en.wikipedia.org/wiki/Borah_Peak",
             img: "Pictures/Idaho/Borah/borah.JPG",
             descriptionMd: "descriptions/highpoints/borah-peak.md",
             logisticsMd: "descriptions/logistics/borah-peak.md",
             notesMd: "descriptions/notes/borah-peak.md",
+            routeGeoJson: "routes/mt-borah.geojson",
 
             //carousel images
             galleryDir: "Pictures/Idaho/Borah/"
@@ -787,6 +830,8 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/black-mesa.md",
             logisticsMd: "descriptions/logistics/black-mesa.md",
             notesMd: "descriptions/notes/black-mesa.md",
+            routeGeoJson: "routes/black-mesa.geojson",
+
             video: {
                 provider: "youtube",
                 id: "3i2FexVpfUM",
@@ -840,13 +885,15 @@ const rawLocations = {
             name: "Guadalupe Peak", 
             country: "US",
             region: "Southwest",
-            lat: 31.89, 
-            lng: -104.86, 
+            lat: 31.8912, 
+            lng: -104.8615, 
             url: "https://en.wikipedia.org/wiki/Guadalupe_Mountains_National_Park",
             img: "Pictures/Texas/Guadalupe/IMG_7818.jpg",
             descriptionMd: "descriptions/highpoints/guadalupe-peak.md",
             logisticsMd: "descriptions/logistics/guadalupe-peak.md",
             notesMd: "descriptions/notes/guadalupe-peak.md",
+            routeGeoJson: "routes/guadalupe-peak.geojson",
+
             video: {
                 provider: "youtube",
                 id: "_ltXpHNJNdE",
@@ -860,13 +907,14 @@ const rawLocations = {
             name: "Mt. Rogers",
             country: "US",
             region: "Appalachian",
-            lat: 36.659,
-            lng: -81.154,
+            lat: 36.660,
+            lng: -81.5448,
             url: "https://en.wikipedia.org/wiki/Mount_Rogers",
             img: "Pictures/Virginia/Rogers/IMG_4354.jpg",
             descriptionMd: "descriptions/highpoints/mt-rogers.md",
             logisticsMd: "descriptions/logistics/mt-rogers.md",
             notesMd: "descriptions/notes/mt-rogers.md",
+            routeGeoJson: "routes/mt-rogers.geojson",
 
             //carousel images
             galleryDir: "Pictures/Virginia/Rogers/"
@@ -905,13 +953,14 @@ const rawLocations = {
             name: "Backbone Mountain",
             country: "US",
             region: "Appalachian",
-            lat: 39.237,
-            lng: -79.485,
+            lat: 39.2374,
+            lng: -79.4853,
             url: "https://en.wikipedia.org/wiki/Backbone_Mountain",
             img: "Pictures/Maryland/Backbone/IMG_4378.jpg",
             descriptionMd: "descriptions/highpoints/backbone-mountain.md",
             logisticsMd: "descriptions/logistics/backbone-mountain.md",
             notesMd: "descriptions/notes/backbone-mountain.md",
+            routeGeoJson: "routes/backbone-mountain.geojson",
 
             //carousel images
             galleryDir: "Pictures/Maryland/Backbone/"
@@ -972,6 +1021,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-frissell.md",
             logisticsMd: "descriptions/logistics/mt-frissell.md",
             notesMd: "descriptions/notes/mt-frissell.md",
+            routeGeoJson: "routes/mt-frissell.geojson",
 
             //carousel images
             galleryDir: "Pictures/Connecticut/Frissell/"
@@ -1077,6 +1127,8 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/clingmans-dome.md",
             logisticsMd: "descriptions/logistics/clingmans-dome.md",
             notesMd: "descriptions/notes/clingmans-dome.md",
+            routeGeoJson: "routes/clingmans-dome.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/Tennessee/Clingmans/"
@@ -1107,6 +1159,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/brasstown-bald.md",
             logisticsMd: "descriptions/logistics/brasstown-bald.md",
             notesMd: "descriptions/notes/brasstown-bald.md",
+            routeGeoJson: "routes/brasstown-bald.geojson",
 
             //carousel images
             galleryDir: "Pictures/Georgia/Brasstown/"
@@ -1162,6 +1215,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/antelope.md",
             logisticsMd: "descriptions/logistics/antelope.md",
             notesMd: "descriptions/notes/antelope.md",
+            routeGeoJson: "routes/antelope-kayak.geojson",
+
             video: {
                 provider: "youtube",
                 id: "--QMBKcCAyY",
@@ -1182,6 +1237,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/adams.md",
             logisticsMd: "descriptions/logistics/adams.md",
             notesMd: "descriptions/notes/adams.md",
+            routeGeoJson: "routes/adams.geojson",
+
             video: {
                 provider: "youtube",
                 id: "ck5EwiccYbw",
@@ -1202,6 +1259,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/black_canyon_colorado.md",
             logisticsMd: "descriptions/logistics/black_canyon_colorado.md",
             notesMd: "descriptions/notes/black_canyon_colorado.md",
+            routeGeoJson: "routes/black-canyon.geojson",
+
             video: {
                 provider: "youtube",
                 id: "TCg3fATvpNc",
@@ -1242,6 +1301,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/calf_creek.md",
             logisticsMd: "descriptions/logistics/calf_creek.md",
             notesMd: "descriptions/notes/calf_creek.md",
+            routeGeoJson: "routes/calf-creek.geojson",
+
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -1275,13 +1336,15 @@ const rawLocations = {
             name: "Pfeifferhorn", 
             country: "US",
             region: "Rocky Mountain",
-            lat: 40.533, 
+            lat: 40.5335, 
             lng: -111.706, 
             url: "https://en.wikipedia.org/wiki/Pfeifferhorn",
             img: "Pictures/Utah/Pfeifferhorn/IMG_0087.JPG",
             descriptionMd: "descriptions/adventures/pfeifferhorn.md",
             logisticsMd: "descriptions/logistics/pfeifferhorn.md",
             notesMd: "descriptions/notes/pfeifferhorn.md",
+            routeGeoJson: "routes/pfeifferhorn.geojson",
+
             video: {
                 provider: "vimeo",
                 id: "1165862465",
@@ -1295,13 +1358,15 @@ const rawLocations = {
             name: "Sawtooths", 
             country: "US",
             region: "Rocky Mountain",
-            lat: 44.141, 
+            lat: 44.1415, 
             lng: -115.010, 
             url: "https://en.wikipedia.org/wiki/Sawtooth_Range_(Idaho)",
             img: "Pictures/Idaho/Thompson/IMG_9159.jpg",
             descriptionMd: "descriptions/adventures/sawtooth.md",
             logisticsMd: "descriptions/logistics/sawtooth.md",
             notesMd: "descriptions/notes/sawtooth.md",
+            routeGeoJson: "routes/sawtooth.geojson",
+
             video: {
                 provider: "youtube",
                 id: "y8mbyq_AgH4",
@@ -1311,17 +1376,34 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Idaho/Thompson/"
         },
+        {
+            name: "Four Peaks",
+            country: "US",
+            region: "Southwest",
+            lat: 33.6844, 
+            lng: -111.3254, 
+            url: "https://en.wikipedia.org/wiki/Four_Peaks",
+            img: "Pictures/Arizona/Four_Peaks/IMG_7751.jpg",
+            descriptionMd: "descriptions/sightseeing/four_peaks.md",
+            logisticsMd: "descriptions/logistics/four_peaks.md",
+            notesMd: "descriptions/notes/four_peaks.md",
+            routeGeoJson: "routes/four-peaks.geojson",
+
+            galleryDir: "Pictures/Arizona/Four_Peaks/"
+        },
         { 
             name: "Goat Canyon Trestle", 
             country: "US",
             region: "Southwest",
-            lat: 32.729, 
-            lng: -116.183, 
+            lat: 32.7289, 
+            lng: -116.1836, 
             url: "https://en.wikipedia.org/wiki/Goat_Canyon_Trestle",
             img: "Pictures/California/Goat_Canyon/GOPR4197.JPG",
             descriptionMd: "descriptions/adventures/goat_canyon.md",
             logisticsMd: "descriptions/logistics/goat_canyon.md",
             notesMd: "descriptions/notes/goat_canyon.md",
+            routeGeoJson: "routes/goat-canyon.geojson",
+
             video: {
                 provider: "youtube",
                 id: "SDrLnDs12EI",
@@ -1335,13 +1417,15 @@ const rawLocations = {
             name: "Salome Jug", 
             country: "US",
             region: "Southwest",
-            lat: 33.770, 
-            lng: -111.119, 
+            lat: 33.7686, 
+            lng: -111.120, 
             url: "https://www.fs.usda.gov/recarea/tonto/recarea/?recid=35517",
             img: "Pictures/Arizona/Jug/IMG_3823.jpg",
             descriptionMd: "descriptions/adventures/jug.md",
             logisticsMd: "descriptions/logistics/jug.md",
             notesMd: "descriptions/notes/jug.md",
+            routeGeoJson: "routes/jug.geojson",
+
             video: {
                 provider: "youtube",
                 id: "miEzLRUMHD8",
@@ -1355,13 +1439,15 @@ const rawLocations = {
             name: "Buckskin Gulch", 
             country: "US",
             region: "Southwest",
-            lat: 37.017, 
-            lng: -112.001, 
+            lat: 37.0076, 
+            lng: -111.9947, 
             url: "https://en.wikipedia.org/wiki/Buckskin_Gulch",
             img: "Pictures/Utah/Buckskin/IMG_3949.jpg",
             descriptionMd: "descriptions/adventures/buckskin.md",
             logisticsMd: "descriptions/logistics/buckskin.md",
             notesMd: "descriptions/notes/buckskin.md",
+            routeGeoJson: "routes/buckskin.geojson",
+
             video: {
                 provider: "youtube",
                 id: "y22yx8XXa14",
@@ -1372,17 +1458,18 @@ const rawLocations = {
             galleryDir: "Pictures/Utah/Buckskin/"
             
         },
-        { 
-            name: "Ausangate", 
+        {
+            name: "Ausangate",
             country: "PE",
             region: "Cusco",
-            lat: -13.758, 
-            lng: -71.218, 
+            lat: -13.7606,
+            lng: -71.2184,
             url: "https://en.wikipedia.org/wiki/Ausangate",
             img: "Pictures/Peru/Ausangate/IMG_4894.jpg",
             descriptionMd: "descriptions/adventures/ausangate.md",
             logisticsMd: "descriptions/logistics/ausangate.md",
             notesMd: "descriptions/notes/ausangate.md",
+            routeGeoJson: "routes/ausangate.geojson",
             video: {
                 provider: "youtube",
                 id: "rIGaGZw_XeI",
@@ -1392,17 +1479,18 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Peru/Ausangate/"
         },
-        { 
-            name: "Salkantay", 
+        {
+            name: "Salkantay",
             country: "PE",
             region: "Cusco",
-            lat: -13.381, 
-            lng: -72.584, 
+            lat: -13.381,
+            lng: -72.584,
             url: "https://en.wikipedia.org/wiki/Salkantay",
             img: "Pictures/Peru/Salkantay/IMG_4672.jpg",
             descriptionMd: "descriptions/adventures/salkantay.md",
             logisticsMd: "descriptions/logistics/salkantay.md",
             notesMd: "descriptions/notes/salkantay.md",
+            routeGeoJson: "routes/salkantay.geojson",
             video: {
                 provider: "youtube",
                 id: "ZqSTk2njJH8",
@@ -1423,6 +1511,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/ice_lake.md",
             logisticsMd: "descriptions/logistics/ice_lake.md",
             notesMd: "descriptions/notes/ice_lake.md",
+            routeGeoJson: "routes/san-juan-mountains.geojson",
+
             video: {
                 provider: "youtube",
                 id: "K0A16jg1hIg",
@@ -1456,13 +1546,15 @@ const rawLocations = {
             name: "Wallaman Falls", 
             country: "AU",
             region: "Queensland",
-            lat: -18.59, 
+            lat: -18.5922, 
             lng: 145.802, 
             url: "https://en.wikipedia.org/wiki/Wallaman_Falls",
             img: "Pictures/Australia/Wallaman/wallamanfalls.jpg",
             descriptionMd: "descriptions/adventures/wallaman.md",
             logisticsMd: "descriptions/logistics/wallaman.md",
             notesMd: "descriptions/notes/wallaman.md",
+            routeGeoJson: "routes/wallaman.geojson",
+
             video: {
                 provider: "youtube",
                 id: "2TUXGEB_C_o",
@@ -1476,13 +1568,14 @@ const rawLocations = {
             name: "Acatenango and Fuego Volcanoes", 
             country: "GT",
             region: "Chimaltenango",
-            lat: 14.474, 
-            lng: -90.88, 
+            lat: 14.4893, 
+            lng: -90.8787, 
             url: "https://en.wikipedia.org/wiki/Acatenango",
             img: "Pictures/Guatemala/Acatenango/GOPR6401.JPG",
             descriptionMd: "descriptions/adventures/acatenango.md",
             logisticsMd: "descriptions/logistics/acatenango.md",
             notesMd: "descriptions/notes/acatenango.md",
+            routeGeoJson: "routes/acatenango.geojson",
             video: {
                 provider: "youtube",
                 id: "myA9L93JyPM",
@@ -1509,13 +1602,15 @@ const rawLocations = {
             name: "Tenorio National Park", 
             country: "CR",
             region: "Alajuela",
-            lat: 10.703, 
-            lng: -84.990, 
+            lat: 10.7035, 
+            lng: -84.9907, 
             url: "https://en.wikipedia.org/wiki/Tenorio_National_Park",
             img: "Pictures/Costa_Rica/Tenorio/GOPR6060.JPG",
             descriptionMd: "descriptions/adventures/tenorio.md",
             logisticsMd: "descriptions/logistics/tenorio.md",
             notesMd: "descriptions/notes/tenorio.md",
+            routeGeoJson: "routes/tenorio.geojson",
+
 
             galleryDir: "Pictures/Costa_Rica/Tenorio/"
         },
@@ -1530,6 +1625,7 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/havasupai.md",
             logisticsMd: "descriptions/logistics/havasupai.md",
             notesMd: "descriptions/notes/havasupai.md",
+            routeGeoJson: "routes/havasupai.geojson",
 
             galleryDir: "Pictures/Arizona/Havasupai/"
         },
@@ -1599,6 +1695,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/kirkham_hot_springs.md",
             logisticsMd: "descriptions/logistics/kirkham_hot_springs.md",
             notesMd: "descriptions/notes/kirkham_hot_springs.md",
+            routeGeoJson: "routes/kirkham.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/Idaho/Kirkham/"
@@ -1607,13 +1705,15 @@ const rawLocations = {
             name: "Fossil Creek",
             country: "US",
             region: "Southwest",
-            lat: 34.145, 
-            lng: -111.605, 
+            lat: 34.4212, 
+            lng: -111.5759, 
             url: "https://en.wikipedia.org/wiki/Fossil_Creek",
             img: "Pictures/Arizona/Fossil/IMG_3822.jpg",
             descriptionMd: "descriptions/sightseeing/fossil_creek.md",
             logisticsMd: "descriptions/logistics/fossil_creek.md",
             notesMd: "descriptions/notes/fossil_creek.md",
+            routeGeoJson: "routes/fossil-creek.geojson",
+
             video: {
                 provider: "youtube",
                 id: "fxspDquRst0",
@@ -1663,12 +1763,14 @@ const rawLocations = {
             country: "US",
             region: "West Coast",
             lat: 45.867, 
-            lng: -121.828, 
+            lng: -121.8286, 
             url: "https://en.wikipedia.org/wiki/Panther_Creek_Falls",
             img: "Pictures/Washington/Panther/IMG_1502.jpg",
             descriptionMd: "descriptions/sightseeing/panther_creek.md",
             logisticsMd: "descriptions/logistics/panther_creek.md",
             notesMd: "descriptions/notes/panther_creek.md",
+            routeGeoJson: "routes/panther-creek.geojson",
+
             video: {
                 provider: "youtube",
                 id: "ck5EwiccYbw",
@@ -1682,13 +1784,15 @@ const rawLocations = {
             name: "Blue Heart Springs",
             country: "US",
             region: "Rocky Mountain",
-            lat: 42.710, 
-            lng: -114.829, 
+            lat: 42.7107, 
+            lng: -114.8297, 
             url: "https://www.visitidaho.org/things-to-do/kayaking-paddle-boarding/blue-heart-springs/",
             img: "Pictures/Idaho/Blue_Heart/IMG_1605.jpg",
             descriptionMd: "descriptions/sightseeing/blue_heart.md",
             logisticsMd: "descriptions/logistics/blue_heart.md",
             notesMd: "descriptions/notes/blue_heart.md",
+            routeGeoJson: "routes/blue-heart.geojson",
+
             video: {
                 provider: "youtube",
                 id: "IztlBA11xus",
@@ -1702,13 +1806,15 @@ const rawLocations = {
             name: "Donut Falls",
             country: "US",
             region: "Rocky Mountain",
-            lat: 40.613, 
-            lng: -111.654, 
+            lat: 40.6311, 
+            lng: -111.6544, 
             url: "https://en.wikipedia.org/wiki/Donut_Falls",
             img: "Pictures/Utah/Donut/IMG_1650.jpg",
             descriptionMd: "descriptions/sightseeing/donut_falls.md",
             logisticsMd: "descriptions/logistics/donut_falls.md",
             notesMd: "descriptions/notes/donut_falls.md",
+            routeGeoJson: "routes/donut-falls.geojson",
+
             video: {
                 provider: "youtube",
                 id: "IztlBA11xus",
@@ -1749,34 +1855,24 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/black_sand_beach.md",
             logisticsMd: "descriptions/logistics/black_sand_beach.md",
             notesMd: "descriptions/notes/black_sand_beach.md",
+            routeGeoJson: "routes/black-sands-beach.geojson",
+
 
             galleryDir: "Pictures/California/Black_Sand/"
-        },
-        {
-            name: "Four Peaks",
-            country: "US",
-            region: "Southwest",
-            lat: 33.684, 
-            lng: -111.325, 
-            url: "https://en.wikipedia.org/wiki/Four_Peaks",
-            img: "Pictures/Arizona/Four_Peaks/IMG_7751.jpg",
-            descriptionMd: "descriptions/sightseeing/four_peaks.md",
-            logisticsMd: "descriptions/logistics/four_peaks.md",
-            notesMd: "descriptions/notes/four_peaks.md",
-
-            galleryDir: "Pictures/Arizona/Four_Peaks/"
         },
         {
             name: "Chiricahua National Monument",
             country: "US",
             region: "Southwest",
-            lat: 32.008, 
+            lat: 32.009, 
             lng: -109.319, 
             url: "https://en.wikipedia.org/wiki/Chiricahua_National_Monument",
             img: "Pictures/Arizona/Chiricahua/IMG_8082.jpg",
             descriptionMd: "descriptions/sightseeing/chiricahua.md",
             logisticsMd: "descriptions/logistics/chiricahua.md",
             notesMd: "descriptions/notes/chiricahua.md",
+            routeGeoJson: "routes/chiricahua.geojson",
+
             video: {
                 provider: "youtube",
                 id: "_ltXpHNJNdE",
@@ -1789,13 +1885,15 @@ const rawLocations = {
             name: "Valley of Fire",
             country: "US",
             region: "Southwest",
-            lat: 36.482, 
-            lng: -114.552, 
+            lat: 36.4823, 
+            lng: -114.522, 
             url: "https://en.wikipedia.org/wiki/Valley_of_Fire_State_Park",
             img: "Pictures/Nevada/Valley_of_Fire/IMG_4058.jpg",
             descriptionMd: "descriptions/sightseeing/valley_fire.md",
             logisticsMd: "descriptions/logistics/valley_fire.md",
             notesMd: "descriptions/notes/valley_fire.md",
+            routeGeoJson: "routes/valley-fire.geojson",
+
             video: {
                 provider: "youtube",
                 id: "y22yx8XXa14",
@@ -1813,8 +1911,8 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Grand_Staircase%E2%80%93Escalante_National_Monument",
             img: "Pictures/Utah/Grand_Staircase/Grand_Staircase.jpg",
             descriptionMd: "descriptions/sightseeing/grand_staircase.md",
-            logisticsMd: "descriptions/logistics/antelope.md",
-            notesMd: "descriptions/notes/antelope.md",
+            logisticsMd: "descriptions/logistics/grand_staircase.md",
+            notesMd: "descriptions/notes/grand_staircase.md",
 
             galleryDir: "Pictures/Utah/Grand_Staircase/"
         },
@@ -1886,6 +1984,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/whitehaven.md",
             logisticsMd: "descriptions/logistics/whitehaven.md",
             notesMd: "descriptions/notes/whitehaven.md",
+            routeGeoJson: "routes/whitehaven.geojson",
+
             video: {
                 provider: "youtube",
                 id: "2TUXGEB_C_o",
@@ -1905,6 +2005,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/daintree.md",
             logisticsMd: "descriptions/logistics/daintree.md",
             notesMd: "descriptions/notes/daintree.md",
+            routeGeoJson: "routes/daintree.geojson",
+
             video: {
                 provider: "youtube",
                 id: "2TUXGEB_C_o",

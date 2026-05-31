@@ -20,7 +20,11 @@ import campbellHill from "./campbell-hill.js";
 import hoosierHill from "./hoosier-hill.js";
 import borahPeak from "./borah-peak.js";
 import brittonHill from "./britton-hill.js";
-
+import mtMitchell from "./mt-mitchell.js";
+import clingmansDome from "./clingmans-dome.js";
+import sassafrasMountain from "./sassafras-mountain.js";
+import brasstownBald from "./brasstown-bald.js";
+import cheahaMountain from "./cheaha-mountain.js";
 
 export default {
   [humphreysPeak.id]: humphreysPeak,
@@ -45,8 +49,11 @@ export default {
   [hoosierHill.id]: hoosierHill,
   [borahPeak.id]: borahPeak,
   [brittonHill.id]: brittonHill,
-
-
+  [mtMitchell.id]: mtMitchell,
+  [clingmansDome.id]: clingmansDome,
+  [sassafrasMountain.id]: sassafrasMountain,
+  [brasstownBald.id]: brasstownBald,
+  [cheahaMountain.id]: cheahaMountain,
 };
 
 

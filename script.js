@@ -56,6 +56,7 @@ const tabs = Array.from(document.querySelectorAll(".tab"));
 const homeButton = document.getElementById("homeButton");
 const worldButton = document.getElementById("worldButton");
 const mapStyleBtns = Array.from(document.querySelectorAll(".map-style-btn"));
+const routesToggleBtn = document.getElementById("routesToggle");
 const mapArea = document.querySelector(".map-area");
 const randomName = document.getElementById("random-location-name");
 const randomImg = document.getElementById("random-location-img");
@@ -67,6 +68,8 @@ const randomImg = document.getElementById("random-location-img");
 let activeCategory = "all";
 let searchTerm = "";
 let lastRandomLocationId = null;
+let routesAlwaysVisible = false;
+let openPopupLocationId = null;
 
 /* =====================
    DATA INDEXES
@@ -93,6 +96,7 @@ CATEGORIES.forEach((category) => {
 
 const markerLayers = Object.fromEntries(CATEGORIES.map((cat) => [cat, L.layerGroup().addTo(map)]));
 const markerById = new Map();
+const routeLayerById = new Map();
 
 /* =====================
    HELPERS
@@ -255,20 +259,49 @@ function loadMarkers() {
       marker.on("popupopen", (event) => {
         const popupEl = event.popup.getElement();
         const popupImg = popupEl?.querySelector(".popup-image");
-        if (!popupImg) return;
-        popupImg.addEventListener(
-          "error",
-          () => {
-            popupImg.src = IMAGE_FALLBACK;
-          },
-          { once: true }
-        );
+        if (popupImg) {
+          popupImg.addEventListener("error", () => { popupImg.src = IMAGE_FALLBACK; }, { once: true });
+        }
+        openPopupLocationId = place.id;
+        routeLayerById.get(place.id)?.addTo(map);
+      });
+
+      marker.on("popupclose", () => {
+        openPopupLocationId = null;
+        if (!routesAlwaysVisible) {
+          const routeLayer = routeLayerById.get(place.id);
+          if (routeLayer) map.removeLayer(routeLayer);
+        }
       });
 
       markerLayers[category].addLayer(marker);
       markerById.set(place.id, marker);
     });
   });
+}
+
+/* =====================
+   ROUTES
+===================== */
+
+async function loadRoutes() {
+  const routeLocations = allLocations.filter((loc) => loc.routeGeoJson);
+  for (const loc of routeLocations) {
+    try {
+      const res = await fetch(loc.routeGeoJson);
+      if (!res.ok) continue;
+      const geojson = await res.json();
+      const halo = L.geoJSON(geojson, {
+        style: { color: "#000", weight: 6, opacity: 0.35, lineCap: "round", lineJoin: "round" },
+      });
+      const line = L.geoJSON(geojson, {
+        style: { color: "#ff7a3d", weight: 3.5, opacity: 1, dashArray: "10, 6", lineCap: "round", lineJoin: "round" },
+      });
+      routeLayerById.set(loc.id, L.layerGroup([halo, line]));
+    } catch (err) {
+      console.warn("Route load failed:", loc.routeGeoJson, err);
+    }
+  }
 }
 
 /* =====================
@@ -337,11 +370,24 @@ mapStyleBtns.forEach((btn) => {
   });
 });
 
+routesToggleBtn?.addEventListener("click", () => {
+  routesAlwaysVisible = !routesAlwaysVisible;
+  routesToggleBtn.classList.toggle("active", routesAlwaysVisible);
+  routeLayerById.forEach((layer, id) => {
+    if (routesAlwaysVisible) {
+      layer.addTo(map);
+    } else if (id !== openPopupLocationId) {
+      map.removeLayer(layer);
+    }
+  });
+});
+
 /* =====================
    INIT
 ===================== */
 
 loadMarkers();
+loadRoutes();
 restoreStateFromUrl();
 setActiveTab(activeCategory);
 showRandomLocation();
