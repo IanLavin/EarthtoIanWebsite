@@ -1,1 +1,1 @@
-test1ing
+Congaree protects the largest intact expanse of old-growth bottomland hardwood forest in the United States, tucked into the floodplain of the Congaree River in central South Carolina. An elevated boardwalk winds through the towering trees, many of which are state and national champions for their size, offering a quiet and genuinely impressive walk through a forest that feels primeval. It draws far fewer visitors than most parks on its tier, which only adds to the sense that you've stumbled into somewhere worth preserving.

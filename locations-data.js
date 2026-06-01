@@ -1595,6 +1595,11 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/arenal.md",
             logisticsMd: "descriptions/logistics/arenal.md",
             notesMd: "descriptions/notes/arenal.md",
+            video: {
+                provider: "youtube",
+                id: "_XNzVE4zOHE",
+                title: "Arenal"
+            },
 
             galleryDir: "Pictures/Costa_Rica/Arenal/"
         },
@@ -2059,6 +2064,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/manuel_antonio.md",
             logisticsMd: "descriptions/logistics/manuel_antonio.md",
             notesMd: "descriptions/notes/manuel_antonio.md",
+            video: {
+                provider: "youtube",
+                id: "_XNzVE4zOHE",
+                title: "Manuel Antonio National Park"
+            },
 
             galleryDir: "Pictures/Costa_Rica/Manuel_Antonio/"
         },

@@ -1,18 +1,18 @@
 ## Getting there
-- Closest airport: Las Vegas or SLC
-- Drive time: 3-4 hours
-- Trailhead / entry point: You will need to park at the main visitor center and use the shuttle service provided.
+- Closest airport: Asheville or Charlotte
+- Drive time: 1-3 hours depending on airport chosen
+- Trailhead / entry point: Kuwohi Visitor Center
 
 ## Time & season
-- Best months: Late spring through fall for best all around mix of activities. April - Oct
-- Typical start time: Early morning to beat crowds and heat
-- Permit / reservation: Standard national park pass.
+- Best months: Fall Sept - Nov
+- Typical start time: Early morning to beat crowds
+- Permit / reservation: Standard national park pass required
 
 ## What to pair it with
-- Nearby stops: Valley of Fire, Kannara Falls, and Snow canyon are all lesser known nearby hidden gems.
-- Good multi-day combo: Usually best as part of a roadtrip across the southwest.
+- Nearby stops: Best combined with other major hikes and sights in Great Smoky Mountains national park
+- Good multi-day combo: Easy to combine with other nearby appalachian highpoints such as Georgia and North Carolina
 
 ## Safety & prep
-- Gear notes: Standard hiking gear, poles, swimsuit, and boots if doing the narrows
+- Gear notes: Standard hiking gear
 - Water: Bring your own
-- Weather hazards: During the summer the narrows can close if flash flooding is predicted. Be aware of the weather beforehand.
+- Weather hazards: Can be prone to cloudy whiteout conditions as the region is technically a temperate rainforest. Hurricane season can also bring heavy storms.
