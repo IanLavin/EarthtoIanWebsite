@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Parks — Earth to Ian</title>
+  <meta name="description" content="Tracking all 63 US national parks — visited parks, locations, and trip details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Earth to Ian" />
+  <meta property="og:title" content="National Parks — Earth to Ian" />
+  <meta property="og:description" content="Tracking all 63 US national parks — visited parks, locations, and trip details." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-tracker">
+
+  <header class="topbar">
+    <h1 id="page-title">National Parks</h1>
+  </header>
+
+  <div class="menu-container">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="menu-dropdown" class="menu-dropdown">
+      <a href="index.html">Home</a>
+      <a href="countries.html">Countries</a>
+      <a href="highpoints.html">Highpoints</a>
+      <a href="national-parks.html">National Parks</a>
+      <a href="year-in-review.html">Year In Review</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+
+  <main class="tracker-page">
+    <div class="tracker-header">
+      <div class="tracker-stats">
+        <span class="tracker-count" id="tracker-count"></span>
+        <div class="tracker-progress-bar">
+          <div class="tracker-progress-fill" id="tracker-progress-fill"></div>
+        </div>
+      </div>
+      <div class="tracker-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="remaining">Remaining</button>
+      </div>
+    </div>
+
+    <div class="tracker-grid" id="tracker-grid"></div>
+  </main>
+
+  <script type="module" src="national-parks.js"></script>
+</body>
+</html>

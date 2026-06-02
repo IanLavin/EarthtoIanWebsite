@@ -1,3 +1,5 @@
+import { openLightbox } from "./lightbox.js";
+
 export function initCarousel(containerId, images = [], options = {}) {
   const container = document.getElementById(containerId);
   if (!container || !Array.isArray(images) || images.length === 0) return;
@@ -24,6 +26,9 @@ export function initCarousel(containerId, images = [], options = {}) {
   const imgEl = container.querySelector(".carousel-img");
   const prevBtn = container.querySelector(".prev");
   const nextBtn = container.querySelector(".next");
+
+  imgEl.style.cursor = "zoom-in";
+  imgEl.addEventListener("click", () => openLightbox(images, currentIndex));
 
   function getRandomNextIndex() {
     if (images.length <= 1) return currentIndex;

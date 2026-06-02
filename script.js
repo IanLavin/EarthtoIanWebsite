@@ -61,6 +61,8 @@ const routesToggleBtn = document.getElementById("routesToggle");
 const mapArea = document.querySelector(".map-area");
 const randomName = document.getElementById("random-location-name");
 const randomImg = document.getElementById("random-location-img");
+const randomLink = document.getElementById("random-location-link");
+const surpriseMeBtn = document.getElementById("surprise-me-btn");
 
 /* =====================
    STATE
@@ -337,12 +339,17 @@ function showRandomLocation() {
 
   lastRandomLocationId = loc.id;
   randomName.textContent = loc.name;
-
   randomImg.src = loc.img;
   randomImg.onerror = () => (randomImg.src = IMAGE_FALLBACK);
+  if (randomLink) randomLink.href = `location.html?id=${encodeURIComponent(loc.id)}`;
 }
 
 setInterval(showRandomLocation, 10000);
+
+surpriseMeBtn?.addEventListener("click", () => {
+  const loc = allLocations[Math.floor(Math.random() * allLocations.length)];
+  window.location.href = `location.html?id=${encodeURIComponent(loc.id)}`;
+});
 
 /* =====================
    EVENTS
