@@ -136,6 +136,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/channel-islands.md",
             logisticsMd: "descriptions/logistics/channel-islands.md",
             notesMd: "descriptions/notes/channel-islands.md",
+            routeGeoJson: "routes/channel-islands.geojson",
+
             video: {
                 provider: "youtube",
                 id: "5v8PHOO0CC4",
@@ -178,6 +180,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/grand-canyon.md",
             logisticsMd: "descriptions/logistics/grand-canyon.md",
             notesMd: "descriptions/notes/grand-canyon.md",
+            routeGeoJson: "routes/grand-canyon.geojson",
+
             video: {
                 provider: "youtube",
                 id: "gDmYIRtXbOk",
@@ -432,6 +436,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/everglades.md",
             logisticsMd: "descriptions/logistics/everglades.md",
             notesMd: "descriptions/notes/everglades.md",
+            routeGeoJson: "routes/everglades.geojson",
+
             video: {
                 provider: "youtube",
                 id: "YkKwDmb07H4",
@@ -472,6 +478,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/dry-tortugas.md",
             logisticsMd: "descriptions/logistics/dry-tortugas.md",
             notesMd: "descriptions/notes/dry-tortugas.md",
+            routeGeoJson: "routes/dry-tortugas.geojson",
+
             video: {
                 provider: "youtube",
                 id: "vqrTiSpibi4",
@@ -512,6 +520,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/shenandoah.md",
             logisticsMd: "descriptions/logistics/shenandoah.md",
             notesMd: "descriptions/notes/shenandoah.md",
+            routeGeoJson: "routes/shenandoah.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/Virginia/Shenandoah/"
@@ -527,6 +537,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/new-river.md",
             logisticsMd: "descriptions/logistics/new-river.md",
             notesMd: "descriptions/notes/new-river.md",
+            routeGeoJson: "routes/new-river.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/West Virginia/New_River/"
@@ -697,16 +709,110 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/congaree-national-park.md",
             logisticsMd: "descriptions/logistics/congaree.md",
             notesMd: "descriptions/notes/congaree.md",
+            routeGeoJson: "routes/congaree.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/South Carolina/Congaree/"
         },
         /*
-        { name: "Lassen Volcanic National Park", country: "US", region: "West Coast", lat: 40.487, lng: -121.505, url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park", img: "Pictures/California/Lassen/IMG_6907.jpg", descriptionMd: "descriptions/parks/lassen-volcanic.md", galleryDir: "Pictures/California/Lassen/" },
-        { name: "Glacier National Park", country: "US", region: "Rocky Mountain", lat: 48.697, lng: -113.717, url: "https://en.wikipedia.org/wiki/Glacier_National_Park", img: "Pictures/Montana/Glacier/IMG_6907.jpg", descriptionMd: "descriptions/parks/glacier.md", galleryDir: "Pictures/Montana/Glacier/" },
-        { name: "Sequoia National Park", country: "US", region: "West Coast", lat: 36.581, lng: -118.751, url: "https://en.wikipedia.org/wiki/Sequoia_National_Park", img: "Pictures/California/Sequoia/IMG_6907.jpg", descriptionMd: "descriptions/parks/sequoia.md", galleryDir: "Pictures/California/Sequoia/" },
-        { name: "Kings Canyon National Park", country: "US", region: "West Coast", lat: 36.739, lng: -118.963, url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park", img: "Pictures/California/Kings_Canyon/IMG_6907.jpg", descriptionMd: "descriptions/parks/kings-canyon.md", galleryDir: "Pictures/California/Kings_Canyon/" },
-        { name: "Yosemite National Park", country: "US", region: "West Coast", lat: 37.745, lng: -119.533, url: "https://en.wikipedia.org/wiki/Yosemite_National_Park", img: "Pictures/California/Yosemite/IMG_6907.jpg", descriptionMd: "descriptions/parks/yosemite.md", galleryDir: "Pictures/California/Yosemite/" },
+        { 
+            name: "Lassen Volcanic National Park", 
+            country: "US", region: "West Coast", 
+            lat: 40.487,
+            lng: -121.505, 
+            url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park", 
+            img: "Pictures/California/Lassen/IMG_6907.jpg", 
+            descriptionMd: "descriptions/parks/lassen-volcanic.md", 
+            galleryDir: "Pictures/California/Lassen/" 
+        },
+        { 
+            name: "Glacier National Park", country: "US", 
+            region: "Rocky Mountain", 
+            lat: 48.697, 
+            lng: -113.717, 
+            url: "https://en.wikipedia.org/wiki/Glacier_National_Park", 
+            img: "Pictures/Montana/Glacier/IMG_6907.jpg", 
+            descriptionMd: "descriptions/parks/glacier.md", 
+            galleryDir: "Pictures/Montana/Glacier/" 
+        },
+        { 
+            name: "Gateway Arch National Park", 
+            country: "US",
+            region: "Midwest",
+            lat: 38.6244, 
+            lng: -90.1848, 
+            url: "https://en.wikipedia.org/wiki/Gateway_Arch_National_Park",
+            img: "Pictures/Missouri/Arch/GOPR6744.JPG",
+            descriptionMd: "descriptions/parks/gateway-arch.md",
+            logisticsMd: "descriptions/logistics/gateway-arch.md",
+            notesMd: "descriptions/notes/gateway-arch.md",
+
+            //carousel images
+            galleryDir: "Pictures/Missouri/Arch/"
+        },
+        { 
+            name: "Indiana Dunes National Park", 
+            country: "US",
+            region: "Midwest",
+            lat: 41.6594, 
+            lng: -87.0492, 
+            url: "https://en.wikipedia.org/wiki/Indiana_Dunes_National_Park",
+            img: "Pictures/Indiana/Dunes/GOPR6744.JPG",
+            descriptionMd: "descriptions/parks/indiana-dunes.md",
+            logisticsMd: "descriptions/logistics/indiana-dunes.md",
+            notesMd: "descriptions/notes/indiana-dunes.md",
+
+            //carousel images
+            galleryDir: "Pictures/Indiana/Dunes/"
+        },
+        { 
+            name: "Mammoth Cave National Park", 
+            country: "US",
+            region: "Midwest",
+            lat: 37.1867, 
+            lng: -86.1008, 
+            url: "https://en.wikipedia.org/wiki/Mammoth_Cave_National_Park",
+            img: "Pictures/Kentucky/Cave/GOPR6744.JPG",
+            descriptionMd: "descriptions/parks/mammoth-cave.md",
+            logisticsMd: "descriptions/logistics/mammoth-cave.md",
+            notesMd: "descriptions/notes/mammoth-cave.md",
+
+            //carousel images
+            galleryDir: "Pictures/Kentucky/Cave/"
+        },
+        { 
+            name: "Sequoia National Park", 
+            country: "US", region: "West Coast", 
+            lat: 36.581, 
+            lng: -118.751, 
+            url: "https://en.wikipedia.org/wiki/Sequoia_National_Park", 
+            img: "Pictures/California/Sequoia/IMG_6907.jpg", 
+            descriptionMd: "descriptions/parks/sequoia.md", 
+            galleryDir: "Pictures/California/Sequoia/" 
+        },
+        { 
+            name: "Kings Canyon National Park", 
+            country: "US", 
+            region: "West Coast", 
+            lat: 36.739, 
+            lng: -118.963, 
+            url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park", 
+            img: "Pictures/California/Kings_Canyon/IMG_6907.jpg", 
+            descriptionMd: "descriptions/parks/kings-canyon.md", 
+            galleryDir: "Pictures/California/Kings_Canyon/" 
+        },
+        { 
+            name: "Yosemite National Park", 
+            country: "US", 
+            region: "West Coast", 
+            lat: 37.745, 
+            lng: -119.533, 
+            url: "https://en.wikipedia.org/wiki/Yosemite_National_Park", 
+            img: "Pictures/California/Yosemite/IMG_6907.jpg", 
+            descriptionMd: "descriptions/parks/yosemite.md", 
+            galleryDir: "Pictures/California/Yosemite/" 
+        },
         */
 
     ],
@@ -945,6 +1051,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/spruce-knob.md",
             logisticsMd: "descriptions/logistics/spruce-knob.md",
             notesMd: "descriptions/notes/spruce-knob.md",
+            routeGeoJson: "routes/spruce-knob.geojson",
 
             //carousel images
             galleryDir: "Pictures/West Virginia/Spruce_Knob/"
@@ -1006,6 +1113,8 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/high-point.md",
             logisticsMd: "descriptions/logistics/high-point.md",
             notesMd: "descriptions/notes/high-point.md",
+            routeGeoJson: "routes/high-point.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/New Jersey/High_Point/"
@@ -1052,6 +1161,8 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/jerimoth-hill.md",
             logisticsMd: "descriptions/logistics/jerimoth-hill.md",
             notesMd: "descriptions/notes/jerimoth-hill.md",
+            routeGeoJson: "routes/jerimoth-hill.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/Rhode Island/Jerimoth/"
@@ -1144,6 +1255,8 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/sassafras-mountain.md",
             logisticsMd: "descriptions/logistics/sassafras-mountain.md",
             notesMd: "descriptions/notes/sassafras-mountain.md",
+            routeGeoJson: "routes/sassafras.geojson",
+
 
             //carousel images
             galleryDir: "Pictures/South_Carolina/Sassafras/"
@@ -1179,7 +1292,38 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Alabama/Cheaha/"
         },
-        
+        /*
+        { 
+            name: "Taum Sauk Mountain", 
+            country: "US",
+            region: "Southeast",
+            lat: 37.5710, 
+            lng: -90.7291, 
+            url: "https://en.wikipedia.org/wiki/Taum_Sauk_Mountain",
+            img: "Pictures/Missouri/Taum-Sauk/GOPR6744.JPG",
+            descriptionMd: "descriptions/highpoints/taum-sauk-mountain.md",
+            logisticsMd: "descriptions/logistics/taum-sauk-mountain.md",
+            notesMd: "descriptions/notes/taum-sauk-mountain.md",
+
+            //carousel images
+            galleryDir: "Pictures/Missouri/Taum-Sauk/"
+        },
+        { 
+            name: "Charles Mound", 
+            country: "US",
+            region: "Midwest",
+            lat: 42.5042, 
+            lng: -90.2407, 
+            url: "https://en.wikipedia.org/wiki/Charles_Mound",
+            img: "Pictures/Michigan/Charles-Mound/GOPR6744.JPG",
+            descriptionMd: "descriptions/highpoints/charles-mound.md",
+            logisticsMd: "descriptions/logistics/charles-mound.md",
+            notesMd: "descriptions/notes/charles-mound.md",
+
+            //carousel images
+            galleryDir: "Pictures/Illinois/Charles-Mound/"
+        },
+        */
             
     ],
 
@@ -1323,6 +1467,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/sedona.md",
             logisticsMd: "descriptions/logistics/sedona.md",
             notesMd: "descriptions/notes/sedona.md",
+            routeGeoJson: "routes/sedona.geojson",
+
             video: {
                 provider: "youtube",
                 id: "V4teaEamomE",
@@ -1595,6 +1741,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/arenal.md",
             logisticsMd: "descriptions/logistics/arenal.md",
             notesMd: "descriptions/notes/arenal.md",
+            routeGeoJson: "routes/arenal.geojson",
+
             video: {
                 provider: "youtube",
                 id: "_XNzVE4zOHE",
@@ -1680,6 +1828,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/superstitions.md",
             logisticsMd: "descriptions/logistics/superstitions.md",
             notesMd: "descriptions/notes/superstitions.md",
+            routeGeoJson: "routes/superstitions.geojson",
+
             video: {
                 provider: "youtube",
                 id: "XTLuTiATB3M",
@@ -2064,6 +2214,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/manuel_antonio.md",
             logisticsMd: "descriptions/logistics/manuel_antonio.md",
             notesMd: "descriptions/notes/manuel_antonio.md",
+            routeGeoJson: "routes/manuel-antonio.geojson",
+
             video: {
                 provider: "youtube",
                 id: "_XNzVE4zOHE",

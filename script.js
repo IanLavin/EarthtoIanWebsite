@@ -1,5 +1,6 @@
 import locations from "./locations-data.js";
 import icons from "./icons.js";
+import standaloneRoutes from "./routes-data.js";
 import { initMenu } from "./js/menu.js";
 import { escapeHtml, IMAGE_FALLBACK } from "./js/utils.js";
 
@@ -97,6 +98,7 @@ CATEGORIES.forEach((category) => {
 const markerLayers = Object.fromEntries(CATEGORIES.map((cat) => [cat, L.layerGroup().addTo(map)]));
 const markerById = new Map();
 const routeLayerById = new Map();
+const standaloneRouteLayers = [];
 
 /* =====================
    HELPERS
@@ -284,22 +286,35 @@ function loadMarkers() {
    ROUTES
 ===================== */
 
+function buildRouteLayer(geojson) {
+  const halo = L.geoJSON(geojson, {
+    style: { color: "#000", weight: 6, opacity: 0.35, lineCap: "round", lineJoin: "round" },
+  });
+  const line = L.geoJSON(geojson, {
+    style: { color: "#ff7a3d", weight: 3.5, opacity: 1, dashArray: "10, 6", lineCap: "round", lineJoin: "round" },
+  });
+  return L.layerGroup([halo, line]);
+}
+
 async function loadRoutes() {
   const routeLocations = allLocations.filter((loc) => loc.routeGeoJson);
   for (const loc of routeLocations) {
     try {
       const res = await fetch(loc.routeGeoJson);
       if (!res.ok) continue;
-      const geojson = await res.json();
-      const halo = L.geoJSON(geojson, {
-        style: { color: "#000", weight: 6, opacity: 0.35, lineCap: "round", lineJoin: "round" },
-      });
-      const line = L.geoJSON(geojson, {
-        style: { color: "#ff7a3d", weight: 3.5, opacity: 1, dashArray: "10, 6", lineCap: "round", lineJoin: "round" },
-      });
-      routeLayerById.set(loc.id, L.layerGroup([halo, line]));
+      routeLayerById.set(loc.id, buildRouteLayer(await res.json()));
     } catch (err) {
       console.warn("Route load failed:", loc.routeGeoJson, err);
+    }
+  }
+
+  for (const route of standaloneRoutes) {
+    try {
+      const res = await fetch(route.file);
+      if (!res.ok) continue;
+      standaloneRouteLayers.push(buildRouteLayer(await res.json()));
+    } catch (err) {
+      console.warn("Standalone route load failed:", route.file, err);
     }
   }
 }
@@ -379,6 +394,10 @@ routesToggleBtn?.addEventListener("click", () => {
     } else if (id !== openPopupLocationId) {
       map.removeLayer(layer);
     }
+  });
+  standaloneRouteLayers.forEach((layer) => {
+    if (routesAlwaysVisible) layer.addTo(map);
+    else map.removeLayer(layer);
   });
 });
 
