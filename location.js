@@ -145,6 +145,8 @@ async function main() {
   }
 
   renderHikeStats(selectedLocation.id);
+  renderElevationProfile(selectedLocation);
+  initShareButton(selectedLocation.name);
   initMiniNav();
   initBackToTop();
   initMenu();
@@ -273,6 +275,196 @@ function initMiniNav() {
   });
 
   if (!nav.querySelector("a")) nav.remove();
+}
+
+let elevationProfileData = null;
+let elevationUnit = localStorage.getItem("elevationUnit") || "imperial";
+
+async function renderElevationProfile(location) {
+  if (!location.routeGeoJson) return;
+  const section = document.getElementById("elevation-profile");
+  if (!section) return;
+
+  try {
+    const res = await fetch(location.routeGeoJson);
+    if (!res.ok) return;
+    const geojson = await res.json();
+
+    const features = geojson.type === "FeatureCollection" ? geojson.features : [geojson];
+    const allCoords = [];
+    for (const feature of features) {
+      if (feature.geometry?.type === "LineString") allCoords.push(...feature.geometry.coordinates);
+    }
+    if (!allCoords.length || allCoords[0].length < 3) return;
+
+    const MAX_PTS = 400;
+    const step = Math.ceil(allCoords.length / MAX_PTS);
+    const sampled = allCoords.filter((_, i) => i % step === 0);
+    if (sampled[sampled.length - 1] !== allCoords[allCoords.length - 1]) {
+      sampled.push(allCoords[allCoords.length - 1]);
+    }
+
+    const pts = [];
+    let cumDist = 0;
+    for (let i = 0; i < sampled.length; i++) {
+      if (i > 0) {
+        const [lng1, lat1] = sampled[i - 1];
+        const [lng2, lat2] = sampled[i];
+        cumDist += haversineMeters(lat1, lng1, lat2, lng2);
+      }
+      pts.push({ dist: cumDist, ele: sampled[i][2] });
+    }
+
+    const elevations = pts.map((p) => p.ele);
+    const minEle = Math.min(...elevations);
+    const maxEle = Math.max(...elevations);
+    const totalDist = pts[pts.length - 1].dist;
+    let gain = 0, loss = 0;
+    for (let i = 1; i < pts.length; i++) {
+      const diff = pts[i].ele - pts[i - 1].ele;
+      if (diff > 0) gain += diff; else loss -= diff;
+    }
+
+    elevationProfileData = { pts, minEle, maxEle, totalDist, gain, loss };
+    section.style.display = "";
+    renderElevationDisplay();
+
+    Array.from(document.querySelectorAll(".unit-btn")).forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.unit === elevationUnit);
+      btn.addEventListener("click", () => {
+        elevationUnit = btn.dataset.unit;
+        localStorage.setItem("elevationUnit", elevationUnit);
+        document.querySelectorAll(".unit-btn").forEach((b) =>
+          b.classList.toggle("active", b.dataset.unit === elevationUnit)
+        );
+        renderElevationDisplay();
+      });
+    });
+  } catch (err) {
+    console.warn("Elevation profile failed:", err);
+  }
+}
+
+function renderElevationDisplay() {
+  if (!elevationProfileData) return;
+  const { pts, minEle, maxEle, totalDist, gain, loss } = elevationProfileData;
+  const imperial = elevationUnit === "imperial";
+
+  const toEle = (m) => imperial ? m * 3.28084 : m;
+  const toDist = (m) => imperial ? m / 1609.344 : m / 1000;
+  const eleUnit = imperial ? "ft" : "m";
+  const distUnit = imperial ? "mi" : "km";
+  const fmtE = (m) => Math.round(toEle(m)).toLocaleString();
+  const fmtD = (m) => toDist(m).toFixed(1);
+
+  document.getElementById("elevation-stats").innerHTML = `
+    <span class="elev-stat">↑ ${fmtE(gain)} ${eleUnit} gain</span>
+    <span class="elev-stat">↓ ${fmtE(loss)} ${eleUnit} loss</span>
+    <span class="elev-stat">↔ ${fmtD(totalDist)} ${distUnit}</span>
+    <span class="elev-stat">⬍ ${fmtE(minEle)}–${fmtE(maxEle)} ${eleUnit}</span>
+  `;
+  document.getElementById("elevation-svg-container").innerHTML =
+    buildElevationSvg(pts, minEle, maxEle, totalDist, imperial);
+}
+
+function haversineMeters(lat1, lng1, lat2, lng2) {
+  const R = 6371000;
+  const φ1 = (lat1 * Math.PI) / 180;
+  const φ2 = (lat2 * Math.PI) / 180;
+  const Δφ = ((lat2 - lat1) * Math.PI) / 180;
+  const Δλ = ((lng2 - lng1) * Math.PI) / 180;
+  const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function buildElevationSvg(pts, minEle, maxEle, totalDist, imperial = false) {
+  const W = 800, H = 160;
+  const PAD = { top: 10, right: 10, bottom: 28, left: 58 };
+  const cW = W - PAD.left - PAD.right;
+  const cH = H - PAD.top - PAD.bottom;
+  const eleRange = maxEle - minEle || 1;
+
+  const x = (d) => PAD.left + (d / totalDist) * cW;
+  const y = (e) => PAD.top + (1 - (e - minEle) / eleRange) * cH;
+  const baseY = PAD.top + cH;
+
+  const coordStr = pts.map((p) => `${x(p.dist).toFixed(1)},${y(p.ele).toFixed(1)}`).join(" ");
+  const areaPath = `M ${x(0).toFixed(1)},${baseY} L ${coordStr.replace(/ /g, " L ")} L ${x(totalDist).toFixed(1)},${baseY} Z`;
+
+  const toEle = (m) => imperial ? m * 3.28084 : m;
+  const toDist = (m) => imperial ? m / 1609.344 : m / 1000;
+  const eleUnit = imperial ? "ft" : "m";
+  const distUnit = imperial ? "mi" : "km";
+
+  // Y-axis grid + labels (4 levels)
+  const yLines = [0, 1, 2, 3].map((i) => {
+    const ele = minEle + (eleRange * i) / 3;
+    const yp = y(ele).toFixed(1);
+    const label = `${Math.round(toEle(ele)).toLocaleString()}${eleUnit}`;
+    return `
+      <line x1="${PAD.left}" y1="${yp}" x2="${W - PAD.right}" y2="${yp}" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+      <text x="${PAD.left - 6}" y="${(parseFloat(yp) + 4).toFixed(1)}" text-anchor="end" fill="rgba(255,255,255,0.4)" font-size="11">${label}</text>`;
+  }).join("");
+
+  // X-axis labels
+  const xLabels = [0, 0.5, 1].map((t) => {
+    const dist = totalDist * t;
+    const xp = x(dist).toFixed(1);
+    const anchor = t === 0 ? "start" : t === 1 ? "end" : "middle";
+    return `<text x="${xp}" y="${H - 5}" text-anchor="${anchor}" fill="rgba(255,255,255,0.4)" font-size="11">${toDist(dist).toFixed(1)} ${distUnit}</text>`;
+  }).join("");
+
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block" aria-label="Elevation profile">
+  <defs>
+    <linearGradient id="elev-fill-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4aa3ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4aa3ff" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  ${yLines}
+  <path d="${areaPath}" fill="url(#elev-fill-grad)"/>
+  <polyline points="${coordStr}" fill="none" stroke="#4aa3ff" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  ${xLabels}
+</svg>`;
+}
+
+function initShareButton(locationName) {
+  const btn = document.getElementById("share-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", async () => {
+    const url = window.location.href;
+    const title = `${locationName} — Earth to Ian`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch {
+        // user cancelled — no action needed
+      }
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = url;
+      ta.style.cssText = "position:fixed;opacity:0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.disabled = false;
+    }, 2000);
+  });
 }
 
 function initBackToTop() {

@@ -73,6 +73,7 @@ let searchTerm = "";
 let lastRandomLocationId = null;
 let routesAlwaysVisible = false;
 let openPopupLocationId = null;
+let pendingOpenId = null;
 
 /* =====================
    DATA INDEXES
@@ -145,6 +146,9 @@ function restoreStateFromUrl() {
     searchTerm = q.trim().toLowerCase();
     searchBox.value = q;
   }
+
+  const openId = params.get("open");
+  if (openId) pendingOpenId = openId;
 }
 
 function setActiveTab(category) {
@@ -268,6 +272,9 @@ function loadMarkers() {
         }
         openPopupLocationId = place.id;
         routeLayerById.get(place.id)?.addTo(map);
+        const p = new URLSearchParams(window.location.search);
+        p.set("open", place.id);
+        window.history.replaceState(null, "", `${window.location.pathname}?${p.toString()}`);
       });
 
       marker.on("popupclose", () => {
@@ -276,6 +283,10 @@ function loadMarkers() {
           const routeLayer = routeLayerById.get(place.id);
           if (routeLayer) map.removeLayer(routeLayer);
         }
+        const p = new URLSearchParams(window.location.search);
+        p.delete("open");
+        const qs = p.toString();
+        window.history.replaceState(null, "", qs ? `${window.location.pathname}?${qs}` : window.location.pathname);
       });
 
       markerLayers[category].addLayer(marker);
@@ -418,3 +429,12 @@ restoreStateFromUrl();
 setActiveTab(activeCategory);
 showRandomLocation();
 initMenu();
+
+if (pendingOpenId) {
+  const marker = markerById.get(pendingOpenId);
+  const place = allLocations.find((loc) => loc.id === pendingOpenId);
+  if (marker && place) {
+    map.setView([place.lat, place.lng], Math.max(map.getZoom(), 9));
+    marker.openPopup();
+  }
+}

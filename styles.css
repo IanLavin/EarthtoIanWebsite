@@ -705,6 +705,9 @@ input {
   max-width: 1200px;
   margin: 10px auto 0;
   padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .page-location .page-nav a {
@@ -734,6 +737,36 @@ input {
 .page-location .page-nav a:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(74,163,255,0.2);
+}
+
+.page-location .share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  transition: transform 0.12s ease, background 0.16s ease, border-color 0.16s ease;
+  font-family: system-ui, sans-serif;
+}
+
+.page-location .share-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.page-location .share-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
 }
 
 .page-location .location-mini-nav {
@@ -1519,6 +1552,73 @@ a.stat-card-link:hover {
 .location-hike-stats > h2 {
   text-align: center;
   margin-bottom: 16px;
+}
+
+/* Elevation profile section */
+.elevation-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.elevation-section-header h2 {
+  margin: 0;
+}
+
+.unit-toggle {
+  display: flex;
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.unit-btn {
+  padding: 4px 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  font-size: 12px;
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.unit-btn:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.unit-btn.active {
+  background: rgba(74, 163, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+}
+
+.unit-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.elevation-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.elev-stat {
+  font-size: 13px;
+  font-family: system-ui, sans-serif;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: rgba(74, 163, 255, 0.1);
+  border: 1px solid rgba(74, 163, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
 }
 
 #hike-stats-container {

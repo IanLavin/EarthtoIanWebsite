@@ -36,6 +36,7 @@
 
   <nav class="page-nav">
     <a href="index.html">&#8592; Back to Map</a>
+    <button id="share-btn" class="share-btn" aria-label="Share this location">Share</button>
   </nav>
 
   <main class="location-page">
@@ -91,6 +92,18 @@
         <section id="hike-stats" class="location-hike-stats" style="display:none">
           <h2>Difficulty &amp; Stats</h2>
           <div id="hike-stats-container"></div>
+        </section>
+
+        <section id="elevation-profile" class="location-elevation-profile" style="display:none">
+          <div class="elevation-section-header">
+            <h2>Elevation Profile</h2>
+            <div class="unit-toggle">
+              <button class="unit-btn" data-unit="imperial">ft / mi</button>
+              <button class="unit-btn" data-unit="metric">m / km</button>
+            </div>
+          </div>
+          <div id="elevation-stats" class="elevation-stats"></div>
+          <div id="elevation-svg-container"></div>
         </section>
 
         <section id="logistics-section" class="location-logistics">
