@@ -1515,6 +1515,123 @@ a.stat-card-link:hover {
   }
 }
 
+/* Hike stats section */
+.location-hike-stats > h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#hike-stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#hike-stats-container.stats-multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.stats-card {
+  padding: 0;
+}
+
+#hike-stats-container.stats-multi .stats-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.stats-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.stats-trail-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+}
+
+.stats-difficulty-badge {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 99px;
+  border: 1px solid;
+  font-family: system-ui, sans-serif;
+}
+
+.stats-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats-bar-label {
+  width: 130px;
+  font-size: 13px;
+  color: var(--muted);
+  flex-shrink: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.stats-bar-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.stats-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.stats-bar-value {
+  width: 48px;
+  font-size: 12px;
+  text-align: right;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  flex-shrink: 0;
+}
+
+.stats-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 4px 0;
+}
+
+.stats-enjoyment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.stats-stars {
+  flex: 1;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #f5c518;
+}
+
 /* Center only main section headers */
 .location-overview > h2,
 .location-logistics > h2,

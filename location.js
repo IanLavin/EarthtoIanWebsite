@@ -4,6 +4,7 @@ import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 import { initMenu } from "./js/menu.js";
 import { escapeHtml, IMAGE_FALLBACK, loadMarkdown, markdownToHtml, setPageMeta } from "./js/utils.js";
+import hikeStats, { computeWeightedScore, getDifficultyLabel } from "./hike-stats-data.js";
 
 const MAX_RELATED = 6;
 
@@ -143,6 +144,7 @@ async function main() {
     initCarousel("location-carousel", gallery, { altText: selectedLocation.name });
   }
 
+  renderHikeStats(selectedLocation.id);
   initMiniNav();
   initBackToTop();
   initMenu();
@@ -182,6 +184,70 @@ function getGalleryForLocation(location) {
   }
 
   return location.img ? [location.img] : [];
+}
+
+const DIFFICULTY_COLORS = {
+  "Very Easy": "#66bb6a",
+  Easy: "#4caf50",
+  Moderate: "#8bc34a",
+  Hard: "#ff9800",
+  "Very Hard": "#ff5722",
+  Extreme: "#e53935",
+};
+
+function buildStatsCard(stats) {
+  const score = computeWeightedScore(stats);
+  const label = getDifficultyLabel(score);
+  const scoreOutOf10 = ((score / 6.5) * 10).toFixed(1);
+  const color = DIFFICULTY_COLORS[label] ?? "#4aa3ff";
+
+  const bar = (value) => `
+    <div class="stats-bar-track">
+      <div class="stats-bar-fill" style="width:${value * 10}%; background:${color}"></div>
+    </div>`;
+
+  const row = (rowLabel, value) => `
+    <div class="stats-bar-row">
+      <span class="stats-bar-label">${rowLabel}</span>
+      ${bar(value)}
+      <span class="stats-bar-value">${value} / 10</span>
+    </div>`;
+
+  const enjoymentStars = Math.round(stats.enjoyment / 2);
+  const stars = "★".repeat(enjoymentStars) + "☆".repeat(5 - enjoymentStars);
+
+  return `
+    <div class="stats-card">
+      <div class="stats-header">
+        <span class="stats-trail-name">${escapeHtml(stats.hike)}</span>
+        <span class="stats-difficulty-badge" style="background:${color}22; color:${color}; border-color:${color}55">${label}</span>
+      </div>
+      <div class="stats-bars">
+        ${row("Length", stats.length)}
+        ${row("Elevation Gain", stats.elevationGain)}
+        ${row("Technicality", stats.technicality)}
+        ${row("External Factors", stats.externalFactors)}
+        <div class="stats-divider"></div>
+        ${row("Overall Score", parseFloat(scoreOutOf10))}
+      </div>
+      <div class="stats-enjoyment">
+        <span class="stats-bar-label">Enjoyment</span>
+        <span class="stats-stars">${stars}</span>
+        <span class="stats-bar-value">${stats.enjoyment} / 10</span>
+      </div>
+    </div>`;
+}
+
+function renderHikeStats(locationId) {
+  const rawData = hikeStats[locationId];
+  const section = document.getElementById("hike-stats");
+  const container = document.getElementById("hike-stats-container");
+  if (!rawData || !section || !container) return;
+
+  const statsList = Array.isArray(rawData) ? rawData : [rawData];
+  container.innerHTML = statsList.map(buildStatsCard).join("");
+  container.classList.toggle("stats-multi", statsList.length > 1);
+  section.style.display = "";
 }
 
 function getVideoAspectClass(video) {
