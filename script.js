@@ -504,11 +504,6 @@ function initYearFilter() {
    INIT
 ===================== */
 
-// On mobile, move sidebar after the backdrop in the DOM so it's guaranteed to render on top
-if (isMobileViewport && sidebarEl && sidebarBackdrop) {
-  sidebarBackdrop.after(sidebarEl);
-}
-
 loadMarkers();
 loadRoutes();
 initYearFilter();

@@ -50,46 +50,6 @@
 
   <div class="app-layout">
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-
-      <div class="sidebar-controls">
-        <button id="homeButton" class="sidebar-btn">United States</button>
-        <button id="worldButton" class="sidebar-btn">Worldwide</button>
-      </div>
-
-      <div class="map-style-toggle">
-        <button class="map-style-btn active" data-style="satellite">Satellite</button>
-        <button class="map-style-btn" data-style="terrain">Terrain</button>
-      </div>
-
-      <button id="routesToggle" class="routes-toggle-btn">Routes</button>
-
-      <input type="text" id="searchBox" placeholder="Search..." />
-
-      <div class="tabs" role="tablist" aria-label="Categories">
-        <button class="tab active" data-category="all" role="tab" aria-selected="true">All</button>
-        <button class="tab" data-category="park" role="tab" aria-selected="false">Parks</button>
-        <button class="tab" data-category="mountain" role="tab" aria-selected="false">Highpoints</button>
-        <button class="tab" data-category="adventure" role="tab" aria-selected="false">Adventures</button>
-        <button class="tab" data-category="sightseeing" role="tab" aria-selected="false">Sightseeing</button>
-      </div>
-
-      <div id="year-filter" class="year-filter"></div>
-
-      <ul id="sidebar-list" class="sidebar-list"></ul>
-
-      <div id="random-location" class="highlight-card">
-        <h3>Highlights</h3>
-        <a id="random-location-link" href="#">
-          <img id="random-location-img" src="" alt="Random Adventure" />
-          <p id="random-location-name"></p>
-        </a>
-        <button id="surprise-me-btn" class="surprise-me-btn">Surprise Me</button>
-      </div>
-
-    </aside>
-
     <!-- Map -->
     <main class="map-area">
       <div id="map"></div>
@@ -101,6 +61,46 @@
   </div>
 
   <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+  <!-- Sidebar lives after the backdrop so it always renders on top regardless of z-index stacking context -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-controls">
+      <button id="homeButton" class="sidebar-btn">United States</button>
+      <button id="worldButton" class="sidebar-btn">Worldwide</button>
+    </div>
+
+    <div class="map-style-toggle">
+      <button class="map-style-btn active" data-style="satellite">Satellite</button>
+      <button class="map-style-btn" data-style="terrain">Terrain</button>
+    </div>
+
+    <button id="routesToggle" class="routes-toggle-btn">Routes</button>
+
+    <input type="text" id="searchBox" placeholder="Search..." />
+
+    <div class="tabs" role="tablist" aria-label="Categories">
+      <button class="tab active" data-category="all" role="tab" aria-selected="true">All</button>
+      <button class="tab" data-category="park" role="tab" aria-selected="false">Parks</button>
+      <button class="tab" data-category="mountain" role="tab" aria-selected="false">Highpoints</button>
+      <button class="tab" data-category="adventure" role="tab" aria-selected="false">Adventures</button>
+      <button class="tab" data-category="sightseeing" role="tab" aria-selected="false">Sightseeing</button>
+    </div>
+
+    <div id="year-filter" class="year-filter"></div>
+
+    <ul id="sidebar-list" class="sidebar-list"></ul>
+
+    <div id="random-location" class="highlight-card">
+      <h3>Highlights</h3>
+      <a id="random-location-link" href="#">
+        <img id="random-location-img" src="" alt="Random Adventure" />
+        <p id="random-location-name"></p>
+      </a>
+      <button id="surprise-me-btn" class="surprise-me-btn">Surprise Me</button>
+    </div>
+
+  </aside>
 
   <!-- Leaflet -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
