@@ -59,6 +59,9 @@ const worldButton = document.getElementById("worldButton");
 const mapStyleBtns = Array.from(document.querySelectorAll(".map-style-btn"));
 const routesToggleBtn = document.getElementById("routesToggle");
 const yearFilterEl = document.getElementById("year-filter");
+const sidebarEl = document.getElementById("sidebar");
+const sidebarDrawerToggle = document.getElementById("sidebar-drawer-toggle");
+const sidebarBackdrop = document.getElementById("sidebar-backdrop");
 const mapArea = document.querySelector(".map-area");
 const randomName = document.getElementById("random-location-name");
 const randomImg = document.getElementById("random-location-img");
@@ -259,9 +262,9 @@ function renderSidebarList() {
       const marker = markerById.get(place.id);
       if (marker) marker.openPopup();
 
-      if (shouldAutoScrollToMap() && mapArea) {
-        mapArea.scrollIntoView({ behavior: "smooth", block: "start" });
-        window.setTimeout(() => map.invalidateSize(), 260);
+      if (shouldAutoScrollToMap()) {
+        closeSidebarDrawer();
+        window.setTimeout(() => map.invalidateSize(), 340);
       }
     });
 
@@ -434,6 +437,25 @@ routesToggleBtn?.addEventListener("click", () => {
     else map.removeLayer(layer);
   });
 });
+
+/* =====================
+   SIDEBAR DRAWER (mobile)
+===================== */
+
+function openSidebarDrawer() {
+  sidebarEl?.classList.add("drawer-open");
+  sidebarBackdrop?.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebarDrawer() {
+  sidebarEl?.classList.remove("drawer-open");
+  sidebarBackdrop?.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+sidebarDrawerToggle?.addEventListener("click", openSidebarDrawer);
+sidebarBackdrop?.addEventListener("click", closeSidebarDrawer);
 
 /* =====================
    YEAR FILTER
