@@ -10,6 +10,7 @@ import { escapeHtml, IMAGE_FALLBACK } from "./js/utils.js";
 
 const DEFAULT_VIEW = { center: [37.8283, -95.5795], zoom: 5 };
 const WORLD_VIEW = { center: [10.8283, -9.5795], zoom: 3 };
+const MOBILE_WORLD_VIEW = { center: [20, -90], zoom: 3 };
 const CATEGORIES = ["park", "mountain", "adventure", "sightseeing"];
 /* =====================
    MAP SETUP
@@ -20,10 +21,13 @@ const WORLD_BOUNDS = L.latLngBounds(
   L.latLng(85, 180)
 );
 
+const isMobileViewport = window.matchMedia("(max-width: 980px)").matches;
+const initialView = isMobileViewport ? MOBILE_WORLD_VIEW : WORLD_VIEW;
+
 const map = L.map("map", {
   maxBounds: WORLD_BOUNDS,
   maxBoundsViscosity: 1.0,
-}).setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
+}).setView(initialView.center, initialView.zoom);
 
 const satelliteLayer = L.tileLayer(
   "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
@@ -403,7 +407,8 @@ homeButton.addEventListener("click", () => {
 });
 
 worldButton.addEventListener("click", () => {
-  map.setView(WORLD_VIEW.center, WORLD_VIEW.zoom);
+  const view = shouldAutoScrollToMap() ? MOBILE_WORLD_VIEW : WORLD_VIEW;
+  map.setView(view.center, view.zoom);
 });
 
 mapStyleBtns.forEach((btn) => {

@@ -681,7 +681,8 @@ input {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
-  z-index: 999;
+  z-index: 1500;
+  cursor: pointer;
 }
 
 .sidebar-backdrop.active {
@@ -705,24 +706,24 @@ input {
   /* Sidebar becomes fixed bottom drawer */
   .page-home .sidebar {
     position: fixed;
-    bottom: 0;
+    bottom: -85dvh;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 2000;
     max-height: 80dvh;
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: none;
     border-radius: 20px 20px 0 0;
     border-bottom: none;
     padding-top: 6px;
-    transform: translateY(100%);
-    transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: bottom 0.32s cubic-bezier(0.32, 0.72, 0, 1);
   }
 
   .page-home .sidebar::-webkit-scrollbar { display: none; }
 
   .page-home .sidebar.drawer-open {
-    transform: translateY(0);
+    bottom: 0;
   }
 
   /* Pull-handle pill */
@@ -1075,7 +1076,25 @@ input {
 @media (max-width: 900px) {
   .page-location .location-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
+
+  /* Flatten wrappers so individual sections become direct grid children */
+  .page-location .location-media,
+  .page-location .location-writing {
+    display: contents;
+  }
+
+  /* Mobile section order: photos → writing → video → journal → related */
+  .page-location #location-carousel       { order: 1; }
+  .page-location .location-overview       { order: 2; }
+  .page-location .location-hike-stats     { order: 3; }
+  .page-location .location-elevation-profile { order: 4; }
+  .page-location .location-logistics      { order: 5; }
+  .page-location .location-notes          { order: 6; }
+  .page-location .location-video          { order: 7; }
+  .page-location .location-journal        { order: 8; }
+  .page-location .location-related        { order: 9; }
 
   .page-location .location-banner {
     grid-template-columns: 72px 1fr;
