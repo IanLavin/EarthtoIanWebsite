@@ -11,7 +11,7 @@ const dateByLocationId = Object.fromEntries(
 const completedCount = data.filter((d) => d.locationId).length;
 const total = data.length;
 
-document.getElementById("tracker-count").textContent = `${completedCount} / ${total} Visited`;
+document.getElementById("tracker-count").textContent = `${completedCount} / ${total} US Parks Visited`;
 document.getElementById("tracker-progress-fill").style.width = `${(completedCount / total) * 100}%`;
 
 let activeFilter = "all";

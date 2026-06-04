@@ -587,8 +587,8 @@ input {
 
 @media (max-width: 640px) {
   .page-home .popup-image {
-    width: 180px;
-    max-width: min(68vw, 180px);
+    width: 220px;
+    max-width: min(72vw, 220px);
   }
 
   .page-home .popup-title {
@@ -596,14 +596,15 @@ input {
   }
 
   .page-home .popup-hint {
-    font-size: 11px;
-    margin-top: 4px;
+    display: none;
   }
 
   .page-home .popup-cta {
-    min-height: 28px;
-    padding: 4px 9px;
-    font-size: 11px;
+    min-height: 44px;
+    padding: 10px 18px;
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .page-home .popup-meta,

@@ -681,6 +681,50 @@ const rawLocations = {
             galleryDir: "Pictures/Washington/Rainier/"
         },
         { 
+            name: "Daintree Rainforest", 
+            country: "AU",
+            region: "Queensland",
+            lat: -16.075, 
+            lng: 145.469, 
+            url: "https://en.wikipedia.org/wiki/Daintree_Rainforest",
+            img: "Pictures/Australia/Daintree/IMG_6107.jpg",
+            descriptionMd: "descriptions/sightseeing/daintree.md",
+            logisticsMd: "descriptions/logistics/daintree.md",
+            notesMd: "descriptions/notes/daintree.md",
+            dateVisited: "2025-08-23",
+            routeGeoJson: "routes/daintree.geojson",
+
+            video: {
+                provider: "youtube",
+                id: "2TUXGEB_C_o",
+                title: "Daintree Rainforest"
+            },
+
+            galleryDir: "Pictures/Australia/Daintree/"
+        },
+        { 
+            name: "Wallaman Falls", 
+            country: "AU",
+            region: "Queensland",
+            lat: -18.5922, 
+            lng: 145.802, 
+            url: "https://en.wikipedia.org/wiki/Wallaman_Falls",
+            img: "Pictures/Australia/Wallaman/wallamanfalls.jpg",
+            descriptionMd: "descriptions/adventures/wallaman.md",
+            logisticsMd: "descriptions/logistics/wallaman.md",
+            notesMd: "descriptions/notes/wallaman.md",
+            routeGeoJson: "routes/wallaman.geojson",
+            dateVisited: "2025-08-28",
+            video: {
+                provider: "youtube",
+                id: "2TUXGEB_C_o",
+                title: "Wallaman Falls"
+            },
+
+            //carousel images
+            galleryDir: "Pictures/Australia/Wallaman/"
+        },
+        { 
             name: "Cuyahoga Valley National Park", 
             country: "US",
             region: "Midwest",
@@ -696,6 +740,44 @@ const rawLocations = {
 
             //carousel images
             galleryDir: "Pictures/Ohio/Cuyahoga/"
+        },
+        { 
+            name: "Tenorio National Park", 
+            country: "CR",
+            region: "Alajuela",
+            lat: 10.7035, 
+            lng: -84.9907, 
+            url: "https://en.wikipedia.org/wiki/Tenorio_National_Park",
+            img: "Pictures/Costa_Rica/Tenorio/GOPR6060.JPG",
+            descriptionMd: "descriptions/adventures/tenorio.md",
+            logisticsMd: "descriptions/logistics/tenorio.md",
+            notesMd: "descriptions/notes/tenorio.md",
+            routeGeoJson: "routes/tenorio.geojson",
+            dateVisited: "2026-02-28",
+
+            galleryDir: "Pictures/Costa_Rica/Tenorio/"
+        },
+        { 
+            name: "Manuel Antonio National Park", 
+            country: "CR",
+            region: "Puntarenas",
+            lat: 9.381, 
+            lng: -84.146, 
+            url: "https://en.wikipedia.org/wiki/Manuel_Antonio_National_Park",
+            img: "Pictures/Costa_Rica/Manuel_Antonio/GOPR6230.JPG",
+            descriptionMd: "descriptions/sightseeing/manuel_antonio.md",
+            logisticsMd: "descriptions/logistics/manuel_antonio.md",
+            notesMd: "descriptions/notes/manuel_antonio.md",
+            dateVisited: "2026-03-02",
+            routeGeoJson: "routes/manuel-antonio.geojson",
+
+            video: {
+                provider: "youtube",
+                id: "_XNzVE4zOHE",
+                title: "Manuel Antonio National Park"
+            },
+
+            galleryDir: "Pictures/Costa_Rica/Manuel_Antonio/"
         },
         { 
             name: "Great Smoky Mountains National Park", 
@@ -1210,7 +1292,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/campbell-hill.md",
             logisticsMd: "descriptions/logistics/campbell-hill.md",
             notesMd: "descriptions/notes/campbell-hill.md",
-            dateVisited: "2023-07-14",
+            dateVisited: "2025-07-14",
 
             //carousel images
             galleryDir: "Pictures/Ohio/Campbell/"
@@ -1740,28 +1822,6 @@ const rawLocations = {
             galleryDir: "Pictures/Australia/GBR/"
         },
         { 
-            name: "Wallaman Falls", 
-            country: "AU",
-            region: "Queensland",
-            lat: -18.5922, 
-            lng: 145.802, 
-            url: "https://en.wikipedia.org/wiki/Wallaman_Falls",
-            img: "Pictures/Australia/Wallaman/wallamanfalls.jpg",
-            descriptionMd: "descriptions/adventures/wallaman.md",
-            logisticsMd: "descriptions/logistics/wallaman.md",
-            notesMd: "descriptions/notes/wallaman.md",
-            routeGeoJson: "routes/wallaman.geojson",
-            dateVisited: "2025-08-28",
-            video: {
-                provider: "youtube",
-                id: "2TUXGEB_C_o",
-                title: "Wallaman Falls"
-            },
-
-            //carousel images
-            galleryDir: "Pictures/Australia/Wallaman/"
-        },
-        { 
             name: "Acatenango and Fuego Volcanoes", 
             country: "GT",
             region: "Chimaltenango",
@@ -1802,22 +1862,6 @@ const rawLocations = {
             },
 
             galleryDir: "Pictures/Costa_Rica/Arenal/"
-        },
-        { 
-            name: "Tenorio National Park", 
-            country: "CR",
-            region: "Alajuela",
-            lat: 10.7035, 
-            lng: -84.9907, 
-            url: "https://en.wikipedia.org/wiki/Tenorio_National_Park",
-            img: "Pictures/Costa_Rica/Tenorio/GOPR6060.JPG",
-            descriptionMd: "descriptions/adventures/tenorio.md",
-            logisticsMd: "descriptions/logistics/tenorio.md",
-            notesMd: "descriptions/notes/tenorio.md",
-            routeGeoJson: "routes/tenorio.geojson",
-            dateVisited: "2026-02-28",
-
-            galleryDir: "Pictures/Costa_Rica/Tenorio/"
         },
         { 
             name: "Havasupai", 
@@ -2213,28 +2257,6 @@ const rawLocations = {
             galleryDir: "Pictures/Australia/Whitehaven/"
         },
         { 
-            name: "Daintree Rainforest", 
-            country: "AU",
-            region: "Queensland",
-            lat: -16.075, 
-            lng: 145.469, 
-            url: "https://en.wikipedia.org/wiki/Daintree_Rainforest",
-            img: "Pictures/Australia/Daintree/IMG_6107.jpg",
-            descriptionMd: "descriptions/sightseeing/daintree.md",
-            logisticsMd: "descriptions/logistics/daintree.md",
-            notesMd: "descriptions/notes/daintree.md",
-            dateVisited: "2025-08-23",
-            routeGeoJson: "routes/daintree.geojson",
-
-            video: {
-                provider: "youtube",
-                id: "2TUXGEB_C_o",
-                title: "Daintree Rainforest"
-            },
-
-            galleryDir: "Pictures/Australia/Daintree/"
-        },
-        { 
             name: "Sydney Opera House", 
             country: "AU",
             region: "New South Wales",
@@ -2267,28 +2289,6 @@ const rawLocations = {
             },
 
             galleryDir: "Pictures/Guatemala/Atitlan/"
-        },
-        { 
-            name: "Manuel Antonio National Park", 
-            country: "CR",
-            region: "Puntarenas",
-            lat: 9.381, 
-            lng: -84.146, 
-            url: "https://en.wikipedia.org/wiki/Manuel_Antonio_National_Park",
-            img: "Pictures/Costa_Rica/Manuel_Antonio/GOPR6230.JPG",
-            descriptionMd: "descriptions/sightseeing/manuel_antonio.md",
-            logisticsMd: "descriptions/logistics/manuel_antonio.md",
-            notesMd: "descriptions/notes/manuel_antonio.md",
-            dateVisited: "2026-03-02",
-            routeGeoJson: "routes/manuel-antonio.geojson",
-
-            video: {
-                provider: "youtube",
-                id: "_XNzVE4zOHE",
-                title: "Manuel Antonio National Park"
-            },
-
-            galleryDir: "Pictures/Costa_Rica/Manuel_Antonio/"
         },
         /*
         { 

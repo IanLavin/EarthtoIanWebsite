@@ -26,9 +26,35 @@ export function initCarousel(containerId, images = [], options = {}) {
   const imgEl = container.querySelector(".carousel-img");
   const prevBtn = container.querySelector(".prev");
   const nextBtn = container.querySelector(".next");
+  const inner = container.querySelector(".carousel-inner");
 
   imgEl.style.cursor = "zoom-in";
-  imgEl.addEventListener("click", () => openLightbox(images, currentIndex));
+
+  // Track touch so swipes navigate and taps open the lightbox
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let swipeHandled = false;
+
+  inner.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    swipeHandled = false;
+  }, { passive: true });
+
+  inner.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+      swipeHandled = true;
+      if (dx < 0) { goToNext(); restartTimer(); }
+      else { goToPrev(); restartTimer(); }
+    }
+  }, { passive: true });
+
+  imgEl.addEventListener("click", () => {
+    if (!swipeHandled) openLightbox(images, currentIndex);
+    swipeHandled = false;
+  });
 
   function getRandomNextIndex() {
     if (images.length <= 1) return currentIndex;
