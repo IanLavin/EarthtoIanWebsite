@@ -44,7 +44,7 @@ async function main() {
   if (dateVisitedEl && selectedLocation.dateVisited) {
     const formatted = formatVisitDate(selectedLocation.dateVisited);
     const relative = relativeTime(selectedLocation.dateVisited);
-    dateVisitedEl.textContent = `Visited ${formatted} · ${relative}`;
+    dateVisitedEl.textContent = `First visited ${formatted} · ${relative}`;
     dateVisitedEl.style.display = "";
   }
 

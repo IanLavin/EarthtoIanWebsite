@@ -140,7 +140,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/channel-islands.md",
             notesMd: "descriptions/notes/channel-islands.md",
             routeGeoJson: "routes/channel-islands.geojson",
-            dateVisited: "2025-05-02",
+            dateVisited: "2024-04-29",
             video: {
                 provider: "youtube",
                 id: "5v8PHOO0CC4",
@@ -162,7 +162,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/joshua-tree.md",
             notesMd: "descriptions/notes/joshua-tree.md",
             routeGeoJson: "routes/joshua-tree.geojson",
-            dateVisited: "2025-05-04",
+            dateVisited: "2023-07-19",
             video: {
                 provider: "vimeo",
                 id: "1165548842",
@@ -184,7 +184,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/grand-canyon.md",
             notesMd: "descriptions/notes/grand-canyon.md",
             routeGeoJson: "routes/grand-canyon.geojson",
-            dateVisited: "2025-02-01",
+            dateVisited: "2023-05-13",
             video: {
                 provider: "youtube",
                 id: "gDmYIRtXbOk",
@@ -227,7 +227,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/saguaro.md",
             logisticsMd: "descriptions/logistics/saguaro.md",
             notesMd: "descriptions/notes/saguaro.md",
-            dateVisited: "2025-06-28",
+            dateVisited: "2023-06-10",
             video: {
                 provider: "youtube",
                 id: "GRCy2U0L0GU",
@@ -336,7 +336,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/zion.md",
             notesMd: "descriptions/notes/zion.md",
             routeGeoJson: "routes/zion.geojson",
-            dateVisited: "2025-04-13",
+            dateVisited: "2024-07-07",
             video: {
                 provider: "youtube",
                 id: "8RfgPvu8Nwo",
@@ -973,7 +973,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/humphreys-peak.md",
             notesMd: "descriptions/notes/humphreys-peak.md",
             routeGeoJson: "routes/humphreys-peak.geojson",
-            dateVisited: "2023-10-14",
+            dateVisited: "2023-06-24",
 
             video: {
                 provider: "youtube",

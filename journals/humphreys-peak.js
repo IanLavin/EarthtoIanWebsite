@@ -1,7 +1,7 @@
 export default {
   id: "humphreys-peak",
   title: "Humphreys Peak Summit Day",
-  date: "2023-10-14",
+  date: "2022-10-14",
   content: `
     <p>
       I had been wanting to hike this trail ever since I moved to Arizona.
