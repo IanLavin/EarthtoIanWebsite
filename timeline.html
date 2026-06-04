@@ -1,20 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Countries â€” Earth to Ian</title>
-  <meta name="description" content="All countries Ian has explored, with locations, photos, and trip details for each." />
+  <title>Timeline — Earth to Ian</title>
+  <meta name="description" content="A chronological record of every adventure — national parks, highpoints, and trips around the world." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Earth to Ian" />
-  <meta property="og:title" content="Countries â€” Earth to Ian" />
-  <meta property="og:description" content="All countries Ian has explored, with locations, photos, and trip details for each." />
+  <meta property="og:title" content="Timeline — Earth to Ian" />
+  <meta property="og:description" content="A chronological record of every adventure — national parks, highpoints, and trips around the world." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="page-countries">
+<body class="page-timeline">
 
   <header class="topbar">
-    <h1 id="page-title">Countries</h1>
+    <h1 id="page-title">Timeline</h1>
   </header>
 
   <div class="menu-container">
@@ -23,7 +23,6 @@
       <span></span>
       <span></span>
     </button>
-
     <nav id="menu-dropdown" class="menu-dropdown">
       <a href="index.html">Home</a>
       <a href="countries.html">Countries</a>
@@ -35,11 +34,10 @@
     </nav>
   </div>
 
-  <main class="countries-page">
-    <p class="countries-intro">All countries with at least one location visited.</p>
-    <ul id="countries-list" class="countries-list"></ul>
+  <main class="timeline-page">
+    <div id="timeline-container"></div>
   </main>
 
-  <script type="module" src="countries.js"></script>
+  <script type="module" src="timeline.js"></script>
 </body>
 </html>

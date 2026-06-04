@@ -40,6 +40,14 @@ async function main() {
     subtitleEl.textContent = parts.join(" - ");
   }
 
+  const dateVisitedEl = document.getElementById("location-date-visited");
+  if (dateVisitedEl && selectedLocation.dateVisited) {
+    const formatted = formatVisitDate(selectedLocation.dateVisited);
+    const relative = relativeTime(selectedLocation.dateVisited);
+    dateVisitedEl.textContent = `Visited ${formatted} · ${relative}`;
+    dateVisitedEl.style.display = "";
+  }
+
   const heroImg = document.getElementById("hero-image");
   heroImg.src = selectedLocation.img;
   heroImg.alt = selectedLocation.name;
@@ -250,6 +258,28 @@ function renderHikeStats(locationId) {
   container.innerHTML = statsList.map(buildStatsCard).join("");
   container.classList.toggle("stats-multi", statsList.length > 1);
   section.style.display = "";
+}
+
+function formatVisitDate(dateStr) {
+  const parts = dateStr.split("-").map(Number);
+  const year = parts[0];
+  const month = parts[1];
+  if (!month) return String(year);
+  return new Date(year, month - 1, 1).toLocaleString("en-US", { month: "long" }) + ` ${year}`;
+}
+
+function relativeTime(dateStr) {
+  const parts = dateStr.split("-").map(Number);
+  const visited = new Date(parts[0], (parts[1] ?? 7) - 1, parts[2] ?? 15);
+  const diffDays = Math.floor((Date.now() - visited.getTime()) / 86400000);
+  if (diffDays < 1) return "today";
+  if (diffDays < 60) return `${diffDays} days ago`;
+  const months = Math.round(diffDays / 30.44);
+  if (months < 12) return `${months} month${months !== 1 ? "s" : ""} ago`;
+  const years = Math.floor(months / 12);
+  const remMonths = months % 12;
+  if (remMonths >= 6) return `${years}½ years ago`;
+  return `${years} year${years !== 1 ? "s" : ""} ago`;
 }
 
 function getVideoAspectClass(video) {

@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Earth to Ian — Adventure Atlas</title>
-  <meta name="description" content="An interactive travel atlas documenting national parks, state highpoints, and adventures around the world — with photos, journals, and trip details." />
+  <title>Earth to Ian â€” Adventure Atlas</title>
+  <meta name="description" content="An interactive travel atlas documenting national parks, state highpoints, and adventures around the world â€” with photos, journals, and trip details." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Earth to Ian" />
-  <meta property="og:title" content="Earth to Ian — Adventure Atlas" />
-  <meta property="og:description" content="An interactive travel atlas documenting national parks, state highpoints, and adventures around the world — with photos, journals, and trip details." />
+  <meta property="og:title" content="Earth to Ian â€” Adventure Atlas" />
+  <meta property="og:description" content="An interactive travel atlas documenting national parks, state highpoints, and adventures around the world â€” with photos, journals, and trip details." />
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -40,7 +40,8 @@
     <a href="countries.html">Countries</a>
     <a href="highpoints.html">Highpoints</a>
     <a href="national-parks.html">National Parks</a>
-    <a href="year-in-review.html">Year In Review</a>
+    <a href="timeline.html">Timeline</a>
+      <a href="year-in-review.html">Year In Review</a>
     <a href="about.html">About</a>
   </nav>
 </div>
@@ -72,6 +73,8 @@
         <button class="tab" data-category="adventure" role="tab" aria-selected="false">Adventures</button>
         <button class="tab" data-category="sightseeing" role="tab" aria-selected="false">Sightseeing</button>
       </div>
+
+      <div id="year-filter" class="year-filter"></div>
 
       <ul id="sidebar-list" class="sidebar-list"></ul>
 

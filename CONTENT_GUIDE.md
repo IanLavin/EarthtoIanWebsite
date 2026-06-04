@@ -46,6 +46,12 @@ Open `locations-data.js` and add an object to the appropriate category array:
 **Optional fields:**
 ```js
 {
+  // Date the location was visited — shown on the location page as "Visited July 2024 · 1 year ago"
+  // Supports three levels of precision:
+  dateVisited: "2024-07-15",   // full date
+  dateVisited: "2024-07",      // month only (displays as "July 2024")
+  dateVisited: "2024",         // year only
+
   // Markdown content files (paths relative to site root)
   descriptionMd: "descriptions/parks/rmnp.md",
   logisticsMd:   "descriptions/logistics/rmnp.md",

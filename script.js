@@ -58,6 +58,7 @@ const homeButton = document.getElementById("homeButton");
 const worldButton = document.getElementById("worldButton");
 const mapStyleBtns = Array.from(document.querySelectorAll(".map-style-btn"));
 const routesToggleBtn = document.getElementById("routesToggle");
+const yearFilterEl = document.getElementById("year-filter");
 const mapArea = document.querySelector(".map-area");
 const randomName = document.getElementById("random-location-name");
 const randomImg = document.getElementById("random-location-img");
@@ -69,6 +70,7 @@ const surpriseMeBtn = document.getElementById("surprise-me-btn");
 ===================== */
 
 let activeCategory = "all";
+let activeYearFilter = "all";
 let searchTerm = "";
 let lastRandomLocationId = null;
 let routesAlwaysVisible = false;
@@ -169,13 +171,13 @@ function setActiveTab(category) {
 function applyCategoryToMap() {
   if (activeCategory === "all") {
     CATEGORIES.forEach((cat) => map.addLayer(markerLayers[cat]));
-    return;
+  } else {
+    CATEGORIES.forEach((cat) => {
+      if (cat === activeCategory) map.addLayer(markerLayers[cat]);
+      else map.removeLayer(markerLayers[cat]);
+    });
   }
-
-  CATEGORIES.forEach((cat) => {
-    if (cat === activeCategory) map.addLayer(markerLayers[cat]);
-    else map.removeLayer(markerLayers[cat]);
-  });
+  applyYearFilter();
 }
 
 function createPopup(place) {
@@ -210,8 +212,22 @@ function createPopup(place) {
 
 function getPlacesForSidebar() {
   const source = sortedByCategory[activeCategory] || [];
-  if (!searchTerm) return source;
-  return source.filter((place) => place.searchName.includes(searchTerm));
+  let result = searchTerm ? source.filter((place) => place.searchName.includes(searchTerm)) : source;
+  if (activeYearFilter !== "all") {
+    result = result.filter((place) => place.dateVisited?.startsWith(activeYearFilter));
+  }
+  return result;
+}
+
+function applyYearFilter() {
+  allLocations.forEach((place) => {
+    const marker = markerById.get(place.id);
+    if (!marker) return;
+    const matches = activeYearFilter === "all" ||
+      (place.dateVisited && place.dateVisited.startsWith(activeYearFilter));
+    marker.setOpacity(matches ? 1 : 0);
+    if (marker._icon) marker._icon.style.pointerEvents = matches ? "" : "none";
+  });
 }
 
 function renderSidebarList() {
@@ -420,11 +436,46 @@ routesToggleBtn?.addEventListener("click", () => {
 });
 
 /* =====================
+   YEAR FILTER
+===================== */
+
+function initYearFilter() {
+  if (!yearFilterEl) return;
+
+  const years = [...new Set(
+    allLocations
+      .filter((loc) => loc.dateVisited)
+      .map((loc) => loc.dateVisited.split("-")[0])
+  )].sort();
+
+  if (!years.length) return;
+
+  const buttons = ["all", ...years].map((year) => {
+    const btn = document.createElement("button");
+    btn.className = "year-btn" + (year === "all" ? " active" : "");
+    btn.dataset.year = year;
+    btn.textContent = year === "all" ? "All Years" : year;
+    btn.addEventListener("click", () => {
+      activeYearFilter = year;
+      yearFilterEl.querySelectorAll(".year-btn").forEach((b) =>
+        b.classList.toggle("active", b.dataset.year === year)
+      );
+      applyYearFilter();
+      renderSidebarList();
+    });
+    return btn;
+  });
+
+  yearFilterEl.append(...buttons);
+}
+
+/* =====================
    INIT
 ===================== */
 
 loadMarkers();
 loadRoutes();
+initYearFilter();
 restoreStateFromUrl();
 setActiveTab(activeCategory);
 showRandomLocation();

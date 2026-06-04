@@ -22,6 +22,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/yellowstone.md",
             notesMd: "descriptions/notes/yellowstone.md",
             routeGeoJson: "routes/yellowstone.geojson",
+            dateVisited: "2024-09-01",
 
             video: {
                 provider: "youtube",
@@ -46,6 +47,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/grand-teton.md",
             notesMd: "descriptions/notes/grand-teton.md",
             routeGeoJson: "routes/grand-teton.geojson",
+            dateVisited: "2024-09-02",
 
             video: {
                 provider: "youtube",
@@ -67,7 +69,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/crater-lake.md",
             logisticsMd: "descriptions/logistics/crater-lake.md",
             notesMd: "descriptions/notes/crater-lake.md",
-
+            dateVisited: "2026-06-16",
             //carousel images
             galleryDir: "Pictures/Oregon/Crater/"
         },
@@ -82,6 +84,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/redwood.md",
             logisticsMd: "descriptions/logistics/redwood.md",
             notesMd: "descriptions/notes/redwood.md",
+            dateVisited: "2026-06-15",
 
             //carousel images
             galleryDir: "Pictures/California/Redwoods/"
@@ -98,7 +101,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/pinnacles.md",
             notesMd: "descriptions/notes/pinnacles.md",
             routeGeoJson: "routes/pinnacles.geojson",
-
+            dateVisited: "2023-04-23",
 
             //carousel images
             galleryDir: "Pictures/California/Pinnacles/"
@@ -115,7 +118,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/death-valley.md",
             notesMd: "descriptions/notes/death-valley.md",
             routeGeoJson: "routes/death-valley.geojson",
-
+            dateVisited: "2024-08-18",
             video: {
                 provider: "youtube",
                 id: "TCg3fATvpNc",
@@ -137,7 +140,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/channel-islands.md",
             notesMd: "descriptions/notes/channel-islands.md",
             routeGeoJson: "routes/channel-islands.geojson",
-
+            dateVisited: "2025-05-02",
             video: {
                 provider: "youtube",
                 id: "5v8PHOO0CC4",
@@ -159,7 +162,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/joshua-tree.md",
             notesMd: "descriptions/notes/joshua-tree.md",
             routeGeoJson: "routes/joshua-tree.geojson",
-
+            dateVisited: "2025-05-04",
             video: {
                 provider: "vimeo",
                 id: "1165548842",
@@ -181,7 +184,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/grand-canyon.md",
             notesMd: "descriptions/notes/grand-canyon.md",
             routeGeoJson: "routes/grand-canyon.geojson",
-
+            dateVisited: "2025-02-01",
             video: {
                 provider: "youtube",
                 id: "gDmYIRtXbOk",
@@ -203,7 +206,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/great-basin.md",
             notesMd: "descriptions/notes/great-basin.md",
             routeGeoJson: "routes/great-basin.geojson",
-
+            dateVisited: "2024-06-20",
             video: {
                 provider: "youtube",
                 id: "--QMBKcCAyY",
@@ -224,6 +227,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/saguaro.md",
             logisticsMd: "descriptions/logistics/saguaro.md",
             notesMd: "descriptions/notes/saguaro.md",
+            dateVisited: "2025-06-28",
             video: {
                 provider: "youtube",
                 id: "GRCy2U0L0GU",
@@ -245,7 +249,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/canyonlands.md",
             notesMd: "descriptions/notes/canyonlands.md",
             routeGeoJson: "routes/canyonlands.geojson",
-
+            dateVisited: "2024-07-04",
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -267,7 +271,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/arches.md",
             notesMd: "descriptions/notes/arches.md",
             routeGeoJson: "routes/arches.geojson",
-
+            dateVisited: "2024-07-04",
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -288,6 +292,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/capitol-reef.md",
             logisticsMd: "descriptions/logistics/capitol-reef.md",
             notesMd: "descriptions/notes/capitol-reef.md",
+            dateVisited: "2024-07-05",
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -309,7 +314,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/bryce.md",
             notesMd: "descriptions/notes/bryce.md",
             routeGeoJson: "routes/bryce.geojson",
-
+            dateVisited: "2024-07-06",
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -331,7 +336,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/zion.md",
             notesMd: "descriptions/notes/zion.md",
             routeGeoJson: "routes/zion.geojson",
-
+            dateVisited: "2025-04-13",
             video: {
                 provider: "youtube",
                 id: "8RfgPvu8Nwo",
@@ -352,6 +357,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/white-sands.md",
             logisticsMd: "descriptions/logistics/white-sands.md",
             notesMd: "descriptions/notes/white-sands.md",
+            dateVisited: "2023-05-29",
             video: {
                 provider: "youtube",
                 id: "_ltXpHNJNdE",
@@ -372,6 +378,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/guadalupe.md",
             logisticsMd: "descriptions/logistics/guadalupe.md",
             notesMd: "descriptions/notes/guadalupe.md",
+            dateVisited: "2023-05-28",
             video: {
                 provider: "youtube",
                 id: "_ltXpHNJNdE",
@@ -393,7 +400,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/great-sands.md",
             notesMd: "descriptions/notes/great-sands.md",
             routeGeoJson: "routes/great-sands.geojson",
-
+            dateVisited: "2024-05-27",
             video: {
                 provider: "youtube",
                 id: "3i2FexVpfUM",
@@ -415,7 +422,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/rocky-mountain.md",
             notesMd: "descriptions/notes/rocky-mountain.md",
             routeGeoJson: "routes/rocky-mountain.geojson",
-
+            dateVisited: "2023-09-03",
             video: {
                 provider: "youtube",
                 id: "gFtNhW_NI7Y",
@@ -437,7 +444,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/everglades.md",
             notesMd: "descriptions/notes/everglades.md",
             routeGeoJson: "routes/everglades.geojson",
-
+            dateVisited: "2023-11-05",
             video: {
                 provider: "youtube",
                 id: "YkKwDmb07H4",
@@ -458,6 +465,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/biscayne.md",
             logisticsMd: "descriptions/logistics/biscayne.md",
             notesMd: "descriptions/notes/biscayne.md",
+            dateVisited: "2024-04-12",
             video: {
                 provider: "youtube",
                 id: "vqrTiSpibi4",
@@ -479,6 +487,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/dry-tortugas.md",
             notesMd: "descriptions/notes/dry-tortugas.md",
             routeGeoJson: "routes/dry-tortugas.geojson",
+            dateVisited: "2024-04-11",
 
             video: {
                 provider: "youtube",
@@ -500,6 +509,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/carlsbad.md",
             logisticsMd: "descriptions/logistics/carlsbad.md",
             notesMd: "descriptions/notes/carlsbad.md",
+            dateVisited: "2023-05-28",
             video: {
                 provider: "youtube",
                 id: "_ltXpHNJNdE",
@@ -521,7 +531,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/shenandoah.md",
             notesMd: "descriptions/notes/shenandoah.md",
             routeGeoJson: "routes/shenandoah.geojson",
-
+            dateVisited: "2025-05-16",
 
             //carousel images
             galleryDir: "Pictures/Virginia/Shenandoah/"
@@ -538,7 +548,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/new-river.md",
             notesMd: "descriptions/notes/new-river.md",
             routeGeoJson: "routes/new-river.geojson",
-
+            dateVisited: "2025-05-16",
 
             //carousel images
             galleryDir: "Pictures/West Virginia/New_River/"
@@ -554,6 +564,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/mesa-verde.md",
             logisticsMd: "descriptions/logistics/mesa-verde.md",
             notesMd: "descriptions/notes/mesa-verde.md",
+            dateVisited: "2025-07-04",
+
             video: {
                 provider: "youtube",
                 id: "K0A16jg1hIg",
@@ -575,6 +587,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black-canyon.md",
             notesMd: "descriptions/notes/black-canyon.md",
             routeGeoJson: "routes/black-canyon-gunnison.geojson",
+            dateVisited: "2025-07-05",
 
             video: {
                 provider: "youtube",
@@ -596,7 +609,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/petrified-forest.md",
             logisticsMd: "descriptions/logistics/petrified-forest.md",
             notesMd: "descriptions/notes/petrified-forest.md",
-
+            dateVisited: "2025-07-06",
             //carousel images
             galleryDir: "Pictures/Arizona/Petrified/"
         },
@@ -612,6 +625,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/olympic.md",
             notesMd: "descriptions/notes/olympic.md",
             routeGeoJson: "routes/olympic.geojson",
+            dateVisited: "2025-08-01",
 
             video: {
                 provider: "youtube",
@@ -634,7 +648,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/north-cascades.md",
             notesMd: "descriptions/notes/north-cascades.md",
             routeGeoJson: "routes/north-cascades.geojson",
-
+            dateVisited: "2025-08-02",
             video: {
                 provider: "youtube",
                 id: "H6KO-betylg",
@@ -656,7 +670,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/rainier.md",
             notesMd: "descriptions/notes/rainier.md",
             routeGeoJson: "routes/rainier-national-park.geojson",
-
+            dateVisited: "2025-08-06",
             video: {
                 provider: "youtube",
                 id: "r0Eurg3WRIg",
@@ -678,7 +692,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/cuyahoga.md",
             notesMd: "descriptions/notes/cuyahoga.md",
             routeGeoJson: "routes/cuyahoga.geojson",
-
+            dateVisited: "2025-10-13",
 
             //carousel images
             galleryDir: "Pictures/Ohio/Cuyahoga/"
@@ -694,7 +708,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/great-smoky-mountains.md",
             logisticsMd: "descriptions/logistics/great-smoky-mountains.md",
             notesMd: "descriptions/notes/great-smoky-mountains.md",
-
+            dateVisited: "2026-05-24",
             //carousel images
             galleryDir: "Pictures/Tennessee/Smoky/"
         },
@@ -710,7 +724,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/congaree.md",
             notesMd: "descriptions/notes/congaree.md",
             routeGeoJson: "routes/congaree.geojson",
-
+            dateVisited: "2026-05-25",
 
             //carousel images
             galleryDir: "Pictures/South Carolina/Congaree/"
@@ -830,6 +844,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mt-whitney.md",
             notesMd: "descriptions/notes/mt-whitney.md",
             routeGeoJson: "routes/mt-whitney.geojson",
+            dateVisited: "2023-07-14",
 
             video: {
                 provider: "vimeo",
@@ -852,6 +867,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mt-elbert.md",
             notesMd: "descriptions/notes/mt-elbert.md",
             routeGeoJson: "routes/mt-elbert.geojson",
+            dateVisited: "2023-09-04",
 
             video: {
                 provider: "youtube",
@@ -875,6 +891,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/humphreys-peak.md",
             notesMd: "descriptions/notes/humphreys-peak.md",
             routeGeoJson: "routes/humphreys-peak.geojson",
+            dateVisited: "2023-10-14",
 
             video: {
                 provider: "youtube",
@@ -898,6 +915,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/wheeler-peak.md",
             notesMd: "descriptions/notes/wheeler-peak.md",
             routeGeoJson: "routes/wheeler-peak-nm.geojson",
+            dateVisited: "2024-05-27",
 
             video: {
                 provider: "youtube",
@@ -937,6 +955,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black-mesa.md",
             notesMd: "descriptions/notes/black-mesa.md",
             routeGeoJson: "routes/black-mesa.geojson",
+            dateVisited: "2024-05-26",
 
             video: {
                 provider: "youtube",
@@ -958,6 +977,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-sunflower.md",
             logisticsMd: "descriptions/logistics/mt-sunflower.md",
             notesMd: "descriptions/notes/mt-sunflower.md",
+            dateVisited: "2023-09-02",
             video: {
                 provider: "youtube",
                 id: "gFtNhW_NI7Y",
@@ -978,6 +998,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/panorama-point.md",
             logisticsMd: "descriptions/logistics/panorama-point.md",
             notesMd: "descriptions/notes/panorama-point.md",
+            dateVisited: "2023-09-02",
             video: {
                 provider: "youtube",
                 id: "gFtNhW_NI7Y",
@@ -999,6 +1020,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/guadalupe-peak.md",
             notesMd: "descriptions/notes/guadalupe-peak.md",
             routeGeoJson: "routes/guadalupe-peak.geojson",
+            dateVisited: "2023-07-14",
 
             video: {
                 provider: "youtube",
@@ -1021,6 +1043,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mt-rogers.md",
             notesMd: "descriptions/notes/mt-rogers.md",
             routeGeoJson: "routes/mt-rogers.geojson",
+            dateVisited: "2025-05-17",
 
             //carousel images
             galleryDir: "Pictures/Virginia/Rogers/"
@@ -1036,6 +1059,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/black-mountain.md",
             logisticsMd: "descriptions/logistics/black-mountain.md",
             notesMd: "descriptions/notes/black-mountain.md",
+            dateVisited: "2025-05-17",
 
             //carousel images
             galleryDir: "Pictures/Kentucky/Black/"
@@ -1052,6 +1076,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/spruce-knob.md",
             notesMd: "descriptions/notes/spruce-knob.md",
             routeGeoJson: "routes/spruce-knob.geojson",
+            dateVisited: "2025-05-18",
 
             //carousel images
             galleryDir: "Pictures/West Virginia/Spruce_Knob/"
@@ -1068,6 +1093,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/backbone-mountain.md",
             notesMd: "descriptions/notes/backbone-mountain.md",
             routeGeoJson: "routes/backbone-mountain.geojson",
+            dateVisited: "2025-05-18",
 
             //carousel images
             galleryDir: "Pictures/Maryland/Backbone/"
@@ -1083,6 +1109,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-davis.md",
             logisticsMd: "descriptions/logistics/mt-davis.md",
             notesMd: "descriptions/notes/mt-davis.md",
+            dateVisited: "2025-05-18",
 
             //carousel images
             galleryDir: "Pictures/Pennsylvania/Davis/"
@@ -1098,6 +1125,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/ebright-azimuth.md",
             logisticsMd: "descriptions/logistics/ebright-azimuth.md",
             notesMd: "descriptions/notes/ebright-azimuth.md",
+            dateVisited: "2025-05-20",
 
             //carousel images
             galleryDir: "Pictures/Delaware/Ebright/"
@@ -1114,6 +1142,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/high-point.md",
             notesMd: "descriptions/notes/high-point.md",
             routeGeoJson: "routes/high-point.geojson",
+            dateVisited: "2025-10-12",
 
 
             //carousel images
@@ -1131,6 +1160,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/mt-frissell.md",
             notesMd: "descriptions/notes/mt-frissell.md",
             routeGeoJson: "routes/mt-frissell.geojson",
+            dateVisited: "2025-10-12",
 
             //carousel images
             galleryDir: "Pictures/Connecticut/Frissell/"
@@ -1146,6 +1176,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-greylock.md",
             logisticsMd: "descriptions/logistics/mt-greylock.md",
             notesMd: "descriptions/notes/mt-greylock.md",
+            dateVisited: "2025-10-12",
 
             //carousel images
             galleryDir: "Pictures/Massachusets/Greylock/"
@@ -1162,6 +1193,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/jerimoth-hill.md",
             notesMd: "descriptions/notes/jerimoth-hill.md",
             routeGeoJson: "routes/jerimoth-hill.geojson",
+            dateVisited: "2025-10-12",
 
 
             //carousel images
@@ -1178,6 +1210,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/campbell-hill.md",
             logisticsMd: "descriptions/logistics/campbell-hill.md",
             notesMd: "descriptions/notes/campbell-hill.md",
+            dateVisited: "2023-07-14",
 
             //carousel images
             galleryDir: "Pictures/Ohio/Campbell/"
@@ -1193,6 +1226,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/hoosier-hill.md",
             logisticsMd: "descriptions/logistics/hoosier-hill.md",
             notesMd: "descriptions/notes/hoosier-hill.md",
+            dateVisited: "2025-10-13",
 
             //carousel images
             galleryDir: "Pictures/Indiana/Hoosier/"
@@ -1208,6 +1242,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/britton-hill.md",
             logisticsMd: "descriptions/logistics/britton-hill.md",
             notesMd: "descriptions/notes/britton-hill.md",
+            dateVisited: "2026-01-31",
 
             //carousel images
             galleryDir: "Pictures/Florida/Britton/"
@@ -1223,6 +1258,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/mt-mitchell.md",
             logisticsMd: "descriptions/logistics/mt-mitchell.md",
             notesMd: "descriptions/notes/mt-mitchell.md",
+            dateVisited: "2026-05-23",
 
             //carousel images
             galleryDir: "Pictures/North_Carolina/Mitchell/"
@@ -1239,6 +1275,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/clingmans-dome.md",
             notesMd: "descriptions/notes/clingmans-dome.md",
             routeGeoJson: "routes/clingmans-dome.geojson",
+            dateVisited: "2026-05-24",
 
 
             //carousel images
@@ -1256,6 +1293,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/sassafras-mountain.md",
             notesMd: "descriptions/notes/sassafras-mountain.md",
             routeGeoJson: "routes/sassafras.geojson",
+            dateVisited: "2026-05-23",
 
 
             //carousel images
@@ -1273,6 +1311,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/brasstown-bald.md",
             notesMd: "descriptions/notes/brasstown-bald.md",
             routeGeoJson: "routes/brasstown-bald.geojson",
+            dateVisited: "2026-05-25",
 
             //carousel images
             galleryDir: "Pictures/Georgia/Brasstown/"
@@ -1288,6 +1327,7 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/cheaha-mountain.md",
             logisticsMd: "descriptions/logistics/cheaha-mountain.md",
             notesMd: "descriptions/notes/cheaha-mountain.md",
+            dateVisited: "2026-05-25",
 
             //carousel images
             galleryDir: "Pictures/Alabama/Cheaha/"
@@ -1339,6 +1379,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/south_fork.md",
             logisticsMd: "descriptions/logistics/south_fork.md",
             notesMd: "descriptions/notes/south_fork.md",
+            dateVisited: "2024-06-23",
+
             video: {
                 provider: "youtube",
                 id: "ck5EwiccYbw",
@@ -1360,6 +1402,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/antelope.md",
             notesMd: "descriptions/notes/antelope.md",
             routeGeoJson: "routes/antelope-kayak.geojson",
+            dateVisited: "2024-06-19",
 
             video: {
                 provider: "youtube",
@@ -1382,6 +1425,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/adams.md",
             notesMd: "descriptions/notes/adams.md",
             routeGeoJson: "routes/adams.geojson",
+            dateVisited: "2024-06-28",
 
             video: {
                 provider: "youtube",
@@ -1404,6 +1448,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black_canyon_colorado.md",
             notesMd: "descriptions/notes/black_canyon_colorado.md",
             routeGeoJson: "routes/black-canyon.geojson",
+            dateVisited: "2024-08-17",
 
             video: {
                 provider: "youtube",
@@ -1425,6 +1470,7 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/torrey_pines_paragliding.md",
             logisticsMd: "descriptions/logistics/torrey_pines_paragliding.md",
             notesMd: "descriptions/notes/torrey_pines_paragliding.md",
+            dateVisited: "2024-03-09",
             video: {
                 provider: "youtube",
                 id: "E1dSGvSlN7k",
@@ -1446,7 +1492,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/calf_creek.md",
             notesMd: "descriptions/notes/calf_creek.md",
             routeGeoJson: "routes/calf-creek.geojson",
-
+            dateVisited: "2024-07-05",
             video: {
                 provider: "youtube",
                 id: "dLRhdqfoVQU",
@@ -1468,7 +1514,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/sedona.md",
             notesMd: "descriptions/notes/sedona.md",
             routeGeoJson: "routes/sedona.geojson",
-
+            dateVisited: "2023-11-17",
             video: {
                 provider: "youtube",
                 id: "V4teaEamomE",
@@ -1490,7 +1536,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/pfeifferhorn.md",
             notesMd: "descriptions/notes/pfeifferhorn.md",
             routeGeoJson: "routes/pfeifferhorn.geojson",
-
+            dateVisited: "2023-07-09",
             video: {
                 provider: "vimeo",
                 id: "1165862465",
@@ -1512,7 +1558,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/sawtooth.md",
             notesMd: "descriptions/notes/sawtooth.md",
             routeGeoJson: "routes/sawtooth.geojson",
-
+            dateVisited: "2023-08-19",
             video: {
                 provider: "youtube",
                 id: "y8mbyq_AgH4",
@@ -1534,6 +1580,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/four_peaks.md",
             notesMd: "descriptions/notes/four_peaks.md",
             routeGeoJson: "routes/four-peaks.geojson",
+            dateVisited: "2023-05-06",
 
             galleryDir: "Pictures/Arizona/Four_Peaks/"
         },
@@ -1549,7 +1596,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/goat_canyon.md",
             notesMd: "descriptions/notes/goat_canyon.md",
             routeGeoJson: "routes/goat-canyon.geojson",
-
+            dateVisited: "2025-03-08",
             video: {
                 provider: "youtube",
                 id: "SDrLnDs12EI",
@@ -1571,7 +1618,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/jug.md",
             notesMd: "descriptions/notes/jug.md",
             routeGeoJson: "routes/jug.geojson",
-
+            dateVisited: "2024-07-01",
             video: {
                 provider: "youtube",
                 id: "miEzLRUMHD8",
@@ -1593,7 +1640,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/buckskin.md",
             notesMd: "descriptions/notes/buckskin.md",
             routeGeoJson: "routes/buckskin.geojson",
-
+            dateVisited: "2025-05-11",
             video: {
                 provider: "youtube",
                 id: "y22yx8XXa14",
@@ -1616,6 +1663,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/ausangate.md",
             notesMd: "descriptions/notes/ausangate.md",
             routeGeoJson: "routes/ausangate.geojson",
+            dateVisited: "2025-05-29",
             video: {
                 provider: "youtube",
                 id: "rIGaGZw_XeI",
@@ -1637,6 +1685,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/salkantay.md",
             notesMd: "descriptions/notes/salkantay.md",
             routeGeoJson: "routes/salkantay.geojson",
+            dateVisited: "2025-05-24",
             video: {
                 provider: "youtube",
                 id: "ZqSTk2njJH8",
@@ -1658,7 +1707,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/ice_lake.md",
             notesMd: "descriptions/notes/ice_lake.md",
             routeGeoJson: "routes/san-juan-mountains.geojson",
-
+            dateVisited: "2025-07-06",
             video: {
                 provider: "youtube",
                 id: "K0A16jg1hIg",
@@ -1679,6 +1728,8 @@ const rawLocations = {
             descriptionMd: "descriptions/adventures/gbr.md",
             logisticsMd: "descriptions/logistics/gbr.md",
             notesMd: "descriptions/notes/gbr.md",
+            dateVisited: "2025-08-22",
+
             video: {
                 provider: "youtube",
                 id: "_zcbBXvOS9E",
@@ -1700,7 +1751,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/wallaman.md",
             notesMd: "descriptions/notes/wallaman.md",
             routeGeoJson: "routes/wallaman.geojson",
-
+            dateVisited: "2025-08-28",
             video: {
                 provider: "youtube",
                 id: "2TUXGEB_C_o",
@@ -1722,6 +1773,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/acatenango.md",
             notesMd: "descriptions/notes/acatenango.md",
             routeGeoJson: "routes/acatenango.geojson",
+            dateVisited: "2026-03-05",
             video: {
                 provider: "youtube",
                 id: "myA9L93JyPM",
@@ -1742,7 +1794,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/arenal.md",
             notesMd: "descriptions/notes/arenal.md",
             routeGeoJson: "routes/arenal.geojson",
-
+            dateVisited: "2026-02-26",
             video: {
                 provider: "youtube",
                 id: "_XNzVE4zOHE",
@@ -1763,7 +1815,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/tenorio.md",
             notesMd: "descriptions/notes/tenorio.md",
             routeGeoJson: "routes/tenorio.geojson",
-
+            dateVisited: "2026-02-28",
 
             galleryDir: "Pictures/Costa_Rica/Tenorio/"
         },
@@ -1779,7 +1831,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/havasupai.md",
             notesMd: "descriptions/notes/havasupai.md",
             routeGeoJson: "routes/havasupai.geojson",
-
+            dateVisited: "2026-04-19",
             galleryDir: "Pictures/Arizona/Havasupai/"
         },
         /*
@@ -1829,6 +1881,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/superstitions.md",
             notesMd: "descriptions/notes/superstitions.md",
             routeGeoJson: "routes/superstitions.geojson",
+            dateVisited: "2023-02-25",
 
             video: {
                 provider: "youtube",
@@ -1851,7 +1904,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/kirkham_hot_springs.md",
             notesMd: "descriptions/notes/kirkham_hot_springs.md",
             routeGeoJson: "routes/kirkham.geojson",
-
+            dateVisited: "2024-12-23",
 
             //carousel images
             galleryDir: "Pictures/Idaho/Kirkham/"
@@ -1868,7 +1921,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/fossil_creek.md",
             notesMd: "descriptions/notes/fossil_creek.md",
             routeGeoJson: "routes/fossil-creek.geojson",
-
+            dateVisited: "2023-10-12",
             video: {
                 provider: "youtube",
                 id: "fxspDquRst0",
@@ -1889,6 +1942,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/pikes.md",
             logisticsMd: "descriptions/logistics/pikes.md",
             notesMd: "descriptions/notes/pikes.md",
+            dateVisited: "2024-05-25",
+
             video: {
                 provider: "youtube",
                 id: "3i2FexVpfUM",
@@ -1909,6 +1964,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/coal_mine.md",
             logisticsMd: "descriptions/logistics/coal_mine.md",
             notesMd: "descriptions/notes/coal_mine.md",
+            dateVisited: "2024-05-11",
+
 
             //carousel images
             galleryDir: "Pictures/Arizona/Coal_Mine/"
@@ -1925,7 +1982,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/panther_creek.md",
             notesMd: "descriptions/notes/panther_creek.md",
             routeGeoJson: "routes/panther-creek.geojson",
-
+            dateVisited: "2024-06-27",
             video: {
                 provider: "youtube",
                 id: "ck5EwiccYbw",
@@ -1947,7 +2004,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/blue_heart.md",
             notesMd: "descriptions/notes/blue_heart.md",
             routeGeoJson: "routes/blue-heart.geojson",
-
+            dateVisited: "2024-07-01",
             video: {
                 provider: "youtube",
                 id: "IztlBA11xus",
@@ -1969,7 +2026,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/donut_falls.md",
             notesMd: "descriptions/notes/donut_falls.md",
             routeGeoJson: "routes/donut-falls.geojson",
-
+            dateVisited: "2023-07-08",
             video: {
                 provider: "youtube",
                 id: "IztlBA11xus",
@@ -2011,7 +2068,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/black_sand_beach.md",
             notesMd: "descriptions/notes/black_sand_beach.md",
             routeGeoJson: "routes/black-sands-beach.geojson",
-
+            dateVisited: "2023-04-29",
 
             galleryDir: "Pictures/California/Black_Sand/"
         },
@@ -2027,6 +2084,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/chiricahua.md",
             notesMd: "descriptions/notes/chiricahua.md",
             routeGeoJson: "routes/chiricahua.geojson",
+            dateVisited: "2023-05-27",
 
             video: {
                 provider: "youtube",
@@ -2048,7 +2106,7 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/valley_fire.md",
             notesMd: "descriptions/notes/valley_fire.md",
             routeGeoJson: "routes/valley-fire.geojson",
-
+            dateVisited: "2025-04-12",
             video: {
                 provider: "youtube",
                 id: "y22yx8XXa14",
@@ -2068,6 +2126,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/grand_staircase.md",
             logisticsMd: "descriptions/logistics/grand_staircase.md",
             notesMd: "descriptions/notes/grand_staircase.md",
+            dateVisited: "2025-04-11",
 
             galleryDir: "Pictures/Utah/Grand_Staircase/"
         },
@@ -2082,6 +2141,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/machu.md",
             logisticsMd: "descriptions/logistics/machu.md",
             notesMd: "descriptions/notes/machu.md",
+            dateVisited: "2025-05-28",  
             video: {
                 provider: "youtube",
                 id: "ZqSTk2njJH8",
@@ -2101,6 +2161,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/pallay.md",
             logisticsMd: "descriptions/logistics/pallay.md",
             notesMd: "descriptions/notes/pallay.md",
+            dateVisited: "2025-05-30",
             video: {
                 provider: "youtube",
                 id: "rIGaGZw_XeI",
@@ -2120,6 +2181,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/monument_valley.md",
             logisticsMd: "descriptions/logistics/monument_valley.md",
             notesMd: "descriptions/notes/monument_valley.md",
+            dateVisited: "2025-07-04",
             video: {
                 provider: "youtube",
                 id: "K0A16jg1hIg",
@@ -2139,6 +2201,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/whitehaven.md",
             logisticsMd: "descriptions/logistics/whitehaven.md",
             notesMd: "descriptions/notes/whitehaven.md",
+            dateVisited: "2025-08-27",
             routeGeoJson: "routes/whitehaven.geojson",
 
             video: {
@@ -2160,6 +2223,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/daintree.md",
             logisticsMd: "descriptions/logistics/daintree.md",
             notesMd: "descriptions/notes/daintree.md",
+            dateVisited: "2025-08-23",
             routeGeoJson: "routes/daintree.geojson",
 
             video: {
@@ -2181,7 +2245,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/opera_house.md",
             logisticsMd: "descriptions/logistics/opera_house.md",
             notesMd: "descriptions/notes/opera_house.md",
-
+            dateVisited: "2025-08-30",
             galleryDir: "Pictures/Australia/Sydney/"
         },
         { 
@@ -2195,6 +2259,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/atitlan.md",
             logisticsMd: "descriptions/logistics/atitlan.md",
             notesMd: "descriptions/notes/atitlan.md",
+            dateVisited: "2026-03-07",
             video: {
                 provider: "youtube",
                 id: "myA9L93JyPM",
@@ -2214,6 +2279,7 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/manuel_antonio.md",
             logisticsMd: "descriptions/logistics/manuel_antonio.md",
             notesMd: "descriptions/notes/manuel_antonio.md",
+            dateVisited: "2026-03-02",
             routeGeoJson: "routes/manuel-antonio.geojson",
 
             video: {

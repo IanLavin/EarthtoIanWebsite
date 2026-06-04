@@ -1,5 +1,12 @@
 import data from "./highpoints-data.js";
+import locations from "./locations-data.js";
 import { initMenu } from "./js/menu.js";
+
+const dateByLocationId = Object.fromEntries(
+  Object.values(locations).flat()
+    .filter((loc) => loc.dateVisited)
+    .map((loc) => [loc.id, loc.dateVisited.split("-")[0]])
+);
 
 const completedCount = data.filter((d) => d.locationId).length;
 const total = data.length;
@@ -33,7 +40,7 @@ function renderGrid() {
       <div class="tracker-info">
         <span class="tracker-state">${item.state}</span>
         <span class="tracker-name">${item.name}</span>
-        <span class="tracker-meta">${item.elevation.toLocaleString()} ft</span>
+        <span class="tracker-meta">${item.elevation.toLocaleString()} ft${done && dateByLocationId[item.locationId] ? ` · ${dateByLocationId[item.locationId]}` : ""}</span>
       </div>
     `;
     return done
