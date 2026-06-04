@@ -447,13 +447,17 @@ routesToggleBtn?.addEventListener("click", () => {
    SIDEBAR DRAWER (mobile)
 ===================== */
 
+let drawerOpenedAt = 0;
+
 function openSidebarDrawer() {
   sidebarEl?.classList.add("drawer-open");
   sidebarBackdrop?.classList.add("active");
   document.body.style.overflow = "hidden";
+  drawerOpenedAt = Date.now();
 }
 
 function closeSidebarDrawer() {
+  if (Date.now() - drawerOpenedAt < 350) return; // guard against iOS 300ms synthetic click
   sidebarEl?.classList.remove("drawer-open");
   sidebarBackdrop?.classList.remove("active");
   document.body.style.overflow = "";
@@ -499,6 +503,11 @@ function initYearFilter() {
 /* =====================
    INIT
 ===================== */
+
+// On mobile, move sidebar after the backdrop in the DOM so it's guaranteed to render on top
+if (isMobileViewport && sidebarEl && sidebarBackdrop) {
+  sidebarBackdrop.after(sidebarEl);
+}
 
 loadMarkers();
 loadRoutes();
