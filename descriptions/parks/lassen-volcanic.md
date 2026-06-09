@@ -1,1 +1,1 @@
-testing2
+One of the most geologically active and undervisited parks in the national park system, Lassen sits atop a hotspot where all four types of volcanoes found on Earth are represented. Steaming fumaroles, boiling mud pots, and sulfur vents at Bumpass Hell give the park an otherworldly feel, while Lassen Peak itself — which last erupted between 1914 and 1921 — offers a challenging summit hike with panoramic views across Northern California.

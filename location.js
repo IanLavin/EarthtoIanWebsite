@@ -5,6 +5,13 @@ import journals from "./journals/index.js";
 import { initMenu } from "./js/menu.js";
 import { escapeHtml, IMAGE_FALLBACK, loadMarkdown, markdownToHtml, setPageMeta } from "./js/utils.js";
 import hikeStats, { computeWeightedScore, getDifficultyLabel } from "./hike-stats-data.js";
+import nationalParksData from "./national-parks-data.js";
+
+const parkRatingByLocationId = Object.fromEntries(
+  nationalParksData
+    .filter((p) => p.locationId && p.rating != null)
+    .map((p) => [p.locationId, p.rating])
+);
 
 const MAX_RELATED = 6;
 
@@ -46,6 +53,13 @@ async function main() {
     const relative = relativeTime(selectedLocation.dateVisited);
     dateVisitedEl.textContent = `First visited ${formatted} · ${relative}`;
     dateVisitedEl.style.display = "";
+  }
+
+  const parkRatingEl = document.getElementById("location-park-rating");
+  const parkRating = parkRatingByLocationId[selectedLocation.id];
+  if (parkRatingEl && parkRating != null) {
+    parkRatingEl.textContent = `Personal Rating: ${parkRating} / 10`;
+    parkRatingEl.style.display = "";
   }
 
   const heroImg = document.getElementById("hero-image");

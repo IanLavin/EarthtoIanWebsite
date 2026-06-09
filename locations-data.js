@@ -820,6 +820,9 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park", 
             img: "Pictures/California/Lassen/IMG_6907.jpg", 
             descriptionMd: "descriptions/parks/lassen-volcanic.md", 
+            logisticsMd: "descriptions/logistics/lassen-volcanic.md",
+            notesMd: "descriptions/notes/lassen-volcanic.md",
+            routeGeoJson: "routes/lassen-peak.geojson",
             galleryDir: "Pictures/California/Lassen/" 
         },
         { 
@@ -830,8 +833,11 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Glacier_National_Park", 
             img: "Pictures/Montana/Glacier/IMG_6907.jpg", 
             descriptionMd: "descriptions/parks/glacier.md", 
+            logisticsMd: "descriptions/logistics/glacier.md",
+            notesMd: "descriptions/notes/glacier.md",
             galleryDir: "Pictures/Montana/Glacier/" 
         },
+        
         { 
             name: "Gateway Arch National Park", 
             country: "US",
@@ -1876,7 +1882,13 @@ const rawLocations = {
             notesMd: "descriptions/notes/havasupai.md",
             routeGeoJson: "routes/havasupai.geojson",
             dateVisited: "2026-04-19",
-            galleryDir: "Pictures/Arizona/Havasupai/"
+            galleryDir: "Pictures/Arizona/Havasupai/",
+
+            video: {
+                provider: "youtube",
+                id: "F9MZ1WFmYDI",
+                title: "Humphreys Peak"
+            },
         },
         /*
         { 
@@ -1887,9 +1899,12 @@ const rawLocations = {
             lng: -121.769, 
             url: "https://en.wikipedia.org/wiki/South_Sister",
             img: "Pictures/Oregon/South_Sister/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/south_sister.md",
+            descriptionMd: "descriptions/adventures/south_sister.md",
             logisticsMd: "descriptions/logistics/south_sister.md",
             notesMd: "descriptions/notes/south_sister.md",
+            routeGeoJson: "routes/south-sister.geojson",
+            dateVisited: "2026-06-18",
+
 
             //carousel images
             galleryDir: "Pictures/Oregon/South_Sister/"
@@ -1902,13 +1917,14 @@ const rawLocations = {
             lng: -116.218, 
             url: "https://en.wikipedia.org/wiki/Banff_National_Park",
             img: "Pictures/Canada/Banff/IMG_6907.jpg",
-            descriptionMd: "descriptions/parks/banff.md",
+            descriptionMd: "descriptions/adventures/banff.md",
             logisticsMd: "descriptions/logistics/banff.md",
             notesMd: "descriptions/notes/banff.md",
 
             //carousel images
             galleryDir: "Pictures/Canada/Banff/"
         },
+        
         */
     ],
 
@@ -2302,6 +2318,8 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/boardman.md",
             logisticsMd: "descriptions/logistics/boardman.md",
             notesMd: "descriptions/notes/boardman.md",
+            dateVisited: "2026-06-16",
+
 
             galleryDir: "Pictures/Oregon/Boardman/"
         },
@@ -2316,9 +2334,11 @@ const rawLocations = {
             descriptionMd: "descriptions/sightseeing/burney.md",
             logisticsMd: "descriptions/logistics/burney.md",
             notesMd: "descriptions/notes/burney.md",
+            dateVisited: "2026-06-14",
 
             galleryDir: "Pictures/California/Burney/"
         },
+        
         */
     ]
 };

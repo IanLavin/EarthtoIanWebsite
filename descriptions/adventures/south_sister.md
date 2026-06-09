@@ -1,0 +1,1 @@
+Located just outside of Sisters in Central Oregon, South Sister is both the youngest and the tallest of the volcanic trio. At over 10,363 feet it is the third highest peak in Oregon and its relativly approachable climb makes it a great intro mountain for begining mountaineers.

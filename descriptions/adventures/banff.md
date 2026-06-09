@@ -1,0 +1,1 @@
+One of the crown jewels of the Canadian national park system, Banff National Park is world famous for its mix of dramatic peaks and vibrant blue lakes. As both a UNESCO world heritage site as well as part of the Canadian rockies it is a destination sought aftter by nature lovers worldwide.

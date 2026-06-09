@@ -164,6 +164,16 @@ export default {
     hike: "Lake Haiyaha",
     length: 3, elevationGain: 3, technicality: 3, externalFactors: 3, enjoyment: 6,
   },
+  "south-sister": {
+    hike: "South Sister Climb",
+    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
+  },
+  "lassen-volcanic-national-park": {
+    hike: "Lassen Peak",
+    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
+  },
+
+  
   "superstitions": [
   {
     hike: "Flatiron",
@@ -216,4 +226,5 @@ export default {
     length: 7, elevationGain: 5, technicality: 4, externalFactors: 4, enjoyment: 8,
   },
   ],
+  
 };

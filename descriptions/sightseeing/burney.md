@@ -1,0 +1,1 @@
+Often called the "Eighth Wonder of the World" by Teddy Roosevelt, Burney Falls is a 129-foot waterfall fed by underground springs that pour water directly from the cliff face year-round, independent of seasonal rainfall. The result is a lush, moss-draped grotto that feels almost tropical amid the dry Northern California landscape. 

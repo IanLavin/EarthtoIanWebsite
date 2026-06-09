@@ -1,0 +1,1 @@
+Samuel H Boardman is a stunning 12-mile stretch of the Oregon Coast Highway that showcases some of the most dramatic coastal scenery in the Pacific Northwest. Towering sea stacks, natural rock arches, secluded pocket beaches, and old-growth Sitka spruce forests make it one of the most photographed but still relatively uncrowded coastlines in the country.

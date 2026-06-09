@@ -1,0 +1,1 @@
+Straddling the Continental Divide in northwestern Montana, Glacier is a cathedral of jagged peaks, turquoise lakes, and ancient glacial valleys that feels genuinely wild and remote. The iconic Going-to-the-Sun Road is one of the most spectacular drives in North America, threading through alpine terrain accessible only a few months of the year. 
