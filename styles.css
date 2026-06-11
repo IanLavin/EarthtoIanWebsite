@@ -360,14 +360,59 @@ input {
   box-shadow: 0 0 0 4px rgba(74, 163, 255, 0.18);
 }
 
+/* Filters toggle button (opens filters modal) */
+.page-home .filters-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.page-home .filters-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.page-home .filters-toggle-btn.has-active {
+  border-color: rgba(74, 163, 255, 0.5);
+}
+
+.page-home .filters-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 99px;
+  background: var(--accent);
+  color: #08111f;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 /* Year filter */
-.page-home .year-filter {
+.page-home .year-filter,
+.page-home .month-filter {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.page-home .year-btn {
+.page-home .year-btn,
+.page-home .month-btn {
   padding: 5px 12px;
   border-radius: 99px;
   border: 1px solid var(--border);
@@ -379,14 +424,16 @@ input {
   font-family: system-ui, sans-serif;
 }
 
-.page-home .year-btn.active {
+.page-home .year-btn.active,
+.page-home .month-btn.active {
   background: rgba(74, 163, 255, 0.18);
   border-color: rgba(74, 163, 255, 0.45);
   color: #fff;
   font-weight: 600;
 }
 
-.page-home .year-btn:hover:not(.active) {
+.page-home .year-btn:hover:not(.active),
+.page-home .month-btn:hover:not(.active) {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text);
 }
@@ -418,6 +465,118 @@ input {
 .page-home .tab.active {
   border-color: rgba(74, 163, 255, 0.75);
   box-shadow: 0 0 0 3px rgba(74, 163, 255, 0.15);
+}
+
+/* =========================================
+   Filters modal (home)
+========================================= */
+
+.filters-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3000;
+}
+
+.filters-backdrop.active {
+  display: block;
+}
+
+.filters-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 3001;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.filters-modal.active {
+  display: flex;
+}
+
+.filters-modal-content {
+  width: min(440px, 100%);
+  max-height: min(640px, 90dvh);
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  color: var(--text);
+}
+
+.filters-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filters-modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.filters-modal-close {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.7;
+}
+
+.filters-modal-close:hover {
+  opacity: 1;
+}
+
+.filters-modal-body {
+  padding: 16px 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.filters-modal .filter-section h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.filters-modal-footer {
+  padding: 12px 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filters-clear-btn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.filters-clear-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Sidebar list (home) */
@@ -1996,6 +2155,25 @@ a.stat-card-link:hover {
   border-color: rgba(255,255,255,0.24);
 }
 
+.countries-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.countries-flag {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.countries-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .countries-count {
   display: inline-flex;
   min-width: 32px;
@@ -2525,6 +2703,21 @@ a.tracker-card.completed:hover {
   border-radius: 8px;
   flex-shrink: 0;
   background: rgba(255,255,255,0.06);
+}
+
+.timeline-milestone {
+  border-style: dashed;
+  border-color: rgba(74, 163, 255, 0.4);
+  background: rgba(74, 163, 255, 0.06);
+}
+
+.timeline-milestone-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: radial-gradient(circle, rgba(74, 163, 255, 0.35), rgba(74, 163, 255, 0.08));
+  border: 1px solid rgba(74, 163, 255, 0.4);
 }
 
 .timeline-item-info {

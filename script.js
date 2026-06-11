@@ -12,6 +12,7 @@ const DEFAULT_VIEW = { center: [37.8283, -95.5795], zoom: 5 };
 const WORLD_VIEW = { center: [10.8283, -9.5795], zoom: 3 };
 const MOBILE_WORLD_VIEW = { center: [20, -90], zoom: 3 };
 const CATEGORIES = ["park", "mountain", "adventure", "sightseeing"];
+const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 /* =====================
    MAP SETUP
 ===================== */
@@ -63,6 +64,13 @@ const worldButton = document.getElementById("worldButton");
 const mapStyleBtns = Array.from(document.querySelectorAll(".map-style-btn"));
 const routesToggleBtn = document.getElementById("routesToggle");
 const yearFilterEl = document.getElementById("year-filter");
+const monthFilterEl = document.getElementById("month-filter");
+const filtersToggleBtn = document.getElementById("filters-toggle-btn");
+const filtersBadge = document.getElementById("filters-badge");
+const filtersModal = document.getElementById("filters-modal");
+const filtersBackdrop = document.getElementById("filters-backdrop");
+const filtersModalClose = document.getElementById("filters-modal-close");
+const filtersClearBtn = document.getElementById("filters-clear-btn");
 const sidebarEl = document.getElementById("sidebar");
 const sidebarDrawerToggle = document.getElementById("sidebar-drawer-toggle");
 const sidebarBackdrop = document.getElementById("sidebar-backdrop");
@@ -78,6 +86,7 @@ const surpriseMeBtn = document.getElementById("surprise-me-btn");
 
 let activeCategory = "all";
 let activeYearFilter = "all";
+let activeMonthFilter = "all";
 let searchTerm = "";
 let lastRandomLocationId = null;
 let routesAlwaysVisible = false;
@@ -173,6 +182,7 @@ function setActiveTab(category) {
   applyCategoryToMap();
   renderSidebarList();
   syncStateToUrl();
+  updateFiltersBadge();
 }
 
 function applyCategoryToMap() {
@@ -184,7 +194,7 @@ function applyCategoryToMap() {
       else map.removeLayer(markerLayers[cat]);
     });
   }
-  applyYearFilter();
+  applyMarkerFilters();
 }
 
 function createPopup(place) {
@@ -217,21 +227,27 @@ function createPopup(place) {
   `;
 }
 
+function matchesActiveFilters(place) {
+  if (activeYearFilter !== "all" && !place.dateVisited?.startsWith(activeYearFilter)) {
+    return false;
+  }
+  if (activeMonthFilter !== "all" && !place.bestMonths?.includes(Number(activeMonthFilter))) {
+    return false;
+  }
+  return true;
+}
+
 function getPlacesForSidebar() {
   const source = sortedByCategory[activeCategory] || [];
   let result = searchTerm ? source.filter((place) => place.searchName.includes(searchTerm)) : source;
-  if (activeYearFilter !== "all") {
-    result = result.filter((place) => place.dateVisited?.startsWith(activeYearFilter));
-  }
-  return result;
+  return result.filter(matchesActiveFilters);
 }
 
-function applyYearFilter() {
+function applyMarkerFilters() {
   allLocations.forEach((place) => {
     const marker = markerById.get(place.id);
     if (!marker) return;
-    const matches = activeYearFilter === "all" ||
-      (place.dateVisited && place.dateVisited.startsWith(activeYearFilter));
+    const matches = matchesActiveFilters(place);
     marker.setOpacity(matches ? 1 : 0);
     if (marker._icon) marker._icon.style.pointerEvents = matches ? "" : "none";
   });
@@ -491,8 +507,9 @@ function initYearFilter() {
       yearFilterEl.querySelectorAll(".year-btn").forEach((b) =>
         b.classList.toggle("active", b.dataset.year === year)
       );
-      applyYearFilter();
+      applyMarkerFilters();
       renderSidebarList();
+      updateFiltersBadge();
     });
     return btn;
   });
@@ -501,12 +518,91 @@ function initYearFilter() {
 }
 
 /* =====================
+   MONTH FILTER
+===================== */
+
+function initMonthFilter() {
+  if (!monthFilterEl) return;
+
+  const buttons = ["all", ...MONTH_NAMES.map((_, i) => String(i + 1))].map((month) => {
+    const btn = document.createElement("button");
+    btn.className = "month-btn" + (month === "all" ? " active" : "");
+    btn.dataset.month = month;
+    btn.textContent = month === "all" ? "Anytime" : MONTH_NAMES[Number(month) - 1];
+    btn.addEventListener("click", () => {
+      activeMonthFilter = month;
+      monthFilterEl.querySelectorAll(".month-btn").forEach((b) =>
+        b.classList.toggle("active", b.dataset.month === month)
+      );
+      applyMarkerFilters();
+      renderSidebarList();
+      updateFiltersBadge();
+    });
+    return btn;
+  });
+
+  monthFilterEl.append(...buttons);
+}
+
+/* =====================
+   FILTERS MODAL
+===================== */
+
+function updateFiltersBadge() {
+  if (!filtersBadge || !filtersToggleBtn) return;
+
+  let count = 0;
+  if (activeCategory !== "all") count++;
+  if (activeYearFilter !== "all") count++;
+  if (activeMonthFilter !== "all") count++;
+
+  filtersBadge.textContent = String(count);
+  filtersBadge.hidden = count === 0;
+  filtersToggleBtn.classList.toggle("has-active", count > 0);
+}
+
+function openFiltersModal() {
+  filtersModal?.classList.add("active");
+  filtersBackdrop?.classList.add("active");
+}
+
+function closeFiltersModal() {
+  filtersModal?.classList.remove("active");
+  filtersBackdrop?.classList.remove("active");
+}
+
+filtersToggleBtn?.addEventListener("click", openFiltersModal);
+filtersModalClose?.addEventListener("click", closeFiltersModal);
+filtersBackdrop?.addEventListener("click", closeFiltersModal);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && filtersModal?.classList.contains("active")) {
+    closeFiltersModal();
+  }
+});
+
+filtersClearBtn?.addEventListener("click", () => {
+  activeYearFilter = "all";
+  activeMonthFilter = "all";
+
+  yearFilterEl?.querySelectorAll(".year-btn").forEach((b) =>
+    b.classList.toggle("active", b.dataset.year === "all")
+  );
+  monthFilterEl?.querySelectorAll(".month-btn").forEach((b) =>
+    b.classList.toggle("active", b.dataset.month === "all")
+  );
+
+  setActiveTab("all");
+});
+
+/* =====================
    INIT
 ===================== */
 
 loadMarkers();
 loadRoutes();
 initYearFilter();
+initMonthFilter();
 restoreStateFromUrl();
 setActiveTab(activeCategory);
 showRandomLocation();

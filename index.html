@@ -79,15 +79,10 @@
 
     <input type="text" id="searchBox" placeholder="Search..." />
 
-    <div class="tabs" role="tablist" aria-label="Categories">
-      <button class="tab active" data-category="all" role="tab" aria-selected="true">All</button>
-      <button class="tab" data-category="park" role="tab" aria-selected="false">Parks</button>
-      <button class="tab" data-category="mountain" role="tab" aria-selected="false">Highpoints</button>
-      <button class="tab" data-category="adventure" role="tab" aria-selected="false">Adventures</button>
-      <button class="tab" data-category="sightseeing" role="tab" aria-selected="false">Sightseeing</button>
-    </div>
-
-    <div id="year-filter" class="year-filter"></div>
+    <button id="filters-toggle-btn" class="filters-toggle-btn" aria-haspopup="dialog" aria-controls="filters-modal">
+      <span>Filters</span>
+      <span id="filters-badge" class="filters-badge" hidden>0</span>
+    </button>
 
     <ul id="sidebar-list" class="sidebar-list"></ul>
 
@@ -101,6 +96,44 @@
     </div>
 
   </aside>
+
+  <!-- Filters Modal -->
+  <div id="filters-backdrop" class="filters-backdrop"></div>
+  <div id="filters-modal" class="filters-modal" role="dialog" aria-modal="true" aria-labelledby="filters-modal-title">
+    <div class="filters-modal-content">
+      <div class="filters-modal-header">
+        <h2 id="filters-modal-title">Filters</h2>
+        <button id="filters-modal-close" class="filters-modal-close" aria-label="Close filters">&times;</button>
+      </div>
+
+      <div class="filters-modal-body">
+        <section class="filter-section">
+          <h3>Category</h3>
+          <div class="tabs" role="tablist" aria-label="Categories">
+            <button class="tab active" data-category="all" role="tab" aria-selected="true">All</button>
+            <button class="tab" data-category="park" role="tab" aria-selected="false">Parks</button>
+            <button class="tab" data-category="mountain" role="tab" aria-selected="false">Highpoints</button>
+            <button class="tab" data-category="adventure" role="tab" aria-selected="false">Adventures</button>
+            <button class="tab" data-category="sightseeing" role="tab" aria-selected="false">Sightseeing</button>
+          </div>
+        </section>
+
+        <section class="filter-section">
+          <h3>Best Time to Visit</h3>
+          <div id="month-filter" class="month-filter"></div>
+        </section>
+
+        <section class="filter-section">
+          <h3>Year Visited</h3>
+          <div id="year-filter" class="year-filter"></div>
+        </section>
+      </div>
+
+      <div class="filters-modal-footer">
+        <button id="filters-clear-btn" class="filters-clear-btn">Clear All</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Leaflet -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

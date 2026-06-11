@@ -255,4 +255,11 @@ export function countryName(code) {
   return COUNTRY_NAMES[code] ?? code;
 }
 
+export function countryFlag(code) {
+  if (!code || code.length !== 2) return "";
+  return String.fromCodePoint(
+    ...code.toUpperCase().split("").map((char) => 0x1f1e6 + char.charCodeAt(0) - 65)
+  );
+}
+
 export default COUNTRY_NAMES;

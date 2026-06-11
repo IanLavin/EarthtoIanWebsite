@@ -57,6 +57,10 @@ Open `locations-data.js` and add an object to the appropriate category array:
   logisticsMd:   "descriptions/logistics/rmnp.md",
   notesMd:       "descriptions/notes/rmnp.md",
 
+  // Best months to visit (1 = Jan ... 12 = Dec), used by the "best time to visit" filter.
+  // Should mirror the "Best months" line in the logistics markdown.
+  bestMonths: [5, 6, 7, 8, 9],
+
   // Gallery — choose ONE of these:
   galleryDir: "Pictures/Colorado/RMNP/",  // auto-loads all images in that folder
   gallery: ["Pictures/Colorado/RMNP/IMG_0001.jpg", ...],  // explicit list

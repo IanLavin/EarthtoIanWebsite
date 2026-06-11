@@ -4,10 +4,18 @@ import { initMenu } from "./js/menu.js";
 
 const TRIP_GAP_DAYS = 7;
 
+const PROJECT_START = {
+  id: "project-start",
+  name: "Earth to Ian Begins",
+  dateVisited: "2023-02-17",
+  isMilestone: true,
+};
+
 // Collect all locations with a dateVisited
 const dated = Object.values(locations)
   .flat()
   .filter((loc) => loc.dateVisited)
+  .concat(PROJECT_START)
   .map((loc) => ({ ...loc, _date: new Date(loc.dateVisited) }))
   .sort((a, b) => b._date - a._date); // newest first
 
@@ -89,6 +97,26 @@ for (const [year, yearTrips] of byYear) {
     items.className = "timeline-items";
 
     for (const loc of trip) {
+      if (loc.isMilestone) {
+        const item = document.createElement("div");
+        item.className = "timeline-item timeline-milestone";
+
+        const icon = document.createElement("div");
+        icon.className = "timeline-milestone-icon";
+
+        const info = document.createElement("div");
+        info.className = "timeline-item-info";
+        info.innerHTML = `
+          <span class="timeline-item-name">${escapeHtml(loc.name)}</span>
+          <span class="timeline-item-meta">The journey starts here</span>
+        `;
+
+        item.appendChild(icon);
+        item.appendChild(info);
+        items.appendChild(item);
+        continue;
+      }
+
       const item = document.createElement("a");
       item.href = `location.html?id=${encodeURIComponent(loc.id)}`;
       item.className = "timeline-item";
