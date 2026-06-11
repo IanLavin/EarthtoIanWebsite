@@ -1,1 +1,1 @@
-testing2
+Yosemite National Park is the granite heart of the Sierra Nevada, a glacially carved valley ringed by sheer cliffs like El Capitan and Half Dome and laced with waterfalls that thunder in spring and trickle to nothing by late summer. Beyond the valley floor, the park unfolds into high alpine country around Tuolumne Meadows and ancient giant sequoias in the Mariposa Grove. It's one of the most iconic landscapes in America, and every viewpoint feels like it was framed on purpose.

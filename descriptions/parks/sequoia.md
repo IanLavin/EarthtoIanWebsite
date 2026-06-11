@@ -1,1 +1,1 @@
-testing2
+Sequoia National Park protects the General Sherman Tree, the largest living thing on Earth by volume, along with the surrounding Giant Forest where groves of massive sequoias dwarf everything around them. The park also climbs east into the high Sierra, culminating at Mount Whitney, the tallest peak in the contiguous United States. Standing at the base of these trees gives a sense of scale that no photo quite manages to capture.

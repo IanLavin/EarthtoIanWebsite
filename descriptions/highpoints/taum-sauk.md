@@ -1,0 +1,1 @@
+Taum Sauk Mountain is the highest point in Missouri, rising from the rugged St. Francois Mountains in the heart of the Ozarks. A short paved trail leads from the parking area to the summit marker, and the same trail continues on to Mina Sauk Falls, the state's tallest waterfall. The forested, hilly terrain makes it feel more substantial than most Midwest highpoints.

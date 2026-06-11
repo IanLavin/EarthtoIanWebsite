@@ -1,0 +1,3 @@
+- The park features Missouri's tallest waterfall Mina Sauk Falls at 132 feet
+- These mountains are some of the oldest in the United States at 1.5 billion years old, three times older than the Appalachians
+- The area is infamous for the nearby hydroelectric, which in 2005 suffered a breach and sent 1.5 billion gallons of water flooding down the hillside.

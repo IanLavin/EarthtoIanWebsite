@@ -1,1 +1,1 @@
-testing2
+Kings Canyon National Park sits just north of Sequoia and shares its love of giant trees, anchored by the General Grant Tree in Grant Grove. Its namesake canyon is one of the deepest in the country, a dramatic gorge of granite walls carved by the South Fork of the Kings River, with the road into Cedar Grove offering rare drive-in access to its floor. Far less crowded than its neighbors, it rewards anyone willing to make the long drive.

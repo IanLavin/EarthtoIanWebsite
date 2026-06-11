@@ -823,7 +823,9 @@ const rawLocations = {
             logisticsMd: "descriptions/logistics/lassen-volcanic.md",
             notesMd: "descriptions/notes/lassen-volcanic.md",
             routeGeoJson: "routes/lassen-peak.geojson",
-            galleryDir: "Pictures/California/Lassen/" 
+            galleryDir: "Pictures/California/Lassen/", 
+            dateVisited: "2026-06-13",
+
         },
         { 
             name: "Glacier National Park", country: "US", 
@@ -835,6 +837,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/glacier.md", 
             logisticsMd: "descriptions/logistics/glacier.md",
             notesMd: "descriptions/notes/glacier.md",
+            dateVisited: "2026-06-28",
             galleryDir: "Pictures/Montana/Glacier/" 
         },
         
@@ -849,7 +852,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/gateway-arch.md",
             logisticsMd: "descriptions/logistics/gateway-arch.md",
             notesMd: "descriptions/notes/gateway-arch.md",
-
+            dateVisited: "2026-07-31",
             //carousel images
             galleryDir: "Pictures/Missouri/Arch/"
         },
@@ -864,6 +867,8 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/indiana-dunes.md",
             logisticsMd: "descriptions/logistics/indiana-dunes.md",
             notesMd: "descriptions/notes/indiana-dunes.md",
+            dateVisited: "2026-08-02",
+
 
             //carousel images
             galleryDir: "Pictures/Indiana/Dunes/"
@@ -879,7 +884,7 @@ const rawLocations = {
             descriptionMd: "descriptions/parks/mammoth-cave.md",
             logisticsMd: "descriptions/logistics/mammoth-cave.md",
             notesMd: "descriptions/notes/mammoth-cave.md",
-
+            dateVisited: "2026-08-01",
             //carousel images
             galleryDir: "Pictures/Kentucky/Cave/"
         },
@@ -891,6 +896,11 @@ const rawLocations = {
             url: "https://en.wikipedia.org/wiki/Sequoia_National_Park", 
             img: "Pictures/California/Sequoia/IMG_6907.jpg", 
             descriptionMd: "descriptions/parks/sequoia.md", 
+            logisticsMd: "descriptions/logistics/sequoia.md",
+            notesMd: "descriptions/notes/sequoia.md",
+            routeGeoJson: "routes/sequoia.geojson",
+            dateVisited: "2026-08-27",
+
             galleryDir: "Pictures/California/Sequoia/" 
         },
         { 
@@ -901,7 +911,10 @@ const rawLocations = {
             lng: -118.963, 
             url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park", 
             img: "Pictures/California/Kings_Canyon/IMG_6907.jpg", 
-            descriptionMd: "descriptions/parks/kings-canyon.md", 
+            descriptionMd: "descriptions/parks/kings_canyon.md",
+            logisticsMd: "descriptions/logistics/kings_canyon.md",
+            notesMd: "descriptions/notes/kings_canyon.md",
+            dateVisited: "2026-08-28",
             galleryDir: "Pictures/California/Kings_Canyon/" 
         },
         { 
@@ -912,7 +925,11 @@ const rawLocations = {
             lng: -119.533, 
             url: "https://en.wikipedia.org/wiki/Yosemite_National_Park", 
             img: "Pictures/California/Yosemite/IMG_6907.jpg", 
-            descriptionMd: "descriptions/parks/yosemite.md", 
+            descriptionMd: "descriptions/parks/yosemite.md",
+            logisticsMd: "descriptions/logistics/yosemite.md",
+            notesMd: "descriptions/notes/yosemite.md",
+            routeGeoJson: "routes/yosemite.geojson",  
+            dateVisited: "2026-08-29",
             galleryDir: "Pictures/California/Yosemite/" 
         },
         */
@@ -1429,9 +1446,13 @@ const rawLocations = {
             lng: -90.7291, 
             url: "https://en.wikipedia.org/wiki/Taum_Sauk_Mountain",
             img: "Pictures/Missouri/Taum-Sauk/GOPR6744.JPG",
-            descriptionMd: "descriptions/highpoints/taum-sauk-mountain.md",
-            logisticsMd: "descriptions/logistics/taum-sauk-mountain.md",
-            notesMd: "descriptions/notes/taum-sauk-mountain.md",
+            descriptionMd: "descriptions/highpoints/taum-sauk.md",
+            logisticsMd: "descriptions/logistics/taum-sauk.md",
+            notesMd: "descriptions/notes/taum-sauk.md",
+            dateVisited: "2026-07-31",
+            routeGeoJson: "routes/taum-sauk.geojson",
+
+
 
             //carousel images
             galleryDir: "Pictures/Missouri/Taum-Sauk/"
@@ -1447,6 +1468,10 @@ const rawLocations = {
             descriptionMd: "descriptions/highpoints/charles-mound.md",
             logisticsMd: "descriptions/logistics/charles-mound.md",
             notesMd: "descriptions/notes/charles-mound.md",
+            dateVisited: "2026-08-02",
+            routeGeoJson: "routes/charles-mound.geojson",
+
+
 
             //carousel images
             galleryDir: "Pictures/Illinois/Charles-Mound/"

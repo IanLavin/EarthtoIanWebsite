@@ -1,0 +1,3 @@
+-  This is the tallest monument in the United States and was built to honor Thomas Jefferson
+- The arch is exactly as wide as it is tall at 630 feet
+- During high winds the arch can sway up to 18 inches

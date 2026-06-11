@@ -172,7 +172,10 @@ export default {
     hike: "Lassen Peak",
     length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
   },
-
+  "yosemite-national-park": {
+    hike: "Half Dome",
+    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
+  },
   
   "superstitions": [
   {
