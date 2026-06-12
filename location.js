@@ -4,6 +4,7 @@ import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 import { initMenu } from "./js/menu.js";
 import { escapeHtml, IMAGE_FALLBACK, loadMarkdown, markdownToHtml, setPageMeta } from "./js/utils.js";
+import { countryName, createFlagIcon } from "./country-names.js";
 import hikeStats, { computeWeightedScore, getDifficultyLabel } from "./hike-stats-data.js";
 import nationalParksData from "./national-parks-data.js";
 
@@ -41,10 +42,24 @@ async function main() {
     image: selectedLocation.img,
   });
 
+  const breadcrumbCountryLink = document.getElementById("breadcrumb-country-link");
+  if (breadcrumbCountryLink) {
+    if (selectedLocation.country) {
+      breadcrumbCountryLink.href = `country.html?country=${selectedLocation.country}`;
+      breadcrumbCountryLink.textContent = countryName(selectedLocation.country);
+    } else {
+      breadcrumbCountryLink.closest("li").remove();
+    }
+  }
+  document.getElementById("breadcrumb-location-name").textContent = selectedLocation.name;
+
   const subtitleEl = document.getElementById("location-subtitle");
   if (subtitleEl) {
     const parts = [selectedLocation.region, selectedLocation.country].filter(Boolean);
-    subtitleEl.textContent = parts.join(" - ");
+    subtitleEl.textContent = "";
+    const flag = createFlagIcon(selectedLocation.country, "location-subtitle-flag");
+    if (flag) subtitleEl.appendChild(flag);
+    subtitleEl.appendChild(document.createTextNode(parts.join(" - ")));
   }
 
   const dateVisitedEl = document.getElementById("location-date-visited");
@@ -324,6 +339,38 @@ function initMiniNav() {
 let elevationProfileData = null;
 let elevationUnit = localStorage.getItem("elevationUnit") || "imperial";
 
+function computeElevationProfile(coords) {
+  const MAX_PTS = 400;
+  const step = Math.ceil(coords.length / MAX_PTS);
+  const sampled = coords.filter((_, i) => i % step === 0);
+  if (sampled[sampled.length - 1] !== coords[coords.length - 1]) {
+    sampled.push(coords[coords.length - 1]);
+  }
+
+  const pts = [];
+  let cumDist = 0;
+  for (let i = 0; i < sampled.length; i++) {
+    if (i > 0) {
+      const [lng1, lat1] = sampled[i - 1];
+      const [lng2, lat2] = sampled[i];
+      cumDist += haversineMeters(lat1, lng1, lat2, lng2);
+    }
+    pts.push({ dist: cumDist, ele: sampled[i][2] });
+  }
+
+  const elevations = pts.map((p) => p.ele);
+  const minEle = Math.min(...elevations);
+  const maxEle = Math.max(...elevations);
+  const totalDist = pts[pts.length - 1].dist;
+  let gain = 0, loss = 0;
+  for (let i = 1; i < pts.length; i++) {
+    const diff = pts[i].ele - pts[i - 1].ele;
+    if (diff > 0) gain += diff; else loss -= diff;
+  }
+
+  return { pts, minEle, maxEle, totalDist, gain, loss };
+}
+
 async function renderElevationProfile(location) {
   if (!location.routeGeoJson) return;
   const section = document.getElementById("elevation-profile");
@@ -335,42 +382,33 @@ async function renderElevationProfile(location) {
     const geojson = await res.json();
 
     const features = geojson.type === "FeatureCollection" ? geojson.features : [geojson];
-    const allCoords = [];
-    for (const feature of features) {
-      if (feature.geometry?.type === "LineString") allCoords.push(...feature.geometry.coordinates);
-    }
-    if (!allCoords.length || allCoords[0].length < 3) return;
+    const routes = features
+      .filter((feature) => feature.geometry?.type === "LineString" && feature.geometry.coordinates?.[0]?.length >= 3)
+      .map((feature, i) => ({
+        name: feature.properties?.name || `Route ${i + 1}`,
+        profile: computeElevationProfile(feature.geometry.coordinates),
+      }));
 
-    const MAX_PTS = 400;
-    const step = Math.ceil(allCoords.length / MAX_PTS);
-    const sampled = allCoords.filter((_, i) => i % step === 0);
-    if (sampled[sampled.length - 1] !== allCoords[allCoords.length - 1]) {
-      sampled.push(allCoords[allCoords.length - 1]);
-    }
+    if (!routes.length) return;
 
-    const pts = [];
-    let cumDist = 0;
-    for (let i = 0; i < sampled.length; i++) {
-      if (i > 0) {
-        const [lng1, lat1] = sampled[i - 1];
-        const [lng2, lat2] = sampled[i];
-        cumDist += haversineMeters(lat1, lng1, lat2, lng2);
-      }
-      pts.push({ dist: cumDist, ele: sampled[i][2] });
-    }
-
-    const elevations = pts.map((p) => p.ele);
-    const minEle = Math.min(...elevations);
-    const maxEle = Math.max(...elevations);
-    const totalDist = pts[pts.length - 1].dist;
-    let gain = 0, loss = 0;
-    for (let i = 1; i < pts.length; i++) {
-      const diff = pts[i].ele - pts[i - 1].ele;
-      if (diff > 0) gain += diff; else loss -= diff;
-    }
-
-    elevationProfileData = { pts, minEle, maxEle, totalDist, gain, loss };
     section.style.display = "";
+
+    const selectWrap = document.getElementById("elevation-route-select-wrap");
+    const select = document.getElementById("elevation-route-select");
+    if (routes.length > 1) {
+      selectWrap.hidden = false;
+      select.innerHTML = routes
+        .map((route, i) => `<option value="${i}">${escapeHtml(route.name)}</option>`)
+        .join("");
+      select.addEventListener("change", () => {
+        elevationProfileData = routes[select.value].profile;
+        renderElevationDisplay();
+      });
+    } else {
+      selectWrap.hidden = true;
+    }
+
+    elevationProfileData = routes[0].profile;
     renderElevationDisplay();
 
     Array.from(document.querySelectorAll(".unit-btn")).forEach((btn) => {
@@ -560,7 +598,9 @@ function renderRelatedLocations(currentLocation) {
 
     const meta = document.createElement("span");
     meta.className = "related-location-meta";
-    meta.textContent = [loc.region, loc.country].filter(Boolean).join(" - ");
+    const flag = createFlagIcon(loc.country, "related-location-flag");
+    if (flag) meta.appendChild(flag);
+    meta.appendChild(document.createTextNode([loc.region, loc.country].filter(Boolean).join(" - ")));
 
     item.appendChild(link);
     item.appendChild(meta);

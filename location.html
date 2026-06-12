@@ -43,6 +43,15 @@
 
   <main class="location-page">
 
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="countries.html">Countries</a></li>
+        <li><a id="breadcrumb-country-link" href="#"></a></li>
+        <li aria-current="page" id="breadcrumb-location-name"></li>
+      </ol>
+    </nav>
+
     <!-- Top banner -->
     <header class="location-banner">
       <div class="banner-left">
@@ -105,6 +114,10 @@
               <button class="unit-btn" data-unit="imperial">ft / mi</button>
               <button class="unit-btn" data-unit="metric">m / km</button>
             </div>
+          </div>
+          <div id="elevation-route-select-wrap" class="elevation-route-select-wrap" hidden>
+            <label for="elevation-route-select">Route</label>
+            <select id="elevation-route-select" class="elevation-route-select"></select>
           </div>
           <div id="elevation-stats" class="elevation-stats"></div>
           <div id="elevation-svg-container"></div>

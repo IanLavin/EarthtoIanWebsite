@@ -1,5 +1,5 @@
 import locations from "./locations-data.js";
-import { countryName, countryFlag } from "./country-names.js";
+import { countryName, createFlagIcon } from "./country-names.js";
 import { initMenu } from "./js/menu.js";
 
 initMenu();
@@ -34,10 +34,7 @@ if (!countries.length) {
     const label = document.createElement("span");
     label.className = "countries-label";
 
-    const flag = document.createElement("span");
-    flag.className = "countries-flag";
-    flag.textContent = countryFlag(country);
-    flag.setAttribute("aria-hidden", "true");
+    const flag = createFlagIcon(country, "countries-flag");
 
     const name = document.createElement("span");
     name.className = "countries-name";
@@ -47,7 +44,7 @@ if (!countries.length) {
     count.className = "countries-count";
     count.textContent = String(total);
 
-    label.appendChild(flag);
+    if (flag) label.appendChild(flag);
     label.appendChild(name);
     link.appendChild(label);
     link.appendChild(count);

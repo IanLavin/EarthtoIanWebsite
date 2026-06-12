@@ -1,5 +1,5 @@
 import locations from "./locations-data.js";
-import { countryName } from "./country-names.js";
+import { countryName, createFlagIcon } from "./country-names.js";
 import { initCarousel } from "./js/carousel.js";
 import { initMenu } from "./js/menu.js";
 import { setPageMeta } from "./js/utils.js";
@@ -13,7 +13,13 @@ if (!countryCode) {
 }
 
 const name = countryName(countryCode);
-document.getElementById("country-title").textContent = name;
+const titleEl = document.getElementById("country-title");
+titleEl.textContent = "";
+const flag = createFlagIcon(countryCode, "country-title-flag");
+if (flag) titleEl.appendChild(flag);
+titleEl.appendChild(document.createTextNode(name));
+
+document.getElementById("breadcrumb-country-name").textContent = name;
 
 const allLocations = Object.values(locations).flat();
 const countryLocations = allLocations.filter((loc) => loc.country === countryCode);

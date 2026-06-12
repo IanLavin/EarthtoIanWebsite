@@ -255,11 +255,20 @@ export function countryName(code) {
   return COUNTRY_NAMES[code] ?? code;
 }
 
-export function countryFlag(code) {
+export function countryFlagUrl(code) {
   if (!code || code.length !== 2) return "";
-  return String.fromCodePoint(
-    ...code.toUpperCase().split("").map((char) => 0x1f1e6 + char.charCodeAt(0) - 65)
-  );
+  return `https://flagcdn.com/${code.toLowerCase()}.svg`;
+}
+
+export function createFlagIcon(code, extraClassName) {
+  const url = countryFlagUrl(code);
+  if (!url) return null;
+  const img = document.createElement("img");
+  img.src = url;
+  img.alt = "";
+  img.loading = "lazy";
+  img.className = extraClassName ? `flag-icon ${extraClassName}` : "flag-icon";
+  return img;
 }
 
 export default COUNTRY_NAMES;
