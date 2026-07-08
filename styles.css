@@ -2028,6 +2028,10 @@ a.stat-card-link:hover {
   color: var(--muted);
 }
 
+.elevation-route-select-wrap[hidden] {
+  display: none;
+}
+
 .elevation-route-select {
   max-width: 100%;
   padding: 5px 10px;

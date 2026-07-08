@@ -849,15 +849,15 @@ const rawLocations = {
 
             //carousel images
             galleryDir: "Pictures/South Carolina/Congaree/"
-        },
-        /*
+        }, 
         { 
             name: "Lassen Volcanic National Park", 
-            country: "US", region: "West Coast", 
+            country: "US", 
+            region: "West Coast", 
             lat: 40.487,
             lng: -121.505, 
             url: "https://en.wikipedia.org/wiki/Lassen_Volcanic_National_Park", 
-            img: "Pictures/California/Lassen/IMG_6907.jpg", 
+            img: "Pictures/California/Lassen/GP010023.jpg", 
             descriptionMd: "descriptions/parks/lassen-volcanic.md", 
             logisticsMd: "descriptions/logistics/lassen-volcanic.md",
             bestMonths: [6, 7, 8, 9, 10],
@@ -868,20 +868,93 @@ const rawLocations = {
 
         },
         { 
-            name: "Glacier National Park", country: "US", 
+            name: "Glacier National Park", 
+            country: "US", 
             region: "Rocky Mountain", 
             lat: 48.697, 
             lng: -113.717, 
             url: "https://en.wikipedia.org/wiki/Glacier_National_Park", 
-            img: "Pictures/Montana/Glacier/IMG_6907.jpg", 
+            img: "Pictures/Montana/Glacier/GP010457.jpg", 
             descriptionMd: "descriptions/parks/glacier.md", 
             logisticsMd: "descriptions/logistics/glacier.md",
-            bestMonths: [6, 7, 8, 9],
+            bestMonths: [7, 8, 9],
+            routeGeoJson: "routes/glacier-national-park.geojson",
             notesMd: "descriptions/notes/glacier.md",
             dateVisited: "2026-06-28",
             galleryDir: "Pictures/Montana/Glacier/" 
         },
-        
+        { 
+            name: "Banff National Park", 
+            country: "CA",
+            region: "Alberta",
+            lat: 51.327, 
+            lng: -116.179, 
+            url: "https://en.wikipedia.org/wiki/Banff_National_Park",
+            img: "Pictures/Canada/Banff/GP010977.jpg",
+            descriptionMd: "descriptions/parks/banff.md",
+            logisticsMd: "descriptions/logistics/banff.md",
+            bestMonths: [7, 8, 9],
+            notesMd: "descriptions/notes/banff.md",
+            routeGeoJson: "routes/banff.geojson",
+            dateVisited: "2026-07-01",
+
+
+            //carousel images
+            galleryDir: "Pictures/Canada/Banff/"
+        },
+        { 
+            name: "Yoho National Park", 
+            country: "CA",
+            region: "British Columbia",
+            lat: 51.439, 
+            lng: -116.541, 
+            url: "https://en.wikipedia.org/wiki/Yoho_National_Park",
+            img: "Pictures/Canada/Yoho/GP010838.jpg",
+            descriptionMd: "descriptions/parks/yoho.md",
+            logisticsMd: "descriptions/logistics/yoho.md",
+            bestMonths: [7, 8, 9],
+            notesMd: "descriptions/notes/yoho.md",
+            routeGeoJson: "routes/yoho.geojson",
+            dateVisited: "2026-07-04",
+            //carousel images
+            galleryDir: "Pictures/Canada/Yoho/"
+        },
+        { 
+            name: "Glacier National Park (Canada)", 
+            country: "CA",
+            region: "British Columbia",
+            lat: 51.388, 
+            lng: -117.530, 
+            url: "https://en.wikipedia.org/wiki/Glacier_National_Park",
+            img: "Pictures/Canada/Glacier/GP010368.jpg",
+            descriptionMd: "descriptions/parks/glacier(ca).md",
+            logisticsMd: "descriptions/logistics/glacier(ca).md",
+            bestMonths: [7, 8, 9],
+            notesMd: "descriptions/notes/glacier(ca).md",
+            routeGeoJson: "routes/great-glacier.geojson",
+            dateVisited: "2026-06-29",
+
+            //carousel images
+            galleryDir: "Pictures/Canada/Glacier/"
+        },
+        { 
+            name: "Kootenay National Park", 
+            country: "CA",
+            region: "British Columbia",
+            lat: 50.883, 
+            lng: -116.049, 
+            url: "https://en.wikipedia.org/wiki/Kootenay_National_Park",
+            img: "Pictures/Canada/Kootenay/GP010767.jpg",
+            descriptionMd: "descriptions/parks/kootenay.md",
+            logisticsMd: "descriptions/logistics/kootenay.md",
+            bestMonths: [7, 8, 9],
+            notesMd: "descriptions/notes/kootenay.md",
+            routeGeoJson: "routes/kootenay.geojson",
+            dateVisited: "2026-07-03",
+            //carousel images
+            galleryDir: "Pictures/Canada/Kootenay/"
+        },
+        /*
         { 
             name: "Gateway Arch National Park", 
             country: "US",
@@ -1590,7 +1663,7 @@ const rawLocations = {
             img: "Pictures/Arizona/Antelope/IMG_1167.jpg",
             descriptionMd: "descriptions/adventures/antelope.md",
             logisticsMd: "descriptions/logistics/antelope.md",
-            bestMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+            bestMonths: [4, 5, 9, 10, 11],
             notesMd: "descriptions/notes/antelope.md",
             routeGeoJson: "routes/antelope-kayak.geojson",
             dateVisited: "2024-06-19",
@@ -2011,7 +2084,6 @@ const rawLocations = {
                 title: "Humphreys Peak"
             },
         },
-        /*
         { 
             name: "South Sister", 
             country: "US",
@@ -2019,7 +2091,7 @@ const rawLocations = {
             lat: 44.103, 
             lng: -121.769, 
             url: "https://en.wikipedia.org/wiki/South_Sister",
-            img: "Pictures/Oregon/South_Sister/IMG_6907.jpg",
+            img: "Pictures/Oregon/South_Sister/GP010281.jpg",
             descriptionMd: "descriptions/adventures/south_sister.md",
             logisticsMd: "descriptions/logistics/south_sister.md",
             bestMonths: [6, 7],
@@ -2031,24 +2103,8 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Oregon/South_Sister/"
         },
-        { 
-            name: "Banff National Park", 
-            country: "CA",
-            region: "Alberta",
-            lat: 51.417, 
-            lng: -116.218, 
-            url: "https://en.wikipedia.org/wiki/Banff_National_Park",
-            img: "Pictures/Canada/Banff/IMG_6907.jpg",
-            descriptionMd: "descriptions/adventures/banff.md",
-            logisticsMd: "descriptions/logistics/banff.md",
-            bestMonths: [7, 8, 9],
-            notesMd: "descriptions/notes/banff.md",
-
-            //carousel images
-            galleryDir: "Pictures/Canada/Banff/"
-        },
         
-        */
+        
     ],
 
     sightseeing: [
@@ -2448,7 +2504,6 @@ const rawLocations = {
 
             galleryDir: "Pictures/Guatemala/Atitlan/"
         },
-        /*
         { 
             name: "Samuel H Boardman State Scenic Corridor", 
             country: "US",
@@ -2456,7 +2511,7 @@ const rawLocations = {
             lat: 42.188, 
             lng: -124.368, 
             url: "https://en.wikipedia.org/wiki/Samuel_H_Boardman_State_Scenic_Corridor",
-            img: "Pictures/Oregon/Boardman/GOPR6230.JPG",
+            img: "Pictures/Oregon/Boardman/boardman2.jpg",
             descriptionMd: "descriptions/sightseeing/boardman.md",
             logisticsMd: "descriptions/logistics/boardman.md",
             bestMonths: [6, 7, 8, 9],
@@ -2473,7 +2528,7 @@ const rawLocations = {
             lat: 41.012, 
             lng: -121.651, 
             url: "https://en.wikipedia.org/wiki/Burney_Falls",
-            img: "Pictures/California/Burney/GOPR6230.JPG",
+            img: "Pictures/California/Burney/IMG_8078.jpg",
             descriptionMd: "descriptions/sightseeing/burney.md",
             logisticsMd: "descriptions/logistics/burney.md",
             bestMonths: [6, 7, 8, 9],
@@ -2483,7 +2538,6 @@ const rawLocations = {
             galleryDir: "Pictures/California/Burney/"
         },
         
-        */
     ]
 };
 

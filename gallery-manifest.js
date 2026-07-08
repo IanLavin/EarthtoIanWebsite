@@ -123,6 +123,9 @@ const galleryManifest = {
   "Pictures/California/Black_Sand": [
     "Pictures/California/Black_Sand/IMG_7640.jpg",
   ],
+  "Pictures/California/Burney": [
+    "Pictures/California/Burney/IMG_8078.jpg",
+  ],
   "Pictures/California/Channel_Islands": [
     "Pictures/California/Channel_Islands/IMG_0659.jpg",
     "Pictures/California/Channel_Islands/IMG_0669.jpg",
@@ -166,6 +169,12 @@ const galleryManifest = {
     "Pictures/California/La_Jolla/GEO_0411.jpg",
     "Pictures/California/La_Jolla/IMG_3835.jpg",
   ],
+  "Pictures/California/Lassen": [
+    "Pictures/California/Lassen/GP010014.JPEG",
+    "Pictures/California/Lassen/GP010023.jpg",
+    "Pictures/California/Lassen/GP010029.jpg",
+    "Pictures/California/Lassen/IMG_8027.jpg",
+  ],
   "Pictures/California/Pinnacles": [
     "Pictures/California/Pinnacles/IMG_7520.jpg",
     "Pictures/California/Pinnacles/IMG_7542.jpg",
@@ -173,6 +182,9 @@ const galleryManifest = {
     "Pictures/California/Pinnacles/IMG_7559.jpg",
   ],
   "Pictures/California/Redwoods": [
+    "Pictures/California/Redwoods/GP010098.jpg",
+    "Pictures/California/Redwoods/GP010125.jpg",
+    "Pictures/California/Redwoods/GP010179.jpg",
     "Pictures/California/Redwoods/IMG_0033.JPG",
     "Pictures/California/Redwoods/IMG_0117.JPG",
     "Pictures/California/Redwoods/IMG_0374.JPG",
@@ -183,6 +195,33 @@ const galleryManifest = {
     "Pictures/California/Whitney/IMG_8989.jpg",
     "Pictures/California/Whitney/IMG_9003.jpg",
     "Pictures/California/Whitney/IMG_9040.jpg",
+  ],
+  "Pictures/Canada/Banff": [
+    "Pictures/Canada/Banff/GP010510.jpg",
+    "Pictures/Canada/Banff/GP010554.jpg",
+    "Pictures/Canada/Banff/GP010596.jpg",
+    "Pictures/Canada/Banff/GP010680.jpg",
+    "Pictures/Canada/Banff/GP010688.jpg",
+    "Pictures/Canada/Banff/GP010904.jpg",
+    "Pictures/Canada/Banff/GP010977.jpg",
+    "Pictures/Canada/Banff/GP011012.jpg",
+    "Pictures/Canada/Banff/IMG_8566.jpg",
+    "Pictures/Canada/Banff/IMG_8700.jpg",
+  ],
+  "Pictures/Canada/Glacier": [
+    "Pictures/Canada/Glacier/GP010343.jpg",
+    "Pictures/Canada/Glacier/GP010361.jpg",
+    "Pictures/Canada/Glacier/GP010368.jpg",
+  ],
+  "Pictures/Canada/Kootenay": [
+    "Pictures/Canada/Kootenay/GP010499.jpg",
+    "Pictures/Canada/Kootenay/GP010767.jpg",
+    "Pictures/Canada/Kootenay/GP010774.jpg",
+    "Pictures/Canada/Kootenay/IMG_8574.jpg",
+  ],
+  "Pictures/Canada/Yoho": [
+    "Pictures/Canada/Yoho/GP010822.jpg",
+    "Pictures/Canada/Yoho/GP010838.jpg",
   ],
   "Pictures/Colorado": [
     "Pictures/Colorado/IMG_5386.jpg",
@@ -323,6 +362,15 @@ const galleryManifest = {
   "Pictures/Massachusets/Greylock": [
     "Pictures/Massachusets/Greylock/IMG_6597.jpg",
   ],
+  "Pictures/Montana/Glacier": [
+    "Pictures/Montana/Glacier/GP010384.jpg",
+    "Pictures/Montana/Glacier/GP010395.jpg",
+    "Pictures/Montana/Glacier/GP010457.jpg",
+    "Pictures/Montana/Glacier/GP010466.jpg",
+    "Pictures/Montana/Glacier/IMG_8392.jpg",
+    "Pictures/Montana/Glacier/IMG_8437.jpg",
+    "Pictures/Montana/Glacier/IMG_8455.jpg",
+  ],
   "Pictures/Nebraska/Panorama": [
     "Pictures/Nebraska/Panorama/IMG_8931.jpg",
     "Pictures/Nebraska/Panorama/IMG_9312.jpg",
@@ -374,8 +422,19 @@ const galleryManifest = {
     "Pictures/Oklahoma/Black_Mesa/IMG_0921.jpg",
     "Pictures/Oklahoma/Black_Mesa/IMG_0934.jpg",
   ],
+  "Pictures/Oregon/Boardman": [
+    "Pictures/Oregon/Boardman/boardman1.jpg",
+    "Pictures/Oregon/Boardman/boardman2.jpg",
+    "Pictures/Oregon/Boardman/GP010138.jpg",
+    "Pictures/Oregon/Boardman/GP010219.jpg",
+  ],
   "Pictures/Oregon/Crater": [
+    "Pictures/Oregon/Crater/GP010249.jpg",
     "Pictures/Oregon/Crater/IMG_5284.jpg",
+  ],
+  "Pictures/Oregon/South_Sister": [
+    "Pictures/Oregon/South_Sister/GP010281.jpg",
+    "Pictures/Oregon/South_Sister/GP010295.jpg",
   ],
   "Pictures/Pennsylvania/Davis": [
     "Pictures/Pennsylvania/Davis/IMG_4385.jpg",

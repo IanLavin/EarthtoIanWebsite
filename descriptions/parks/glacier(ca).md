@@ -1,0 +1,1 @@
+Defined by its towering, razor-sharp peaks and massive fields of ancient ice, this park is a paradise for rugged alpine exploration. It protects over a hundred glaciers along with a network of steep, dramatic valleys carved by heavy winter snowfalls. The landscape transitions sharply from dense, old-growth cedar rainforests up to exposed, weather-beaten rock summits.

@@ -1,6 +1,7 @@
 import locations from "./locations-data.js";
+import standaloneRoutes from "./routes-data.js";
 import { initMenu } from "./js/menu.js";
-import { loadMarkdown, markdownToHtml } from "./js/utils.js";
+import { haversineMeters, loadMarkdown, markdownToHtml } from "./js/utils.js";
 
 const ABOUT_CONTENT = {
   who: "descriptions/about/who-i-am.md",
@@ -11,6 +12,7 @@ const ABOUT_CONTENT = {
 
 initMenu();
 renderStats();
+renderRouteStats();
 loadAboutContent();
 
 function renderStats() {
@@ -26,6 +28,56 @@ function renderStats() {
   if (highpointsEl) highpointsEl.textContent = String(highpointsCount);
   if (parksEl) parksEl.textContent = String(parksCount);
   if (countriesEl) countriesEl.textContent = String(countriesCount);
+}
+
+async function renderRouteStats() {
+  const milesEl = document.getElementById("stat-miles");
+  const gainEl = document.getElementById("stat-elevation-gain");
+  if (!milesEl && !gainEl) return;
+
+  const allLocations = Object.values(locations).flat();
+  const files = new Set([
+    ...allLocations.map((loc) => loc.routeGeoJson).filter(Boolean),
+    ...standaloneRoutes.map((route) => route.file),
+  ]);
+
+  const results = await Promise.all(
+    Array.from(files).map(async (file) => {
+      try {
+        const res = await fetch(file);
+        if (!res.ok) return { distance: 0, gain: 0 };
+        const geojson = await res.json();
+        const features = geojson.type === "FeatureCollection" ? geojson.features : [geojson];
+
+        let distance = 0;
+        let gain = 0;
+        for (const feature of features) {
+          const coords = feature.geometry?.coordinates;
+          if (feature.geometry?.type !== "LineString" || !coords?.[0] || coords[0].length < 3) continue;
+
+          for (let i = 1; i < coords.length; i++) {
+            const [lng1, lat1, ele1] = coords[i - 1];
+            const [lng2, lat2, ele2] = coords[i];
+            distance += haversineMeters(lat1, lng1, lat2, lng2);
+            if (ele2 > ele1) gain += ele2 - ele1;
+          }
+        }
+        return { distance, gain };
+      } catch (err) {
+        console.warn(`Failed to load route: ${file}`, err);
+        return { distance: 0, gain: 0 };
+      }
+    })
+  );
+
+  const totalDistanceMeters = results.reduce((sum, r) => sum + r.distance, 0);
+  const totalGainMeters = results.reduce((sum, r) => sum + r.gain, 0);
+
+  const totalMiles = totalDistanceMeters / 1609.344;
+  const totalGainFeet = totalGainMeters * 3.28084;
+
+  if (milesEl) milesEl.textContent = `${Math.round(totalMiles).toLocaleString()} mi`;
+  if (gainEl) gainEl.textContent = `${Math.round(totalGainFeet).toLocaleString()} ft`;
 }
 
 async function loadAboutContent() {

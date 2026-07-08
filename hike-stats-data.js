@@ -166,11 +166,23 @@ export default {
   },
   "south-sister": {
     hike: "South Sister Climb",
-    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
+    length: 7, elevationGain: 8, technicality: 6, externalFactors: 6, enjoyment: 8,
   },
   "lassen-volcanic-national-park": {
     hike: "Lassen Peak",
-    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
+    length: 4, elevationGain: 5, technicality: 5, externalFactors: 5, enjoyment: 7,
+  },
+  "glacier-national-park": {
+    hike: "Avalanche Lake",
+    length: 3, elevationGain: 2, technicality: 2, externalFactors: 3, enjoyment: 6,
+  },
+  "glacier-national-park-canada": {
+    hike: "Great Glacier Trail",
+    length: 3, elevationGain: 4, technicality: 3, externalFactors: 3, enjoyment: 7,
+  },
+  "kootenay-national-park": {
+    hike: "Marble Canyon",
+    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 7,
   },
   "yosemite-national-park": {
     hike: "Half Dome",
@@ -227,6 +239,20 @@ export default {
   {
     hike: "Bob Bear to Fossil Springs",
     length: 7, elevationGain: 5, technicality: 4, externalFactors: 4, enjoyment: 8,
+  },
+  ],
+  "banff-national-park": [
+  {
+    hike: "Johnston Canyon to Ink Pots",
+    length: 4, elevationGain: 4, technicality: 3, externalFactors: 4, enjoyment: 8,
+  },
+  {
+    hike: "Mt Norquay Via Ferrata",
+    length: 2, elevationGain: 3, technicality: 5, externalFactors: 4, enjoyment: 8,
+  },
+  {
+    hike: "Lake Agnes Tea House and Little Beehive",
+    length: 3, elevationGain: 4, technicality: 2, externalFactors: 3, enjoyment: 7,
   },
   ],
   

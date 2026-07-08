@@ -3,7 +3,7 @@ import galleryManifest from "./gallery-manifest.js";
 import { initCarousel } from "./js/carousel.js";
 import journals from "./journals/index.js";
 import { initMenu } from "./js/menu.js";
-import { escapeHtml, IMAGE_FALLBACK, loadMarkdown, markdownToHtml, setPageMeta } from "./js/utils.js";
+import { escapeHtml, haversineMeters, IMAGE_FALLBACK, loadMarkdown, markdownToHtml, setPageMeta } from "./js/utils.js";
 import { countryName, createFlagIcon } from "./country-names.js";
 import hikeStats, { computeWeightedScore, getDifficultyLabel } from "./hike-stats-data.js";
 import nationalParksData from "./national-parks-data.js";
@@ -447,16 +447,6 @@ function renderElevationDisplay() {
   `;
   document.getElementById("elevation-svg-container").innerHTML =
     buildElevationSvg(pts, minEle, maxEle, totalDist, imperial);
-}
-
-function haversineMeters(lat1, lng1, lat2, lng2) {
-  const R = 6371000;
-  const φ1 = (lat1 * Math.PI) / 180;
-  const φ2 = (lat2 * Math.PI) / 180;
-  const Δφ = ((lat2 - lat1) * Math.PI) / 180;
-  const Δλ = ((lng2 - lng1) * Math.PI) / 180;
-  const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
 function buildElevationSvg(pts, minEle, maxEle, totalDist, imperial = false) {
