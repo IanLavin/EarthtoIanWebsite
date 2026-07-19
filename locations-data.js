@@ -74,7 +74,14 @@ const rawLocations = {
             notesMd: "descriptions/notes/crater-lake.md",
             dateVisited: "2026-06-16",
             //carousel images
-            galleryDir: "Pictures/Oregon/Crater/"
+            galleryDir: "Pictures/Oregon/Crater/",
+
+            video: {
+                provider: "youtube",
+                id: "HkukVKCpZyA",
+                title: "Crater Lake National Park"
+            },
+
         },
         { 
             name: "Redwood National Park", 
@@ -89,6 +96,12 @@ const rawLocations = {
             bestMonths: [5, 6, 7, 8, 9],
             notesMd: "descriptions/notes/redwood.md",
             dateVisited: "2026-06-15",
+
+            video: {
+                provider: "youtube",
+                id: "HkukVKCpZyA",
+                title: "Redwood National Park"
+            },
 
             //carousel images
             galleryDir: "Pictures/California/Redwoods/"
@@ -866,6 +879,12 @@ const rawLocations = {
             galleryDir: "Pictures/California/Lassen/", 
             dateVisited: "2026-06-13",
 
+            video: {
+                provider: "youtube",
+                id: "HkukVKCpZyA",
+                title: "Lassen Volcanic National Park"
+            },
+
         },
         { 
             name: "Glacier National Park", 
@@ -1005,6 +1024,7 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Kentucky/Cave/"
         },
+        /*
         { 
             name: "Sequoia National Park", 
             country: "US", region: "West Coast", 
@@ -1625,8 +1645,7 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Illinois/Charles-Mound/"
         },
-        */
-            
+          */  
     ],
 
     adventure: [
@@ -2099,6 +2118,12 @@ const rawLocations = {
             routeGeoJson: "routes/south-sister.geojson",
             dateVisited: "2026-06-18",
 
+            video: {
+                provider: "youtube",
+                id: "HkukVKCpZyA",
+                title: "South Sister Volcano"
+            },
+
 
             //carousel images
             galleryDir: "Pictures/Oregon/South_Sister/"
@@ -2518,6 +2543,12 @@ const rawLocations = {
             notesMd: "descriptions/notes/boardman.md",
             dateVisited: "2026-06-16",
 
+            video: {
+                provider: "youtube",
+                id: "HkukVKCpZyA",
+                title: "Samuel H Boardman State Scenic Corridor"
+            },
+
 
             galleryDir: "Pictures/Oregon/Boardman/"
         },
@@ -2534,6 +2565,12 @@ const rawLocations = {
             bestMonths: [6, 7, 8, 9],
             notesMd: "descriptions/notes/burney.md",
             dateVisited: "2026-06-14",
+
+            video: {
+                provider: "youtube",
+                id: "HkukVKCpZyA",
+                title: "Burney Falls"
+            },
 
             galleryDir: "Pictures/California/Burney/"
         },
