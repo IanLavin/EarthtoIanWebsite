@@ -1,6 +1,7 @@
 import locations from "./locations-data.js";
 import icons from "./icons.js";
 import standaloneRoutes from "./routes-data.js";
+import travelPaths from "./travel-paths-data.js";
 import { initMenu } from "./js/menu.js";
 import { escapeHtml, IMAGE_FALLBACK } from "./js/utils.js";
 
@@ -63,6 +64,7 @@ const homeButton = document.getElementById("homeButton");
 const worldButton = document.getElementById("worldButton");
 const mapStyleBtns = Array.from(document.querySelectorAll(".map-style-btn"));
 const routesToggleBtn = document.getElementById("routesToggle");
+const tripsToggleBtn = document.getElementById("tripsToggle");
 const yearFilterEl = document.getElementById("year-filter");
 const monthFilterEl = document.getElementById("month-filter");
 const filtersToggleBtn = document.getElementById("filters-toggle-btn");
@@ -90,6 +92,7 @@ let activeMonthFilter = "all";
 let searchTerm = "";
 let lastRandomLocationId = null;
 let routesAlwaysVisible = false;
+let travelPathsVisible = false;
 let openPopupLocationId = null;
 let pendingOpenId = null;
 
@@ -120,6 +123,7 @@ const markerLayers = Object.fromEntries(CATEGORIES.map((cat) => [cat, L.layerGro
 const markerById = new Map();
 const routeLayerById = new Map();
 const standaloneRouteLayers = [];
+const travelPathLayers = [];
 
 /* =====================
    HELPERS
@@ -251,6 +255,7 @@ function applyMarkerFilters() {
     marker.setOpacity(matches ? 1 : 0);
     if (marker._icon) marker._icon.style.pointerEvents = matches ? "" : "none";
   });
+  applyTripLayerFilters();
 }
 
 function renderSidebarList() {
@@ -372,6 +377,43 @@ async function loadRoutes() {
 }
 
 /* =====================
+   TRAVEL PATHS
+===================== */
+
+function buildTravelPathLayer(geojson) {
+  const halo = L.geoJSON(geojson, {
+    style: { color: "#000", weight: 6, opacity: 0.3, lineCap: "round", lineJoin: "round" },
+  });
+  const line = L.geoJSON(geojson, {
+    style: { color: "#2dd4bf", weight: 3, opacity: 0.9, lineCap: "round", lineJoin: "round" },
+  });
+  return L.layerGroup([halo, line]);
+}
+
+async function loadTravelPaths() {
+  for (const path of travelPaths) {
+    try {
+      const res = await fetch(path.file);
+      if (!res.ok) continue;
+      travelPathLayers.push({
+        layer: buildTravelPathLayer(await res.json()),
+        year: path.date ? path.date.split("-")[0] : null,
+      });
+    } catch (err) {
+      console.warn("Travel path load failed:", path.file, err);
+    }
+  }
+}
+
+function applyTripLayerFilters() {
+  travelPathLayers.forEach(({ layer, year }) => {
+    const yearMatches = activeYearFilter === "all" || year === activeYearFilter;
+    if (travelPathsVisible && yearMatches) layer.addTo(map);
+    else map.removeLayer(layer);
+  });
+}
+
+/* =====================
    RANDOM HIGHLIGHT
 ===================== */
 
@@ -457,6 +499,12 @@ routesToggleBtn?.addEventListener("click", () => {
     if (routesAlwaysVisible) layer.addTo(map);
     else map.removeLayer(layer);
   });
+});
+
+tripsToggleBtn?.addEventListener("click", () => {
+  travelPathsVisible = !travelPathsVisible;
+  tripsToggleBtn.classList.toggle("active", travelPathsVisible);
+  applyTripLayerFilters();
 });
 
 /* =====================
@@ -601,6 +649,7 @@ filtersClearBtn?.addEventListener("click", () => {
 
 loadMarkers();
 loadRoutes();
+loadTravelPaths();
 initYearFilter();
 initMonthFilter();
 restoreStateFromUrl();

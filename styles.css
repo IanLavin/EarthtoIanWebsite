@@ -389,26 +389,41 @@ input {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.page-home .routes-toggle-btn {
-  width: 100%;
-  padding: 8px 12px;
+.page-home .layer-toggle-group {
+  display: flex;
   border-radius: 12px;
+  overflow: hidden;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.page-home .routes-toggle-btn:hover {
+.page-home .layer-toggle-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.page-home .layer-toggle-btn:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.page-home .layer-toggle-btn:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.page-home .routes-toggle-btn.active {
+.page-home #routesToggle.active {
   background: rgba(255, 122, 61, 0.22);
-  border-color: rgba(255, 122, 61, 0.5);
   color: #ff7a3d;
+  font-weight: 600;
+}
+
+.page-home #tripsToggle.active {
+  background: rgba(45, 212, 191, 0.18);
+  color: #2dd4bf;
   font-weight: 600;
 }
 
