@@ -973,7 +973,6 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Canada/Kootenay/"
         },
-        /*
         { 
             name: "Gateway Arch National Park", 
             country: "US",
@@ -981,7 +980,7 @@ const rawLocations = {
             lat: 38.6244, 
             lng: -90.1848, 
             url: "https://en.wikipedia.org/wiki/Gateway_Arch_National_Park",
-            img: "Pictures/Missouri/Arch/GOPR6744.JPG",
+            img: "Pictures/Missouri/Arch/GP011065.jpg",
             descriptionMd: "descriptions/parks/gateway-arch.md",
             logisticsMd: "descriptions/logistics/gateway-arch.md",
             bestMonths: [6, 7, 8, 9, 10],
@@ -997,7 +996,7 @@ const rawLocations = {
             lat: 41.6594, 
             lng: -87.0492, 
             url: "https://en.wikipedia.org/wiki/Indiana_Dunes_National_Park",
-            img: "Pictures/Indiana/Dunes/GOPR6744.JPG",
+            img: "Pictures/Indiana/Dunes/GP011187.jpg",
             descriptionMd: "descriptions/parks/indiana-dunes.md",
             logisticsMd: "descriptions/logistics/indiana-dunes.md",
             bestMonths: [6, 7, 8, 9, 10],
@@ -1015,7 +1014,7 @@ const rawLocations = {
             lat: 37.1867, 
             lng: -86.1008, 
             url: "https://en.wikipedia.org/wiki/Mammoth_Cave_National_Park",
-            img: "Pictures/Kentucky/Cave/GOPR6744.JPG",
+            img: "Pictures/Kentucky/Cave/GP011131.jpg",
             descriptionMd: "descriptions/parks/mammoth-cave.md",
             logisticsMd: "descriptions/logistics/mammoth-cave.md",
             bestMonths: [6, 7, 8, 9, 10, 11],
@@ -1604,7 +1603,6 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Alabama/Cheaha/"
         },
-        /*
         { 
             name: "Taum Sauk Mountain", 
             country: "US",
@@ -1612,7 +1610,7 @@ const rawLocations = {
             lat: 37.5710, 
             lng: -90.7291, 
             url: "https://en.wikipedia.org/wiki/Taum_Sauk_Mountain",
-            img: "Pictures/Missouri/Taum-Sauk/GOPR6744.JPG",
+            img: "Pictures/Missouri/Taum-Sauk/GP011080.JPG",
             descriptionMd: "descriptions/highpoints/taum-sauk.md",
             logisticsMd: "descriptions/logistics/taum-sauk.md",
             bestMonths: [3, 4, 5, 6, 7, 8, 9, 10, 11],
@@ -1632,7 +1630,7 @@ const rawLocations = {
             lat: 42.5042, 
             lng: -90.2407, 
             url: "https://en.wikipedia.org/wiki/Charles_Mound",
-            img: "Pictures/Michigan/Charles-Mound/GOPR6744.JPG",
+            img: "Pictures/Illinois/charles-mound/GP011221.jpg",
             descriptionMd: "descriptions/highpoints/charles-mound.md",
             logisticsMd: "descriptions/logistics/charles-mound.md",
             bestMonths: [2, 6, 7, 8, 9],
@@ -1645,7 +1643,7 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Illinois/Charles-Mound/"
         },
-          */  
+          
     ],
 
     adventure: [

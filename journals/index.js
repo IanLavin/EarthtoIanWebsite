@@ -25,6 +25,8 @@ import clingmansDome from "./clingmans-dome.js";
 import sassafrasMountain from "./sassafras-mountain.js";
 import brasstownBald from "./brasstown-bald.js";
 import cheahaMountain from "./cheaha-mountain.js";
+import charlesMound from "./charles-mound.js";
+import taumSauk from "./taum-sauk.js";
 
 export default {
   [humphreysPeak.id]: humphreysPeak,
@@ -54,6 +56,9 @@ export default {
   [sassafrasMountain.id]: sassafrasMountain,
   [brasstownBald.id]: brasstownBald,
   [cheahaMountain.id]: cheahaMountain,
+  [charlesMound.id]: charlesMound,
+  [taumSauk.id]: taumSauk,
+
 };
 
 

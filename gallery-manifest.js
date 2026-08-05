@@ -345,6 +345,19 @@ const galleryManifest = {
     "Pictures/Idaho/Thompson/IMG_9159.jpg",
     "Pictures/Idaho/Thompson/IMG_9232.jpg",
   ],
+  "Pictures/Illinois/charles-mound": [
+    "Pictures/Illinois/charles-mound/GP011202.jpg",
+    "Pictures/Illinois/charles-mound/GP011207.jpg",
+    "Pictures/Illinois/charles-mound/GP011221.jpg",
+    "Pictures/Illinois/charles-mound/IMG_8968.jpg",
+    "Pictures/Illinois/charles-mound/IMG_8976.jpg",
+  ],
+  "Pictures/Indiana/Dunes": [
+    "Pictures/Indiana/Dunes/GP011180.jpg",
+    "Pictures/Indiana/Dunes/GP011187.jpg",
+    "Pictures/Indiana/Dunes/GP011189.jpg",
+    "Pictures/Indiana/Dunes/GP011193.jpg",
+  ],
   "Pictures/Indiana/Hoosier": [
     "Pictures/Indiana/Hoosier/IMG_6629.jpg",
   ],
@@ -355,12 +368,31 @@ const galleryManifest = {
     "Pictures/Kentucky/Black/IMG_4335.jpg",
     "Pictures/Kentucky/Black/IMG_4346.jpg",
   ],
+  "Pictures/Kentucky/Cave": [
+    "Pictures/Kentucky/Cave/GP011094.jpg",
+    "Pictures/Kentucky/Cave/GP011131.jpg",
+    "Pictures/Kentucky/Cave/GP011142.jpg",
+  ],
   "Pictures/Maryland/Backbone": [
     "Pictures/Maryland/Backbone/IMG_4378.jpg",
     "Pictures/Maryland/Backbone/IMG_4383.jpg",
   ],
   "Pictures/Massachusets/Greylock": [
     "Pictures/Massachusets/Greylock/IMG_6597.jpg",
+  ],
+  "Pictures/Missouri/Arch": [
+    "Pictures/Missouri/Arch/GP011057.jpg",
+    "Pictures/Missouri/Arch/GP011060.jpg",
+    "Pictures/Missouri/Arch/GP011062.jpg",
+    "Pictures/Missouri/Arch/GP011065.jpg",
+    "Pictures/Missouri/Arch/GP011071.jpg",
+  ],
+  "Pictures/Missouri/Taum-Sauk": [
+    "Pictures/Missouri/Taum-Sauk/GP011073.jpg",
+    "Pictures/Missouri/Taum-Sauk/GP011077.jpg",
+    "Pictures/Missouri/Taum-Sauk/GP011079.jpg",
+    "Pictures/Missouri/Taum-Sauk/GP011080.jpg",
+    "Pictures/Missouri/Taum-Sauk/GP011085.jpg",
   ],
   "Pictures/Montana/Glacier": [
     "Pictures/Montana/Glacier/GP010384.jpg",
