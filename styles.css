@@ -1020,14 +1020,24 @@ input {
     bottom: -85dvh;
     z-index: 2000;
     max-height: 80dvh;
-    scrollbar-width: none;
+    overflow: hidden; /* sidebar itself never scrolls; only the list does */
     border-radius: 20px 20px 0 0;
     border-bottom: none;
     padding-top: 6px;
     transition: bottom 0.32s cubic-bezier(0.32, 0.72, 0, 1);
   }
 
-  .page-home .sidebar::-webkit-scrollbar { display: none; }
+  /* List is the only scrollable region — controls always stay visible above it */
+  .page-home .sidebar-list {
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Highlights card takes too much space in the drawer; hide it on mobile */
+  .page-home #random-location {
+    display: none;
+  }
 
   .page-home .sidebar.drawer-open {
     bottom: 0;
