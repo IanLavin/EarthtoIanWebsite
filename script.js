@@ -93,6 +93,8 @@ let searchTerm = "";
 let lastRandomLocationId = null;
 let routesAlwaysVisible = false;
 let travelPathsVisible = false;
+let tripDotSeq = 0;
+let closeTripOverlay = null; // cleanup fn for the currently pinned trip (mobile tap or desktop click)
 let openPopupLocationId = null;
 let pendingOpenId = null;
 
@@ -417,25 +419,90 @@ function buildTravelPathLayer(geojson, color, name, locationIds = []) {
       if (fl._path) fl._path.style.pointerEvents = "stroke";
     });
   });
+  const svgNS = "http://www.w3.org/2000/svg";
+  let activeDot = null;
+
+  function showTripDot() {
+    if (activeDot) return;
+    line.eachLayer(function (fl) {
+      if (!fl._path || activeDot) return;
+      if (!fl._path.id) fl._path.id = "tp-" + (++tripDotSeq);
+
+      const dot = document.createElementNS(svgNS, "circle");
+      dot.setAttribute("r", "5");
+      dot.setAttribute("fill", color);
+      dot.setAttribute("stroke", "rgba(255,255,255,0.85)");
+      dot.setAttribute("stroke-width", "2");
+      dot.setAttribute("pointer-events", "none");
+
+      const anim = document.createElementNS(svgNS, "animateMotion");
+      anim.setAttribute("dur", "20s");
+      anim.setAttribute("repeatCount", "indefinite");
+      anim.setAttribute("rotate", "auto");
+
+      const mpath = document.createElementNS(svgNS, "mpath");
+      mpath.setAttribute("href", "#" + fl._path.id);
+      mpath.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + fl._path.id);
+
+      anim.appendChild(mpath);
+      dot.appendChild(anim);
+      fl._path.parentNode.appendChild(dot);
+      activeDot = dot;
+    });
+  }
+
+  function hideTripDot() {
+    if (activeDot) { activeDot.remove(); activeDot = null; }
+  }
+
   if (name) {
     // Manage tooltip manually — avoids bindTooltip which on touch-capable browsers
     // (Windows 11 reports maxTouchPoints > 0) wires click→openTooltip on every
     // feature layer, causing the stuck empty box on click.
     const tooltip = L.tooltip({ className: "trip-tooltip", direction: "top", offset: [0, -8] }).setContent(name);
-    hit.on("mouseover", function (e) {
-      tooltip.setLatLng(e.latlng);
+    let pinnedByClick = false;
+
+    function openOverlay(latlng) {
+      tooltip.setLatLng(latlng);
       if (!map.hasLayer(tooltip)) tooltip.addTo(map);
       highlightTripMarkers(locationIds, true);
+      showTripDot();
+    }
+
+    function closeOverlay() {
+      tooltip.remove();
+      highlightTripMarkers(locationIds, false);
+      hideTripDot();
+      pinnedByClick = false;
+      if (closeTripOverlay === closeOverlay) closeTripOverlay = null;
+    }
+
+    // Desktop: hover shows/hides transiently (only when not pinned by click).
+    hit.on("mouseover", function (e) {
+      if (!pinnedByClick) openOverlay(e.latlng);
     });
-    hit.on("mousemove", function (e) { tooltip.setLatLng(e.latlng); });
+    hit.on("mousemove", function (e) {
+      if (!pinnedByClick) tooltip.setLatLng(e.latlng);
+    });
     hit.on("mouseout", function () {
-      tooltip.remove();
-      highlightTripMarkers(locationIds, false);
+      if (!pinnedByClick) closeOverlay();
     });
-    hit.on("remove", function () {
-      tooltip.remove();
-      highlightTripMarkers(locationIds, false);
+
+    // Click / tap: pin the overlay so it stays after the finger lifts.
+    // Works as the primary interaction on mobile (no hover events).
+    // On desktop it toggles a persistent state; tapping the map dismisses.
+    hit.on("click", function (e) {
+      if (pinnedByClick) {
+        closeOverlay();
+        return;
+      }
+      if (closeTripOverlay) closeTripOverlay(); // dismiss any other pinned trip
+      openOverlay(e.latlng);
+      pinnedByClick = true;
+      closeTripOverlay = closeOverlay;
     });
+
+    hit.on("remove", closeOverlay);
   }
   return L.layerGroup([halo, line, hit]);
 }
@@ -728,6 +795,8 @@ filtersClearBtn?.addEventListener("click", () => {
 loadMarkers();
 loadRoutes();
 loadTravelPaths();
+// Tapping the map (not on a trip path) dismisses any pinned trip overlay.
+map.on("click", function () { if (closeTripOverlay) closeTripOverlay(); });
 initYearFilter();
 initMonthFilter();
 restoreStateFromUrl();
