@@ -346,9 +346,11 @@ function loadMarkers() {
 function buildRouteLayer(geojson) {
   const halo = L.geoJSON(geojson, {
     style: { color: "#000", weight: 6, opacity: 0.35, lineCap: "round", lineJoin: "round" },
+    interactive: false,
   });
   const line = L.geoJSON(geojson, {
     style: { color: "#ff7a3d", weight: 3.5, opacity: 1, dashArray: "10, 6", lineCap: "round", lineJoin: "round" },
+    interactive: false,
   });
   return L.layerGroup([halo, line]);
 }
@@ -380,14 +382,62 @@ async function loadRoutes() {
    TRAVEL PATHS
 ===================== */
 
-function buildTravelPathLayer(geojson) {
+const YEAR_COLORS = {
+  "2023": "#22d3ee",
+  "2024": "#a855f7",
+  "2025": "#facc15",
+  "2026": "#4ade80",
+  default: "#94a3b8",
+};
+
+function highlightTripMarkers(locationIds, on) {
+  (locationIds || []).forEach((id) => {
+    const marker = markerById.get(id);
+    const el = marker?.getElement();
+    if (el) el.classList.toggle("marker-trip-highlight", on);
+  });
+}
+
+function buildTravelPathLayer(geojson, color, name, locationIds = []) {
   const halo = L.geoJSON(geojson, {
     style: { color: "#000", weight: 6, opacity: 0.3, lineCap: "round", lineJoin: "round" },
+    interactive: false,
   });
   const line = L.geoJSON(geojson, {
-    style: { color: "#2dd4bf", weight: 3, opacity: 0.9, lineCap: "round", lineJoin: "round" },
+    style: { color, weight: 3, opacity: 0.9, lineCap: "round", lineJoin: "round" },
+    interactive: false,
   });
-  return L.layerGroup([halo, line]);
+  // Invisible wide hit area — catches hover for tooltip, absorbs clicks.
+  const hit = L.geoJSON(geojson, {
+    style: { color, weight: 16, opacity: 0, lineCap: "round", lineJoin: "round" },
+    bubblingMouseEvents: false,
+  });
+  hit.on("add", function () {
+    hit.eachLayer(function (fl) {
+      if (fl._path) fl._path.style.pointerEvents = "stroke";
+    });
+  });
+  if (name) {
+    // Manage tooltip manually — avoids bindTooltip which on touch-capable browsers
+    // (Windows 11 reports maxTouchPoints > 0) wires click→openTooltip on every
+    // feature layer, causing the stuck empty box on click.
+    const tooltip = L.tooltip({ className: "trip-tooltip", direction: "top", offset: [0, -8] }).setContent(name);
+    hit.on("mouseover", function (e) {
+      tooltip.setLatLng(e.latlng);
+      if (!map.hasLayer(tooltip)) tooltip.addTo(map);
+      highlightTripMarkers(locationIds, true);
+    });
+    hit.on("mousemove", function (e) { tooltip.setLatLng(e.latlng); });
+    hit.on("mouseout", function () {
+      tooltip.remove();
+      highlightTripMarkers(locationIds, false);
+    });
+    hit.on("remove", function () {
+      tooltip.remove();
+      highlightTripMarkers(locationIds, false);
+    });
+  }
+  return L.layerGroup([halo, line, hit]);
 }
 
 async function loadTravelPaths() {
@@ -395,14 +445,17 @@ async function loadTravelPaths() {
     try {
       const res = await fetch(path.file);
       if (!res.ok) continue;
+      const year = path.date ? path.date.split("-")[0] : null;
+      const color = YEAR_COLORS[year] ?? YEAR_COLORS.default;
       travelPathLayers.push({
-        layer: buildTravelPathLayer(await res.json()),
-        year: path.date ? path.date.split("-")[0] : null,
+        layer: buildTravelPathLayer(await res.json(), color, path.name, path.locations),
+        year,
       });
     } catch (err) {
       console.warn("Travel path load failed:", path.file, err);
     }
   }
+  renderTripLegend();
 }
 
 function applyTripLayerFilters() {
@@ -411,6 +464,29 @@ function applyTripLayerFilters() {
     if (travelPathsVisible && yearMatches) layer.addTo(map);
     else map.removeLayer(layer);
   });
+}
+
+function renderTripLegend() {
+  const existing = document.getElementById("trip-legend");
+  if (existing) existing.remove();
+
+  const years = [...new Set(travelPaths.map((p) => p.date?.split("-")[0]).filter(Boolean))].sort();
+  if (!years.length) return;
+
+  const legend = document.createElement("div");
+  legend.id = "trip-legend";
+  legend.className = "trip-legend";
+  legend.hidden = !travelPathsVisible;
+
+  years.forEach((year) => {
+    const color = YEAR_COLORS[year] ?? YEAR_COLORS.default;
+    const item = document.createElement("span");
+    item.className = "trip-legend-item";
+    item.innerHTML = `<span class="trip-legend-dot" style="background:${color}"></span>${year}`;
+    legend.appendChild(item);
+  });
+
+  tripsToggleBtn?.parentElement.after(legend);
 }
 
 /* =====================
@@ -504,6 +580,8 @@ routesToggleBtn?.addEventListener("click", () => {
 tripsToggleBtn?.addEventListener("click", () => {
   travelPathsVisible = !travelPathsVisible;
   tripsToggleBtn.classList.toggle("active", travelPathsVisible);
+  const legend = document.getElementById("trip-legend");
+  if (legend) legend.hidden = !travelPathsVisible;
   applyTripLayerFilters();
 });
 

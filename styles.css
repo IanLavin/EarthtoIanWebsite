@@ -427,6 +427,62 @@ input {
   font-weight: 600;
 }
 
+/* Trip year legend */
+.trip-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.trip-legend[hidden] {
+  display: none;
+}
+
+.trip-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.trip-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Trip hover tooltip */
+.trip-tooltip {
+  background: rgba(10, 18, 32, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  font-family: system-ui, sans-serif;
+  padding: 5px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+}
+
+.trip-tooltip::before {
+  display: none;
+}
+
+@keyframes marker-trip-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.7)); }
+  50%       { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); }
+}
+
+.marker-trip-highlight {
+  animation: marker-trip-pulse 1.2s ease-in-out infinite;
+}
+
 .page-home #searchBox {
   width: 100%;
   padding: 12px 14px;
