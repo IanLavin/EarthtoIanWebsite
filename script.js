@@ -507,6 +507,43 @@ function buildTravelPathLayer(geojson, color, name, locationIds = []) {
   return L.layerGroup([halo, line, hit]);
 }
 
+// Ramer-Douglas-Peucker simplification on raw [lng, lat] coordinate arrays.
+// Reduces tens-of-thousands of GPS-precision points to a few hundred while
+// remaining visually identical at the zoom levels used for travel routes.
+function rdpSimplify(coords, tol) {
+  if (coords.length <= 2) return coords;
+  let maxD = 0, idx = 0;
+  const [x1, y1] = coords[0], [x2, y2] = coords[coords.length - 1];
+  const dx = x2 - x1, dy = y2 - y1, len2 = dx * dx + dy * dy;
+  for (let i = 1; i < coords.length - 1; i++) {
+    const [px, py] = coords[i];
+    const t = len2 ? Math.max(0, Math.min(1, ((px - x1) * dx + (py - y1) * dy) / len2)) : 0;
+    const d = Math.hypot(px - x1 - t * dx, py - y1 - t * dy);
+    if (d > maxD) { maxD = d; idx = i; }
+  }
+  if (maxD > tol) {
+    const l = rdpSimplify(coords.slice(0, idx + 1), tol);
+    const r = rdpSimplify(coords.slice(idx), tol);
+    return [...l.slice(0, -1), ...r];
+  }
+  return [coords[0], coords[coords.length - 1]];
+}
+
+function simplifyGeoJson(geojson) {
+  const tol = 0.0005; // ~55 m — imperceptible at travel-route zoom levels
+  const features = geojson.type === "FeatureCollection" ? geojson.features : [geojson];
+  features.forEach((f) => {
+    if (f.geometry.type === "LineString") {
+      f.geometry.coordinates = rdpSimplify(f.geometry.coordinates, tol);
+    } else if (f.geometry.type === "MultiLineString") {
+      f.geometry.coordinates = f.geometry.coordinates.map((line) => rdpSimplify(line, tol));
+    }
+  });
+  return geojson;
+}
+
+let tripsLoaded = false;
+
 async function loadTravelPaths() {
   for (const path of travelPaths) {
     try {
@@ -515,14 +552,16 @@ async function loadTravelPaths() {
       const year = path.date ? path.date.split("-")[0] : null;
       const color = YEAR_COLORS[year] ?? YEAR_COLORS.default;
       travelPathLayers.push({
-        layer: buildTravelPathLayer(await res.json(), color, path.name, path.locations),
+        layer: buildTravelPathLayer(simplifyGeoJson(await res.json()), color, path.name, path.locations),
         year,
       });
     } catch (err) {
       console.warn("Travel path load failed:", path.file, err);
     }
   }
+  tripsLoaded = true;
   renderTripLegend();
+  applyTripLayerFilters();
 }
 
 function applyTripLayerFilters() {
@@ -649,7 +688,11 @@ tripsToggleBtn?.addEventListener("click", () => {
   tripsToggleBtn.classList.toggle("active", travelPathsVisible);
   const legend = document.getElementById("trip-legend");
   if (legend) legend.hidden = !travelPathsVisible;
-  applyTripLayerFilters();
+  if (travelPathsVisible && !tripsLoaded) {
+    loadTravelPaths(); // lazy: first toggle triggers the fetch + render
+  } else {
+    applyTripLayerFilters();
+  }
 });
 
 /* =====================
@@ -794,7 +837,7 @@ filtersClearBtn?.addEventListener("click", () => {
 
 loadMarkers();
 loadRoutes();
-loadTravelPaths();
+// Travel paths are lazy-loaded on first Trips toggle click (see tripsToggleBtn handler).
 // Tapping the map (not on a trip path) dismisses any pinned trip overlay.
 map.on("click", function () { if (closeTripOverlay) closeTripOverlay(); });
 initYearFilter();
