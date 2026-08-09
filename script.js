@@ -354,7 +354,58 @@ function buildRouteLayer(geojson) {
     style: { color: "#ff7a3d", weight: 3.5, opacity: 1, dashArray: "10, 6", lineCap: "round", lineJoin: "round" },
     interactive: false,
   });
-  return L.layerGroup([halo, line]);
+  const hit = L.geoJSON(geojson, {
+    style: { color: "transparent", weight: 16, opacity: 0, lineCap: "round", lineJoin: "round" },
+    bubblingMouseEvents: false,
+  });
+
+  const svgNS = "http://www.w3.org/2000/svg";
+  let pinnedByClick = false;
+
+  function showDots() {
+    line.eachLayer(function (fl) {
+      if (!fl._path || fl._routeDot) return;
+      if (!fl._path.id) fl._path.id = "tp-" + (++tripDotSeq);
+      const dot = document.createElementNS(svgNS, "circle");
+      dot.setAttribute("r", "5");
+      dot.setAttribute("fill", "#ff7a3d");
+      dot.setAttribute("stroke", "rgba(255,255,255,0.85)");
+      dot.setAttribute("stroke-width", "2");
+      dot.setAttribute("pointer-events", "none");
+      const anim = document.createElementNS(svgNS, "animateMotion");
+      anim.setAttribute("dur", "15s");
+      anim.setAttribute("repeatCount", "indefinite");
+      anim.setAttribute("rotate", "auto");
+      const mpath = document.createElementNS(svgNS, "mpath");
+      mpath.setAttribute("href", "#" + fl._path.id);
+      mpath.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + fl._path.id);
+      anim.appendChild(mpath);
+      dot.appendChild(anim);
+      fl._path.parentNode.appendChild(dot);
+      fl._routeDot = dot;
+    });
+  }
+
+  function hideDots() {
+    line.eachLayer(function (fl) {
+      if (fl._routeDot) { fl._routeDot.remove(); fl._routeDot = null; }
+    });
+  }
+
+  hit.on("add", function () {
+    hit.eachLayer(function (fl) {
+      if (fl._path) fl._path.setAttribute("pointer-events", "stroke");
+    });
+  });
+  hit.on("mouseover", function () { if (!pinnedByClick) showDots(); });
+  hit.on("mouseout", function () { if (!pinnedByClick) hideDots(); });
+  hit.on("click", function () {
+    pinnedByClick = !pinnedByClick;
+    if (pinnedByClick) showDots(); else hideDots();
+  });
+  hit.on("remove", function () { pinnedByClick = false; hideDots(); });
+
+  return L.layerGroup([halo, line, hit]);
 }
 
 async function loadRoutes() {
