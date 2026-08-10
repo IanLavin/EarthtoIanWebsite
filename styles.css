@@ -427,6 +427,44 @@ input {
   font-weight: 600;
 }
 
+/* Stat bar */
+.page-home .stat-bar {
+  display: flex;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.page-home .stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 4px;
+}
+
+.page-home .stat-item:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.page-home .stat-value {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.page-home .stat-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
 /* Trip year legend */
 .trip-legend {
   display: flex;
@@ -1032,6 +1070,11 @@ input {
     min-height: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* Stat bar is desktop-only — mobile sidebar is too cramped */
+  .page-home .stat-bar {
+    display: none;
   }
 
   /* Prevent toggle rows from being flex-shrunk to nothing on iOS Safari */

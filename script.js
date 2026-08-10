@@ -2,6 +2,8 @@ import locations from "./locations-data.js";
 import icons from "./icons.js";
 import standaloneRoutes from "./routes-data.js";
 import travelPaths from "./travel-paths-data.js";
+import nationalParksData from "./national-parks-data.js";
+import highpointsData from "./highpoints-data.js";
 import { initMenu } from "./js/menu.js";
 import { escapeHtml, IMAGE_FALLBACK } from "./js/utils.js";
 
@@ -126,6 +128,21 @@ const markerById = new Map();
 const routeLayerById = new Map();
 const standaloneRouteLayers = [];
 const travelPathLayers = [];
+
+/* =====================
+   STAT BAR
+===================== */
+
+function initStatBar() {
+  const countries = new Set(allLocations.map((p) => p.country).filter(Boolean));
+  const parksVisited = nationalParksData.filter((p) => p.locationId).length;
+  const highpointsVisited = highpointsData.filter((h) => h.locationId).length;
+
+  document.getElementById("stat-locations").textContent = allLocations.length;
+  document.getElementById("stat-countries").textContent = countries.size;
+  document.getElementById("stat-highpoints").textContent = `${highpointsVisited}/50`;
+  document.getElementById("stat-parks").textContent = `${parksVisited}/63`;
+}
 
 /* =====================
    HELPERS
@@ -892,6 +909,7 @@ loadRoutes();
 // Travel paths are lazy-loaded on first Trips toggle click (see tripsToggleBtn handler).
 // Tapping the map (not on a trip path) dismisses any pinned trip overlay.
 map.on("click", function () { if (closeTripOverlay) closeTripOverlay(); });
+initStatBar();
 initYearFilter();
 initMonthFilter();
 restoreStateFromUrl();

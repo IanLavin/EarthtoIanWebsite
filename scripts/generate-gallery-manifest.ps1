@@ -6,8 +6,18 @@ Set-Location $repoRoot
 $root = "Pictures"
 $extensions = @(".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".svg")
 
-$files = Get-ChildItem -Path $root -Recurse -File |
+$allFiles = Get-ChildItem -Path $root -Recurse -File |
   Where-Object { $extensions -contains $_.Extension.ToLowerInvariant() }
+
+# If a .webp counterpart exists for a jpg/jpeg/png, skip the original to avoid duplicates.
+$replaceableExts = @(".jpg", ".jpeg", ".png")
+$files = $allFiles | Where-Object {
+  if ($replaceableExts -contains $_.Extension.ToLowerInvariant()) {
+    $webpPath = [System.IO.Path]::ChangeExtension($_.FullName, ".webp")
+    return -not (Test-Path $webpPath)
+  }
+  return $true
+}
 
 $groups = $files | Group-Object DirectoryName | Sort-Object Name
 

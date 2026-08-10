@@ -39,7 +39,7 @@ Open `locations-data.js` and add an object to the appropriate category array:
   lat: 40.3428,
   lng: -105.6836,
   url: "https://en.wikipedia.org/wiki/Rocky_Mountain_National_Park",
-  img: "Pictures/Colorado/RMNP/IMG_0001.jpg",  // hero image shown in popup + page
+  img: "Pictures/Colorado/RMNP/IMG_0001.webp",  // hero image shown in popup + page
 }
 ```
 
@@ -63,7 +63,7 @@ Open `locations-data.js` and add an object to the appropriate category array:
 
   // Gallery — choose ONE of these:
   galleryDir: "Pictures/Colorado/RMNP/",  // auto-loads all images in that folder
-  gallery: ["Pictures/Colorado/RMNP/IMG_0001.jpg", ...],  // explicit list
+  gallery: ["Pictures/Colorado/RMNP/IMG_0001.webp", ...],  // explicit list
 
   // Map route overlay (GeoJSON file path)
   routeGeoJson: "routes/rmnp-trail.geojson",
@@ -106,12 +106,19 @@ Slug is typically the location ID or a short version of it. It just needs to mat
 
 Put images in `Pictures/[Country]/[LocationName]/`. Use consistent folder names.
 
-Run the gallery manifest script to register new images:
+**Convert to WebP** (run this first — creates compressed `.webp` next to each photo):
+```powershell
+.\scripts\convert-to-webp.ps1
+```
+This resizes to max 1200 px wide and converts to WebP (~90% smaller than raw camera files). Safe to re-run; already-converted files are skipped.
+
+**Then regenerate the gallery manifest:**
 ```powershell
 .\scripts\generate-gallery-manifest.ps1
 ```
+This regenerates `gallery-manifest.js`. The generator automatically prefers `.webp` over `.jpg` when both exist. If you're using `galleryDir`, this step is required for images to appear in the carousel.
 
-This regenerates `gallery-manifest.js`. If you're using `galleryDir`, this step is required for images to appear in the carousel.
+**Reference the `.webp` file** in `locations-data.js` (not the original `.jpg`).
 
 ---
 
@@ -291,13 +298,18 @@ The tracker will automatically show it as completed and link to the location pag
 ## 7. Adding Gallery Images
 
 1. Add images to `Pictures/[Country]/[LocationName]/`
-2. Run the manifest generator:
+2. Convert to WebP:
+   ```powershell
+   .\scripts\convert-to-webp.ps1
+   ```
+3. Run the manifest generator:
    ```powershell
    .\scripts\generate-gallery-manifest.ps1
    ```
-3. If the location uses `galleryDir`, images appear automatically. If it uses an explicit `gallery` array, add the paths manually.
+4. If the location uses `galleryDir`, images appear automatically. If it uses an explicit `gallery` array, add the `.webp` paths manually.
 
 **Supported formats:** `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif`, `.avif`, `.svg`
+(`.jpg`/`.png` originals are skipped in the manifest if a `.webp` counterpart exists.)
 
 ---
 
@@ -323,4 +335,4 @@ XY: "Country Name",
 | New route (location-linked) | `routes/[name].geojson` (create), `locations-data.js` (add `routeGeoJson`) |
 | New route (standalone) | `routes/[name].geojson` (create), `routes-data.js` (add entry) |
 | New hike stats | `hike-stats-data.js` (add entry) |
-| New images | `Pictures/` folder, then run `generate-gallery-manifest.ps1` |
+| New images | `Pictures/` folder → run `convert-to-webp.ps1` → run `generate-gallery-manifest.ps1` |
