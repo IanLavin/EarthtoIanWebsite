@@ -219,6 +219,7 @@ function createPopup(place) {
           alt="${placeName}"
           width="260"
           class="popup-image"
+          loading="lazy"
         />
       </a>
       <a class="popup-cta" href="location.html?id=${place.id}">View Details</a>
