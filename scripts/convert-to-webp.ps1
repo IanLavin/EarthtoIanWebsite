@@ -22,7 +22,7 @@ foreach ($img in $images) {
         continue
     }
 
-    $result = magick $img.FullName -resize "${MaxWidth}x>" -quality $Quality $outPath 2>&1
+    $result = magick $img.FullName -auto-orient -resize "${MaxWidth}x>" -quality $Quality $outPath 2>&1
     if ($LASTEXITCODE -ne 0) {
         Write-Host "FAILED: $($img.FullName)" -ForegroundColor Red
         Write-Host $result
