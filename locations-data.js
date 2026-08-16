@@ -917,6 +917,12 @@ const rawLocations = {
             routeGeoJson: "routes/banff.geojson",
             dateVisited: "2026-07-01",
 
+            video: {
+                provider: "youtube",
+                id: "XCdQxKJd4eQ",
+                title: "Banff National Park"
+            },
+
 
             //carousel images
             galleryDir: "Pictures/Canada/Banff/"
@@ -935,6 +941,13 @@ const rawLocations = {
             notesMd: "descriptions/notes/yoho.md",
             routeGeoJson: "routes/yoho.geojson",
             dateVisited: "2026-07-04",
+
+            video: {
+                provider: "youtube",
+                id: "XCdQxKJd4eQ",
+                title: "Yoho National Park"
+            },
+
             //carousel images
             galleryDir: "Pictures/Canada/Yoho/"
         },
@@ -970,6 +983,13 @@ const rawLocations = {
             notesMd: "descriptions/notes/kootenay.md",
             routeGeoJson: "routes/kootenay.geojson",
             dateVisited: "2026-07-03",
+
+            video: {
+                provider: "youtube",
+                id: "XCdQxKJd4eQ",
+                title: "Kootenay National Park"
+            },
+
             //carousel images
             galleryDir: "Pictures/Canada/Kootenay/"
         },
