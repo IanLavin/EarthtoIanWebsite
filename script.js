@@ -612,23 +612,34 @@ function simplifyGeoJson(geojson) {
 }
 
 let tripsLoaded = false;
+let tripsLoading = false;
 
 async function loadTravelPaths() {
-  for (const path of travelPaths) {
-    try {
+  tripsLoading = true;
+  if (tripsToggleBtn) tripsToggleBtn.dataset.loading = "";
+
+  const results = await Promise.allSettled(
+    travelPaths.map(async (path) => {
       const res = await fetch(path.file);
-      if (!res.ok) continue;
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const geojson = await res.json();
       const year = path.date ? path.date.split("-")[0] : null;
       const color = YEAR_COLORS[year] ?? YEAR_COLORS.default;
-      travelPathLayers.push({
-        layer: buildTravelPathLayer(simplifyGeoJson(await res.json()), color, path.name, path.locations),
+      return {
+        layer: buildTravelPathLayer(simplifyGeoJson(geojson), color, path.name, path.locations),
         year,
-      });
-    } catch (err) {
-      console.warn("Travel path load failed:", path.file, err);
-    }
-  }
+      };
+    })
+  );
+
+  results.forEach((result) => {
+    if (result.status === "fulfilled") travelPathLayers.push(result.value);
+    else console.warn("Travel path load failed:", result.reason);
+  });
+
   tripsLoaded = true;
+  tripsLoading = false;
+  if (tripsToggleBtn) delete tripsToggleBtn.dataset.loading;
   renderTripLegend();
   applyTripLayerFilters();
 }
@@ -757,9 +768,9 @@ tripsToggleBtn?.addEventListener("click", () => {
   tripsToggleBtn.classList.toggle("active", travelPathsVisible);
   const legend = document.getElementById("trip-legend");
   if (legend) legend.hidden = !travelPathsVisible;
-  if (travelPathsVisible && !tripsLoaded) {
-    loadTravelPaths(); // lazy: first toggle triggers the fetch + render
-  } else {
+  if (travelPathsVisible && !tripsLoaded && !tripsLoading) {
+    loadTravelPaths();
+  } else if (!tripsLoading) {
     applyTripLayerFilters();
   }
 });

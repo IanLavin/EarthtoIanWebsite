@@ -1043,14 +1043,13 @@ const rawLocations = {
             //carousel images
             galleryDir: "Pictures/Kentucky/Cave/"
         },
-        /*
         { 
             name: "Sequoia National Park", 
             country: "US", region: "West Coast", 
             lat: 36.581, 
             lng: -118.751, 
             url: "https://en.wikipedia.org/wiki/Sequoia_National_Park", 
-            img: "Pictures/California/Sequoia/IMG_6907.webp", 
+            img: "Pictures/California/Sequoia/GP011278.webp", 
             descriptionMd: "descriptions/parks/sequoia.md", 
             logisticsMd: "descriptions/logistics/sequoia.md",
             bestMonths: [5, 6, 7, 8, 9, 10],
@@ -1067,7 +1066,7 @@ const rawLocations = {
             lat: 36.739, 
             lng: -118.963, 
             url: "https://en.wikipedia.org/wiki/Kings_Canyon_National_Park", 
-            img: "Pictures/California/Kings_Canyon/IMG_6907.webp", 
+            img: "Pictures/California/Kings_Canyon/GP011296.webp", 
             descriptionMd: "descriptions/parks/kings_canyon.md",
             logisticsMd: "descriptions/logistics/kings_canyon.md",
             bestMonths: [5, 6, 7, 8, 9, 10],
@@ -1082,7 +1081,7 @@ const rawLocations = {
             lat: 37.745, 
             lng: -119.533, 
             url: "https://en.wikipedia.org/wiki/Yosemite_National_Park", 
-            img: "Pictures/California/Yosemite/IMG_6907.webp", 
+            img: "Pictures/California/Yosemite/GP011372.webp", 
             descriptionMd: "descriptions/parks/yosemite.md",
             logisticsMd: "descriptions/logistics/yosemite.md",
             bestMonths: [5, 6, 7, 8, 9, 10],
@@ -1091,7 +1090,7 @@ const rawLocations = {
             dateVisited: "2026-08-29",
             galleryDir: "Pictures/California/Yosemite/" 
         },
-        */
+        
 
     ],
 

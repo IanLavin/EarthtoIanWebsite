@@ -174,6 +174,12 @@ export default [
         locations: ["daintree-rainforest", "wallaman-falls", "great-barrier-reef", "whitehaven-beach"],
     },
     {
+        file: "routes/travel-paths/yosemite2026.geojson",
+        name: "Yosemite 2026",
+        date: "2026-08-27",
+        locations: ["yosemite-national-park", "kings-canyon-national-park", "sequoia-national-park", "death-valley-national-park"],
+    },
+    {
         file: "routes/travel-paths/havasupai2026.geojson",
         name: "Havasupai 2026",
         date: "2026-04-16",

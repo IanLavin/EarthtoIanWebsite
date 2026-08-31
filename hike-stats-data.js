@@ -186,7 +186,7 @@ export default {
   },
   "yosemite-national-park": {
     hike: "Half Dome",
-    length: 1, elevationGain: 1, technicality: 1, externalFactors: 1, enjoyment: 1,
+    length: 8, elevationGain: 8, technicality: 6, externalFactors: 5, enjoyment: 9,
   },
   
   "superstitions": [

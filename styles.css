@@ -421,6 +421,15 @@ input {
   font-weight: 600;
 }
 
+.page-home #tripsToggle[data-loading] {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.page-home #tripsToggle[data-loading]::after {
+  content: "…";
+}
+
 .page-home #tripsToggle.active {
   background: rgba(45, 212, 191, 0.18);
   color: #2dd4bf;

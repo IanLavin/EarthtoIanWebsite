@@ -106,17 +106,7 @@ Slug is typically the location ID or a short version of it. It just needs to mat
 
 Put images in `Pictures/[Country]/[LocationName]/`. Use consistent folder names.
 
-**Convert to WebP** (run this first — creates compressed `.webp` next to each photo):
-```powershell
-.\scripts\convert-to-webp.ps1
-```
-This resizes to max 1200 px wide and converts to WebP (~90% smaller than raw camera files). Safe to re-run; already-converted files are skipped.
-
-**Then regenerate the gallery manifest:**
-```powershell
-.\scripts\generate-gallery-manifest.ps1
-```
-This regenerates `gallery-manifest.js`. The generator automatically prefers `.webp` over `.jpg` when both exist. If you're using `galleryDir`, this step is required for images to appear in the carousel.
+Put your photos in the folder, then run the update script (see [After Any Update](#after-any-update) below) — it handles WebP conversion and gallery manifest regeneration automatically.
 
 **Reference the `.webp` file** in `locations-data.js` (not the original `.jpg`).
 
@@ -298,15 +288,8 @@ The tracker will automatically show it as completed and link to the location pag
 ## 7. Adding Gallery Images
 
 1. Add images to `Pictures/[Country]/[LocationName]/`
-2. Convert to WebP:
-   ```powershell
-   .\scripts\convert-to-webp.ps1
-   ```
-3. Run the manifest generator:
-   ```powershell
-   .\scripts\generate-gallery-manifest.ps1
-   ```
-4. If the location uses `galleryDir`, images appear automatically. If it uses an explicit `gallery` array, add the `.webp` paths manually.
+2. Run `.\scripts\update.ps1` — converts to WebP and regenerates the manifest.
+3. If the location uses `galleryDir`, images appear automatically. If it uses an explicit `gallery` array, add the `.webp` paths manually.
 
 **Supported formats:** `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif`, `.avif`, `.svg`
 (`.jpg`/`.png` originals are skipped in the manifest if a `.webp` counterpart exists.)
@@ -324,15 +307,25 @@ XY: "Country Name",
 
 ---
 
+## After Any Update
+
+Run this once after making changes — it converts new images to WebP, refreshes the gallery manifest, validates location data, and regenerates the sitemap:
+
+```powershell
+.\scripts\update.ps1
+```
+
+---
+
 ## Quick Reference — Files to Update Per Task
 
 | Task | Files to update |
 |---|---|
-| New location | `locations-data.js`, markdown files, `gallery-manifest.js` (run script) |
+| New location | `locations-data.js`, markdown files, then run `update.ps1` |
 | New highpoint | Above + `highpoints-data.js` |
 | New national park | Above + `national-parks-data.js` |
 | New journal | `journals/[id].js` (create), `journals/index.js` (register) |
 | New route (location-linked) | `routes/[name].geojson` (create), `locations-data.js` (add `routeGeoJson`) |
 | New route (standalone) | `routes/[name].geojson` (create), `routes-data.js` (add entry) |
 | New hike stats | `hike-stats-data.js` (add entry) |
-| New images | `Pictures/` folder → run `convert-to-webp.ps1` → run `generate-gallery-manifest.ps1` |
+| New images | `Pictures/` folder, then run `update.ps1` |

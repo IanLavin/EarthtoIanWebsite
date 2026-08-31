@@ -161,6 +161,11 @@ const galleryManifest = {
     "Pictures/California/Joshua_Tree/IMG_8837.webp",
     "Pictures/California/Joshua_Tree/IMG_8850.webp",
   ],
+  "Pictures/California/Kings_Canyon": [
+    "Pictures/California/Kings_Canyon/GP011290.webp",
+    "Pictures/California/Kings_Canyon/GP011296.webp",
+    "Pictures/California/Kings_Canyon/GP011303.webp",
+  ],
   "Pictures/California/La_Jolla": [
     "Pictures/California/La_Jolla/GEO_0341.webp",
     "Pictures/California/La_Jolla/GEO_0402.webp",
@@ -190,11 +195,22 @@ const galleryManifest = {
     "Pictures/California/Redwoods/IMG_0374.webp",
     "Pictures/California/Redwoods/IMG_5260.webp",
   ],
+  "Pictures/California/Sequoia": [
+    "Pictures/California/Sequoia/GP011278.webp",
+  ],
   "Pictures/California/Whitney": [
+    "Pictures/California/Whitney/GP011422.webp",
     "Pictures/California/Whitney/IMG_8933.webp",
     "Pictures/California/Whitney/IMG_8989.webp",
     "Pictures/California/Whitney/IMG_9003.webp",
     "Pictures/California/Whitney/IMG_9040.webp",
+  ],
+  "Pictures/California/Yosemite": [
+    "Pictures/California/Yosemite/GP011317.webp",
+    "Pictures/California/Yosemite/GP011372.webp",
+    "Pictures/California/Yosemite/GP011382.webp",
+    "Pictures/California/Yosemite/GP011389.webp",
+    "Pictures/California/Yosemite/GP011400.webp",
   ],
   "Pictures/Canada/Banff": [
     "Pictures/Canada/Banff/GP010510.webp",
