@@ -900,6 +900,13 @@ const rawLocations = {
             routeGeoJson: "routes/glacier-national-park.geojson",
             notesMd: "descriptions/notes/glacier.md",
             dateVisited: "2026-06-28",
+
+            video: {
+                provider: "youtube",
+                id: "ZGykvILP5Dg",
+                title: "Glacier National Park"
+            },
+
             galleryDir: "Pictures/Montana/Glacier/" 
         },
         { 
@@ -966,6 +973,12 @@ const rawLocations = {
             routeGeoJson: "routes/great-glacier.geojson",
             dateVisited: "2026-06-29",
 
+            video: {
+                provider: "youtube",
+                id: "ZGykvILP5Dg",
+                title: "Glacier National Park Canada"
+            },
+
             //carousel images
             galleryDir: "Pictures/Canada/Glacier/"
         },
@@ -986,7 +999,7 @@ const rawLocations = {
 
             video: {
                 provider: "youtube",
-                id: "XCdQxKJd4eQ",
+                id: "ZGykvILP5Dg",
                 title: "Kootenay National Park"
             },
 
