@@ -1101,7 +1101,15 @@ const rawLocations = {
             notesMd: "descriptions/notes/yosemite.md",
             routeGeoJson: "routes/yosemite.geojson",  
             dateVisited: "2026-08-29",
-            galleryDir: "Pictures/California/Yosemite/" 
+            galleryDir: "Pictures/California/Yosemite/",
+            
+            video: {
+                provider: "youtube",
+                id: "Y16kBIZLJRI",
+                title: "Yosemite National Park"
+            },
+
+
         },
         
 
