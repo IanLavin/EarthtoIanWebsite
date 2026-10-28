@@ -1111,6 +1111,29 @@ const rawLocations = {
 
 
         },
+        {
+            name: "Chiricahua National Park",
+            country: "US",
+            region: "Southwest",
+            lat: 32.009, 
+            lng: -109.319, 
+            url: "https://en.wikipedia.org/wiki/Chiricahua_National_Park",
+            img: "Pictures/Arizona/Chiricahua/IMG_8082.webp",
+            descriptionMd: "descriptions/parks/chiricahua.md",
+            logisticsMd: "descriptions/logistics/chiricahua.md",
+            bestMonths: [3, 4, 5, 6, 7, 8, 9, 10, 11],
+            notesMd: "descriptions/notes/chiricahua.md",
+            routeGeoJson: "routes/chiricahua.geojson",
+            dateVisited: "2023-05-27",
+
+            video: {
+                provider: "youtube",
+                id: "_ltXpHNJNdE",
+                title: "Chiricahua National Park"
+            },
+
+            galleryDir: "Pictures/Arizona/Chiricahua/"
+        },
         
 
     ],
@@ -2383,29 +2406,6 @@ const rawLocations = {
             dateVisited: "2023-04-29",
 
             galleryDir: "Pictures/California/Black_Sand/"
-        },
-        {
-            name: "Chiricahua National Monument",
-            country: "US",
-            region: "Southwest",
-            lat: 32.009, 
-            lng: -109.319, 
-            url: "https://en.wikipedia.org/wiki/Chiricahua_National_Monument",
-            img: "Pictures/Arizona/Chiricahua/IMG_8082.webp",
-            descriptionMd: "descriptions/sightseeing/chiricahua.md",
-            logisticsMd: "descriptions/logistics/chiricahua.md",
-            bestMonths: [3, 4, 5, 6, 7, 8, 9, 10, 11],
-            notesMd: "descriptions/notes/chiricahua.md",
-            routeGeoJson: "routes/chiricahua.geojson",
-            dateVisited: "2023-05-27",
-
-            video: {
-                provider: "youtube",
-                id: "_ltXpHNJNdE",
-                title: "Chiricahua National Monument"
-            },
-
-            galleryDir: "Pictures/Arizona/Chiricahua/"
         },
         {
             name: "Valley of Fire",

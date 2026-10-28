@@ -141,7 +141,7 @@ function initStatBar() {
   document.getElementById("stat-locations").textContent = allLocations.length;
   document.getElementById("stat-countries").textContent = countries.size;
   document.getElementById("stat-highpoints").textContent = `${highpointsVisited}/50`;
-  document.getElementById("stat-parks").textContent = `${parksVisited}/63`;
+  document.getElementById("stat-parks").textContent = `${parksVisited}/64`;
 }
 
 /* =====================

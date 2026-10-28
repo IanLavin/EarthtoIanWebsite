@@ -1,1 +1,0 @@
-Chiricahua National Monument is known for towering rock spires and balanced formations shaped by volcanic activity. Trails weave through narrow corridors of stone and open viewpoints. The landscape feels both playful and otherworldly.
